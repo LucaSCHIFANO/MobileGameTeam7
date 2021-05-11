@@ -10,6 +10,18 @@ public class PlayerMovement : MonoBehaviour
     public int lastX;
     public int lastY;
 
+    public int maxMouvementPoint;
+
+    public States state = 0;
+    public enum States
+    {
+        IDLE,
+        SELECTED,
+        MOVEMENT,
+        ACTION,
+        WAIT,
+    }
+
     public void Start()
     {
         transform.position = new Vector3(xPos, yPos, -10);
@@ -31,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator movement(List<Panel> panelsList)
     {
+        Grid.Instance.resetClicked();
+        state = States.IDLE;
+
         foreach (var panel in panelsList)
         {
             transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 10f);
