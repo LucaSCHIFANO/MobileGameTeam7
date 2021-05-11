@@ -30,6 +30,7 @@ public class ClicklManager : MonoBehaviour
                         {
                             Grid.Instance.resetClicked();
                             player.state = PlayerMovement.States.IDLE;
+                            UiActionManager.Instance.showButton();
                         }
 
 
@@ -41,10 +42,18 @@ public class ClicklManager : MonoBehaviour
                             if (player.state == PlayerMovement.States.IDLE)
                             {
                                 BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
-                                BlueRedGrid.Instance.blueRedPath(player.maxMouvementPoint);
+                                BlueRedGrid.Instance.blueRedPath(player.mouvementPoint);
                                 //BlueRedGrid.Instance.attackPossible();
 
+                                UiActionManager.Instance.hideButton();
+
                                 player.state = PlayerMovement.States.SELECTED;
+
+                            }else if (player.state == PlayerMovement.States.SELECTED)
+                            {
+                                Grid.Instance.resetClicked();
+                                player.state = PlayerMovement.States.IDLE;
+                                UiActionManager.Instance.showButton();
                             }
                         }
                     }

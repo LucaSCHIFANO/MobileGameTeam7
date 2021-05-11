@@ -51,6 +51,7 @@ public class PhaseManager : MonoBehaviour
             oneTime = true;
             CharacterManager.Instance.resetAllCharacter();
             uiColor.GetComponent<Image>().color = Color.blue;
+            UiActionManager.Instance.showButton();
 
         }
     }
