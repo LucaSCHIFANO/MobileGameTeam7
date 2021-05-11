@@ -117,7 +117,7 @@ public class Grid : MonoBehaviour
                     continue;
                 }
 
-                if (!voisin.canBeCrossed)
+                if (!voisin.canBeCrossed || voisin.unitOn != null)
                 {
                     closeList.Add(voisin);
                     continue;

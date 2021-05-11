@@ -17,6 +17,7 @@ public class ClicklManager : MonoBehaviour
                 var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
                 if (touchedCollier != null) {
+
                     if (touchedCollier.gameObject.tag == "Panel")
                     {
                         var touchedPanel = touchedCollier.gameObject.GetComponent<Panel>();
@@ -30,6 +31,8 @@ public class ClicklManager : MonoBehaviour
                             Grid.Instance.resetClicked();
                             player.state = PlayerMovement.States.IDLE;
                         }
+
+
 
                     }else if (touchedCollier.gameObject.tag == "Characters")
                     {

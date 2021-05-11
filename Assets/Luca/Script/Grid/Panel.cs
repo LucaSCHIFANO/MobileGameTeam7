@@ -48,9 +48,25 @@ public class Panel : MonoBehaviour
     }
 
 
-    private void Update()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "Characters")
+        {
+            if (unitOn == null)
+            {
+                isOccupied = true;
+                unitOn = collision.gameObject;
+            }
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == unitOn)
+        {
+            isOccupied = false;
+            unitOn = null;
+        }
     }
 
 }

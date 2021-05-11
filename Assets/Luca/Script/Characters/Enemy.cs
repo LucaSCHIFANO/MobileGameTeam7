@@ -55,25 +55,29 @@ public class Enemy : MonoBehaviour
 
         }
 
-        foreach (var voisin in allVoisinsPlayers)
-        {
-            List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y);
-            if (listPanel[listPanel.Count - 1].actualMovementCost < minPath)
+            foreach (var voisin in allVoisinsPlayers)
             {
-                finalPath = listPanel;
-                minPath = listPanel[listPanel.Count - 1].actualMovementCost;
-            }
-        }
+                List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y);
 
-        foreach (var panel in finalPath)
-        {
-            if (panel.actualMovementCost <= maxMovement)
+                if (listPanel != null)
+                {
+                    if (listPanel[listPanel.Count - 1].actualMovementCost < minPath)
+                    {
+                        finalPath = listPanel;
+                        minPath = listPanel[listPanel.Count - 1].actualMovementCost;
+                    }
+                }
+            }
+
+            foreach (var panel in finalPath)
             {
-                finalPath2.Add(panel);
+                if (panel.actualMovementCost <= maxMovement)
+                {
+                    finalPath2.Add(panel);
+                }
             }
-        }
 
-        StartCoroutine(movement(finalPath2));
+            StartCoroutine(movement(finalPath2));
     }
 
 

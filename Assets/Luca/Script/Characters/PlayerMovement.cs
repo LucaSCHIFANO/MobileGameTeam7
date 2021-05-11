@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator movement(List<Panel> panelsList)
     {
+        Debug.Log("player mouv");
         Grid.Instance.resetClicked();
 
         foreach (var panel in panelsList)

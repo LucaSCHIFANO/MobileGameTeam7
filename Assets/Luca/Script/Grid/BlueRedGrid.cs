@@ -25,10 +25,10 @@ public class BlueRedGrid : MonoBehaviour
     {
         foreach (var panel in Grid.Instance.gridArray)
         {
-            if (panel.actualMovementCost <= maxMovementPlayer)
+            if (panel.actualMovementCost <= maxMovementPlayer && panel.prevousPanel != null)
             {
-                panel.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
-                panel.canBeClick = true;
+                    panel.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+                    panel.canBeClick = true;
             }
         }
 
@@ -51,6 +51,7 @@ public class BlueRedGrid : MonoBehaviour
             foreach (var panel in openList.ToArray())
             {
                 openList.Remove(panel);
+                if(!closeList.Contains(panel))
                 closeList.Add(panel);
 
                 foreach (var voisin in CheckVoisin(panel))
@@ -59,7 +60,7 @@ public class BlueRedGrid : MonoBehaviour
                     {
                         if (voisin.actualMovementCost > (panel.actualMovementCost + voisin.movementCost))
                         {
-                            if (voisin.canBeCrossed)
+                            if (voisin.canBeCrossed && voisin.unitOn == null)
                             {
                                 voisin.prevousPanel = panel;
                                 voisin.actualMovementCost = voisin.movementCost + panel.actualMovementCost;
@@ -73,7 +74,7 @@ public class BlueRedGrid : MonoBehaviour
                     }
                     else
                     {
-                        if (!voisin.canBeCrossed)
+                        if ((!voisin.canBeCrossed || voisin.unitOn != null))
                         {
                             closeList.Add(voisin);
                             voisin.actualMovementCost = int.MaxValue;
