@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 4391244545055928744}
   - component: {fileID: 4391244545055928747}
   - component: {fileID: 6894285611670106552}
+  - component: {fileID: 5201598307983141479}
   - component: {fileID: 373878670402899203}
   - component: {fileID: 1492304920757445513}
   m_Layer: 0
@@ -211,9 +212,26 @@ MonoBehaviour:
   yPos: 0
   lastX: 0
   lastY: 0
-  maxMouvementPoint: 0
-  mouvementPoint: 0
+  stats: {fileID: 0}
   state: 0
+--- !u!114 &5201598307983141479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391244545055928749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ed089b1e59eef945a9df55d9c646194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  strenght: 0
+  defense: 0
+  speed: 0
+  maxActionPoint: 5
+  actionPoint: 0
 --- !u!61 &373878670402899203
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -6,13 +6,17 @@ public class Enemy : MonoBehaviour
 {
     public int xPos;
     public int yPos;
-    public int maxMovement;
     public PlayerMovement.States characterState;
+
+    public Stats stats;
 
     void Start()
     {
         Panel startPos =  Grid.Instance.gridArray[xPos, -yPos];
         transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
+        stats = GetComponent<Stats>();
+
+        stats.actionPoint = stats.maxActionPoint;
     }
 
     void Update()
@@ -72,7 +76,7 @@ public class Enemy : MonoBehaviour
 
             foreach (var panel in finalPath)
             {
-                if (panel.actualMovementCost <= maxMovement)
+                if (panel.actualMovementCost <= stats.actionPoint)
                 {
                     finalPath2.Add(panel);
                 }
@@ -106,10 +110,19 @@ public class Enemy : MonoBehaviour
     public IEnumerator movement(List<Panel> panelsList) // se deplace au plus proche de sa cible
     {
         Grid.Instance.resetClicked();
+        var notFirst = 0;
+
         foreach (var panel in panelsList)
         {
             transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
             yield return new WaitForSeconds(0.2f);
+
+            if (notFirst != 0)
+            {
+                stats.actionPoint -= panel.movementCost;
+            }
+            notFirst++;
+
         }
         yield return new WaitForSeconds(0.3f);
         xPos = panelsList[panelsList.Count - 1].x;

@@ -20,6 +20,9 @@ public class Panel : MonoBehaviour
 
     public int movementCost;
     public int actualMovementCost;
+
+    public int actualPanelCount;
+
     public bool canBeClick;
 
     public bool isOccupied;

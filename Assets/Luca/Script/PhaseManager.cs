@@ -92,6 +92,12 @@ public class PhaseManager : MonoBehaviour
             oneTime = false;
             Debug.Log("Player Phase");
             CharacterManager.Instance.countMoveEnemy = 0;
+
+            foreach (var enemy in CharacterManager.Instance.enemyList)
+            {
+                var ene = enemy.GetComponent<Enemy>();
+                ene.stats.actionPoint = ene.stats.maxActionPoint;
+            }
         }
         else
         {

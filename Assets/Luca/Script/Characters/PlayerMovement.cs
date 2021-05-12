@@ -10,8 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public int lastX;
     public int lastY;
 
-    public int maxMouvementPoint;
-    public int mouvementPoint;
+    public Stats stats;
 
     public States state = 0;
     public enum States  
@@ -26,11 +25,13 @@ public class PlayerMovement : MonoBehaviour
     public void Start()
     {
         Panel startPos = Grid.Instance.gridArray[xPos, -yPos]; // positionne le joueur et set ses MP (mouvement points)
-        transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);  
+        transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
+
+        stats = GetComponent<Stats>();
 
         lastX = xPos;
         lastY = yPos;
-        mouvementPoint = maxMouvementPoint;
+        stats.actionPoint = stats.maxActionPoint;
 
         UiActionManager.Instance.setMovePoint(); // affiche a l'écran les mouvement points 
     }
@@ -61,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             if(notFirst != 0)
             {
-                mouvementPoint -= panel.movementCost;
+                stats.actionPoint -= panel.movementCost;
             }
             notFirst++;
         }
@@ -81,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
     public void endTurn() // fin du tour
     {
         state = States.WAIT;
-        mouvementPoint = maxMouvementPoint;
+        stats.actionPoint = stats.maxActionPoint;
         UiActionManager.Instance.hideButton();
         PhaseManager.Instance.checkAllPlayer();
         UiActionManager.Instance.setMovePoint();

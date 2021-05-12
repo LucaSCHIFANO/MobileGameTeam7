@@ -39,6 +39,6 @@ public class UiActionManager : MonoBehaviour
 
     public void setMovePoint()
     {
-        moveLeft.text = "MP : " + CharacterManager.Instance.currentPlayer.mouvementPoint.ToString();
+        moveLeft.text = "MP : " + CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 }

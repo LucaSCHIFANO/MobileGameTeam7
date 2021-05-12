@@ -41,11 +41,11 @@ public class ClicklManager : MonoBehaviour
 
                         if (touchedCollier.gameObject.GetComponentInParent<PlayerMovement>())
                         {
-                            if (player.state == PlayerMovement.States.IDLE && player.mouvementPoint > 0)
+                            if (player.state == PlayerMovement.States.IDLE && player.stats.actionPoint > 0)
                             {
+                                Grid.Instance.resetClicked();
                                 BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
-                                BlueRedGrid.Instance.blueRedPath(player.mouvementPoint);
-                                //BlueRedGrid.Instance.attackPossible();
+                                BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
 
                                 UiActionManager.Instance.hideButton();
 

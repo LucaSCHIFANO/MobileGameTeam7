@@ -112,6 +112,7 @@ public class Grid : MonoBehaviour
         openList.Add(startPanel);
 
         startPanel.GCost = 0;
+        startPanel.actualPanelCount = 0;
 
         while (openList.Count > 0)
         {
@@ -184,6 +185,7 @@ public class Grid : MonoBehaviour
                 Panel panelToCheck = gridArray[i, j];
                 panelToCheck.canBeClick = false;
                 panelToCheck.gameObject.GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
+                panelToCheck.actualPanelCount = 0;
             }
         }
     }
