@@ -21,7 +21,7 @@ public class BlueRedGrid : MonoBehaviour
     }
 
 
-    public void blueRedPath(int maxMovementPlayer)
+    public void blueRedPath(int maxMovementPlayer) // affiche les cases en bleu si le joueur peut s'y rendre
     {
         foreach (var panel in Grid.Instance.gridArray)
         {

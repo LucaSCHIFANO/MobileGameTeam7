@@ -28,10 +28,11 @@ public class Grid : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        awake2();
     }
 
 
-    void Start()
+    void awake2() // crée la grid avec tt les cases en fct du pattern
     {
         gridArray = new Panel[width, height];
         var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
@@ -40,7 +41,21 @@ public class Grid : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                Panel newPanel = Instantiate(panel, new Vector3(i * cellSize, -j * cellSize, 0), transform.rotation);
+                Panel newPanel = Instantiate(panel, new Vector3(i * cellSize * 0.866f, -j * cellSize, 0), transform.rotation);
+                //newPanel.gameObject.transform.rotation = Quaternion.Euler(60, 30, 0);
+
+
+                if (j == 0 && i != 0)
+                {
+                    Panel panelPrevious = gridArray[i - 1, j];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x + 0.5f * cellSize, panelPrevious.transform.position.y - 0.25f * cellSize);
+                }
+                if (j > 0)
+                {
+                    Panel panelPrevious = gridArray[i, j-1];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x - 0.5f * cellSize, panelPrevious.transform.position.y -0.25f * cellSize);
+                }
+
                 gridArray[i, j] = newPanel;
 
                 newPanel.setValue(i, j, 0, 0);
@@ -84,7 +99,7 @@ public class Grid : MonoBehaviour
         }
     }
 
-    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)
+    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)  // trouve le chemins le plus court pour allez sur une case
     {
         openList.Clear();
         closeList.Clear();
@@ -144,7 +159,7 @@ public class Grid : MonoBehaviour
         return null;
     }
 
-    public void ActuAllPanelCost(int xEnd, int yEnd)
+    public void ActuAllPanelCost(int xEnd, int yEnd) // verifie le coup en deplacement d'une case
     {
         for (int i = 0; i < width; i++)
         {
@@ -173,7 +188,7 @@ public class Grid : MonoBehaviour
         }
     }
 
-    private int CalculateHCost(Panel start, Panel end)
+    private int CalculateHCost(Panel start, Panel end) // verifie la distance d'un chemin
     {
         int xDist = Mathf.Abs(start.x - end.x);
         int yDist = Mathf.Abs(start.y - end.y);
@@ -197,7 +212,7 @@ public class Grid : MonoBehaviour
     }
 
 
-    public List<Panel> CheckVoisin(Panel currentPanel)
+    public List<Panel> CheckVoisin(Panel currentPanel) // verifie si les voisins d'une case et les renvoie
     {
         List<Panel> voisinList = new List<Panel>();
 

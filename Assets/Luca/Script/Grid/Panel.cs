@@ -48,7 +48,7 @@ public class Panel : MonoBehaviour
     }
 
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision) // check si un perso entre sur la case
     {
         if (collision.gameObject.tag == "Characters")
         {
@@ -60,7 +60,7 @@ public class Panel : MonoBehaviour
         }
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerExit2D(Collider2D collision) // check si un perso sort de la case
     {
         if (collision.gameObject == unitOn)
         {

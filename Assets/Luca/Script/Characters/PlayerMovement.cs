@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public int mouvementPoint;
 
     public States state = 0;
-    public enum States
+    public enum States  
     {
         IDLE,
         SELECTED,
@@ -25,17 +25,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void Start()
     {
-        transform.position = new Vector3(xPos, yPos, -10);
+        Panel startPos = Grid.Instance.gridArray[xPos, -yPos]; // positionne le joueur et set ses MP (mouvement points)
+        transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);  
+
         lastX = xPos;
         lastY = yPos;
         mouvementPoint = maxMouvementPoint;
 
-        UiActionManager.Instance.setMovePoint();
+        UiActionManager.Instance.setMovePoint(); // affiche a l'écran les mouvement points 
     }
 
     void Update()
     {
-        if (state == States.WAIT)
+        if (state == States.WAIT) // changement de couleur a la fin d'un tour
         {
             GetComponent<SpriteRenderer>().color = new Color(0.3679245f, 0.3679245f, 0.3679245f);
         }
@@ -45,52 +47,43 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void testMove(Vector2 pos)
+
+    public IEnumerator movement(List<Panel> panelsList) // envoie une list de panel a traverser 
     {
-        transform.position = pos;
-    }
-
-
-
-    public IEnumerator movement(List<Panel> panelsList)
-    {
-        Debug.Log("player mouv");
         Grid.Instance.resetClicked();
 
-        mouvementPoint++;
+        //mouvementPoint++;
+        var notFirst = 0;
         
         foreach (var panel in panelsList)
         {
-            transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 10f);
+            transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
             yield return new WaitForSeconds(0.2f);
-            mouvementPoint -= panel.movementCost;
+            if(notFirst != 0)
+            {
+                mouvementPoint -= panel.movementCost;
+            }
+            notFirst++;
         }
 
         xPos = panelsList[panelsList.Count - 1].x;
         yPos = -panelsList[panelsList.Count - 1].y;
 
-        if(mouvementPoint > 0)
-        {
-            state = States.IDLE;
-            UiActionManager.Instance.showButton();
-        }
-        else
-        {
-            state = States.WAIT;
-            mouvementPoint = maxMouvementPoint;
-            UiActionManager.Instance.hideButton();
-        }
+
+        state = States.IDLE;
+        UiActionManager.Instance.showButton();
 
         UiActionManager.Instance.setMovePoint();
         PhaseManager.Instance.checkAllPlayer();
 
     }
 
-    public void endTurn()
+    public void endTurn() // fin du tour
     {
         state = States.WAIT;
         mouvementPoint = maxMouvementPoint;
         UiActionManager.Instance.hideButton();
         PhaseManager.Instance.checkAllPlayer();
+        UiActionManager.Instance.setMovePoint();
     }
 }

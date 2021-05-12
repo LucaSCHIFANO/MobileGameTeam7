@@ -24,7 +24,7 @@ public class CharacterManager : MonoBehaviour
     }
 
 
-    void Start()
+    void Start() // range les persos en 2 catégorie joueur ou ennemis)
     {
         var allCharacters = GameObject.FindGameObjectsWithTag("Characters");
         foreach (var chara in allCharacters)
@@ -40,13 +40,13 @@ public class CharacterManager : MonoBehaviour
         }
     }
 
-    public void enemiesMovement()
+    public void enemiesMovement() // fait bougé un ennemi
     {
         var enemy = enemyList[countMoveEnemy];
         enemy.GetComponent<Enemy>().mouvementCheck();
     }
 
-    public void resetAllCharacter()
+    public void resetAllCharacter() // met tous les persos en etat idle
     {
         var allCharacters = GameObject.FindGameObjectsWithTag("Characters");
         foreach (var chara in allCharacters)

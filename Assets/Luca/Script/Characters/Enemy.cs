@@ -11,7 +11,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector2(xPos, yPos);
+        Panel startPos =  Grid.Instance.gridArray[xPos, -yPos];
+        transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
     }
 
     void Update()
@@ -26,7 +27,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void mouvementCheck()
+    public void mouvementCheck() // check le chemin  pour atteindre le joueur
     {
         var allPlayerPos = checkAllPlayerPos();
 
@@ -82,7 +83,7 @@ public class Enemy : MonoBehaviour
 
 
 
-    private List<Vector2> checkAllPlayerPos()
+    private List<Vector2> checkAllPlayerPos() // verifie la position de tous les joueurs
     {
         var allCharacters = GameObject.FindGameObjectsWithTag("Characters");
 
@@ -102,12 +103,12 @@ public class Enemy : MonoBehaviour
 
 
 
-    public IEnumerator movement(List<Panel> panelsList)
+    public IEnumerator movement(List<Panel> panelsList) // se deplace au plus proche de sa cible
     {
         Grid.Instance.resetClicked();
         foreach (var panel in panelsList)
         {
-            transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 1f);
+            transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
             yield return new WaitForSeconds(0.2f);
         }
         yield return new WaitForSeconds(0.3f);

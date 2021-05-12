@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClicklManager : MonoBehaviour
 {
-    void Update()
+    void Update() // check les differentes possibilité de click
     {
         if (Input.touchCount > 0)
         {
@@ -20,6 +20,7 @@ public class ClicklManager : MonoBehaviour
 
                     if (touchedCollier.gameObject.tag == "Panel")
                     {
+                        Debug.Log("panel touched");
                         var touchedPanel = touchedCollier.gameObject.GetComponent<Panel>();
                         
                         if (player.state == PlayerMovement.States.SELECTED && touchedPanel.canBeClick)
@@ -35,11 +36,12 @@ public class ClicklManager : MonoBehaviour
 
 
 
-                    }else if (touchedCollier.gameObject.tag == "Characters")
+                    }else if (touchedCollier.gameObject.tag == "ClickableChar")
                     {
-                        if (touchedCollier.gameObject.GetComponent<PlayerMovement>())
+
+                        if (touchedCollier.gameObject.GetComponentInParent<PlayerMovement>())
                         {
-                            if (player.state == PlayerMovement.States.IDLE)
+                            if (player.state == PlayerMovement.States.IDLE && player.mouvementPoint > 0)
                             {
                                 BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
                                 BlueRedGrid.Instance.blueRedPath(player.mouvementPoint);

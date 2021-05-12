@@ -37,7 +37,7 @@ public class PhaseManager : MonoBehaviour
         Debug.Log("Player Phase");
     }
 
-    void Update()
+    void Update() // demarre la phase du joueur ou des ennemis
     {
         if (phase == actualPhase.ENEMY && !oneTime)
         {
@@ -57,7 +57,7 @@ public class PhaseManager : MonoBehaviour
     }
 
 
-    public void checkAllPlayer()
+    public void checkAllPlayer() // check si des players n'ont pas joueur
     {
         int number = 0;
         foreach (var player in CharacterManager.Instance.playerList)
@@ -75,7 +75,7 @@ public class PhaseManager : MonoBehaviour
         }
     }
 
-    public void checkAllEnemies()
+    public void checkAllEnemies() // check si tous les ennemies ont joués
     {
         int number = 0;
         foreach (var enemy in CharacterManager.Instance.enemyList)
