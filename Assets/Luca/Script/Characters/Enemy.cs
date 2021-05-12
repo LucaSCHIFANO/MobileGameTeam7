@@ -9,12 +9,21 @@ public class Enemy : MonoBehaviour
     public PlayerMovement.States characterState;
 
     public Stats stats;
+    public AttackMonster attackMonster;
+
+    public enum Pattern
+    {
+        RUSH,
+        RUSHDISTANCE,
+        RUN,
+    }
 
     void Start()
     {
         Panel startPos =  Grid.Instance.gridArray[xPos, -yPos];
         transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
         stats = GetComponent<Stats>();
+        attackMonster = GetComponent<AttackMonster>();
 
         stats.actionPoint = stats.maxActionPoint;
     }
@@ -124,6 +133,9 @@ public class Enemy : MonoBehaviour
             notFirst++;
 
         }
+
+        attackMonster.testAttackRange(xPos, yPos);
+
         yield return new WaitForSeconds(0.3f);
         xPos = panelsList[panelsList.Count - 1].x;
         yPos = -panelsList[panelsList.Count - 1].y;

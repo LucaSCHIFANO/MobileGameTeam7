@@ -350,7 +350,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MP: X'
+  m_Text: 'AC : X'
 --- !u!222 &145212391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1021,8 +1021,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612550d1bbf4ad346b093cfe9154faa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 3
-  row_column: 1
+  range: 5
+  row_column: 0
   throughWall: 0
 --- !u!4 &931028302
 Transform:

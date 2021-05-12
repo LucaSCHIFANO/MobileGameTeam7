@@ -2,33 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestAttackRange : MonoBehaviour
+public class AttackMonster : MonoBehaviour
 {
-    public int range;
-    public bool row_column; // false = tout autour de toi
-    public bool throughWall;
-    
 
-    public void testAttackRange()
+    public AttackParam attackParam;
+
+    public void testAttackRange(int xpos, int ypos)
     {
+
         Grid.Instance.resetClicked();
 
         var player = CharacterManager.Instance.currentPlayer;
         BlueRedGrid.Instance.actuPanelCount(player.xPos, player.yPos);
 
-        if(row_column == false)
+        if (attackParam.row_column == false)
         {
-            AttackColor(range);
+            AttackColor(attackParam.range);
         }
         else
         {
-            AttackColor(range, player.xPos, player.yPos);
+            AttackColor(attackParam.range, xpos, ypos);
         }
 
     }
 
 
-    public void AttackColor(int maxPanelCount) 
+    public void AttackColor(int maxPanelCount)
     {
         foreach (var panel in Grid.Instance.gridArray)
         {
@@ -43,16 +42,8 @@ public class TestAttackRange : MonoBehaviour
 
     }
 
-    public void AttackColor(int maxPanelCount, int xPos, int yPos) 
+    public void AttackColor(int maxPanelCount, int xPos, int yPos)
     {
-        /*foreach (var panel in Grid.Instance.gridArray)
-        {
-            if (panel.actualPanelCount <= maxPanelCount && (panel.x == xPos || panel.y == -yPos))
-            {
-                panel.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            }
-        }*/
-
         // RIGHT --------------------------------------
         var startPanel = Grid.Instance.gridArray[xPos, -yPos];
         var actuPanel = Grid.Instance.gridArray[xPos, -yPos];
@@ -67,7 +58,7 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed)
                     {
                         if (actuPanel.canBeCrossed)
                         {
@@ -97,7 +88,7 @@ public class TestAttackRange : MonoBehaviour
 
         random = false;
 
-        while (random == false) 
+        while (random == false)
         {
             if (actuPanel.x - 1 > -1)
             {
@@ -105,7 +96,7 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed)
                     {
                         if (actuPanel.canBeCrossed)
                         {
@@ -135,7 +126,7 @@ public class TestAttackRange : MonoBehaviour
 
         random = false;
 
-        while (random == false) 
+        while (random == false)
         {
             if (actuPanel.y - 1 > -1)
             {
@@ -143,7 +134,7 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed)
                     {
                         if (actuPanel.canBeCrossed)
                         {
@@ -183,7 +174,7 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed)
                     {
                         if (actuPanel.canBeCrossed)
                         {
