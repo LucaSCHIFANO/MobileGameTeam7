@@ -65,7 +65,7 @@ public class UiActionManager : MonoBehaviour
 
     public void setMovePoint()
     {
-        moveLeft.text = "AC : " + CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+        moveLeft.text = "AP : " + CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 
     public void cancelButton()

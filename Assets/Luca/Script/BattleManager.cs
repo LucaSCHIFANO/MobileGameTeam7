@@ -6,6 +6,7 @@ public class BattleManager : MonoBehaviour
 {
 
     public AttackParam currentAttackParam;
+    public GameObject damageEffect;
 
     private static BattleManager _instance = null;
 
@@ -32,6 +33,7 @@ public class BattleManager : MonoBehaviour
         }
 
         def.HP -= damage;
+        Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
         CharacterManager.Instance.StartCoroutine("checkAlive");
 
         if(PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
