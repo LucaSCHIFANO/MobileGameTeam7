@@ -27,8 +27,9 @@ public class BlueRedGrid : MonoBehaviour
         {
             if (panel.actualMovementCost <= maxMovementPlayer && panel.prevousPanel != null)
             {
-                    panel.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
-                    panel.canBeClick = true;
+                var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y];
+                alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,1,0.5f);
+                panel.canBeClick = true;
             }
         }
 

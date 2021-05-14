@@ -9,4 +9,7 @@ public class AttackParam : ScriptableObject
     public int range;
     public bool row_column;
     public bool throughWall;
+
+    public int APNeeded;
+    public int damage;
 }

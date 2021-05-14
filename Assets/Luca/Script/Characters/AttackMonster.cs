@@ -6,14 +6,15 @@ public class AttackMonster : MonoBehaviour
 {
 
     public AttackParam attackParam;
+    public bool seePlayer = false;
 
     public void testAttackRange(int xpos, int ypos)
     {
+        seePlayer = false;
 
         Grid.Instance.resetClicked();
 
-        var player = CharacterManager.Instance.currentPlayer;
-        BlueRedGrid.Instance.actuPanelCount(player.xPos, player.yPos);
+        BlueRedGrid.Instance.actuPanelCount(xpos, ypos);
 
         if (attackParam.row_column == false)
         {
@@ -35,7 +36,11 @@ public class AttackMonster : MonoBehaviour
             {
                 if (panel.canBeCrossed)
                 {
-                    panel.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                    if(panel.isOccupied == true && panel.unitOn.name == "Player")
+                    {
+                        seePlayer = true;
+                        Debug.Log("I see : " + panel.unitOn);
+                    }
                 }
             }
         }
@@ -62,7 +67,11 @@ public class AttackMonster : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
-                            actuPanel.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                            if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
+                            {
+                                seePlayer = true;
+                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                            }
                         }
                     }
                     else
@@ -100,7 +109,11 @@ public class AttackMonster : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
-                            actuPanel.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                            if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
+                            {
+                                seePlayer = true;
+                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                            }
                         }
                     }
                     else
@@ -138,7 +151,11 @@ public class AttackMonster : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
-                            actuPanel.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                            if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
+                            {
+                                seePlayer = true;
+                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                            }
                         }
                     }
                     else
@@ -178,7 +195,11 @@ public class AttackMonster : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
-                            actuPanel.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                            if(actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
+                            {
+                                seePlayer = true;
+                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                            }
                         }
                     }
                     else

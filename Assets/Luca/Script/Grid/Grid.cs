@@ -8,9 +8,13 @@ public class Grid : MonoBehaviour
     public int width;
 
     public int cellSize;
+
     public Panel panel;
+    public Panel panelAlpha;
 
     public Panel[,] gridArray;
+
+    public Panel[,] gridArrayAlpha;
 
     public int levelID;
 
@@ -29,6 +33,7 @@ public class Grid : MonoBehaviour
     {
         _instance = this;
         awake2();
+        awake2Alpha();
     }
 
 
@@ -94,6 +99,75 @@ public class Grid : MonoBehaviour
                 }
 
                 newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
+                newPanel.transform.parent = GameObject.Find("TheGrid").transform;
+
+            }
+        }
+    }
+
+    void awake2Alpha() // crée la grid en transparent
+    {
+        gridArrayAlpha = new Panel[width, height];
+        var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
+
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                Panel newPanel = Instantiate(panelAlpha, new Vector3(i * cellSize * 0.866f, -j * cellSize, 0), transform.rotation);
+                //newPanel.gameObject.transform.rotation = Quaternion.Euler(60, 30, 0);
+
+
+                if (j == 0 && i != 0)
+                {
+                    Panel panelPrevious = gridArrayAlpha[i - 1, j];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x + 0.5f * cellSize, panelPrevious.transform.position.y - 0.25f * cellSize);
+                }
+                if (j > 0)
+                {
+                    Panel panelPrevious = gridArrayAlpha[i, j - 1];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x - 0.5f * cellSize, panelPrevious.transform.position.y - 0.25f * cellSize);
+                }
+
+                gridArrayAlpha[i, j] = newPanel;
+
+                newPanel.setValue(i, j, 0, 0);
+                newPanel.name = i + " , " + j + " alpha mode";
+
+                switch (myGridPanel[j, i])
+                {
+                    case GridPattern.panelType.GRASS:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 1;
+                        break;
+                    case GridPattern.panelType.PATH:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 1;
+                        break;
+                    case GridPattern.panelType.FOREST:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 3;
+                        break;
+                    case GridPattern.panelType.WATER:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 4;
+                        break;
+                    case GridPattern.panelType.WALL:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 255;
+                        newPanel.canBeCrossed = false;
+                        break;
+                    case GridPattern.panelType.BRIDGE:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 1;
+                        break;
+                    default:
+                        Debug.Log("ya un pb alpha");
+                        break;
+                }
+
+                newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
+                newPanel.transform.parent = GameObject.Find("TheGridAlpha").transform;
 
             }
         }
@@ -183,8 +257,9 @@ public class Grid : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 Panel panelToCheck = gridArray[i, j];
+                Panel alphaPanel = gridArrayAlpha[i, j];
                 panelToCheck.canBeClick = false;
-                panelToCheck.gameObject.GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
+                alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
                 panelToCheck.actualPanelCount = 0;
             }
         }

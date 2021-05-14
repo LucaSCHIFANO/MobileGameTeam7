@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class ClicklManager : MonoBehaviour
 {
+
+    private static ClicklManager _instance = null;
+
+    public static ClicklManager Instance
+    {
+        get => _instance;
+    }
+    private void Awake()
+    {
+        _instance = this;
+    }
+
+
+
     void Update() // check les differentes possibilité de click
     {
         if (Input.touchCount > 0)
@@ -27,12 +41,12 @@ public class ClicklManager : MonoBehaviour
                         {
                             player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y)));
                         }
-                        else if (!touchedPanel.canBeClick)
+                        /*else if (!touchedPanel.canBeClick)
                         {
                             Grid.Instance.resetClicked();
                             player.state = PlayerMovement.States.IDLE;
                             UiActionManager.Instance.showButton();
-                        }
+                        }*/
 
 
 
@@ -62,6 +76,35 @@ public class ClicklManager : MonoBehaviour
                 }
 
             }
+        }
+    }
+
+
+    public void cancelButton()
+    {
+        var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
+
+        if (player.state == PlayerMovement.States.SELECTED)
+        {
+            Grid.Instance.resetClicked();
+            player.state = PlayerMovement.States.IDLE;
+            UiActionManager.Instance.showButton();
+        }
+
+        else if (player.state == PlayerMovement.States.SELECTCARD)
+        {
+            Grid.Instance.resetClicked();
+            player.state = PlayerMovement.States.IDLE;
+            UiActionManager.Instance.hideAll();
+            UiActionManager.Instance.showButton();
+        }
+
+        else if (player.state == PlayerMovement.States.ACTION)
+        {
+            Grid.Instance.resetClicked();
+            player.state = PlayerMovement.States.SELECTCARD;
+            UiActionManager.Instance.showDeck();
+            UiActionManager.Instance.showButton();
         }
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
-  m_Name: Sword_1
+  m_Name: FuckingBlast
   m_EditorClassIdentifier: 
-  patternName: Sword
-  range: 1
-  row_column: 1
+  patternName: FuckingBlast
+  range: 5
+  row_column: 0
   throughWall: 0
-  APNeeded: 1
-  damage: 5
+  APNeeded: 3
+  damage: 7

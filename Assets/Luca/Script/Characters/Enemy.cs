@@ -120,25 +120,45 @@ public class Enemy : MonoBehaviour
     {
         Grid.Instance.resetClicked();
         var notFirst = 0;
-
-        foreach (var panel in panelsList)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
-            yield return new WaitForSeconds(0.2f);
-
-            if (notFirst != 0)
-            {
-                stats.actionPoint -= panel.movementCost;
-            }
-            notFirst++;
-
-        }
+        var noNeedToMove = false;
 
         attackMonster.testAttackRange(xPos, yPos);
+        if (attackMonster.seePlayer)
+        {
+            Debug.Log("ok");
+            noNeedToMove = true;
+        }
+
+        if (noNeedToMove == false)
+        {
+            foreach (var panel in panelsList)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
+                yield return new WaitForSeconds(0.2f);
+
+                if (notFirst != 0)
+                {
+                    stats.actionPoint -= panel.movementCost;
+                }
+                notFirst++;
+
+                attackMonster.testAttackRange(panel.x, -panel.y);
+                if (attackMonster.seePlayer)
+                {
+                    Debug.Log("ok");
+                    break;
+                }
+
+            }
+        }
 
         yield return new WaitForSeconds(0.3f);
-        xPos = panelsList[panelsList.Count - 1].x;
-        yPos = -panelsList[panelsList.Count - 1].y;
+        if (noNeedToMove == false)
+        {
+            xPos = panelsList[panelsList.Count - 1].x;
+            yPos = -panelsList[panelsList.Count - 1].y;
+        }
+
         characterState = PlayerMovement.States.WAIT;
         PhaseManager.Instance.checkAllEnemies();
     }

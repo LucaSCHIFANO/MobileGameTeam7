@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         IDLE,
         SELECTED,
-        MOVEMENT,
+        SELECTCARD,
         ACTION,
         WAIT,
     }
@@ -51,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator movement(List<Panel> panelsList) // envoie une list de panel a traverser 
     {
+        UiActionManager.Instance.hideAll();
+
         Grid.Instance.resetClicked();
 
         //mouvementPoint++;
@@ -83,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
     {
         state = States.WAIT;
         stats.actionPoint = stats.maxActionPoint;
-        UiActionManager.Instance.hideButton();
+        UiActionManager.Instance.hideAll();
         PhaseManager.Instance.checkAllPlayer();
         UiActionManager.Instance.setMovePoint();
     }
