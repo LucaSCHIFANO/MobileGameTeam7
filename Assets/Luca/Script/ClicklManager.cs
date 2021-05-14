@@ -41,16 +41,18 @@ public class ClicklManager : MonoBehaviour
                         {
                             player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y)));
                         }
-                        /*else if (!touchedPanel.canBeClick)
+                        if (player.state == PlayerMovement.States.ACTION && touchedPanel.canBeClick)
                         {
-                            Grid.Instance.resetClicked();
-                            player.state = PlayerMovement.States.IDLE;
-                            UiActionManager.Instance.showButton();
-                        }*/
+                            if(touchedPanel.unitOn != null)
+                            {
+                                BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats);
+                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                UiActionManager.Instance.setMovePoint();
+                            }
+                        }
 
-
-
-                    }else if (touchedCollier.gameObject.tag == "ClickableChar")
+                    }
+                    else if (touchedCollier.gameObject.tag == "ClickableChar")
                     {
 
                         if (touchedCollier.gameObject.GetComponentInParent<PlayerMovement>())
@@ -70,6 +72,20 @@ public class ClicklManager : MonoBehaviour
                                 Grid.Instance.resetClicked();
                                 player.state = PlayerMovement.States.IDLE;
                                 UiActionManager.Instance.showButton();
+                            }
+
+                        }
+                        
+                        else if (touchedCollier.gameObject.GetComponentInParent<Enemy>())
+                        {
+                            var charact = touchedCollier.gameObject.GetComponentInParent<Enemy>();
+                            var actualPanel = Grid.Instance.gridArray[charact.xPos, -charact.yPos];
+
+                            if (player.state == PlayerMovement.States.ACTION && actualPanel.canBeClick)
+                            {
+                                BattleManager.Instance.attackUnit(player.stats, charact.stats);
+                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                UiActionManager.Instance.setMovePoint();
                             }
                         }
                     }
@@ -104,7 +120,6 @@ public class ClicklManager : MonoBehaviour
             Grid.Instance.resetClicked();
             player.state = PlayerMovement.States.SELECTCARD;
             UiActionManager.Instance.showDeck();
-            UiActionManager.Instance.showButton();
         }
     }
 }

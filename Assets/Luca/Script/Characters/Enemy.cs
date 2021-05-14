@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
         attackMonster = GetComponent<AttackMonster>();
 
         stats.actionPoint = stats.maxActionPoint;
+        stats.HP = stats.maxHP;
     }
 
     void Update()
@@ -125,7 +126,6 @@ public class Enemy : MonoBehaviour
         attackMonster.testAttackRange(xPos, yPos);
         if (attackMonster.seePlayer)
         {
-            Debug.Log("ok");
             noNeedToMove = true;
         }
 
@@ -145,11 +145,14 @@ public class Enemy : MonoBehaviour
                 attackMonster.testAttackRange(panel.x, -panel.y);
                 if (attackMonster.seePlayer)
                 {
-                    Debug.Log("ok");
+                    BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
                     break;
                 }
 
             }
+        }else
+        {
+            BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
         }
 
         yield return new WaitForSeconds(0.3f);

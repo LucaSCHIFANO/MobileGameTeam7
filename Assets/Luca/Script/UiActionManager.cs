@@ -76,11 +76,21 @@ public class UiActionManager : MonoBehaviour
 
     public void showAttackRange(AttackParam param)
     {
-        var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
-        player.state = PlayerMovement.States.ACTION;
+        var playerStats = CharacterManager.Instance.currentPlayer.GetComponent<Stats>();
+        BattleManager.Instance.currentAttackParam = param;
 
-        hideButton();
-        sra.testAttackRange(param);
+        if (playerStats.actionPoint >= param.APNeeded)
+        {
+            var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
+            player.state = PlayerMovement.States.ACTION;
+
+            hideButton();
+            sra.testAttackRange(param);
+        }
+        else
+        {
+            Debug.Log("You need more AP");
+        }
     }
 
 }

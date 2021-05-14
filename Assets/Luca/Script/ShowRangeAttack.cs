@@ -27,10 +27,11 @@ public class ShowRangeAttack : MonoBehaviour
     {
         foreach (var panel in Grid.Instance.gridArray)
         {
-            if (panel.actualPanelCount <= attackParam.range)
+            if (panel.actualPanelCount != 0 && panel.actualPanelCount <= attackParam.range)
             {
                 if (panel.canBeCrossed)
                 {
+                    panel.canBeClick = true;
                     var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y];
                     alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
                 }
@@ -59,6 +60,7 @@ public class ShowRangeAttack : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
+                            actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
                         }
@@ -98,6 +100,7 @@ public class ShowRangeAttack : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
+                            actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
                         }
@@ -137,6 +140,7 @@ public class ShowRangeAttack : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
+                            actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
                         }
@@ -178,6 +182,7 @@ public class ShowRangeAttack : MonoBehaviour
                     {
                         if (actuPanel.canBeCrossed)
                         {
+                            actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
                         }

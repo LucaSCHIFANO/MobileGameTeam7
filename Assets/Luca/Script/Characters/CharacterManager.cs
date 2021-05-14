@@ -61,4 +61,39 @@ public class CharacterManager : MonoBehaviour
             }
         }
     }
+
+
+    public IEnumerator checkAlive()
+    {
+        yield return new WaitForSeconds(0.5f);
+        var allCharacters = GameObject.FindGameObjectsWithTag("Characters");
+        foreach (var chara in allCharacters)
+        {
+            if (chara.GetComponent<PlayerMovement>() != null)
+            {
+                if (chara.GetComponent<Stats>().HP <= 0)
+                {
+                    playerList.Remove(chara);
+                    Destroy(chara);
+                }
+            }
+            else if (chara.GetComponent<Enemy>() != null)
+            {
+                if (chara.GetComponent<Stats>().HP <= 0)
+                {
+                    enemyList.Remove(chara);
+                    Destroy(chara);
+                }
+            }
+        }
+
+        if(playerList.Count == 0)
+        {
+            Debug.Log("You died");
+        }
+        else if(enemyList.Count == 0)
+        {
+            Debug.Log("You win");
+        }
+    }
 }

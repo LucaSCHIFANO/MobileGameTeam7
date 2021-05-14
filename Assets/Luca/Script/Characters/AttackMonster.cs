@@ -39,7 +39,7 @@ public class AttackMonster : MonoBehaviour
                     if(panel.isOccupied == true && panel.unitOn.name == "Player")
                     {
                         seePlayer = true;
-                        Debug.Log("I see : " + panel.unitOn);
+                        BattleManager.Instance.currentAttackParam = attackParam;
                     }
                 }
             }
@@ -70,7 +70,7 @@ public class AttackMonster : MonoBehaviour
                             if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                             {
                                 seePlayer = true;
-                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                                BattleManager.Instance.currentAttackParam = attackParam;
                             }
                         }
                     }
@@ -112,7 +112,7 @@ public class AttackMonster : MonoBehaviour
                             if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                             {
                                 seePlayer = true;
-                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                                BattleManager.Instance.currentAttackParam = attackParam;
                             }
                         }
                     }
@@ -154,7 +154,7 @@ public class AttackMonster : MonoBehaviour
                             if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                             {
                                 seePlayer = true;
-                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                                BattleManager.Instance.currentAttackParam = attackParam;
                             }
                         }
                     }
@@ -198,7 +198,7 @@ public class AttackMonster : MonoBehaviour
                             if(actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                             {
                                 seePlayer = true;
-                                Debug.Log("I'm : " + name + ". I see : " + actuPanel.unitOn);
+                                BattleManager.Instance.currentAttackParam = attackParam;
                             }
                         }
                     }
