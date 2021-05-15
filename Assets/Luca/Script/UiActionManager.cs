@@ -11,6 +11,14 @@ public class UiActionManager : MonoBehaviour
 
     public Text moveLeft;
 
+    public GameObject unitPortrait;
+    public Text unitName;
+    public Text unitHP;
+    public Text unitSTR;
+    public Text unitDEF;
+    public Text unitAP;
+    public Slider HPBar;
+
     public ShowRangeAttack sra;
 
 
@@ -31,6 +39,7 @@ public class UiActionManager : MonoBehaviour
     {
         buttonHand.SetActive(true);
         buttonCancel.SetActive(false);
+        unitPortrait.SetActive(false);
     }
 
     public void hideButton()
@@ -45,6 +54,7 @@ public class UiActionManager : MonoBehaviour
         buttonHand.SetActive(false);
         buttonCancel.SetActive(true);
         deck.SetActive(true);
+        unitPortrait.SetActive(false);
 
         var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
@@ -56,6 +66,7 @@ public class UiActionManager : MonoBehaviour
         buttonHand.SetActive(false);
         buttonCancel.SetActive(false);
         deck.SetActive(false);
+        unitPortrait.SetActive(false);
     }
 
     public void endTurn()
@@ -66,6 +77,18 @@ public class UiActionManager : MonoBehaviour
     public void setMovePoint()
     {
         moveLeft.text = "AP : " + CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+    }
+
+    public void ShowPortrait(Stats stats)
+    {
+        unitPortrait.SetActive(true);
+        unitName.text = stats.characName;
+        unitHP.text = stats.HP + " / " + stats.maxHP;
+        HPBar.maxValue = stats.maxHP;
+        HPBar.value = stats.HP;
+        unitSTR.text = "STR : " + stats.strenght.ToString();
+        unitDEF.text = "DEF : " + stats.defense.ToString();
+        unitAP.text = "AP : " + stats.actionPoint.ToString();
     }
 
     public void cancelButton()

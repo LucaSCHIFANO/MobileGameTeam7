@@ -5,6 +5,8 @@ using UnityEngine;
 public class ClicklManager : MonoBehaviour
 {
 
+    public Panel currentPanel = null;
+
     private static ClicklManager _instance = null;
 
     public static ClicklManager Instance
@@ -36,18 +38,38 @@ public class ClicklManager : MonoBehaviour
                     {
                         Debug.Log("panel touched");
                         var touchedPanel = touchedCollier.gameObject.GetComponent<Panel>();
-                        
-                        if (player.state == PlayerMovement.States.SELECTED && touchedPanel.canBeClick)
+
+                        if (touchedPanel.canBeClick)
                         {
-                            player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y)));
-                        }
-                        if (player.state == PlayerMovement.States.ACTION && touchedPanel.canBeClick)
-                        {
-                            if(touchedPanel.unitOn != null)
+                            if (currentPanel != touchedPanel)
                             {
-                                BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats);
-                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                UiActionManager.Instance.setMovePoint();
+                                if (currentPanel != null)
+                                {
+                                    var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].GetComponent<SpriteRenderer>();
+                                    panelColor.color = new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 0.5f);
+                                }
+                                currentPanel = touchedPanel;
+                            }
+
+                            else
+                            {
+
+                                if (player.state == PlayerMovement.States.SELECTED)
+                                {
+                                    player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y)));
+                                    currentPanel = null;
+                                }
+
+                                else if (player.state == PlayerMovement.States.ACTION)
+                                {
+                                    if (touchedPanel.unitOn != null)
+                                    {
+                                        BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats);
+                                        CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                        UiActionManager.Instance.setMovePoint();
+                                        currentPanel = null;
+                                    }
+                                }
                             }
                         }
 
@@ -67,6 +89,8 @@ public class ClicklManager : MonoBehaviour
 
                                 player.state = PlayerMovement.States.SELECTED;
 
+                                UiActionManager.Instance.ShowPortrait(player.stats);
+
                             }else if (player.state == PlayerMovement.States.SELECTED)
                             {
                                 Grid.Instance.resetClicked();
@@ -83,9 +107,23 @@ public class ClicklManager : MonoBehaviour
 
                             if (player.state == PlayerMovement.States.ACTION && actualPanel.canBeClick)
                             {
-                                BattleManager.Instance.attackUnit(player.stats, charact.stats);
-                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                UiActionManager.Instance.setMovePoint();
+                                Debug.Log("test");
+
+                                if(actualPanel == currentPanel)
+                                {
+                                    BattleManager.Instance.attackUnit(player.stats, charact.stats);
+                                    CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                    UiActionManager.Instance.setMovePoint();
+                                    currentPanel = null;
+                                }
+                                else
+                                {
+                                    currentPanel = actualPanel;
+                                }
+                            }
+                            if (player.state == PlayerMovement.States.IDLE)
+                            {
+                                UiActionManager.Instance.ShowPortrait(charact.stats);
                             }
                         }
                     }
@@ -93,6 +131,18 @@ public class ClicklManager : MonoBehaviour
 
             }
         }
+
+
+        if(currentPanel != null)
+        {
+            shinningPannel();
+        }
+    }
+
+    public void shinningPannel()
+    {
+        var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].GetComponent<SpriteRenderer>();
+        panelColor.color = Color.Lerp(new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 0.5f), new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 1f), Mathf.PingPong(Time.time * 5, 0.5f));
     }
 
 
