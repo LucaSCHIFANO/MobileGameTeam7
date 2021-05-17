@@ -31,7 +31,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
+        if (state == States.WAIT)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(0.3679245f, 0.3679245f, 0.3679245f);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = Color.cyan;
+        }
     }
 
     public void testMove(Vector2 pos)
@@ -44,14 +51,18 @@ public class PlayerMovement : MonoBehaviour
     public IEnumerator movement(List<Panel> panelsList)
     {
         Grid.Instance.resetClicked();
-        state = States.IDLE;
 
         foreach (var panel in panelsList)
         {
             transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 10f);
             yield return new WaitForSeconds(0.2f);
         }
+
+        state = States.WAIT;
         xPos = panelsList[panelsList.Count - 1].x;
         yPos = -panelsList[panelsList.Count - 1].y;
+
+        PhaseManager.Instance.checkAllPlayer();
+
     }
 }

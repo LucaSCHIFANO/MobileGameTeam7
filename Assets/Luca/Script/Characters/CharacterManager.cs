@@ -33,6 +33,32 @@ public class CharacterManager : MonoBehaviour
             {
                 playerList.Add(chara);
             }
+            else
+            {
+                enemyList.Add(chara);
+            }
+        }
+    }
+
+    public void enemiesMovement()
+    {
+        var enemy = enemyList[countMoveEnemy];
+        enemy.GetComponent<Enemy>().mouvementCheck();
+    }
+
+    public void resetAllCharacter()
+    {
+        var allCharacters = GameObject.FindGameObjectsWithTag("Characters");
+        foreach (var chara in allCharacters)
+        {
+            if (chara.GetComponent<PlayerMovement>() != null)
+            {
+                chara.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
+            }
+            else if (chara.GetComponent<Enemy>() != null)
+            {
+                chara.GetComponent<Enemy>().characterState = PlayerMovement.States.IDLE;
+            }
         }
     }
 }
