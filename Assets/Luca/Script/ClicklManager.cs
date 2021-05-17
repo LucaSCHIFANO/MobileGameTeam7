@@ -125,7 +125,7 @@ public class ClicklManager : MonoBehaviour
                         }
                     }
                 }
-                UiActionManager.Instance.HidePortrait();
+                //UiActionManager.Instance.HidePortrait();
 
             }
         }

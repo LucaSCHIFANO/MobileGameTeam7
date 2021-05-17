@@ -23,9 +23,12 @@ public class BattleManager : MonoBehaviour
     {
         Grid.Instance.resetClicked();
 
-        var totalAtt = att.strenght + currentAttackParam.damage;
+        float multiplicator = ElementInteract.Instance.interaction(currentAttackParam.element, def.element);
 
+        int totalAtt = (int)((att.strenght + currentAttackParam.damage) * multiplicator);
+        
         var damage = 0;
+
 
         if (totalAtt - def.defense > 0)
         {
@@ -58,6 +61,7 @@ public class BattleManager : MonoBehaviour
         if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
         {
             att.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
+            att.GetComponent<Stats>().element = currentAttackParam.element;
             UiActionManager.Instance.showButton();
             UiActionManager.Instance.HidePortrait();
         }
@@ -92,12 +96,12 @@ public class BattleManager : MonoBehaviour
                 {
                     if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
                     {
-                        Debug.Log("tu peux aller en haut ");
+                        Debug.Log("tu peux aller en bas ");
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
                     }
                     else
                     {
-                        Debug.Log("tu ne peux pas aller en haut");
+                        Debug.Log("tu ne peux pas aller en bas");
                     }
                 }
             }
@@ -114,6 +118,10 @@ public class BattleManager : MonoBehaviour
                             Debug.Log("tu peux aller en bas ");
                             defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
                         }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller en bas");
+                        }
                     }
                 }
                 else
@@ -121,6 +129,11 @@ public class BattleManager : MonoBehaviour
                     if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
                     {
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                        Debug.Log("tu peux aller en haut ");
+                    }
+                    else
+                    {
+                        Debug.Log("tu ne peux pas aller en haut");
                     }
                 }
             }
@@ -151,12 +164,12 @@ public class BattleManager : MonoBehaviour
                 {
                     if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                     {
-                        Debug.Log("tu peux aller a droite ");
+                        Debug.Log("tu peux aller a gauche ");
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
                     }
                     else
                     {
-                        Debug.Log("tu ne peux pas aller a droite");
+                        Debug.Log("tu ne peux pas aller a gauche");
                     }
                 }
             }
@@ -181,12 +194,12 @@ public class BattleManager : MonoBehaviour
                 {
                     if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                     {
-                        Debug.Log("tu peux aller a gauche ");
+                        Debug.Log("tu peux aller a droite ");
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
                     }
                     else
                     {
-                        Debug.Log("tu ne peux pas aller a gauche");
+                        Debug.Log("tu ne peux pas aller a droite");
                     }
                 }
             }
@@ -197,11 +210,16 @@ public class BattleManager : MonoBehaviour
 
     public void PushPool(Enemy attPos, PlayerMovement defPos)
     {
+
         var grid = Grid.Instance.gridArray;
         var gridScript = Grid.Instance;
 
+        Debug.Log(attPos.xPos + " " + attPos.yPos + " ; " + defPos.xPos + " " + defPos.yPos);
+
         if (attPos.xPos == defPos.xPos) // check mm colonne
         {
+
+            Debug.Log("enemy push player");
             if (attPos.yPos < defPos.yPos) // si en bas
             {
                 if (currentAttackParam.push) // push or pull
@@ -223,15 +241,17 @@ public class BattleManager : MonoBehaviour
                 {
                     if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
                     {
-                        Debug.Log("tu peux aller en haut ");
+                        Debug.Log("tu peux aller en bas ");
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
                     }
                     else
                     {
-                        Debug.Log("tu ne peux pas aller en haut");
+                        Debug.Log("tu ne peux pas aller en bas");
                     }
                 }
             }
+
+
             else // si en haut
             {
                 if (currentAttackParam.push) // push or pull
@@ -243,6 +263,10 @@ public class BattleManager : MonoBehaviour
                             Debug.Log("tu peux aller en bas ");
                             defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
                         }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller en bas");
+                        }
                     }
                 }
                 else
@@ -250,6 +274,11 @@ public class BattleManager : MonoBehaviour
                     if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
                     {
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                        Debug.Log("tu peux aller en haut ");
+                    }
+                    else
+                    {
+                        Debug.Log("tu ne peux pas aller en haut");
                     }
                 }
             }
@@ -257,7 +286,7 @@ public class BattleManager : MonoBehaviour
         }
 
 
-        else if (attPos.yPos == defPos.yPos)
+        else if (attPos.yPos == defPos.yPos) // mmm ligne
         {
             if (attPos.xPos < defPos.xPos) // si a gauche
             {
@@ -280,12 +309,12 @@ public class BattleManager : MonoBehaviour
                 {
                     if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                     {
-                        Debug.Log("tu peux aller a droite ");
+                        Debug.Log("tu peux aller a gauche ");
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
                     }
                     else
                     {
-                        Debug.Log("tu ne peux pas aller a droite");
+                        Debug.Log("tu ne peux pas aller a gauche");
                     }
                 }
             }
@@ -310,12 +339,12 @@ public class BattleManager : MonoBehaviour
                 {
                     if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                     {
-                        Debug.Log("tu peux aller a gauche ");
+                        Debug.Log("tu peux aller a droite ");
                         defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
                     }
                     else
                     {
-                        Debug.Log("tu ne peux pas aller a gauche");
+                        Debug.Log("tu ne peux pas aller a droite");
                     }
                 }
             }

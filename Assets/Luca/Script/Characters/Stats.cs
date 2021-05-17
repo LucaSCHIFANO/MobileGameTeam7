@@ -13,15 +13,14 @@ public class Stats : MonoBehaviour
     public int speed;
     public int maxActionPoint;
     public int actionPoint;
-    //public int maxInHqandCard;
+    public ELEMENT element;
 
-    void Start()
+    public enum ELEMENT
     {
-        
+        NORMAL,
+        RED,
+        BLUE,
+        GREEN,
     }
 
-    void Update()
-    {
-        
-    }
 }

@@ -63,6 +63,11 @@ public class ShowRangeAttack : MonoBehaviour
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+
+                            if(actuPanel.unitOn != null && !attackParam.throughWall)
+                            { 
+                                random = true;
+                            }
                         }
                     }
                     else
@@ -103,6 +108,11 @@ public class ShowRangeAttack : MonoBehaviour
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+
+                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                            {
+                                random = true;
+                            }
                         }
                     }
                     else
@@ -143,6 +153,11 @@ public class ShowRangeAttack : MonoBehaviour
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+
+                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                            {
+                                random = true;
+                            }
                         }
                     }
                     else
@@ -185,6 +200,11 @@ public class ShowRangeAttack : MonoBehaviour
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+
+                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                            {
+                                random = true;
+                            }
                         }
                     }
                     else

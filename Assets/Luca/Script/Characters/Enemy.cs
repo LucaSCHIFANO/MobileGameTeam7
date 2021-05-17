@@ -149,6 +149,8 @@ public class Enemy : MonoBehaviour
                     stats.actionPoint -= panel.movementCost;
                 }
                 notFirst++;
+                xPos = panel.x;
+                yPos = -panel.y;
 
                 attackMonster.testAttackRange(panel.x, -panel.y);
                 if (attackMonster.seePlayer)

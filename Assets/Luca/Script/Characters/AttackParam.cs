@@ -16,4 +16,6 @@ public class AttackParam : ScriptableObject
 
     public bool push;
     public bool pull;
+
+    public Stats.ELEMENT element;
 }
