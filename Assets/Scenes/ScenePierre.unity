@@ -272,9 +272,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: BouttonTuto
+      - m_Target: {fileID: 1269135496}
+        m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
+        m_MethodName: OptionsActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1101,6 +1101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 447727178}
+  optionMenuUI: {fileID: 1451072036}
 --- !u!114 &1269135497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1561,7 +1562,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1269135496}
         m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
-        m_MethodName: LoadMenu
+        m_MethodName: OptionsEnactive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -6,6 +6,15 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
+    public GameObject creditsMenuUI;
+    public GameObject MenuUI;
+
+    private void Start()
+    {
+        MenuUI.SetActive(true);
+        creditsMenuUI.SetActive(false);
+    }
+
     public void BouttonJouer()
     {
         SceneManager.LoadScene("ScenePierre");
@@ -18,7 +27,7 @@ public class Menu : MonoBehaviour
 
     public void BouttonCredits()
     {
-        SceneManager.LoadScene("Credits");
+        
     }
 
     public void BouttonOptions()
@@ -29,5 +38,17 @@ public class Menu : MonoBehaviour
     public void BouttonQuitter()
     {
         Application.Quit();
+    }
+
+    public void CreditsActive()
+    {
+        MenuUI.SetActive(false);
+        creditsMenuUI.SetActive(true);
+    }
+
+    public void CreditsDisable()
+    {
+        MenuUI.SetActive(true);
+        creditsMenuUI.SetActive(false);
     }
 }
