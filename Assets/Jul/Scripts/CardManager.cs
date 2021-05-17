@@ -12,6 +12,8 @@ public class CardManager : MonoBehaviour
     public List<Card> cardList = new List<Card>();
 
     private bool inChosenTime = false;
+    private bool inRound = false;
+    private bool isMid = false;
 
     private List<Card> deck = new List<Card>();
 
@@ -26,11 +28,12 @@ public class CardManager : MonoBehaviour
     public int nbOfCards;
     public float gap;
     public Transform handPanel;
+    private Vector3 previousTransform;
 
     void Start()
     {
         nbOfCards = 0;
-        gap = 1;
+        gap = 1f;
     }
 
     void Update()
@@ -40,16 +43,43 @@ public class CardManager : MonoBehaviour
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-            if (hit.collider != null)
-            {
-                if (inChosenTime)
-                {
-                    if (hit.collider.gameObject.CompareTag("Card"))
-                    {
-                        Debug.Log(hit.collider.gameObject.name);
+            RaycastHit2D[] hit = Physics2D.RaycastAll(mousePos2D, Vector2.zero);
 
-                        deck.Add(hit.collider.gameObject.GetComponent<CardDisplay>().card);
+            if (hit.Length == 0)
+            {
+                return;
+            }
+
+            GameObject firstCard = hit[0].collider?.gameObject;
+            GameObject hitCard = null;
+            if (hit.Length == 1)
+            {
+                hitCard = firstCard;
+            }
+            else
+            {
+                foreach (RaycastHit2D h in hit)
+                {
+                    if (firstCard != h.collider.gameObject)
+                    {
+                        if (h.collider.gameObject.GetComponent<RectTransform>().localPosition.z > firstCard.GetComponent<RectTransform>().localPosition.z)
+                        {
+                            hitCard = h.collider.gameObject;
+                        }
+                    }
+                }
+            }
+
+            if (hitCard != null)
+            {
+                Debug.Log(hitCard.GetComponent<CardDisplay>().card.cardName); 
+                if (hitCard.CompareTag("Card"))
+                {
+                    if (inChosenTime)
+                    {
+                        Debug.Log(hitCard.GetComponent<CardDisplay>().card.cardName) ;
+
+                        deck.Add(hitCard.GetComponent<CardDisplay>().card);
 
                         for (int i = 0; i < actualRoll.Length; i++)
                         {
@@ -67,13 +97,28 @@ public class CardManager : MonoBehaviour
                             inChosenTime = false;
                         }
                     }
-                }
-               
+                    
+                    if (inRound)
+                    {    
+                        if (!isMid)
+                        {
+                            previousTransform = hitCard.transform.position;
+                            hitCard.transform.position = Vector3.zero;
+                            isMid = true;
+                        }
+                        else
+                        {
+                            hitCard.transform.position = previousTransform;
+                            isMid = false;
+                        }
+                    }
+                        
+                }  
             }
             
         }
 
-        
+
     }
 
     public void FitCards()
@@ -105,12 +150,15 @@ public class CardManager : MonoBehaviour
         for (int i = 0; i < howManyInHand; i++)
         {
             var handCard = Instantiate(cardPrefab, startLocation.position, Quaternion.identity, handPanel);
+            Vector3 handCardPosition = handCard.GetComponent<RectTransform>().localPosition;
+            handCard.GetComponent<RectTransform>().localPosition = new Vector3(handCardPosition.x, handCardPosition.y, i);
             int rand = Random.Range(0, deck.Count);
             handCard.GetComponent<CardDisplay>().card = deck[rand];
             hand.Add(handCard);
             deck.RemoveAt(rand);
         }
         FitCards();
+        inRound = true;
     }
 
     public void RollCard()
