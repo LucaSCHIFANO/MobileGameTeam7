@@ -8,26 +8,17 @@ public class MenuPause : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject optionMenuUI;
 
     private void Start()
     {
         GameIsPaused = false;
-            Resume();
-
+        Resume();
+        optionMenuUI.SetActive(false);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Boutton();
-        }
-    }
-
 
     public void Boutton()
     {
-        Debug.Log("Test");
         if (GameIsPaused)
             Resume();
         else
@@ -58,6 +49,18 @@ public class MenuPause : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OptionsActive()
+    {
+        pauseMenuUI.SetActive(false);
+        optionMenuUI.SetActive(true);
+    }
+
+    public void OptionsEnactive()
+    {
+        optionMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(true);
     }
 }
 
