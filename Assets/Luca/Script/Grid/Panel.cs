@@ -20,6 +20,9 @@ public class Panel : MonoBehaviour
 
     public int movementCost;
     public int actualMovementCost;
+
+    public int actualPanelCount;
+
     public bool canBeClick;
 
     public bool isOccupied;
@@ -48,9 +51,25 @@ public class Panel : MonoBehaviour
     }
 
 
-    private void Update()
+    public void OnTriggerEnter2D(Collider2D collision) // check si un perso entre sur la case
     {
-        
+        if (collision.gameObject.tag == "Characters")
+        {
+            if (unitOn == null)
+            {
+                isOccupied = true;
+                unitOn = collision.gameObject;
+            }
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision) // check si un perso sort de la case
+    {
+        if (collision.gameObject == unitOn)
+        {
+            isOccupied = false;
+            unitOn = null;
+        }
     }
 
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Characters
   - Panel
+  - ClickableChar
   layers:
   - Default
   - TransparentFX

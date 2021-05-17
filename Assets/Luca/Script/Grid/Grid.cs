@@ -8,9 +8,13 @@ public class Grid : MonoBehaviour
     public int width;
 
     public int cellSize;
+
     public Panel panel;
+    public Panel panelAlpha;
 
     public Panel[,] gridArray;
+
+    public Panel[,] gridArrayAlpha;
 
     public int levelID;
 
@@ -28,10 +32,12 @@ public class Grid : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        awake2();
+        awake2Alpha();
     }
 
 
-    void Start()
+    void awake2() // crée la grid avec tt les cases en fct du pattern
     {
         gridArray = new Panel[width, height];
         var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
@@ -40,7 +46,21 @@ public class Grid : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                Panel newPanel = Instantiate(panel, new Vector3(i * cellSize, -j * cellSize, 0), transform.rotation);
+                Panel newPanel = Instantiate(panel, new Vector3(i * cellSize * 0.866f, -j * cellSize, 0), transform.rotation);
+                //newPanel.gameObject.transform.rotation = Quaternion.Euler(60, 30, 0);
+
+
+                if (j == 0 && i != 0)
+                {
+                    Panel panelPrevious = gridArray[i - 1, j];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x + 0.5f * cellSize, panelPrevious.transform.position.y - 0.25f * cellSize);
+                }
+                if (j > 0)
+                {
+                    Panel panelPrevious = gridArray[i, j-1];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x - 0.5f * cellSize, panelPrevious.transform.position.y -0.25f * cellSize);
+                }
+
                 gridArray[i, j] = newPanel;
 
                 newPanel.setValue(i, j, 0, 0);
@@ -79,12 +99,81 @@ public class Grid : MonoBehaviour
                 }
 
                 newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
+                newPanel.transform.parent = GameObject.Find("TheGrid").transform;
 
             }
         }
     }
 
-    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)
+    void awake2Alpha() // crée la grid en transparent
+    {
+        gridArrayAlpha = new Panel[width, height];
+        var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
+
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                Panel newPanel = Instantiate(panelAlpha, new Vector3(i * cellSize * 0.866f, -j * cellSize, 0), transform.rotation);
+                //newPanel.gameObject.transform.rotation = Quaternion.Euler(60, 30, 0);
+
+
+                if (j == 0 && i != 0)
+                {
+                    Panel panelPrevious = gridArrayAlpha[i - 1, j];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x + 0.5f * cellSize, panelPrevious.transform.position.y - 0.25f * cellSize);
+                }
+                if (j > 0)
+                {
+                    Panel panelPrevious = gridArrayAlpha[i, j - 1];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x - 0.5f * cellSize, panelPrevious.transform.position.y - 0.25f * cellSize);
+                }
+
+                gridArrayAlpha[i, j] = newPanel;
+
+                newPanel.setValue(i, j, 0, 0);
+                newPanel.name = i + " , " + j + " alpha mode";
+
+                switch (myGridPanel[j, i])
+                {
+                    case GridPattern.panelType.GRASS:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 1;
+                        break;
+                    case GridPattern.panelType.PATH:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 1;
+                        break;
+                    case GridPattern.panelType.FOREST:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 3;
+                        break;
+                    case GridPattern.panelType.WATER:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 4;
+                        break;
+                    case GridPattern.panelType.WALL:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 255;
+                        newPanel.canBeCrossed = false;
+                        break;
+                    case GridPattern.panelType.BRIDGE:
+                        newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
+                        newPanel.movementCost = 1;
+                        break;
+                    default:
+                        Debug.Log("ya un pb alpha");
+                        break;
+                }
+
+                newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
+                newPanel.transform.parent = GameObject.Find("TheGridAlpha").transform;
+
+            }
+        }
+    }
+
+    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)  // trouve le chemins le plus court pour allez sur une case
     {
         openList.Clear();
         closeList.Clear();
@@ -97,6 +186,7 @@ public class Grid : MonoBehaviour
         openList.Add(startPanel);
 
         startPanel.GCost = 0;
+        startPanel.actualPanelCount = 0;
 
         while (openList.Count > 0)
         {
@@ -117,7 +207,7 @@ public class Grid : MonoBehaviour
                     continue;
                 }
 
-                if (!voisin.canBeCrossed)
+                if (!voisin.canBeCrossed || voisin.unitOn != null)
                 {
                     closeList.Add(voisin);
                     continue;
@@ -144,7 +234,7 @@ public class Grid : MonoBehaviour
         return null;
     }
 
-    public void ActuAllPanelCost(int xEnd, int yEnd)
+    public void ActuAllPanelCost(int xEnd, int yEnd) // verifie le coup en deplacement d'une case
     {
         for (int i = 0; i < width; i++)
         {
@@ -167,13 +257,17 @@ public class Grid : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 Panel panelToCheck = gridArray[i, j];
+                Panel alphaPanel = gridArrayAlpha[i, j];
                 panelToCheck.canBeClick = false;
-                panelToCheck.gameObject.GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
+                alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
+                panelToCheck.actualPanelCount = 0;
             }
         }
+
+        ClicklManager.Instance.currentPanel = null;
     }
 
-    private int CalculateHCost(Panel start, Panel end)
+    private int CalculateHCost(Panel start, Panel end) // verifie la distance d'un chemin
     {
         int xDist = Mathf.Abs(start.x - end.x);
         int yDist = Mathf.Abs(start.y - end.y);
@@ -197,7 +291,7 @@ public class Grid : MonoBehaviour
     }
 
 
-    public List<Panel> CheckVoisin(Panel currentPanel)
+    public List<Panel> CheckVoisin(Panel currentPanel) // verifie si les voisins d'une case et les renvoie
     {
         List<Panel> voisinList = new List<Panel>();
 

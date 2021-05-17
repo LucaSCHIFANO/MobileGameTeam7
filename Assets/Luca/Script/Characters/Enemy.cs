@@ -6,12 +6,29 @@ public class Enemy : MonoBehaviour
 {
     public int xPos;
     public int yPos;
-    public int maxMovement;
     public PlayerMovement.States characterState;
+
+    public Stats stats;
+    public AttackMonster attackMonster;
+
+    private GameObject panelToGo;
+
+    public enum Pattern
+    {
+        RUSH,
+        RUSHDISTANCE,
+        RUN,
+    }
 
     void Start()
     {
-        transform.position = new Vector2(xPos, yPos);
+        Panel startPos =  Grid.Instance.gridArray[xPos, -yPos];
+        transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
+        stats = GetComponent<Stats>();
+        attackMonster = GetComponent<AttackMonster>();
+
+        stats.actionPoint = stats.maxActionPoint;
+        stats.HP = stats.maxHP;
     }
 
     void Update()
@@ -24,9 +41,14 @@ public class Enemy : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.magenta;
         }
+
+        if (panelToGo != null)
+        {
+            trueMovement();
+        }
     }
 
-    public void mouvementCheck()
+    public void mouvementCheck() // check le chemin  pour atteindre le joueur
     {
         var allPlayerPos = checkAllPlayerPos();
 
@@ -55,30 +77,34 @@ public class Enemy : MonoBehaviour
 
         }
 
-        foreach (var voisin in allVoisinsPlayers)
-        {
-            List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y);
-            if (listPanel[listPanel.Count - 1].actualMovementCost < minPath)
+            foreach (var voisin in allVoisinsPlayers)
             {
-                finalPath = listPanel;
-                minPath = listPanel[listPanel.Count - 1].actualMovementCost;
-            }
-        }
+                List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y);
 
-        foreach (var panel in finalPath)
-        {
-            if (panel.actualMovementCost <= maxMovement)
+                if (listPanel != null)
+                {
+                    if (listPanel[listPanel.Count - 1].actualMovementCost < minPath)
+                    {
+                        finalPath = listPanel;
+                        minPath = listPanel[listPanel.Count - 1].actualMovementCost;
+                    }
+                }
+            }
+
+            foreach (var panel in finalPath)
             {
-                finalPath2.Add(panel);
+                if (panel.actualMovementCost <= stats.actionPoint)
+                {
+                    finalPath2.Add(panel);
+                }
             }
-        }
 
-        StartCoroutine(movement(finalPath2));
+            StartCoroutine(movement(finalPath2));
     }
 
 
 
-    private List<Vector2> checkAllPlayerPos()
+    private List<Vector2> checkAllPlayerPos() // verifie la position de tous les joueurs
     {
         var allCharacters = GameObject.FindGameObjectsWithTag("Characters");
 
@@ -98,18 +124,69 @@ public class Enemy : MonoBehaviour
 
 
 
-    public IEnumerator movement(List<Panel> panelsList)
+    public IEnumerator movement(List<Panel> panelsList) // se deplace au plus proche de sa cible
     {
         Grid.Instance.resetClicked();
-        foreach (var panel in panelsList)
+        var notFirst = 0;
+        var noNeedToMove = false;
+
+        attackMonster.testAttackRange(xPos, yPos);
+        if (attackMonster.seePlayer)
         {
-            transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 1f);
-            yield return new WaitForSeconds(0.2f);
+            noNeedToMove = true;
         }
+
+        if (noNeedToMove == false)
+        {
+            foreach (var panel in panelsList)
+            {
+                //transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
+                panelToGo = panel.gameObject;
+                yield return new WaitForSeconds(0.2f);
+
+                if (notFirst != 0)
+                {
+                    stats.actionPoint -= panel.movementCost;
+                }
+                notFirst++;
+
+                attackMonster.testAttackRange(panel.x, -panel.y);
+                if (attackMonster.seePlayer)
+                {
+                    BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
+                    break;
+                }
+
+            }
+        }else
+        {
+            BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
+        }
+
+        panelToGo = null;
         yield return new WaitForSeconds(0.3f);
-        xPos = panelsList[panelsList.Count - 1].x;
-        yPos = -panelsList[panelsList.Count - 1].y;
+        if (noNeedToMove == false)
+        {
+            xPos = panelsList[panelsList.Count - 1].x;
+            yPos = -panelsList[panelsList.Count - 1].y;
+        }
+
         characterState = PlayerMovement.States.WAIT;
         PhaseManager.Instance.checkAllEnemies();
+    }
+
+    public void trueMovement()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, panelToGo.gameObject.transform.position, 0.095f);
+    }
+
+
+
+    public IEnumerator isPushOrPull(Panel panelToMove)
+    {
+        panelToGo = panelToMove.gameObject;
+        yield return new WaitForSeconds(0.2f);
+        xPos = panelToMove.x;
+        yPos = -panelToMove.y;
     }
 }

@@ -6,7 +6,7 @@ public class GridPattern : MonoBehaviour
 {
     private panelType[,] pattern;
 
-    public enum panelType
+    public enum panelType // differents type de case
     {
         GRASS,
         PATH,
@@ -16,7 +16,7 @@ public class GridPattern : MonoBehaviour
         BRIDGE,
     }
 
-    public panelType[,] createPattern(int id)
+    public panelType[,] createPattern(int id) // les patterns
     {
 
         switch (id)

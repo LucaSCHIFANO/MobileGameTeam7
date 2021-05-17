@@ -37,7 +37,7 @@ public class PhaseManager : MonoBehaviour
         Debug.Log("Player Phase");
     }
 
-    void Update()
+    void Update() // demarre la phase du joueur ou des ennemis
     {
         if (phase == actualPhase.ENEMY && !oneTime)
         {
@@ -51,12 +51,13 @@ public class PhaseManager : MonoBehaviour
             oneTime = true;
             CharacterManager.Instance.resetAllCharacter();
             uiColor.GetComponent<Image>().color = Color.blue;
+            UiActionManager.Instance.showButton();
 
         }
     }
 
 
-    public void checkAllPlayer()
+    public void checkAllPlayer() // check si des players n'ont pas joueur
     {
         int number = 0;
         foreach (var player in CharacterManager.Instance.playerList)
@@ -74,7 +75,7 @@ public class PhaseManager : MonoBehaviour
         }
     }
 
-    public void checkAllEnemies()
+    public void checkAllEnemies() // check si tous les ennemies ont joués
     {
         int number = 0;
         foreach (var enemy in CharacterManager.Instance.enemyList)
@@ -91,6 +92,12 @@ public class PhaseManager : MonoBehaviour
             oneTime = false;
             Debug.Log("Player Phase");
             CharacterManager.Instance.countMoveEnemy = 0;
+
+            foreach (var enemy in CharacterManager.Instance.enemyList)
+            {
+                var ene = enemy.GetComponent<Enemy>();
+                ene.stats.actionPoint = ene.stats.maxActionPoint;
+            }
         }
         else
         {
