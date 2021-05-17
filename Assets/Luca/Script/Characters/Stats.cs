@@ -15,11 +15,6 @@ public class Stats : MonoBehaviour
     public int actionPoint;
     //public int maxInHqandCard;
 
-
-   /* ligne direction avec variable 
-
-    attaque qui passe a travers mur et dautres non*/
-
     void Start()
     {
         

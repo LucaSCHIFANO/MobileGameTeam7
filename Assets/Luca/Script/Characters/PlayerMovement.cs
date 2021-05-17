@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public int xPos;
     public int yPos;
 
-    public int lastX;
-    public int lastY;
+    /*public int lastX;
+    public int lastY;*/
 
     public Stats stats;
+
+    private GameObject panelToGo;
 
     public States state = 0;
     public enum States  
@@ -29,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
         stats = GetComponent<Stats>();
 
-        lastX = xPos;
-        lastY = yPos;
+        /*lastX = xPos;
+        lastY = yPos;*/
         stats.actionPoint = stats.maxActionPoint;
         stats.HP = stats.maxHP;
 
@@ -47,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.cyan;
         }
+
+        if(panelToGo != null)
+        {
+            trueMovement();
+        }
     }
 
 
@@ -61,7 +68,8 @@ public class PlayerMovement : MonoBehaviour
         
         foreach (var panel in panelsList)
         {
-            transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
+            //transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
+            panelToGo = panel.gameObject;
             yield return new WaitForSeconds(0.2f);
             if(notFirst != 0)
             {
@@ -70,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
             notFirst++;
         }
 
+        panelToGo = null;
         xPos = panelsList[panelsList.Count - 1].x;
         yPos = -panelsList[panelsList.Count - 1].y;
 
@@ -81,6 +90,22 @@ public class PlayerMovement : MonoBehaviour
         PhaseManager.Instance.checkAllPlayer();
 
     }
+
+    public void trueMovement()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, panelToGo.gameObject.transform.position, 0.095f);
+    }
+
+    public IEnumerator isPushOrPull(Panel panelToMove)
+    {
+        panelToGo = panelToMove.gameObject;
+        yield return new WaitForSeconds(0.2f);
+        xPos = panelToMove.x;
+        yPos = -panelToMove.y;
+    }
+
+
+
 
     public void endTurn() // fin du tour
     {

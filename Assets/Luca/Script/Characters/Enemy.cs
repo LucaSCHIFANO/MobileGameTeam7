@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public Stats stats;
     public AttackMonster attackMonster;
 
+    private GameObject panelToGo;
+
     public enum Pattern
     {
         RUSH,
@@ -38,6 +40,11 @@ public class Enemy : MonoBehaviour
         else
         {
             GetComponent<SpriteRenderer>().color = Color.magenta;
+        }
+
+        if (panelToGo != null)
+        {
+            trueMovement();
         }
     }
 
@@ -133,7 +140,8 @@ public class Enemy : MonoBehaviour
         {
             foreach (var panel in panelsList)
             {
-                transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
+                //transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
+                panelToGo = panel.gameObject;
                 yield return new WaitForSeconds(0.2f);
 
                 if (notFirst != 0)
@@ -155,6 +163,7 @@ public class Enemy : MonoBehaviour
             BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
         }
 
+        panelToGo = null;
         yield return new WaitForSeconds(0.3f);
         if (noNeedToMove == false)
         {
@@ -164,5 +173,21 @@ public class Enemy : MonoBehaviour
 
         characterState = PlayerMovement.States.WAIT;
         PhaseManager.Instance.checkAllEnemies();
+    }
+
+    public void trueMovement()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, panelToGo.gameObject.transform.position, 0.095f);
+    }
+
+
+
+    public IEnumerator isPushOrPull(Panel panelToMove)
+    {
+        Debug.Log("dans la fct");
+        panelToGo = panelToMove.gameObject;
+        yield return new WaitForSeconds(0.2f);
+        xPos = panelToMove.x;
+        yPos = -panelToMove.y;
     }
 }

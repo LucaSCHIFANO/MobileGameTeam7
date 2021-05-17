@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClicklManager : MonoBehaviour
 {
-
     public Panel currentPanel = null;
 
     private static ClicklManager _instance = null;

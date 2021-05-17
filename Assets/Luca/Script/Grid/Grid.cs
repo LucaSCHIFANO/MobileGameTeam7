@@ -263,6 +263,8 @@ public class Grid : MonoBehaviour
                 panelToCheck.actualPanelCount = 0;
             }
         }
+
+        ClicklManager.Instance.currentPanel = null;
     }
 
     private int CalculateHCost(Panel start, Panel end) // verifie la distance d'un chemin
