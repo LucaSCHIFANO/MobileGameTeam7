@@ -91,6 +91,11 @@ public class UiActionManager : MonoBehaviour
         unitAP.text = "AP : " + stats.actionPoint.ToString();
     }
 
+    public void HidePortrait()
+    {
+        unitPortrait.SetActive(false);
+    }
+
     public void cancelButton()
     {
         ClicklManager.Instance.cancelButton();

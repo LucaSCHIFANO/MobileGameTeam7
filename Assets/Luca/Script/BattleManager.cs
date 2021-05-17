@@ -35,7 +35,7 @@ public class BattleManager : MonoBehaviour
         def.HP -= damage;
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
-        if(currentAttackParam.pull || currentAttackParam.push)
+        if (currentAttackParam.pull || currentAttackParam.push)
         {
             if (att.gameObject.GetComponent<PlayerMovement>())
             {
@@ -55,10 +55,11 @@ public class BattleManager : MonoBehaviour
 
         CharacterManager.Instance.StartCoroutine("checkAlive");
 
-        if(PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
-        {   
+        if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
+        {
             att.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
             UiActionManager.Instance.showButton();
+            UiActionManager.Instance.HidePortrait();
         }
 
     }
@@ -67,16 +68,32 @@ public class BattleManager : MonoBehaviour
     {
         var grid = Grid.Instance.gridArray;
         var gridScript = Grid.Instance;
-        if(attPos.xPos == defPos.xPos) // check mm colonne
+
+        if (attPos.xPos == defPos.xPos) // check mm colonne
         {
-            if(attPos.yPos < defPos.yPos) // si en bas
+            if (attPos.yPos < defPos.yPos) // si en bas
             {
-                if(defPos.yPos != 0) // ennemi pas en au bord en haut
+                if (currentAttackParam.push) // push or pull
                 {
-                    if(grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
+                    if (defPos.yPos != 0) // ennemi pas en au bord en haut
+                    {
+                        if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller en haut ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                        }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller en haut");
+                        }
+                    }
+                }
+                else
+                {
+                    if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
                     {
                         Debug.Log("tu peux aller en haut ");
-                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
                     }
                     else
                     {
@@ -84,39 +101,224 @@ public class BattleManager : MonoBehaviour
                     }
                 }
             }
-            else
+
+
+            else // si en haut
             {
-                if (defPos.yPos != gridScript.height - 1) // ennemi pas en au bord en bas
+                if (currentAttackParam.push) // push or pull
                 {
-                    if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
+                    if (defPos.yPos != gridScript.height - 1) // ennemi pas en au bord en bas
                     {
-                        Debug.Log("tu peux aller en bas ");
-                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
+                        if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller en bas ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
+                        }
                     }
-                    else
+                }
+                else
+                {
+                    if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
                     {
-                        Debug.Log("tu ne peux pas aller en bas");
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
                     }
                 }
             }
 
         }
-        else if(attPos.yPos == defPos.yPos)
+
+
+        else if (attPos.yPos == defPos.yPos)
         {
-            if (attPos.xPos < defPos.xPos)
+            if (attPos.xPos < defPos.xPos) // si a gauche
             {
-                Debug.Log("va a droite");
+                if (currentAttackParam.push) // push or pull
+                {
+                    if (defPos.xPos != gridScript.width - 1) // ennemi pas en au bord a droite
+                    {
+                        if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller a droite ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
+                        }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller a droite");
+                        }
+                    }
+                }
+                else
+                {
+                    if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                    {
+                        Debug.Log("tu peux aller a droite ");
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
+                    }
+                    else
+                    {
+                        Debug.Log("tu ne peux pas aller a droite");
+                    }
+                }
             }
             else
             {
-                Debug.Log("va a gauche");
+                if (currentAttackParam.push) // push or pull
+                {
+                    if (defPos.xPos != 0) // ennemi pas en au bord a gauche
+                    {
+                        if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller a gauche ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
+                        }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller a gauche");
+                        }
+                    }
+                }
+                else
+                {
+                    if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                    {
+                        Debug.Log("tu peux aller a gauche ");
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
+                    }
+                    else
+                    {
+                        Debug.Log("tu ne peux pas aller a gauche");
+                    }
+                }
             }
         }
     }
 
 
+
     public void PushPool(Enemy attPos, PlayerMovement defPos)
     {
+        var grid = Grid.Instance.gridArray;
+        var gridScript = Grid.Instance;
 
+        if (attPos.xPos == defPos.xPos) // check mm colonne
+        {
+            if (attPos.yPos < defPos.yPos) // si en bas
+            {
+                if (currentAttackParam.push) // push or pull
+                {
+                    if (defPos.yPos != 0) // ennemi pas en au bord en haut
+                    {
+                        if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller en haut ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                        }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller en haut");
+                        }
+                    }
+                }
+                else
+                {
+                    if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
+                    {
+                        Debug.Log("tu peux aller en haut ");
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
+                    }
+                    else
+                    {
+                        Debug.Log("tu ne peux pas aller en haut");
+                    }
+                }
+            }
+            else // si en haut
+            {
+                if (currentAttackParam.push) // push or pull
+                {
+                    if (defPos.yPos != gridScript.height - 1) // ennemi pas en au bord en bas
+                    {
+                        if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller en bas ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
+                        }
+                    }
+                }
+                else
+                {
+                    if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
+                    {
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                    }
+                }
+            }
+
+        }
+
+
+        else if (attPos.yPos == defPos.yPos)
+        {
+            if (attPos.xPos < defPos.xPos) // si a gauche
+            {
+                if (currentAttackParam.push) // push or pull
+                {
+                    if (defPos.xPos != gridScript.width - 1) // ennemi pas en au bord a droite
+                    {
+                        if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller a droite ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
+                        }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller a droite");
+                        }
+                    }
+                }
+                else
+                {
+                    if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                    {
+                        Debug.Log("tu peux aller a droite ");
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
+                    }
+                    else
+                    {
+                        Debug.Log("tu ne peux pas aller a droite");
+                    }
+                }
+            }
+            else
+            {
+                if (currentAttackParam.push) // push or pull
+                {
+                    if (defPos.xPos != 0) // ennemi pas en au bord a gauche
+                    {
+                        if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                        {
+                            Debug.Log("tu peux aller a gauche ");
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
+                        }
+                        else
+                        {
+                            Debug.Log("tu ne peux pas aller a gauche");
+                        }
+                    }
+                }
+                else
+                {
+                    if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
+                    {
+                        Debug.Log("tu peux aller a gauche ");
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
+                    }
+                    else
+                    {
+                        Debug.Log("tu ne peux pas aller a gauche");
+                    }
+                }
+            }
+        }
     }
 }

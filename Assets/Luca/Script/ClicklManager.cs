@@ -106,13 +106,11 @@ public class ClicklManager : MonoBehaviour
 
                             if (player.state == PlayerMovement.States.ACTION && actualPanel.canBeClick)
                             {
-                                Debug.Log("test");
 
                                 if(actualPanel == currentPanel)
                                 {
                                     BattleManager.Instance.attackUnit(player.stats, charact.stats);
                                     CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                    UiActionManager.Instance.setMovePoint();
                                     currentPanel = null;
                                 }
                                 else
@@ -127,6 +125,7 @@ public class ClicklManager : MonoBehaviour
                         }
                     }
                 }
+                UiActionManager.Instance.HidePortrait();
 
             }
         }

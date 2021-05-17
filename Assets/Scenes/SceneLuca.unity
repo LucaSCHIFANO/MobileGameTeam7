@@ -1801,7 +1801,7 @@ PrefabInstance:
     - target: {fileID: 433343789525343234, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
       propertyPath: attackParam
       value: 
-      objectReference: {fileID: 11400000, guid: 01aea159d4e355b4f8952ddaef30cd3c, type: 2}
+      objectReference: {fileID: 11400000, guid: 6a42ce3fff45d0c44b96f891ebec86aa, type: 2}
     - target: {fileID: 2125179589904228848, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
       propertyPath: maxHP
       value: 5

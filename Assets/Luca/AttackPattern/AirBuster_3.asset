@@ -18,5 +18,5 @@ MonoBehaviour:
   throughWall: 0
   APNeeded: 2
   damage: 2
-  push: 1
-  pool: 0
+  push: 0
+  pull: 1

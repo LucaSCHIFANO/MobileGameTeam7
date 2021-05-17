@@ -184,7 +184,6 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator isPushOrPull(Panel panelToMove)
     {
-        Debug.Log("dans la fct");
         panelToGo = panelToMove.gameObject;
         yield return new WaitForSeconds(0.2f);
         xPos = panelToMove.x;
