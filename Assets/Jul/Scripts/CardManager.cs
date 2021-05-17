@@ -18,21 +18,20 @@ public class CardManager : MonoBehaviour
     private List<Card> deck = new List<Card>();
 
     private List<GameObject> hand = new List<GameObject>();
+    private GameObject middleCard = null;
+
     private List<Card> discard = new List<Card>();
 
     private GameObject[] actualRoll = new GameObject[3];
     private int index = 0;
-
     //Hearthstone Style
     public Transform startLocation;
-    public int nbOfCards;
     public float gap;
     public Transform handPanel;
     private Vector3 previousTransform;
 
     void Start()
     {
-        nbOfCards = 0;
         gap = 1f;
     }
 
@@ -72,13 +71,10 @@ public class CardManager : MonoBehaviour
 
             if (hitCard != null)
             {
-                Debug.Log(hitCard.GetComponent<CardDisplay>().card.cardName); 
                 if (hitCard.CompareTag("Card"))
                 {
                     if (inChosenTime)
                     {
-                        Debug.Log(hitCard.GetComponent<CardDisplay>().card.cardName) ;
-
                         deck.Add(hitCard.GetComponent<CardDisplay>().card);
 
                         for (int i = 0; i < actualRoll.Length; i++)
@@ -104,21 +100,19 @@ public class CardManager : MonoBehaviour
                         {
                             previousTransform = hitCard.transform.position;
                             hitCard.transform.position = Vector3.zero;
+                            middleCard = hitCard;
                             isMid = true;
                         }
                         else
                         {
                             hitCard.transform.position = previousTransform;
+                            middleCard = null;
                             isMid = false;
                         }
-                    }
-                        
+                    }    
                 }  
             }
-            
         }
-
-
     }
 
     public void FitCards()
@@ -176,7 +170,7 @@ public class CardManager : MonoBehaviour
         actualRoll[2] = newCard;
     }
 
-    public void CardInDeck()
+    public void UseCard()
     {
         
     }
