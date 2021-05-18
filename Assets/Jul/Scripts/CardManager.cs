@@ -15,7 +15,10 @@ public class CardManager : MonoBehaviour
     private bool inRound = false;
     private bool isMid = false;
 
-    public float totalTwist;
+    private bool handToMid = false;
+    private bool midToHand = false;
+
+    private float totalTwist;
 
     private List<Card> deck = new List<Card>();
 
@@ -104,20 +107,48 @@ public class CardManager : MonoBehaviour
                         {
                             previousTransform = hitCard.transform.position;
                             previousRotation = hitCard.transform.rotation;
-                            hitCard.transform.position = Vector3.zero;
+                            //hitCard.transform.position = Vector3.zero;
                             hitCard.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                             middleCard = hitCard;
+                            handToMid = true;
                             isMid = true;
                         }
                         else if (isMid && middleCard == hitCard)
                         {
-                            hitCard.transform.position = previousTransform;
+                            //hitCard.transform.position = previousTransform;
                             hitCard.transform.rotation = previousRotation;
-                            middleCard = null;
+                            midToHand = true;
                             isMid = false;
                         }
                     }    
                 }  
+            }
+        }
+
+        if (handToMid)
+        {
+            if (middleCard == null)
+            {
+                return;
+            }
+            middleCard.transform.position = Vector3.Lerp(middleCard.transform.position, Vector3.zero, .05f);
+            if (middleCard.transform.position == Vector3.zero)
+            {
+                handToMid = false;
+            }
+        }
+
+        if (midToHand)
+        {
+            if (middleCard == null)
+            {
+                return;
+            }
+            middleCard.transform.position = Vector3.Lerp(middleCard.transform.position, previousTransform, 1f);
+            if (middleCard.transform.position == previousTransform)
+            {
+                midToHand = false;
+                middleCard = null;
             }
         }
 
@@ -237,6 +268,18 @@ public class CardManager : MonoBehaviour
             Destroy(middleCard);
             isMid = false;
             FitCards();
+        }
+    }
+
+    public void EndRound()
+    {
+        if (middleCard == null)
+        {
+            for (int i = 0; i < hand.Count; i++)
+            {
+                discard.Add(hand[i].GetComponent<CardDisplay>().card);
+                hand.RemoveAt(i);
+            }
         }
     }
 }
