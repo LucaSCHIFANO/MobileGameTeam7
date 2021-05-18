@@ -23,8 +23,11 @@ public class Grid : MonoBehaviour
     public List<Panel> closeList = new List<Panel>();
 
     public List<Vector2> locationEnemy = new List<Vector2>();
+    public List<Vector2> playerSpawn = new List<Vector2>();
+    
+    public GameObject playerPrefab;
     public GameObject enemy;
-
+    
     private CreateAnEnemy cae;
 
 
@@ -41,6 +44,7 @@ public class Grid : MonoBehaviour
         awake2();
         awake2Alpha();
         createEnemies();
+        setPos();
     }
 
 
@@ -196,6 +200,34 @@ public class Grid : MonoBehaviour
         }
         
         locationEnemy.Clear();
+    }
+
+    public void createPlayer(Panel panel)
+    {
+        Debug.Log("creatkon du joueur");
+        var en = Instantiate(playerPrefab, Vector2.zero, transform.rotation);
+        var enE = en.GetComponent<PlayerMovement>();
+        CharacterManager.Instance.currentPlayer = enE;
+
+        enE.xPos = panel.x;
+        enE.yPos = -panel.y;
+        enE.Start();
+
+        playerSpawn.Clear();
+
+        PhaseManager.Instance.phase = PhaseManager.actualPhase.PLAYER;
+
+        resetClicked();
+    }
+
+    void setPos()
+    {
+        foreach (var VECTOR in playerSpawn)
+        {
+            var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y];
+            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 0.5f);
+            Grid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
+        }
     }
 
     public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)  // trouve le chemins le plus court pour allez sur une case

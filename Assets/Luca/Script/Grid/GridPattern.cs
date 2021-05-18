@@ -43,6 +43,9 @@ public class GridPattern : MonoBehaviour
                 gridref.locationEnemy.Add(new Vector2(4, -2));
                 gridref.locationEnemy.Add(new Vector2(5, -2));
 
+                gridref.playerSpawn.Add(new Vector2(1, -7));
+                gridref.playerSpawn.Add(new Vector2(8, -7));
+
                 Debug.Log("normal");
                 break;
 

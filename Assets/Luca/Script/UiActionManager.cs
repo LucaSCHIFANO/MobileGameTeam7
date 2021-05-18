@@ -91,7 +91,7 @@ public class UiActionManager : MonoBehaviour
 
         if (stats.gameObject.GetComponent<Enemy>())
         {
-            unitSTR.text = "STR : " + stats.strenght.ToString() + " + " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.damage;
+            unitSTR.text = "STR : " + stats.strenght.ToString() + " + " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.damage + "   "  + "Range : " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.range;
             imageBG.color = new Color(1, 0.4481132f, 0.4481132f, 0.5f);
         }
         else

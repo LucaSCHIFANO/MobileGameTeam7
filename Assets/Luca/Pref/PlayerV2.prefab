@@ -210,8 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xPos: 0
   yPos: 0
-  lastX: 0
-  lastY: 0
   stats: {fileID: 0}
   state: 0
 --- !u!114 &5201598307983141479
@@ -226,12 +224,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed089b1e59eef945a9df55d9c646194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characName: Hero
   level: 0
+  maxHP: 15
+  HP: 0
   strenght: 0
   defense: 0
   speed: 0
   maxActionPoint: 5
   actionPoint: 0
+  element: 0
+  effect: 0
+  numberOfTurn: 0
 --- !u!61 &373878670402899203
 BoxCollider2D:
   m_ObjectHideFlags: 0
