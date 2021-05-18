@@ -13,10 +13,13 @@ public class Enemy : MonoBehaviour
 
     private GameObject panelToGo;
 
+    public Pattern pattern;
+
     public enum Pattern
     {
         RUSH,
-        RUSHDISTANCE,
+        RUSHDISTANCECIRCLE,
+        RUSHDISTANCEROWCOLUMN,
         RUN,
     }
 
@@ -52,6 +55,7 @@ public class Enemy : MonoBehaviour
     {
         var allPlayerPos = checkAllPlayerPos();
 
+
         List<Panel> allVoisinsPlayers = new List<Panel>();
 
         List<Panel> finalPath = null;
@@ -76,6 +80,12 @@ public class Enemy : MonoBehaviour
             }
 
         }
+
+        /*if (pattern == Pattern.RUSHDISTANCECIRCLE || pattern == Pattern.RUSHDISTANCEROWCOLUMN)  // -----------------------
+        {
+            var allOtherPos = checkOtherPosPossible();
+            allVoisinsPlayers.AddRange(allOtherPos);
+        }*/
 
             foreach (var voisin in allVoisinsPlayers)
             {
@@ -119,6 +129,41 @@ public class Enemy : MonoBehaviour
         }
 
         return playersPosList;
+    }
+
+    private List<Panel> checkOtherPosPossible()
+    {
+        Grid.Instance.resetClicked();
+
+        var player = CharacterManager.Instance.currentPlayer;
+
+        BlueRedGrid.Instance.actuPanelCount(player.xPos, player.yPos);
+
+        List<Panel> otherPosList = new List<Panel>();
+        if (pattern == Pattern.RUSHDISTANCECIRCLE)
+        {
+            foreach (var panel in Grid.Instance.gridArray)
+            {
+                if (panel.actualPanelCount <= attackMonster.attackParam.range)
+                {
+                    otherPosList.Add(panel);
+                    Debug.Log(panel);
+                }
+            }
+        }
+        else
+        {
+            foreach (var panel in Grid.Instance.gridArray)
+            {
+                if (panel.actualPanelCount <= attackMonster.attackParam.range && (panel.x == player.xPos || panel.y == player.yPos) )
+                {
+                    otherPosList.Add(panel);
+                    Debug.Log(panel);
+                }
+            }
+        }
+
+        return otherPosList;
     }
 
 

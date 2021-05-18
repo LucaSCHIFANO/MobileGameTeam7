@@ -24,7 +24,7 @@ public class CharacterManager : MonoBehaviour
     }
 
 
-    void Start() // range les persos en 2 catégorie joueur ou ennemis)
+    public void functionStart() // range les persos en 2 catégorie joueur ou ennemis)
     {
         var allCharacters = GameObject.FindGameObjectsWithTag("Characters");
         foreach (var chara in allCharacters)

@@ -43,12 +43,12 @@ public class Grid : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        /*awake2();
+        awake2();
         awake2Alpha();
         createEnemies();
         setPos();
 
-        mC.functionStart();*/
+        mC.functionStart();
     }
 
     public void functionStart()
@@ -230,6 +230,7 @@ public class Grid : MonoBehaviour
         playerSpawn.Clear();
 
         PhaseManager.Instance.phase = PhaseManager.actualPhase.PLAYER;
+        en.name = "Player";
 
         resetClicked();
     }

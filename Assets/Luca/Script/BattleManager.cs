@@ -21,7 +21,7 @@ public class BattleManager : MonoBehaviour
 
     public void attackUnit(Stats att, Stats def, bool aoe)
     {
-
+        Debug.Log("test attck");
         float multiplicator = ElementInteract.Instance.interaction(currentAttackParam.element, def.element);
 
         int totalAtt = (int)((att.strenght + currentAttackParam.damage) * multiplicator);

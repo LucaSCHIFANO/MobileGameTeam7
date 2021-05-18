@@ -10,6 +10,7 @@ public class AttackMonster : MonoBehaviour
 
     public void testAttackRange(int xpos, int ypos)
     {
+
         seePlayer = false;
 
         Grid.Instance.resetClicked();

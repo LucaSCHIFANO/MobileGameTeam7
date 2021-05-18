@@ -33,7 +33,6 @@ public class Stats : MonoBehaviour
         REGEN, 
     }
 
-
     public void effectActu()
     {
         if(numberOfTurn > 0 && effect != EFFECT.NORMAL)
