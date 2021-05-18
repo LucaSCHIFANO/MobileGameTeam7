@@ -1357,6 +1357,7 @@ MonoBehaviour:
   playerSpawn: []
   playerPrefab: {fileID: 4391244545055928749, guid: a26c6c7cf9ae8984fb22478eaf0339f2, type: 3}
   enemy: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
+  mC: {fileID: 260224054}
 --- !u!4 &670730764
 Transform:
   m_ObjectHideFlags: 0

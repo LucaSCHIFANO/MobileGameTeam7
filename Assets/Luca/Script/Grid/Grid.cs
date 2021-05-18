@@ -30,6 +30,8 @@ public class Grid : MonoBehaviour
     
     private CreateAnEnemy cae;
 
+    public MoveCam mC;
+
 
 
     private static Grid _instance = null;
@@ -41,10 +43,22 @@ public class Grid : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        /*awake2();
+        awake2Alpha();
+        createEnemies();
+        setPos();
+
+        mC.functionStart();*/
+    }
+
+    public void functionStart()
+    {
         awake2();
         awake2Alpha();
         createEnemies();
         setPos();
+
+        mC.functionStart();
     }
 
 

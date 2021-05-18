@@ -11,7 +11,7 @@ public class MoveCam : MonoBehaviour
     public Transform bottomLimit;
     public Transform upLimit;
 
-    public void Start()
+    public void functionStart()
     {
         Vector3 transWoutZ = new Vector3(transform.position.x, transform.position.y, 0);
         var grid = Grid.Instance.gridArray;
