@@ -21,18 +21,20 @@ public class BlueRedGrid : MonoBehaviour
     }
 
 
-    public void blueRedPath(int maxMovementPlayer)
+    public void blueRedPath(int maxMovementPlayer) // affiche les cases en bleu si le joueur peut s'y rendre
     {
         foreach (var panel in Grid.Instance.gridArray)
         {
-            if (panel.actualMovementCost <= maxMovementPlayer)
+            if (panel.actualMovementCost <= maxMovementPlayer && panel.prevousPanel != null)
             {
-                panel.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+                var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y];
+                alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,1,0.5f);
                 panel.canBeClick = true;
             }
         }
 
     }
+
 
 
     public void movementsPossible(int xStart, int yStart)
@@ -51,6 +53,7 @@ public class BlueRedGrid : MonoBehaviour
             foreach (var panel in openList.ToArray())
             {
                 openList.Remove(panel);
+                if(!closeList.Contains(panel))
                 closeList.Add(panel);
 
                 foreach (var voisin in CheckVoisin(panel))
@@ -59,7 +62,7 @@ public class BlueRedGrid : MonoBehaviour
                     {
                         if (voisin.actualMovementCost > (panel.actualMovementCost + voisin.movementCost))
                         {
-                            if (voisin.canBeCrossed)
+                            if (voisin.canBeCrossed && voisin.unitOn == null)
                             {
                                 voisin.prevousPanel = panel;
                                 voisin.actualMovementCost = voisin.movementCost + panel.actualMovementCost;
@@ -73,7 +76,7 @@ public class BlueRedGrid : MonoBehaviour
                     }
                     else
                     {
-                        if (!voisin.canBeCrossed)
+                        if ((!voisin.canBeCrossed || voisin.unitOn != null))
                         {
                             closeList.Add(voisin);
                             voisin.actualMovementCost = int.MaxValue;
@@ -93,40 +96,10 @@ public class BlueRedGrid : MonoBehaviour
 
                     }
 
-
                 }
 
             }
         }
-    }
-
-    public void attackPossible()
-    {
-        List<Panel> listOfBlue = new List<Panel>();
-
-        for (int i = 0; i < Grid.Instance.width; i++)
-        {
-            for (int j = 0; j < Grid.Instance.height; j++)
-            {
-                Panel panelToCheck = Grid.Instance.gridArray[i, j];
-                if (panelToCheck.canBeClick)
-                {
-                    listOfBlue.Add(panelToCheck);
-                }
-            }
-
-            foreach (var panel in listOfBlue)
-            {
-                foreach (var panel2 in CheckVoisin(panel))
-                {
-                    if (!panel2.canBeClick)
-                    {
-                        panel2.GetComponent<SpriteRenderer>().color = Color.red;
-                    }
-                }
-            }
-        }
-
     }
 
 
@@ -156,5 +129,59 @@ public class BlueRedGrid : MonoBehaviour
         }
 
         return voisinList;
+    }
+
+
+    public void actuPanelCount(int xStart, int yStart)
+    {
+        openList.Clear();
+        closeList.Clear();
+
+        Panel startPanel = Grid.Instance.gridArray[xStart, -yStart];
+
+        startPanel.actualPanelCount = 0;
+
+        openList.Add(startPanel);
+
+        while (openList.Count > 0)
+        {
+            foreach (var panel in openList.ToArray())
+            {
+
+                openList.Remove(panel);
+                if (!closeList.Contains(panel))
+                    closeList.Add(panel);
+
+                foreach (var voisin in CheckVoisin(panel))
+                {
+                    if (closeList.Contains(voisin) || openList.Contains(voisin))
+                    {
+                        if (voisin.actualPanelCount > (panel.actualPanelCount + 1))
+                        {
+                            if ((voisin.actualPanelCount == 0 && voisin != startPanel) || voisin.actualPanelCount > panel.actualPanelCount)
+                            {
+                                voisin.actualPanelCount = panel.actualPanelCount + 1;
+                            }
+
+                            if (!openList.Contains(voisin))
+                            {
+                                openList.Add(voisin);
+                            }
+                        }
+                    }                
+
+
+                    if ((voisin.actualPanelCount == 0 && voisin != startPanel) || voisin.actualPanelCount > panel.actualPanelCount)
+                    {
+                        voisin.actualPanelCount = panel.actualPanelCount + 1;
+
+                        if (!openList.Contains(voisin))
+                        {
+                            openList.Add(voisin);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

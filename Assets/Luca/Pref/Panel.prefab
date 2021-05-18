@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8139735050018979042}
   - component: {fileID: 6743454802769837215}
   - component: {fileID: 7635196711641401961}
-  - component: {fileID: -4260603049094403208}
+  - component: {fileID: 7494803780202684033}
   m_Layer: 0
   m_Name: Panel
-  m_TagString: Pannel
+  m_TagString: Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6456829263620554026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.4853318, y: -0.25294667, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3522453020963696018}
   m_Father: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 498b9bff4b3c99440aa2ed84276d73da, type: 3}
+  m_Sprite: {fileID: 3625043607559282579, guid: d7de445cfe1942f4aaaf3dbed70dbb45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,12 +107,13 @@ MonoBehaviour:
   prevousPanel: {fileID: 0}
   movementCost: 0
   actualMovementCost: 0
+  actualPanelCount: 0
   canBeClick: 0
   isOccupied: 0
   unitOn: {fileID: 0}
   col: {fileID: 0}
---- !u!61 &-4260603049094403208
-BoxCollider2D:
+--- !u!60 &7494803780202684033
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,15 +129,22 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 0.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.033854008, y: 0.21582064}
+      - {x: -0.44303417, y: 0.007812679}
+      - {x: -0.4186206, y: -0.023762941}
+      - {x: -0.03613305, y: -0.20768267}
+      - {x: 0.030598879, y: -0.20279992}
+      - {x: 0.41048265, y: -0.00455752}
+      - {x: 0.41373777, y: 0.020507768}
+      - {x: 0.019857407, y: 0.21419305}
 --- !u!1 &7500405734070458168
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3522453020963696018
 Transform:
   m_ObjectHideFlags: 0

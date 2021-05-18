@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Characters
   - Panel
+  - ClickableChar
+  - TresureMap
+  - EnemyMap
+  - RestMap
+  - BossMap
   layers:
   - Default
   - TransparentFX
