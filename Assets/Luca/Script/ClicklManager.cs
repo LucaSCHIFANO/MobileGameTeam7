@@ -61,14 +61,65 @@ public class ClicklManager : MonoBehaviour
 
                                 else if (player.state == PlayerMovement.States.ACTION)
                                 {
-                                    if (touchedPanel.unitOn != null)
+                                    if (BattleManager.Instance.currentAttackParam.AOE)
                                     {
-                                        BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats);
+                                        player.state = PlayerMovement.States.AOESELECT;
+                                        UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
+                                    }
+
+                                    else if (touchedPanel.unitOn != null)
+                                    {
+                                        BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
                                         CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                         UiActionManager.Instance.setMovePoint();
                                         currentPanel = null;
                                     }
                                 }
+                                else if (player.state == PlayerMovement.States.AOESELECT)
+                                {
+                                    if (touchedPanel.unitOn != null)
+                                    {
+                                        foreach (var panel in Grid.Instance.gridArray)
+                                        {
+                                            if (panel.canBeClick && panel.unitOn != null)
+                                            {
+                                                if (panel.unitOn.GetComponent<Enemy>())
+                                                {
+                                                    BattleManager.Instance.attackUnit(player.stats, panel.unitOn.GetComponent<Enemy>().stats, true);
+                                                    Debug.Log("hit enemy");
+                                                }
+                                                else
+                                                {
+                                                    BattleManager.Instance.attackUnit(player.stats, player.stats, true);
+                                                    Debug.Log("hit myself");
+                                                }
+                                            }
+                                        }
+
+                                        CharacterManager.Instance.StartCoroutine("checkAlive");
+
+                                        Grid.Instance.resetClicked();
+                                        player.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
+                                        player.stats.element = BattleManager.Instance.currentAttackParam.element;
+                                        UiActionManager.Instance.showButton();
+                                        UiActionManager.Instance.HidePortrait();
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<PlayerMovement>())
+                            {
+                                Grid.Instance.resetClicked();
+                                BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
+                                BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
+
+                                UiActionManager.Instance.hideButton();
+
+                                player.state = PlayerMovement.States.SELECTED;
+
+                                UiActionManager.Instance.ShowPortrait(player.stats);
                             }
                         }
 
@@ -109,18 +160,61 @@ public class ClicklManager : MonoBehaviour
 
                                 if(actualPanel == currentPanel)
                                 {
-                                    BattleManager.Instance.attackUnit(player.stats, charact.stats);
-                                    CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                    currentPanel = null;
+                                    if (BattleManager.Instance.currentAttackParam.AOE)
+                                    {
+                                        player.state = PlayerMovement.States.AOESELECT;
+                                        UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
+                                    }
+                                    else
+                                    {
+                                        BattleManager.Instance.attackUnit(player.stats, charact.stats, false);
+                                        CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                        currentPanel = null;
+                                    }
                                 }
                                 else
                                 {
                                     currentPanel = actualPanel;
                                 }
                             }
-                            if (player.state == PlayerMovement.States.IDLE)
+
+                            else if (player.state == PlayerMovement.States.IDLE)
                             {
                                 UiActionManager.Instance.ShowPortrait(charact.stats);
+
+                            }
+                            
+                            else if (player.state == PlayerMovement.States.AOESELECT)
+                            {
+                                if (actualPanel == currentPanel)
+                                {
+                                    foreach (var panel in Grid.Instance.gridArray)
+                                    {
+                                        if (panel.canBeClick && panel.unitOn != null)
+                                        {
+                                            if (panel.unitOn.GetComponent<Enemy>())
+                                            {
+                                                BattleManager.Instance.attackUnit(player.stats, panel.unitOn.GetComponent<Enemy>().stats, true);
+                                            }
+                                            else
+                                            {
+                                                BattleManager.Instance.attackUnit(player.stats, player.stats, true);
+                                            }
+                                        }
+                                    }
+
+                                    CharacterManager.Instance.StartCoroutine("checkAlive");
+
+                                    Grid.Instance.resetClicked();
+                                    player.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
+                                    player.stats.element = BattleManager.Instance.currentAttackParam.element;
+                                    UiActionManager.Instance.showButton();
+                                    UiActionManager.Instance.HidePortrait();
+                                }
+                                else
+                                {
+                                    currentPanel = actualPanel;
+                                }
                             }
                         }
                     }
@@ -164,6 +258,13 @@ public class ClicklManager : MonoBehaviour
         }
 
         else if (player.state == PlayerMovement.States.ACTION)
+        {
+            Grid.Instance.resetClicked();
+            player.state = PlayerMovement.States.SELECTCARD;
+            UiActionManager.Instance.showDeck();
+        }
+        
+        else if (player.state == PlayerMovement.States.AOESELECT)
         {
             Grid.Instance.resetClicked();
             player.state = PlayerMovement.States.SELECTCARD;

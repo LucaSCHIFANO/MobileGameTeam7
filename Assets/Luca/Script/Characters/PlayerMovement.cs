@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         SELECTED,
         SELECTCARD,
         ACTION,
+        AOESELECT,
         WAIT,
     }
 
@@ -111,8 +112,11 @@ public class PlayerMovement : MonoBehaviour
     {
         state = States.WAIT;
         stats.actionPoint = stats.maxActionPoint;
+
+        stats.effectActu();
+
         UiActionManager.Instance.hideAll();
-        PhaseManager.Instance.checkAllPlayer();
         UiActionManager.Instance.setMovePoint();
+        PhaseManager.Instance.checkAllPlayer();
     }
 }

@@ -19,9 +19,8 @@ public class BattleManager : MonoBehaviour
         _instance = this;
     }
 
-    public void attackUnit(Stats att, Stats def)
+    public void attackUnit(Stats att, Stats def, bool aoe)
     {
-        Grid.Instance.resetClicked();
 
         float multiplicator = ElementInteract.Instance.interaction(currentAttackParam.element, def.element);
 
@@ -56,14 +55,19 @@ public class BattleManager : MonoBehaviour
             }
         }
 
-        CharacterManager.Instance.StartCoroutine("checkAlive");
-
-        if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
+        if (!aoe)
         {
-            att.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
-            att.GetComponent<Stats>().element = currentAttackParam.element;
-            UiActionManager.Instance.showButton();
-            UiActionManager.Instance.HidePortrait();
+            CharacterManager.Instance.StartCoroutine("checkAlive");
+
+            Grid.Instance.resetClicked();
+
+            if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
+            {
+                att.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
+                att.GetComponent<Stats>().element = currentAttackParam.element;
+                UiActionManager.Instance.showButton();
+                UiActionManager.Instance.HidePortrait();
+            }
         }
 
     }

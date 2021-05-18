@@ -18,4 +18,7 @@ public class AttackParam : ScriptableObject
     public bool pull;
 
     public Stats.ELEMENT element;
+
+    public bool AOE;
+    public AttackParam aoeEffect;
 }

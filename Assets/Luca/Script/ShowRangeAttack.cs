@@ -23,6 +23,30 @@ public class ShowRangeAttack : MonoBehaviour
     }
 
 
+    public void testAttackRange(AttackParam attackParam, int x, int y)
+    {
+        Grid.Instance.resetClicked();
+
+        var player = CharacterManager.Instance.currentPlayer;
+        BlueRedGrid.Instance.actuPanelCount(x, y);
+
+        if (attackParam.row_column == false)
+        {
+            AttackColor(attackParam);
+        }
+        else
+        {
+            AttackColor(attackParam, x, y);
+        }
+
+        var actuPanel = Grid.Instance.gridArray[x, -y];
+        actuPanel.canBeClick = true;
+        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
+        alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+
+    }
+
+
     public void AttackColor(AttackParam attackParam)
     {
         foreach (var panel in Grid.Instance.gridArray)

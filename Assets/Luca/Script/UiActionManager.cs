@@ -135,4 +135,14 @@ public class UiActionManager : MonoBehaviour
         }
     }
 
+    public void showAttackRange(AttackParam param, int x, int y)
+    {
+        var playerStats = CharacterManager.Instance.currentPlayer.GetComponent<Stats>();
+        BattleManager.Instance.currentAttackParam = param;
+
+        hideButton();
+        sra.testAttackRange(param, x, y);
+
+    }
+
 }

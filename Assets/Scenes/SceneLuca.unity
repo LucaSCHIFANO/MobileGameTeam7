@@ -4011,7 +4011,7 @@ MonoBehaviour:
         m_MethodName: showAttackRange
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a39c8bf2ab1a04845ba1a3602658114f, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: 00cd9e71453a13f4ea4c3d3ee0734ae4, type: 2}
           m_ObjectArgumentAssemblyTypeName: AttackParam, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0

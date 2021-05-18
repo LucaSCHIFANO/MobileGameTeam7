@@ -155,14 +155,14 @@ public class Enemy : MonoBehaviour
                 attackMonster.testAttackRange(panel.x, -panel.y);
                 if (attackMonster.seePlayer)
                 {
-                    BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
+                    BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>(), false);
                     break;
                 }
 
             }
         }else
         {
-            BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
+            BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>(), false);
         }
 
         panelToGo = null;
