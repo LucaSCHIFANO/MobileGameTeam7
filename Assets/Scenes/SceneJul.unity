@@ -557,7 +557,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2062135362}
         m_TargetAssemblyTypeName: CardManager, Assembly-CSharp
-        m_MethodName: startCombat
+        m_MethodName: UseCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a078ebdada95746bd8bffb1f379efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbTirageDebut: 5
+  nbTirageDebut: 10
   howManyInHand: 5
   canvas: {fileID: 1233843691}
   cardPrefab: {fileID: 8318987361052222005, guid: d163574b3b5de3745a295d1f66155e2f, type: 3}
@@ -1252,8 +1252,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a63f26ea3e8b05441b3ebece6c6a8528, type: 2}
   - {fileID: 11400000, guid: 24a5750234aa389468ccfbfb175a4e11, type: 2}
   - {fileID: 11400000, guid: 80b285aaa35df0447bd40ca43dcdbe6a, type: 2}
+  totalTwist: 0
   startLocation: {fileID: 1108376956}
-  nbOfCards: 0
   gap: 1
   handPanel: {fileID: 893339036}
 --- !u!4 &2062135363

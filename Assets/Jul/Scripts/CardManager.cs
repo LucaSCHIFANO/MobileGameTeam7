@@ -15,6 +15,8 @@ public class CardManager : MonoBehaviour
     private bool inRound = false;
     private bool isMid = false;
 
+    public float totalTwist;
+
     private List<Card> deck = new List<Card>();
 
     private List<GameObject> hand = new List<GameObject>();
@@ -29,10 +31,12 @@ public class CardManager : MonoBehaviour
     public float gap;
     public Transform handPanel;
     private Vector3 previousTransform;
+    private Quaternion previousRotation;
+
 
     void Start()
     {
-        gap = 1f;
+        gap = 1.5f;
     }
 
     void Update()
@@ -95,17 +99,20 @@ public class CardManager : MonoBehaviour
                     }
                     
                     if (inRound)
-                    {    
+                    {
                         if (!isMid)
                         {
                             previousTransform = hitCard.transform.position;
+                            previousRotation = hitCard.transform.rotation;
                             hitCard.transform.position = Vector3.zero;
+                            hitCard.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                             middleCard = hitCard;
                             isMid = true;
                         }
-                        else
+                        else if (isMid && middleCard == hitCard)
                         {
                             hitCard.transform.position = previousTransform;
+                            hitCard.transform.rotation = previousRotation;
                             middleCard = null;
                             isMid = false;
                         }
@@ -113,23 +120,74 @@ public class CardManager : MonoBehaviour
                 }  
             }
         }
+
+        if (deck.Count < 5)
+        {
+            for (int i = 0; i < discard.Count; i++)
+            {
+                int rand = Random.Range(0, discard.Count);
+                deck.Add(discard[rand]);
+                discard.RemoveAt(rand);
+            }
+        }
     }
 
     public void FitCards()
     {
-        if (hand.Count == 0)
+        int numberOfCards = hand.Count;
+
+        if (numberOfCards == 0)
         {
             return;
         }
 
-        for (int i = 0; i < hand.Count; i++)
+        if (numberOfCards <= 5)
         {
-            hand[i].transform.position += new Vector3(i * gap, 0, 0);
+            totalTwist = 40f;
+            if (numberOfCards <= 4)
+            {
+                totalTwist = 30f;
+                if (numberOfCards <= 3)
+                {
+                    totalTwist = 20f;
+                    if (numberOfCards <= 1)
+                    {
+                        totalTwist = 0f;
+                    }
+                }
+            }
         }
 
-        for (int i = 0; i < hand.Count; i++)
+        float twistedPerCard = totalTwist / numberOfCards;
+        float startTwist = -1f * (totalTwist / 2f);
+
+        for (int i = 0; i < numberOfCards; i++)
         {
-            hand[i].transform.position -= new Vector3(2, 0, 0);
+            hand[i].transform.position = new Vector3(startLocation.position.x + (i * gap), startLocation.position.y, i);
+            float twistForThisCard = startTwist + (i * twistedPerCard);
+            hand[i].transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+            hand[i].transform.Rotate(0f, 0f, -twistForThisCard);
+
+            float scalingFactor = 0.01f;
+            float nudgeThisCard = Mathf.Abs(twistForThisCard);
+            nudgeThisCard *= scalingFactor;
+            hand[0].transform.Translate(0f, -nudgeThisCard, 0f);
+            hand[numberOfCards - 1].transform.Translate(0f, -nudgeThisCard, 0f);
+        }
+
+        if (numberOfCards % 2 != 0)
+        {
+            for (int i = 0; i < numberOfCards; i++)
+            {
+                hand[i].transform.position -= new Vector3((numberOfCards / 2) * gap, 0, 0);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < numberOfCards; i++)
+            {
+                hand[i].transform.position -= new Vector3((numberOfCards / gap), 0, 0);
+            }
         }
     }
 
@@ -172,6 +230,13 @@ public class CardManager : MonoBehaviour
 
     public void UseCard()
     {
-        
+        if (middleCard != null)
+        {
+            discard.Add(middleCard.GetComponent<CardDisplay>().card);
+            hand.Remove(middleCard);
+            Destroy(middleCard);
+            isMid = false;
+            FitCards();
+        }
     }
 }
