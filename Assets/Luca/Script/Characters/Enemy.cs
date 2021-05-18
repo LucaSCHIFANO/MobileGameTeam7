@@ -81,16 +81,16 @@ public class Enemy : MonoBehaviour
 
         }
 
-        /*if (pattern == Pattern.RUSHDISTANCECIRCLE || pattern == Pattern.RUSHDISTANCEROWCOLUMN)  // -----------------------
+        if (pattern == Pattern.RUSHDISTANCECIRCLE || pattern == Pattern.RUSHDISTANCEROWCOLUMN)  // -----------------------
         {
             var allOtherPos = checkOtherPosPossible();
             allVoisinsPlayers.AddRange(allOtherPos);
-        }*/
+        }
 
             foreach (var voisin in allVoisinsPlayers)
             {
-                List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y);
-
+            List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y);
+                
                 if (listPanel != null)
                 {
                     if (listPanel[listPanel.Count - 1].actualMovementCost < minPath)
@@ -144,7 +144,7 @@ public class Enemy : MonoBehaviour
         {
             foreach (var panel in Grid.Instance.gridArray)
             {
-                if (panel.actualPanelCount <= attackMonster.attackParam.range)
+                if (panel.actualPanelCount <= attackMonster.attackParam.range && !panel.isOccupied)
                 {
                     otherPosList.Add(panel);
                     Debug.Log(panel);

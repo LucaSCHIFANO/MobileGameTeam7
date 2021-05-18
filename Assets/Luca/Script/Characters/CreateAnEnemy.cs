@@ -32,7 +32,7 @@ public class CreateAnEnemy : MonoBehaviour
                 enemy.stats.element = Stats.ELEMENT.NORMAL;
 
                 enemy.attackMonster.attackParam = listEnAttack[0];
-                //enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+                enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
                 break;
 
             case 1:
@@ -47,7 +47,7 @@ public class CreateAnEnemy : MonoBehaviour
                 enemy.stats.element = Stats.ELEMENT.GREEN;
 
                 enemy.attackMonster.attackParam = listEnAttack[1];
-                //enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
+                enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
                 break;
 
             case 2:
@@ -62,7 +62,7 @@ public class CreateAnEnemy : MonoBehaviour
                 enemy.stats.element = Stats.ELEMENT.BLUE;
 
                 enemy.attackMonster.attackParam = listEnAttack[2];
-                //enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+                enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
                 break;
 
             case 3:
@@ -77,7 +77,7 @@ public class CreateAnEnemy : MonoBehaviour
                 enemy.stats.element = Stats.ELEMENT.RED;
 
                 enemy.attackMonster.attackParam = listEnAttack[3];
-                //enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
+                enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
                 break;
 
 
