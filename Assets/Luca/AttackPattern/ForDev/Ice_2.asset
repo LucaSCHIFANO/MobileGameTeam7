@@ -9,11 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e10eb71d119cfd4ca4001fdca145a38, type: 3}
-  m_Name: Hache
+  m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
+  m_Name: Ice_2
   m_EditorClassIdentifier: 
-  cardName: hache
-  description: c'est une hache
-  artwork: {fileID: 21300000, guid: d029cbe4a9868934f8264ea8fec48d72, type: 3}
-  attackDamage: 4
-  actionCost: 1
+  patternName: Ice
+  range: 2
+  row_column: 0
+  throughWall: 1
+  APNeeded: 3
+  damage: 2
+  push: 0
+  pull: 0
+  element: 2

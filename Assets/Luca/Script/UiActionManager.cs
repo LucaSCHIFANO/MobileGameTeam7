@@ -12,12 +12,14 @@ public class UiActionManager : MonoBehaviour
     public Text moveLeft;
 
     public GameObject unitPortrait;
+    public Image imageBG;
     public Text unitName;
     public Text unitHP;
     public Text unitSTR;
     public Text unitDEF;
     public Text unitAP;
     public Slider HPBar;
+    public Text element;
 
     public ShowRangeAttack sra;
 
@@ -83,12 +85,24 @@ public class UiActionManager : MonoBehaviour
     {
         unitPortrait.SetActive(true);
         unitName.text = stats.characName;
-        unitHP.text = stats.HP + " / " + stats.maxHP;
+        unitHP.text = stats.HP + " / " + stats.maxHP + " PV";
         HPBar.maxValue = stats.maxHP;
         HPBar.value = stats.HP;
-        unitSTR.text = "STR : " + stats.strenght.ToString();
+
+        if (stats.gameObject.GetComponent<Enemy>())
+        {
+            unitSTR.text = "STR : " + stats.strenght.ToString() + " + " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.damage + "   "  + "Range : " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.range;
+            imageBG.color = new Color(1, 0.4481132f, 0.4481132f, 0.5f);
+        }
+        else
+        {
+            unitSTR.text = "STR : " + stats.strenght.ToString();
+            imageBG.color = new Color(0, 0.5876393f, 1, 0.5f);
+        }
+
         unitDEF.text = "DEF : " + stats.defense.ToString();
         unitAP.text = "AP : " + stats.actionPoint.ToString();
+        element.text = "Elem : " + stats.element.ToString();
     }
 
     public void HidePortrait()
@@ -119,6 +133,16 @@ public class UiActionManager : MonoBehaviour
         {
             Debug.Log("You need more AP");
         }
+    }
+
+    public void showAttackRange(AttackParam param, int x, int y)
+    {
+        var playerStats = CharacterManager.Instance.currentPlayer.GetComponent<Stats>();
+        BattleManager.Instance.currentAttackParam = param;
+
+        hideButton();
+        sra.testAttackRange(param, x, y);
+
     }
 
 }

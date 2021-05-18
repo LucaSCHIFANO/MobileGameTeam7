@@ -107,6 +107,7 @@ MonoBehaviour:
   prevousPanel: {fileID: 0}
   movementCost: 0
   actualMovementCost: 0
+  actualPanelCount: 0
   canBeClick: 0
   isOccupied: 0
   unitOn: {fileID: 0}

@@ -17,9 +17,20 @@ public class Grid : MonoBehaviour
     public Panel[,] gridArrayAlpha;
 
     public int levelID;
+    public int progress;
 
     public List<Panel> openList = new List<Panel>();
     public List<Panel> closeList = new List<Panel>();
+
+    public List<Vector2> locationEnemy = new List<Vector2>();
+    public List<Vector2> playerSpawn = new List<Vector2>();
+    
+    public GameObject playerPrefab;
+    public GameObject enemy;
+    
+    private CreateAnEnemy cae;
+
+    public MoveCam mC;
 
 
 
@@ -32,15 +43,29 @@ public class Grid : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        /*awake2();
+        awake2Alpha();
+        createEnemies();
+        setPos();
+
+        mC.functionStart();*/
+    }
+
+    public void functionStart()
+    {
         awake2();
         awake2Alpha();
+        createEnemies();
+        setPos();
+
+        mC.functionStart();
     }
 
 
     void awake2() // crée la grid avec tt les cases en fct du pattern
     {
-        gridArray = new Panel[width, height];
         var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
+        gridArray = new Panel[width, height];
 
         for (int i = 0; i < width; i++)
         {
@@ -108,7 +133,7 @@ public class Grid : MonoBehaviour
     void awake2Alpha() // crée la grid en transparent
     {
         gridArrayAlpha = new Panel[width, height];
-        var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
+        //var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
 
         for (int i = 0; i < width; i++)
         {
@@ -134,7 +159,7 @@ public class Grid : MonoBehaviour
                 newPanel.setValue(i, j, 0, 0);
                 newPanel.name = i + " , " + j + " alpha mode";
 
-                switch (myGridPanel[j, i])
+                /*switch (myGridPanel[j, i])
                 {
                     case GridPattern.panelType.GRASS:
                         newPanel.baseColor = new Color(0f, 0f, 0f, 0f);
@@ -164,12 +189,58 @@ public class Grid : MonoBehaviour
                     default:
                         Debug.Log("ya un pb alpha");
                         break;
-                }
+                }*/
 
                 newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
                 newPanel.transform.parent = GameObject.Find("TheGridAlpha").transform;
 
             }
+        }
+    }
+
+    void createEnemies()
+    {
+        cae = GetComponent<CreateAnEnemy>();
+        foreach (var VECTOR in locationEnemy)
+        {
+            var en = Instantiate(enemy, Vector2.zero, transform.rotation);
+            var enE = en.GetComponent<Enemy>();
+
+            enE.xPos = (int)VECTOR.x;
+            enE.yPos = (int)VECTOR.y;
+            enE.Start();
+
+            cae.creation(enE, levelID, progress);
+        }
+        
+        locationEnemy.Clear();
+    }
+
+    public void createPlayer(Panel panel)
+    {
+        Debug.Log("creatkon du joueur");
+        var en = Instantiate(playerPrefab, Vector2.zero, transform.rotation);
+        var enE = en.GetComponent<PlayerMovement>();
+        CharacterManager.Instance.currentPlayer = enE;
+
+        enE.xPos = panel.x;
+        enE.yPos = -panel.y;
+        enE.Start();
+
+        playerSpawn.Clear();
+
+        PhaseManager.Instance.phase = PhaseManager.actualPhase.PLAYER;
+
+        resetClicked();
+    }
+
+    void setPos()
+    {
+        foreach (var VECTOR in playerSpawn)
+        {
+            var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y];
+            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 0.5f);
+            Grid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
         }
     }
 

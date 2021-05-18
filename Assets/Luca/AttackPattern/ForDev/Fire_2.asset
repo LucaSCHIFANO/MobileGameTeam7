@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
-  m_Name: AirBuster_3
+  m_Name: Fire_2
   m_EditorClassIdentifier: 
-  patternName: AirBuster
-  range: 3
-  row_column: 1
-  throughWall: 0
-  APNeeded: 2
-  damage: 2
+  patternName: Fire
+  range: 2
+  row_column: 0
+  throughWall: 1
+  APNeeded: 3
+  damage: 4
   push: 0
-  pull: 1
+  pull: 0
+  element: 1
