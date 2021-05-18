@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 670730763}
   - component: {fileID: 670730765}
   - component: {fileID: 670730766}
+  - component: {fileID: 670730767}
   m_Layer: 0
   m_Name: GridManager
   m_TagString: Untagged
@@ -1343,14 +1344,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e3581255a0d5e4b9e1b536f26403c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 10
-  width: 10
+  height: 0
+  width: 0
   cellSize: 2
   panel: {fileID: 7635196711641401961, guid: e007d0c9546ce134d8e94ec62ddce458, type: 3}
   panelAlpha: {fileID: 7388167128119430108, guid: 24250fe6db8672e47bf6751ec21ad174, type: 3}
   levelID: 0
+  progress: 0
   openList: []
   closeList: []
+  locationEnemy: []
+  enemy: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
 --- !u!4 &670730764
 Transform:
   m_ObjectHideFlags: 0
@@ -1377,6 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442238ff9ec9c094082560fcc118ea17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridref: {fileID: 670730763}
 --- !u!114 &670730766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1391,6 +1396,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openList: []
   closeList: []
+--- !u!114 &670730767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670730762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6dc17b8f2a68d843ac081a238b04cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listEnAttack:
+  - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
+  - {fileID: 11400000, guid: 180afc0f9f209044ca804839c7da62e8, type: 2}
+  - {fileID: 11400000, guid: 005268a5e884c9543a97017869fa8b65, type: 2}
+  - {fileID: 11400000, guid: 69ecbb99035c7f946b25016be2d9fe01, type: 2}
 --- !u!1 &736588754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +1926,10 @@ PrefabInstance:
     - target: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
       propertyPath: m_Name
       value: EnemyV2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5852055919343428379, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
       propertyPath: xPos
@@ -3359,6 +3385,10 @@ PrefabInstance:
     - target: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
       propertyPath: m_Name
       value: EnemyV2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5852055919343428379, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
       propertyPath: xPos

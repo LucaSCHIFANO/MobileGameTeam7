@@ -96,6 +96,7 @@ public class ClicklManager : MonoBehaviour
                                             }
                                         }
 
+                                        CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                         CharacterManager.Instance.StartCoroutine("checkAlive");
 
                                         Grid.Instance.resetClicked();
@@ -109,17 +110,24 @@ public class ClicklManager : MonoBehaviour
                         }
                         else
                         {
-                            if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<PlayerMovement>())
+                            if (player.state == PlayerMovement.States.IDLE)
                             {
-                                Grid.Instance.resetClicked();
-                                BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
-                                BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
+                                if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<PlayerMovement>())
+                                {
+                                    Grid.Instance.resetClicked();
+                                    BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
+                                    BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
 
-                                UiActionManager.Instance.hideButton();
+                                    UiActionManager.Instance.hideButton();
 
-                                player.state = PlayerMovement.States.SELECTED;
+                                    player.state = PlayerMovement.States.SELECTED;
 
-                                UiActionManager.Instance.ShowPortrait(player.stats);
+                                    UiActionManager.Instance.ShowPortrait(player.stats);
+                                }
+                                else if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<Enemy>())
+                                {
+                                    UiActionManager.Instance.ShowPortrait(touchedPanel.unitOn.GetComponent<Enemy>().stats);
+                                }
                             }
                         }
 
@@ -203,6 +211,7 @@ public class ClicklManager : MonoBehaviour
                                         }
                                     }
 
+                                    CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                     CharacterManager.Instance.StartCoroutine("checkAlive");
 
                                     Grid.Instance.resetClicked();

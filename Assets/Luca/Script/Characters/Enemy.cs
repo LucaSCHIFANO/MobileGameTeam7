@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         RUN,
     }
 
-    void Start()
+    public void Start()
     {
         Panel startPos =  Grid.Instance.gridArray[xPos, -yPos];
         transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
