@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         RUN,
     }
 
-    void Start()
+    public void Start()
     {
         Panel startPos =  Grid.Instance.gridArray[xPos, -yPos];
         transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
@@ -149,18 +149,20 @@ public class Enemy : MonoBehaviour
                     stats.actionPoint -= panel.movementCost;
                 }
                 notFirst++;
+                xPos = panel.x;
+                yPos = -panel.y;
 
                 attackMonster.testAttackRange(panel.x, -panel.y);
                 if (attackMonster.seePlayer)
                 {
-                    BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
+                    BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>(), false);
                     break;
                 }
 
             }
         }else
         {
-            BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>());
+            BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>(), false);
         }
 
         panelToGo = null;

@@ -16,6 +16,7 @@ public class PhaseManager : MonoBehaviour
     {
         PLAYER,
         ENEMY,
+        BEGIN,
     }
 
 
@@ -33,7 +34,7 @@ public class PhaseManager : MonoBehaviour
 
     void Start()
     {
-        phase = actualPhase.PLAYER;
+        phase = actualPhase.BEGIN;
         Debug.Log("Player Phase");
     }
 

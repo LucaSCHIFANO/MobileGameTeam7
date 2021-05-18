@@ -13,15 +13,45 @@ public class Stats : MonoBehaviour
     public int speed;
     public int maxActionPoint;
     public int actionPoint;
-    //public int maxInHqandCard;
+    public ELEMENT element;
 
-    void Start()
+    public EFFECT effect;
+    public int numberOfTurn;
+
+    public enum ELEMENT
     {
-        
+        NORMAL,
+        RED,
+        BLUE,
+        GREEN,
     }
 
-    void Update()
+    public enum EFFECT
     {
-        
+        NORMAL,
+        POISON,
+        REGEN, 
     }
+
+
+    public void effectActu()
+    {
+        if(numberOfTurn > 0 && effect != EFFECT.NORMAL)
+        {
+            if(effect == EFFECT.POISON)
+            {
+                if(HP > 1)
+                {
+                    HP--; 
+                }
+            }else if (effect == EFFECT.REGEN)
+            {
+                HP++;
+                HP = Mathf.Clamp(HP, 0, maxHP);
+            }
+
+            numberOfTurn--;
+        }
+    }
+
 }

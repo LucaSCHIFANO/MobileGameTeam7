@@ -12,7 +12,6 @@ public class MenuPause : MonoBehaviour
 
     private void Start()
     {
-        GameIsPaused = false;
         Resume();
         optionMenuUI.SetActive(false);
     }
