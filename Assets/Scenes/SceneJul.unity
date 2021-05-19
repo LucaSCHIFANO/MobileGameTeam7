@@ -508,7 +508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -209, y: 76}
+  m_AnchoredPosition: {x: -197, y: 76}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112481543
@@ -1252,7 +1252,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a63f26ea3e8b05441b3ebece6c6a8528, type: 2}
   - {fileID: 11400000, guid: 24a5750234aa389468ccfbfb175a4e11, type: 2}
   - {fileID: 11400000, guid: 80b285aaa35df0447bd40ca43dcdbe6a, type: 2}
-  totalTwist: 0
   startLocation: {fileID: 1108376956}
   gap: 1
   handPanel: {fileID: 893339036}
@@ -1264,7 +1263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062135361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1108376956}
