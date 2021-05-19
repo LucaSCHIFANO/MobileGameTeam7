@@ -118,5 +118,6 @@ public class PlayerMovement : MonoBehaviour
         UiActionManager.Instance.hideAll();
         UiActionManager.Instance.setMovePoint();
         PhaseManager.Instance.checkAllPlayer();
+        CardManager.Instance.EndRound();
     }
 }

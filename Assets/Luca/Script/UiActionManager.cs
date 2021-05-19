@@ -55,12 +55,19 @@ public class UiActionManager : MonoBehaviour
     {
         buttonHand.SetActive(false);
         buttonCancel.SetActive(true);
-        deck.SetActive(true);
+        //deck.SetActive(true);
         unitPortrait.SetActive(false);
 
         var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
         player.state = PlayerMovement.States.SELECTCARD;
+
+        CardManager.Instance.letrucquibouge.GetComponent<Animator>().SetTrigger("Show");
+    }
+
+    public void useCard()
+    {
+        
     }
 
     public void hideAll()

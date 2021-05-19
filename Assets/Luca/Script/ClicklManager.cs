@@ -275,10 +275,16 @@ public class ClicklManager : MonoBehaviour
 
         else if (player.state == PlayerMovement.States.SELECTCARD)
         {
-            Grid.Instance.resetClicked();
-            player.state = PlayerMovement.States.IDLE;
-            UiActionManager.Instance.hideAll();
-            UiActionManager.Instance.showButton();
+            var cardM = CardManager.Instance;
+            if (!cardM.handToMid && !cardM.midToHand)
+            {
+                Grid.Instance.resetClicked();
+                player.state = PlayerMovement.States.IDLE;
+                UiActionManager.Instance.hideAll();
+                UiActionManager.Instance.showButton();
+                CardManager.Instance.letrucquibouge.GetComponent<Animator>().SetTrigger("Hide");
+                CardManager.Instance.MidToHandLaFonction();
+            }
         }
 
         else if (player.state == PlayerMovement.States.ACTION)
