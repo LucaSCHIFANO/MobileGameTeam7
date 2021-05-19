@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BattleManager : MonoBehaviour
 {
 
     public AttackParam currentAttackParam;
     public GameObject damageEffect;
+
+    public GameObject floatingText;
 
     private static BattleManager _instance = null;
 
@@ -36,6 +39,18 @@ public class BattleManager : MonoBehaviour
 
         def.HP -= damage;
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
+
+        var txt = Instantiate(floatingText, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
+        txt.GetComponent<TextMeshPro>().text = "-" + damage;
+        txt.GetComponent<MeshRenderer>().sortingOrder = 100;
+        if (att.GetComponent<PlayerMovement>())
+        {
+            txt.GetComponent<TextMeshPro>().color = Color.cyan;
+        }
+        else
+        {
+            txt.GetComponent<TextMeshPro>().color = Color.red;
+        }
 
         if (currentAttackParam.pull || currentAttackParam.push)
         {

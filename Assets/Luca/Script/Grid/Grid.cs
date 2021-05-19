@@ -245,6 +245,42 @@ public class Grid : MonoBehaviour
         }
     }
 
+
+    public void deleteMap()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+
+                var panel = gridArray[i, j];
+                Destroy(panel.gameObject);
+
+                panel = gridArrayAlpha[i, j];
+                Destroy(panel.gameObject);
+            }
+        }
+
+        ClicklManager.Instance.currentPanel = null;
+
+        CharacterManager.Instance.currentPlayer = null;
+        foreach (var item in CharacterManager.Instance.playerList)
+        {
+            Destroy(item);
+        }
+        CharacterManager.Instance.playerList.Clear();
+
+        foreach (var item in CharacterManager.Instance.enemyList)
+        {
+            Destroy(item);
+        }
+        CharacterManager.Instance.enemyList.Clear();
+
+        PhaseManager.Instance.phase = PhaseManager.actualPhase.BEGIN;
+
+        functionStart();
+    }
+
     public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)  // trouve le chemins le plus court pour allez sur une case
     {
         openList.Clear();
