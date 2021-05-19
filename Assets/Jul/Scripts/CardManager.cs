@@ -57,17 +57,23 @@ public class CardManager : MonoBehaviour
             GameObject hitCard = null;
             if (hit.Length == 1)
             {
-                hitCard = firstCard;
+                if (hit[0].collider.gameObject.CompareTag("Card"))
+                {
+                    hitCard = firstCard;
+                }
             }
             else
             {
                 foreach (RaycastHit2D h in hit)
                 {
-                    if (firstCard != h.collider.gameObject)
-                    {
-                        if (h.collider.gameObject.GetComponent<RectTransform>().localPosition.z > firstCard.GetComponent<RectTransform>().localPosition.z)
+                    if (h.collider.gameObject.CompareTag("Card"))
+                    { 
+                        if (firstCard != h.collider.gameObject)
                         {
-                            hitCard = h.collider.gameObject;
+                            if (h.collider.gameObject.GetComponent<RectTransform>().localPosition.z > firstCard.GetComponent<RectTransform>().localPosition.z)
+                            {
+                                hitCard = h.collider.gameObject;
+                            }
                         }
                     }
                 }
