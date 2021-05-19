@@ -10,6 +10,7 @@ public class CardManager : MonoBehaviour
     public Canvas canvas;
     public GameObject cardPrefab;
     public List<Card> cardList = new List<Card>();
+    public List<AttackParam> attackParams = new List<AttackParam>();
 
     private bool inChosenTime = false;
     private bool inRound = false;
@@ -24,7 +25,7 @@ public class CardManager : MonoBehaviour
     private List<Card> deck = new List<Card>();
 
     private List<GameObject> hand = new List<GameObject>();
-    private GameObject middleCard = null;
+    public GameObject middleCard = null;
 
     private List<Card> discard = new List<Card>();
 
@@ -85,8 +86,6 @@ public class CardManager : MonoBehaviour
                 {
                     foreach (RaycastHit2D h in hit)
                     {
-                        Debug.Log(h.collider.gameObject.name + " / " + h.collider.gameObject.tag);
-
                         if (h.collider.gameObject.CompareTag("Card") && h.collider.gameObject.GetComponent<RectTransform>())
                         {
                             if (firstCard != h.collider.gameObject)
@@ -115,6 +114,7 @@ public class CardManager : MonoBehaviour
                         if (inChosenTime)
                         {
                             deck.Add(hitCard.GetComponent<CardDisplay>().card);
+                            hitCard.GetComponent<CardDisplay>().card.attackParam = hitCard.GetComponent<CardDisplay>().attackParam;
 
                             for (int i = 0; i < actualRoll.Length; i++)
                             {
@@ -140,18 +140,13 @@ public class CardManager : MonoBehaviour
                             {
                                 previousTransform = hitCard.GetComponent<RectTransform>().localPosition;
                                 previousRotation = hitCard.transform.rotation;
-                                //hitCard.transform.position = Vector3.zero;
-                                hitCard.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                                 middleCard = hitCard;
                                 handToMid = true;
                                 isMid = true;
                             }
                             else if (isMid && middleCard == hitCard)
                             {
-                                //hitCard.transform.position = previousTransform;
-                                hitCard.transform.rotation = previousRotation;
                                 midToHand = true;
-                                isMid = false;
                             }
                         }
                     }
@@ -167,7 +162,7 @@ public class CardManager : MonoBehaviour
             }
             middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, transform.position, .05f);
             middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, midRotation, .05f);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, transform.position) < 1.5f)
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, transform.position) < 2f)
             {
                 handToMid = false;
                 middleCard.GetComponent<RectTransform>().localPosition = handPanel.position;
@@ -180,9 +175,9 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
-            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, previousTransform, 0.05f);
+            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, previousTransform, 0.1f);
             middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, previousRotation, .05f);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) < 1.5f)
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) < 2f)
             {
                 midToHand = false;
                 middleCard.GetComponent<RectTransform>().localPosition = previousTransform;
@@ -276,6 +271,7 @@ public class CardManager : MonoBehaviour
             handCard.GetComponent<RectTransform>().localPosition = new Vector3(handCardPosition.x, handCardPosition.y, i);
             int rand = Random.Range(0, deck.Count);
             handCard.GetComponent<CardDisplay>().card = deck[rand];
+            handCard.GetComponent<CardDisplay>().attackParam = deck[rand].attackParam;
             hand.Add(handCard);
             deck.RemoveAt(rand);
         }
@@ -287,15 +283,21 @@ public class CardManager : MonoBehaviour
     {
         
         var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-6, 0, 0)), Quaternion.identity, canvas.transform);
-        newCard.GetComponent<CardDisplay>().card = cardList[Random.Range(0, cardList.Count)];
+        var number = Random.Range(0, cardList.Count);
+        newCard.GetComponent<CardDisplay>().card = cardList[number];
+        newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
         actualRoll[0] = newCard;
 
+        number = Random.Range(0, cardList.Count);
         newCard = Instantiate(cardPrefab, (transform.position + new Vector3(0, 0, 0)), Quaternion.identity, canvas.transform);
-        newCard.GetComponent<CardDisplay>().card = cardList[Random.Range(0, cardList.Count)];
+        newCard.GetComponent<CardDisplay>().card = cardList[number];
+        newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
         actualRoll[1] = newCard;
 
+        number = Random.Range(0, cardList.Count);
         newCard = Instantiate(cardPrefab, (transform.position + new Vector3(6, 0, 0)), Quaternion.identity, canvas.transform);
-        newCard.GetComponent<CardDisplay>().card = cardList[Random.Range(0, cardList.Count)];
+        newCard.GetComponent<CardDisplay>().card = cardList[number];
+        newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
         actualRoll[2] = newCard;
     }
 
@@ -328,6 +330,9 @@ public class CardManager : MonoBehaviour
 
     public void MidToHandLaFonction()
     {
+        if(middleCard != null)
+        {
             midToHand = true;
+        }
     }
 }

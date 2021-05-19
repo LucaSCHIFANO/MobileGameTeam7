@@ -7,6 +7,7 @@ using TMPro;
 public class CardDisplay : MonoBehaviour
 {
     public Card card;
+    public AttackParam attackParam;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;

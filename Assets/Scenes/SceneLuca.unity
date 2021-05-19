@@ -1663,7 +1663,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 974637997}
         m_TargetAssemblyTypeName: UiActionManager, Assembly-CSharp
-        m_MethodName: cancelButton
+        m_MethodName: useCard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2873,6 +2873,7 @@ MonoBehaviour:
   buttonHand: {fileID: 234507682}
   buttonCancel: {fileID: 1769318695}
   deck: {fileID: 2032853119}
+  use: {fileID: 794376097}
   moveLeft: {fileID: 145212390}
   unitPortrait: {fileID: 1383690384}
   imageBG: {fileID: 736588756}
@@ -4087,8 +4088,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a63f26ea3e8b05441b3ebece6c6a8528, type: 2}
   - {fileID: 11400000, guid: 24a5750234aa389468ccfbfb175a4e11, type: 2}
   - {fileID: 11400000, guid: 80b285aaa35df0447bd40ca43dcdbe6a, type: 2}
+  attackParams:
+  - {fileID: 11400000, guid: 180afc0f9f209044ca804839c7da62e8, type: 2}
+  - {fileID: 11400000, guid: 28c0ef5a8b403ce4a9cefcf71bdbcfe4, type: 2}
+  - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
   handToMid: 0
   midToHand: 0
+  middleCard: {fileID: 0}
   startLocation: {fileID: 1887949847}
   gap: 1
   handPanel: {fileID: 411351869}

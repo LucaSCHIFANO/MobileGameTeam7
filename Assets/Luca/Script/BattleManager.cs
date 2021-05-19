@@ -41,7 +41,7 @@ public class BattleManager : MonoBehaviour
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
         var txt = Instantiate(floatingText, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
-        txt.GetComponent<TextMeshPro>().text = "-" + damage;
+        txt.GetComponent<TextMeshPro>().text = damage.ToString();
         txt.GetComponent<MeshRenderer>().sortingOrder = 100;
         if (att.GetComponent<PlayerMovement>())
         {
