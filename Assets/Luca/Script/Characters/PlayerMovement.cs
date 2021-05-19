@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         UiActionManager.Instance.showButton();
 
         UiActionManager.Instance.setMovePoint();
-        PhaseManager.Instance.checkAllPlayer();
+        //PhaseManager.Instance.checkAllPlayer();
 
     }
 

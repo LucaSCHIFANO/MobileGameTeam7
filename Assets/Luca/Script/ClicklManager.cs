@@ -235,10 +235,11 @@ public class ClicklManager : MonoBehaviour
                     }
                     else
                     {
-                            Debug.Log("creatkon du joueurqzizjeomibimzi");
                         if (touchedCollier.gameObject.tag == "Panel" && touchedCollier.gameObject.GetComponent<Panel>().canBeClick)
                         {
                             Grid.Instance.createPlayer(touchedCollier.gameObject.GetComponent<Panel>());
+                            UiActionManager.Instance.showButton();
+                            CharacterManager.Instance.functionStart();
                         }
                     }
 

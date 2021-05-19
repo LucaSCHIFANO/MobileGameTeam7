@@ -67,6 +67,10 @@ public class GridPattern : MonoBehaviour
                 gridref.locationEnemy.Add(new Vector2(1, -2));
                 gridref.locationEnemy.Add(new Vector2(5, -3));
 
+                gridref.playerSpawn.Add(new Vector2(0, -4));
+                gridref.playerSpawn.Add(new Vector2(6, -0)); 
+                gridref.playerSpawn.Add(new Vector2(4, -6));
+
                 Debug.Log("green");
                 break;
 
@@ -88,6 +92,9 @@ public class GridPattern : MonoBehaviour
 
                 gridref.locationEnemy.Add(new Vector2(4, 0));
                 gridref.locationEnemy.Add(new Vector2(2, -7));
+
+                gridref.playerSpawn.Add(new Vector2(0, -1));
+                gridref.playerSpawn.Add(new Vector2(6, -6));
 
                 Debug.Log("water");
                 break;
@@ -114,6 +121,8 @@ public class GridPattern : MonoBehaviour
 
                 gridref.locationEnemy.Add(new Vector2(1, -2));
                 gridref.locationEnemy.Add(new Vector2(6, -8));
+
+                gridref.playerSpawn.Add(new Vector2(2, -11));
 
                 Debug.Log("fire");
                 break;
