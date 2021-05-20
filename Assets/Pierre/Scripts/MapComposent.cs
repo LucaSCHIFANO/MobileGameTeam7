@@ -39,9 +39,23 @@ public class MapComposent : MonoBehaviour
     public Transform salle10;
 
 
-    void Start()
+    private static MapComposent _instance = null;
+
+    public static MapComposent Instance
+    {
+        get => _instance;
+    }
+    private void Awake()
+    {
+        _instance = this;
+    }
+
+
+
+        void Start()
     {
         MapUI.SetActive(false);
+                //Opening();
     }
 
 
@@ -198,7 +212,6 @@ public class MapComposent : MonoBehaviour
     public void TestSalle()
     {
         //mets ce que tu veux ici luca
-        position++;
     }
 
     public void UpdatePosition()

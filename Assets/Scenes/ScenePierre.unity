@@ -567,7 +567,6 @@ GameObject:
   - component: {fileID: 509874181}
   - component: {fileID: 509874180}
   - component: {fileID: 509874179}
-  - component: {fileID: 509874182}
   m_Layer: 5
   m_Name: Map
   m_TagString: Untagged
@@ -633,45 +632,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &509874182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509874178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bce3f24343d87148a318d1759d4f72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 1
-  MapUI: {fileID: 0}
-  TypeRoom: []
-  Enemy: {fileID: 0}
-  Rest: {fileID: 0}
-  Treasure: {fileID: 0}
-  Boss: {fileID: 0}
-  salle1: {fileID: 0}
-  salle2: {fileID: 0}
-  salle2H: {fileID: 0}
-  salle2B: {fileID: 0}
-  salle3: {fileID: 0}
-  salle3H: {fileID: 0}
-  salle3B: {fileID: 0}
-  salle4: {fileID: 0}
-  salle4H: {fileID: 0}
-  salle4B: {fileID: 0}
-  salle5: {fileID: 0}
-  salle6H: {fileID: 0}
-  salle6B: {fileID: 0}
-  salle7: {fileID: 0}
-  salle7H: {fileID: 0}
-  salle7B: {fileID: 0}
-  salle8H: {fileID: 0}
-  salle8B: {fileID: 0}
-  salle9: {fileID: 0}
-  salle10: {fileID: 0}
 --- !u!1 &517081025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,9 +2158,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MapTp, Assembly-CSharp
-        m_MethodName: UpdatePosition
+      - m_Target: {fileID: 1269135496}
+        m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
