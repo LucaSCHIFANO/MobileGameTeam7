@@ -12,4 +12,6 @@ public class Card : ScriptableObject
 
     public int attackDamage;
     public int actionCost;
+
+    public AttackParam attackParam;
 }

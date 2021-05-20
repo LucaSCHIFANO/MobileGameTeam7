@@ -43,12 +43,19 @@ public class Grid : MonoBehaviour
     private void Awake()
     {
         _instance = this;
-        awake2();
+
+
+        /*awake2();
         awake2Alpha();
         createEnemies();
         setPos();
 
-        mC.functionStart();
+        mC.functionStart();*/
+    }
+
+    public void Start()
+    {
+        CardManager.Instance.startTheGame();
     }
 
     public void functionStart()

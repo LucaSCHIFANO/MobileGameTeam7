@@ -11,6 +11,7 @@ TagManager:
   - EnemyMap
   - RestMap
   - BossMap
+  - Card
   layers:
   - Default
   - TransparentFX
