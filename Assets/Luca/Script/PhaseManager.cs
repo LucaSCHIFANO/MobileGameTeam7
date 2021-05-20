@@ -53,6 +53,7 @@ public class PhaseManager : MonoBehaviour
             CharacterManager.Instance.resetAllCharacter();
             uiColor.GetComponent<Image>().color = Color.blue;
             UiActionManager.Instance.showButton();
+            CardManager.Instance.startCombat();
 
         }
     }

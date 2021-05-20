@@ -69,6 +69,7 @@ public class ClicklManager : MonoBehaviour
                                         {
                                             player.state = PlayerMovement.States.AOESELECT;
                                             UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
+                                            CardManager.Instance.UseCard();
                                         }
 
                                         else if (touchedPanel.unitOn != null)
@@ -77,6 +78,7 @@ public class ClicklManager : MonoBehaviour
                                             CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                             UiActionManager.Instance.setMovePoint();
                                             currentPanel = null;
+                                            CardManager.Instance.UseCard();
                                         }
                                     }
                                     else if (player.state == PlayerMovement.States.AOESELECT)
@@ -99,6 +101,8 @@ public class ClicklManager : MonoBehaviour
                                                     }
                                                 }
                                             }
+
+                                            CardManager.Instance.UseCard();
 
                                             CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                             CharacterManager.Instance.StartCoroutine("checkAlive");
@@ -177,12 +181,14 @@ public class ClicklManager : MonoBehaviour
                                         {
                                             player.state = PlayerMovement.States.AOESELECT;
                                             UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
+                                            CardManager.Instance.UseCard();
                                         }
                                         else
                                         {
                                             BattleManager.Instance.attackUnit(player.stats, charact.stats, false);
                                             CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                             currentPanel = null;
+                                            CardManager.Instance.UseCard();
                                         }
                                     }
                                     else
@@ -216,6 +222,8 @@ public class ClicklManager : MonoBehaviour
                                             }
                                         }
 
+                                        CardManager.Instance.UseCard();
+
                                         CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                         CharacterManager.Instance.StartCoroutine("checkAlive");
 
@@ -235,10 +243,11 @@ public class ClicklManager : MonoBehaviour
                     }
                     else
                     {
-                            Debug.Log("creatkon du joueurqzizjeomibimzi");
                         if (touchedCollier.gameObject.tag == "Panel" && touchedCollier.gameObject.GetComponent<Panel>().canBeClick)
                         {
                             Grid.Instance.createPlayer(touchedCollier.gameObject.GetComponent<Panel>());
+                            UiActionManager.Instance.showButton();
+                            CharacterManager.Instance.functionStart();
                         }
                     }
 
@@ -274,10 +283,16 @@ public class ClicklManager : MonoBehaviour
 
         else if (player.state == PlayerMovement.States.SELECTCARD)
         {
-            Grid.Instance.resetClicked();
-            player.state = PlayerMovement.States.IDLE;
-            UiActionManager.Instance.hideAll();
-            UiActionManager.Instance.showButton();
+            var cardM = CardManager.Instance;
+            if (!cardM.handToMid && !cardM.midToHand)
+            {
+                Grid.Instance.resetClicked();
+                player.state = PlayerMovement.States.IDLE;
+                UiActionManager.Instance.hideAll();
+                UiActionManager.Instance.showButton();
+                CardManager.Instance.letrucquibouge.GetComponent<Animator>().SetTrigger("Hide");
+                CardManager.Instance.MidToHandLaFonction();
+            }
         }
 
         else if (player.state == PlayerMovement.States.ACTION)

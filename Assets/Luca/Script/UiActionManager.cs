@@ -8,6 +8,7 @@ public class UiActionManager : MonoBehaviour
     public GameObject buttonHand;
     public GameObject buttonCancel;
     public GameObject deck;
+    public GameObject use;
 
     public Text moveLeft;
 
@@ -42,6 +43,7 @@ public class UiActionManager : MonoBehaviour
         buttonHand.SetActive(true);
         buttonCancel.SetActive(false);
         unitPortrait.SetActive(false);
+        use.SetActive(false);
     }
 
     public void hideButton()
@@ -49,18 +51,44 @@ public class UiActionManager : MonoBehaviour
         buttonHand.SetActive(false);
         buttonCancel.SetActive(true);
         deck.SetActive(false);
+        use.SetActive(false);
     }
 
     public void showDeck()
     {
-        buttonHand.SetActive(false);
-        buttonCancel.SetActive(true);
-        deck.SetActive(true);
-        unitPortrait.SetActive(false);
+        var cardM = CardManager.Instance;
+        if (!cardM.handToMid && !cardM.midToHand)
+        {
+            buttonHand.SetActive(false);
+            buttonCancel.SetActive(true);
+            use.SetActive(true);
+            unitPortrait.SetActive(false);
 
-        var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
+            var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
-        player.state = PlayerMovement.States.SELECTCARD;
+            player.state = PlayerMovement.States.SELECTCARD;
+
+            CardManager.Instance.letrucquibouge.GetComponent<Animator>().SetTrigger("Show");
+        }
+    }
+
+    public void useCard()
+    {
+        var cardM = CardManager.Instance;
+        if (!cardM.handToMid && !cardM.midToHand)
+        {
+            if (CardManager.Instance.middleCard != null)
+            {
+                var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
+                var player = CharacterManager.Instance.currentPlayer;
+
+                cardM.MidToHandLaFonction();
+                showAttackRange(midCard);
+                cardM.letrucquibouge.GetComponent<Animator>().SetTrigger("Hide");
+                cardM.chosenCard = cardM.middleCard;
+
+            }
+        }
     }
 
     public void hideAll()
@@ -68,6 +96,7 @@ public class UiActionManager : MonoBehaviour
         buttonHand.SetActive(false);
         buttonCancel.SetActive(false);
         deck.SetActive(false);
+        use.SetActive(false);
         unitPortrait.SetActive(false);
     }
 
