@@ -26,6 +26,7 @@ public class CardManager : MonoBehaviour
 
     private List<GameObject> hand = new List<GameObject>();
     public GameObject middleCard = null;
+    public GameObject chosenCard = null;
 
     private List<Card> discard = new List<Card>();
 
@@ -303,11 +304,11 @@ public class CardManager : MonoBehaviour
 
     public void UseCard()
     {
-        if (middleCard != null)
+        if (chosenCard != null)
         {
-            discard.Add(middleCard.GetComponent<CardDisplay>().card);
-            hand.Remove(middleCard);
-            Destroy(middleCard);
+            discard.Add(chosenCard.GetComponent<CardDisplay>().card);
+            hand.Remove(chosenCard);
+            Destroy(chosenCard);
             isMid = false;
             FitCards();
         }

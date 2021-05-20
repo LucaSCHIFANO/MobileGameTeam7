@@ -74,14 +74,20 @@ public class UiActionManager : MonoBehaviour
 
     public void useCard()
     {
-        if (CardManager.Instance.middleCard != null)
+        var cardM = CardManager.Instance;
+        if (!cardM.handToMid && !cardM.midToHand)
         {
-            var midCard = CardManager.Instance.middleCard.GetComponent<CardDisplay>().attackParam;
-            var player = CharacterManager.Instance.currentPlayer;
+            if (CardManager.Instance.middleCard != null)
+            {
+                var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
+                var player = CharacterManager.Instance.currentPlayer;
 
-            CardManager.Instance.MidToHandLaFonction();
-            showAttackRange(midCard);
-            CardManager.Instance.letrucquibouge.GetComponent<Animator>().SetTrigger("Hide");
+                cardM.MidToHandLaFonction();
+                showAttackRange(midCard);
+                cardM.letrucquibouge.GetComponent<Animator>().SetTrigger("Hide");
+                cardM.chosenCard = cardM.middleCard;
+
+            }
         }
     }
 

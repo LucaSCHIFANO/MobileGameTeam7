@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void trueMovement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, panelToGo.gameObject.transform.position, 0.095f);
+        transform.position = Vector3.MoveTowards(transform.position, panelToGo.gameObject.transform.position, 6.5f * Time.deltaTime);
     }
 
     public IEnumerator isPushOrPull(Panel panelToMove)
