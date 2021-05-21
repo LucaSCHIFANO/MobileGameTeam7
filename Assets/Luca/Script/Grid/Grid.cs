@@ -66,6 +66,8 @@ public class Grid : MonoBehaviour
         setPos();
 
         mC.functionStart();
+        CardManager.Instance.EndRound();
+        PhaseManager.Instance.oneTime = false;
     }
 
 
@@ -253,20 +255,26 @@ public class Grid : MonoBehaviour
     }
 
 
-    public void deleteMap()
+    public void deleteMap(bool respawn)
     {
-        for (int i = 0; i < width; i++)
+        if (width != 0 || height != 0)
         {
-            for (int j = 0; j < height; j++)
+            for (int i = 0; i < width; i++)
             {
+                for (int j = 0; j < height; j++)
+                {
 
-                var panel = gridArray[i, j];
-                Destroy(panel.gameObject);
+                    var panel = gridArray[i, j];
+                    Destroy(panel.gameObject);
 
-                panel = gridArrayAlpha[i, j];
-                Destroy(panel.gameObject);
+                    panel = gridArrayAlpha[i, j];
+                    Destroy(panel.gameObject);
+                }
             }
         }
+
+        width = 0;
+        height = 0;
 
         ClicklManager.Instance.currentPanel = null;
 
@@ -283,9 +291,14 @@ public class Grid : MonoBehaviour
         }
         CharacterManager.Instance.enemyList.Clear();
 
-        PhaseManager.Instance.phase = PhaseManager.actualPhase.BEGIN;
+        if(respawn == true)
+        {
+            PhaseManager.Instance.phase = PhaseManager.actualPhase.BEGIN;
 
-        functionStart();
+            functionStart();
+
+        }
+
     }
 
     public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)  // trouve le chemins le plus court pour allez sur une case

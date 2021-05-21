@@ -36,7 +36,6 @@ public class CardManager : MonoBehaviour
     public Transform startLocation;
     public float gap;
     public Transform handPanel;
-    public Transform letrucquibouge;
     private Vector3 previousTransform;
     private Quaternion previousRotation;
 
@@ -131,8 +130,17 @@ public class CardManager : MonoBehaviour
                             else
                             {
                                 inChosenTime = false;
-                                MapComposent.Instance.Opening();
-                                //Grid.Instance.functionStart();
+                                //MapComposent.Instance.Opening();
+                                //MapComposent.Instance.Check();
+                                var cM = CharacterManager.Instance;
+
+                                if (cM.currentPlayer == null || cM.currentPlayer.state != PlayerMovement.States.WIN)
+                                {
+                                    Grid.Instance.functionStart();
+                                }
+                                else{
+                                    CharacterManager.Instance.returnToMap();
+                                }
                             }
                         }
 
@@ -162,9 +170,9 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
-            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, transform.position, .05f);
-            middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, midRotation, .05f);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, transform.position) < 2f)
+            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, transform.position, 7f * Time.deltaTime);
+            middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, midRotation, 7f * Time.deltaTime);
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, transform.position) < 15f) // trouver la bonne valuer avec la speed
             {
                 handToMid = false;
                 middleCard.GetComponent<RectTransform>().localPosition = handPanel.position;
@@ -177,9 +185,9 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
-            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, previousTransform, 0.1f);
-            middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, previousRotation, .05f);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) < 2f)
+            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, previousTransform, 5f * Time.deltaTime);
+            middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, previousRotation, 5f * Time.deltaTime);
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) < 15f)
             {
                 midToHand = false;
                 middleCard.GetComponent<RectTransform>().localPosition = previousTransform;
@@ -268,7 +276,7 @@ public class CardManager : MonoBehaviour
     {
         for (int i = 0; i < howManyInHand; i++)
         {
-            var handCard = Instantiate(cardPrefab, startLocation.position, Quaternion.identity, letrucquibouge);
+            var handCard = Instantiate(cardPrefab, startLocation.position, Quaternion.identity, handPanel);
             Vector3 handCardPosition = handCard.GetComponent<RectTransform>().localPosition;
             handCard.GetComponent<RectTransform>().localPosition = new Vector3(handCardPosition.x, handCardPosition.y, i);
             int rand = Random.Range(0, deck.Count);
@@ -336,5 +344,11 @@ public class CardManager : MonoBehaviour
         {
             midToHand = true;
         }
+    }
+
+    public void toChoice()
+    {
+        inRound = false;
+        inChosenTime = true;
     }
 }

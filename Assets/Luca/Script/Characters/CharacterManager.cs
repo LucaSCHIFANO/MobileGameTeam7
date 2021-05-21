@@ -94,6 +94,18 @@ public class CharacterManager : MonoBehaviour
         else if(enemyList.Count == 0)
         {
             Debug.Log("You win");
+            UiActionManager.Instance.hideAll();
+
+            CardManager.Instance.RollCard();
+            CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
+            CardManager.Instance.toChoice();
         }
+    }
+
+    public void returnToMap()
+    {
+        MapComposent.Instance.Opening();
+            MapComposent.Instance.Check();
+        Grid.Instance.deleteMap(false);
     }
 }

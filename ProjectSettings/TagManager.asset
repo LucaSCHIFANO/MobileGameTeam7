@@ -12,6 +12,7 @@ TagManager:
   - RestMap
   - BossMap
   - Card
+  - BoutonLevel
   layers:
   - Default
   - TransparentFX

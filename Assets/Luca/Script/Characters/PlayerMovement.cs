@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         ACTION,
         AOESELECT,
         WAIT,
+        WIN,
     }
 
     public void Start()
