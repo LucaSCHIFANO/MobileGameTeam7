@@ -82,6 +82,18 @@ public class CreateAnEnemy : MonoBehaviour
 
 
             default:
+                enemy.stats.characName = "Skully";
+                enemy.stats.maxHP = 10 + upgradeValue + proba(upgradeProba);
+                enemy.stats.HP = enemy.stats.maxHP;
+                enemy.stats.strenght = upgradeValue + proba(upgradeProba);
+                enemy.stats.defense = upgradeValue + proba(upgradeProba);
+                enemy.stats.speed = upgradeValue + proba(upgradeProba);
+                enemy.stats.maxActionPoint = 3;
+                enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                enemy.stats.element = Stats.ELEMENT.NORMAL;
+
+                enemy.attackMonster.attackParam = listEnAttack[0];
+                enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
                 break;
         }
     }

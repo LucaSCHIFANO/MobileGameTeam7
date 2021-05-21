@@ -219,6 +219,7 @@ public class Enemy : MonoBehaviour
         }
 
         characterState = PlayerMovement.States.WAIT;
+        stats.effectActu();
         PhaseManager.Instance.checkAllEnemies();
     }
 
