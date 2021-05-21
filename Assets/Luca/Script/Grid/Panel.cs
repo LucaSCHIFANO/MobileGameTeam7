@@ -14,6 +14,7 @@ public class Panel : MonoBehaviour
     public Color baseColor;
 
     public bool canBeCrossed = true;
+    public bool canShotThrought = true;
 
     public Panel prevousPanel;
 
@@ -29,6 +30,9 @@ public class Panel : MonoBehaviour
     public GameObject unitOn;
 
     public Collider2D col;
+
+    public bool canBeOpen;
+    public bool isOpen;
 
     private void Start()
     {

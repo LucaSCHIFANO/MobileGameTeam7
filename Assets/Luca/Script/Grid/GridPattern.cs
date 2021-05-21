@@ -15,6 +15,8 @@ public class GridPattern : MonoBehaviour
         WATER,  // 4 deplacement
         WALL,   // 255 deplacement
         BRIDGE, // 1 deplacement
+        HOLE, // 255 deplacement mais peut tirer a travers
+        CHEST, // 1 depl mais coffre
     }
 
     public panelType[,] createPattern(int id) // les patterns
@@ -33,7 +35,7 @@ public class GridPattern : MonoBehaviour
                     {panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.PATH,panelType.PATH,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.GRASS,},
                     {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
                     {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.WALL,panelType.WALL,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
-                    {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.WALL,panelType.WALL,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
+                    {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.WALL,panelType.WALL,panelType.FOREST,panelType.CHEST,panelType.PATH,panelType.GRASS,},
                     {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
 
                 };

@@ -114,6 +114,12 @@ public class PlayerMovement : MonoBehaviour
         state = States.WAIT;
         stats.actionPoint = stats.maxActionPoint;
 
+        if(Grid.Instance.gridArray[xPos, - yPos].canBeOpen && !Grid.Instance.gridArray[xPos, -yPos].isOpen)
+        {
+            Grid.Instance.gridArray[xPos, -yPos].isOpen = true;
+            Debug.Log("chest opened");
+        }
+
         stats.effectActu();
 
         UiActionManager.Instance.hideAll();
