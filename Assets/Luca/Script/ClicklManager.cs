@@ -70,6 +70,7 @@ public class ClicklManager : MonoBehaviour
                                             player.state = PlayerMovement.States.AOESELECT;
                                             UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
                                             CardManager.Instance.UseCard();
+                                            CardManager.Instance.midToHand = false;
                                         }
 
                                         else if (touchedPanel.unitOn != null)
@@ -79,6 +80,7 @@ public class ClicklManager : MonoBehaviour
                                             UiActionManager.Instance.setMovePoint();
                                             currentPanel = null;
                                             CardManager.Instance.UseCard();
+                                            CardManager.Instance.midToHand = false;
                                         }
                                     }
                                     else if (player.state == PlayerMovement.States.AOESELECT)
@@ -103,6 +105,7 @@ public class ClicklManager : MonoBehaviour
                                             }
 
                                             CardManager.Instance.UseCard();
+                                            CardManager.Instance.midToHand = false;
 
                                             CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                             CharacterManager.Instance.StartCoroutine("checkAlive");
@@ -182,6 +185,7 @@ public class ClicklManager : MonoBehaviour
                                             player.state = PlayerMovement.States.AOESELECT;
                                             UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
                                             CardManager.Instance.UseCard();
+                                            CardManager.Instance.midToHand = false;
                                         }
                                         else
                                         {
@@ -189,6 +193,7 @@ public class ClicklManager : MonoBehaviour
                                             CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                             currentPanel = null;
                                             CardManager.Instance.UseCard();
+                                            CardManager.Instance.midToHand = false;
                                         }
                                     }
                                     else
@@ -223,6 +228,7 @@ public class ClicklManager : MonoBehaviour
                                         }
 
                                         CardManager.Instance.UseCard();
+                                        CardManager.Instance.midToHand = false;
 
                                         CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
                                         CharacterManager.Instance.StartCoroutine("checkAlive");
