@@ -94,6 +94,10 @@ public class CharacterManager : MonoBehaviour
         else if(enemyList.Count == 0)
         {
             Debug.Log("You win");
+            UiActionManager.Instance.hideAll();
+            MapComposent.Instance.Opening();
+            MapComposent.Instance.Check();
+            Grid.Instance.deleteMap(false);
         }
     }
 }

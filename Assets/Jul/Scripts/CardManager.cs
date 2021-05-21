@@ -36,7 +36,6 @@ public class CardManager : MonoBehaviour
     public Transform startLocation;
     public float gap;
     public Transform handPanel;
-    public Transform letrucquibouge;
     private Vector3 previousTransform;
     private Quaternion previousRotation;
 
@@ -131,8 +130,9 @@ public class CardManager : MonoBehaviour
                             else
                             {
                                 inChosenTime = false;
-                                MapComposent.Instance.Opening();
-                                //Grid.Instance.functionStart();
+                                //MapComposent.Instance.Opening();
+                                //MapComposent.Instance.Check();
+                                Grid.Instance.functionStart();
                             }
                         }
 
@@ -268,7 +268,7 @@ public class CardManager : MonoBehaviour
     {
         for (int i = 0; i < howManyInHand; i++)
         {
-            var handCard = Instantiate(cardPrefab, startLocation.position, Quaternion.identity, letrucquibouge);
+            var handCard = Instantiate(cardPrefab, startLocation.position, Quaternion.identity, handPanel);
             Vector3 handCardPosition = handCard.GetComponent<RectTransform>().localPosition;
             handCard.GetComponent<RectTransform>().localPosition = new Vector3(handCardPosition.x, handCardPosition.y, i);
             int rand = Random.Range(0, deck.Count);

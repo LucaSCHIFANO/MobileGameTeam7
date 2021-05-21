@@ -9,12 +9,12 @@ public class GridPattern : MonoBehaviour
 
     public enum panelType // differents type de case
     {
-        GRASS,
-        PATH,
-        FOREST,
-        WATER,
-        WALL,
-        BRIDGE,
+        GRASS, // 1 deplacement
+        PATH,   // 1 deplacement
+        FOREST, // 3 deplacement
+        WATER,  // 4 deplacement
+        WALL,   // 255 deplacement
+        BRIDGE, // 1 deplacement
     }
 
     public panelType[,] createPattern(int id) // les patterns
@@ -37,13 +37,13 @@ public class GridPattern : MonoBehaviour
                     {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
 
                 };
-                gridref.height = 10;
+                gridref.height = 10; // taille de la grille 
                 gridref.width = 10;
 
-                gridref.locationEnemy.Add(new Vector2(4, -2));
+                gridref.locationEnemy.Add(new Vector2(4, -2)); // position des ennemies
                 gridref.locationEnemy.Add(new Vector2(5, -2));
 
-                gridref.playerSpawn.Add(new Vector2(1, -7));
+                gridref.playerSpawn.Add(new Vector2(1, -7)); // possible position du player
                 gridref.playerSpawn.Add(new Vector2(8, -7));
 
                 Debug.Log("normal");

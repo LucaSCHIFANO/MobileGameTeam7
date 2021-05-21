@@ -290,7 +290,7 @@ public class ClicklManager : MonoBehaviour
                 player.state = PlayerMovement.States.IDLE;
                 UiActionManager.Instance.hideAll();
                 UiActionManager.Instance.showButton();
-                CardManager.Instance.letrucquibouge.GetComponent<Animator>().SetTrigger("Hide");
+                CardManager.Instance.handPanel.GetComponent<Animator>().SetTrigger("Hide");
                 CardManager.Instance.MidToHandLaFonction();
             }
         }

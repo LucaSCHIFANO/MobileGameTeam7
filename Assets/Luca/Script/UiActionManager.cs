@@ -68,25 +68,31 @@ public class UiActionManager : MonoBehaviour
 
             player.state = PlayerMovement.States.SELECTCARD;
 
-            CardManager.Instance.letrucquibouge.GetComponent<Animator>().SetTrigger("Show");
+            CardManager.Instance.handPanel.GetComponent<Animator>().SetTrigger("Show");
         }
     }
 
     public void useCard()
     {
         var cardM = CardManager.Instance;
-        if (!cardM.handToMid && !cardM.midToHand)
+        if (cardM.middleCard != null)
         {
-            if (CardManager.Instance.middleCard != null)
+            if (cardM.middleCard.GetComponent<CardDisplay>().attackParam.APNeeded <= CharacterManager.Instance.currentPlayer.GetComponent<Stats>().actionPoint)
             {
-                var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
-                var player = CharacterManager.Instance.currentPlayer;
+                if (!cardM.handToMid && !cardM.midToHand)
+                {
+                    if (cardM.middleCard != null)
+                    {
+                        var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
+                        var player = CharacterManager.Instance.currentPlayer;
 
-                cardM.MidToHandLaFonction();
-                showAttackRange(midCard);
-                cardM.letrucquibouge.GetComponent<Animator>().SetTrigger("Hide");
-                cardM.chosenCard = cardM.middleCard;
+                        cardM.MidToHandLaFonction();
+                        showAttackRange(midCard);
+                        cardM.handPanel.GetComponent<Animator>().SetTrigger("Hide");
+                        cardM.chosenCard = cardM.middleCard;
 
+                    }
+                }
             }
         }
     }
