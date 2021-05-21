@@ -131,7 +131,8 @@ public class CardManager : MonoBehaviour
                             else
                             {
                                 inChosenTime = false;
-                                Grid.Instance.functionStart();
+                                MapComposent.Instance.Opening();
+                                //Grid.Instance.functionStart();
                             }
                         }
 
