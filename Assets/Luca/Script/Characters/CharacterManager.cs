@@ -95,9 +95,17 @@ public class CharacterManager : MonoBehaviour
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
-            MapComposent.Instance.Opening();
-            MapComposent.Instance.Check();
-            Grid.Instance.deleteMap(false);
+
+            CardManager.Instance.RollCard();
+            CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
+            CardManager.Instance.toChoice();
         }
+    }
+
+    public void returnToMap()
+    {
+        MapComposent.Instance.Opening();
+            MapComposent.Instance.Check();
+        Grid.Instance.deleteMap(false);
     }
 }

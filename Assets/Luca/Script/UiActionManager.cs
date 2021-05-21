@@ -68,7 +68,7 @@ public class UiActionManager : MonoBehaviour
 
             player.state = PlayerMovement.States.SELECTCARD;
 
-            CardManager.Instance.handPanel.GetComponent<Animator>().SetTrigger("Show");
+            cardM.handPanel.GetComponent<Animator>().SetTrigger("Show");
         }
     }
 
