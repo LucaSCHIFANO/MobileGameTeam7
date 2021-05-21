@@ -44,7 +44,6 @@ public class Grid : MonoBehaviour
     {
         _instance = this;
 
-
         /*awake2();
         awake2Alpha();
         createEnemies();

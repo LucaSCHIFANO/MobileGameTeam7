@@ -153,7 +153,7 @@ public class MapComposent : MonoBehaviour
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Treasure;
             else
-                Create(TypeRoom[RandomRoom], salle4H, 41);
+                Create(TypeRoom[RandomRoom], salle4H, 40);
             //var room4H = Instantiate(TypeRoom[RandomRoom], salle4H.position, salle4H.rotation, salle4H.transform);
         }
         else if (position == 31)
@@ -164,7 +164,7 @@ public class MapComposent : MonoBehaviour
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Treasure;
             else
-                Create(TypeRoom[RandomRoom], salle4B, 41);
+                Create(TypeRoom[RandomRoom], salle4B, 42);
             //var room4B = Instantiate(TypeRoom[RandomRoom], salle4B.position, salle4B.rotation, salle4B.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
@@ -172,7 +172,7 @@ public class MapComposent : MonoBehaviour
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Treasure;
             else
-                Create(TypeRoom[RandomRoom], salle4H, 41);
+                Create(TypeRoom[RandomRoom], salle4H, 40);
             //var room4H = Instantiate(TypeRoom[RandomRoom], salle4H.position, salle4H.rotation, salle4H.transform);
         }
         else if (position == 32)
@@ -191,7 +191,7 @@ public class MapComposent : MonoBehaviour
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Treasure;
             else
-                Create(TypeRoom[RandomRoom], salle4B, 41);
+                Create(TypeRoom[RandomRoom], salle4B, 42);
             //var room4B = Instantiate(TypeRoom[RandomRoom], salle4B.position, salle4B.rotation, salle4B.transform);
         }
 

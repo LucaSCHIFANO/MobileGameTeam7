@@ -7362,7 +7362,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 24a5750234aa389468ccfbfb175a4e11, type: 2}
   - {fileID: 11400000, guid: 80b285aaa35df0447bd40ca43dcdbe6a, type: 2}
   attackParams:
-  - {fileID: 11400000, guid: e21cd480b8f889d448cefae8dd623a05, type: 2}
+  - {fileID: 11400000, guid: c01485432ecccb44893953497f7b250e, type: 2}
   - {fileID: 11400000, guid: 28c0ef5a8b403ce4a9cefcf71bdbcfe4, type: 2}
   - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
   handToMid: 0
