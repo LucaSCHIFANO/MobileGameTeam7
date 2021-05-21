@@ -40,17 +40,15 @@ public class BattleManager : MonoBehaviour
         def.HP -= damage;
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
-        var txt = Instantiate(floatingText, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
-        txt.GetComponent<TextMeshPro>().text = damage.ToString();
-        txt.GetComponent<MeshRenderer>().sortingOrder = 100;
         if (att.GetComponent<PlayerMovement>())
         {
-            txt.GetComponent<TextMeshPro>().color = Color.cyan;
+            showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue);
         }
         else
         {
-            txt.GetComponent<TextMeshPro>().color = Color.red;
+            showDamage(damage, def.gameObject.transform.GetChild(0), Color.red);
         }
+        
 
         if (currentAttackParam.pull || currentAttackParam.push)
         {
@@ -68,6 +66,18 @@ public class BattleManager : MonoBehaviour
 
                 PushPool(attScript, defScript);
             }
+        }
+
+        if (currentAttackParam.effect != Stats.EFFECT.NORMAL)
+        {
+
+            if (currentAttackParam.effect == Stats.EFFECT.POISON)
+            {
+                def.effect = Stats.EFFECT.POISON;
+            }
+
+            def.intesity = currentAttackParam.intensity;
+            def.numberOfTurn = currentAttackParam.duration;
         }
 
         if (!aoe)
@@ -369,4 +379,14 @@ public class BattleManager : MonoBehaviour
             }
         }
     }
+
+   public void showDamage(int damage, Transform position, Color color)
+   {
+        var txt = Instantiate(floatingText, position.position, position.rotation);
+        txt.GetComponent<TextMeshPro>().text = damage.ToString();
+        txt.GetComponent<MeshRenderer>().sortingOrder = 100;
+
+        txt.GetComponent<TextMeshPro>().color = color;
+    }
+
 }

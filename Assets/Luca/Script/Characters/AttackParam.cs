@@ -21,4 +21,9 @@ public class AttackParam : ScriptableObject
 
     public bool AOE;
     public AttackParam aoeEffect;
+
+
+    public Stats.EFFECT effect;
+    public int duration;
+    public int intensity;
 }
