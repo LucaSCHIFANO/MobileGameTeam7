@@ -59,104 +59,108 @@ public class CardManager : MonoBehaviour
 
     void Update()
     {
-        if(!handToMid && !midToHand)
+        if (!handToMid && !midToHand)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-
-                RaycastHit2D[] hit = Physics2D.RaycastAll(mousePos2D, Vector2.zero);
-
-                if (hit.Length == 0)
+                if (!MenuPause.GameIsPaused)
                 {
-                    return;
-                }
+                    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-                GameObject firstCard = hit[0].collider?.gameObject;
-                GameObject hitCard = null;
-                if (hit.Length == 1)
-                {
-                    if (hit[0].collider.gameObject.CompareTag("Card"))
+                    RaycastHit2D[] hit = Physics2D.RaycastAll(mousePos2D, Vector2.zero);
+
+                    if (hit.Length == 0)
                     {
-                        hitCard = firstCard;
+                        return;
                     }
-                }
-                else
-                {
-                    foreach (RaycastHit2D h in hit)
+
+                    GameObject firstCard = hit[0].collider?.gameObject;
+                    GameObject hitCard = null;
+                    if (hit.Length == 1)
                     {
-                        if (h.collider.gameObject.CompareTag("Card") && h.collider.gameObject.GetComponent<RectTransform>())
+                        if (hit[0].collider.gameObject.CompareTag("Card"))
                         {
-                            if (firstCard != h.collider.gameObject)
+                            hitCard = firstCard;
+                        }
+                    }
+                    else
+                    {
+                        foreach (RaycastHit2D h in hit)
+                        {
+                            if (h.collider.gameObject.CompareTag("Card") && h.collider.gameObject.GetComponent<RectTransform>())
                             {
-                                if (firstCard.GetComponent<RectTransform>())
+                                if (firstCard != h.collider.gameObject)
                                 {
-                                    if (h.collider.gameObject.GetComponent<RectTransform>().localPosition.z > firstCard.GetComponent<RectTransform>().localPosition.z)
+                                    if (firstCard.GetComponent<RectTransform>())
+                                    {
+                                        if (h.collider.gameObject.GetComponent<RectTransform>().localPosition.z > firstCard.GetComponent<RectTransform>().localPosition.z)
+                                        {
+                                            hitCard = h.collider.gameObject;
+                                        }
+
+                                    }
+                                    else
                                     {
                                         hitCard = h.collider.gameObject;
                                     }
-
-                                }
-                                else
-                                {
-                                    hitCard = h.collider.gameObject;
                                 }
                             }
                         }
                     }
-                }
 
-                if (hitCard != null)
-                {
-                    if (hitCard.CompareTag("Card"))
+                    if (hitCard != null)
                     {
-                        if (inChosenTime)
+                        if (hitCard.CompareTag("Card"))
                         {
-                            deck.Add(hitCard.GetComponent<CardDisplay>().card);
-                            hitCard.GetComponent<CardDisplay>().card.attackParam = hitCard.GetComponent<CardDisplay>().attackParam;
-
-                            for (int i = 0; i < actualRoll.Length; i++)
+                            if (inChosenTime)
                             {
-                                Destroy(actualRoll[i]);
-                                actualRoll[i] = null;
-                            }
+                                deck.Add(hitCard.GetComponent<CardDisplay>().card);
+                                hitCard.GetComponent<CardDisplay>().card.attackParam = hitCard.GetComponent<CardDisplay>().attackParam;
 
-                            if (index < nbTirageDebut - 1)
-                            {
-                                RollCard();
-                                index++;
-                            }
-                            else
-                            {
-                                inChosenTime = false;
-                                //MapComposent.Instance.Opening();
-                                //MapComposent.Instance.Check();
-                                var cM = CharacterManager.Instance;
-
-                                if (cM.currentPlayer == null || cM.currentPlayer.state != PlayerMovement.States.WIN)
+                                for (int i = 0; i < actualRoll.Length; i++)
                                 {
-                                    Grid.Instance.functionStart();
+                                    Destroy(actualRoll[i]);
+                                    actualRoll[i] = null;
                                 }
-                                else{
-                                    CharacterManager.Instance.returnToMap();
-                                }
-                            }
-                        }
 
-                        if (inRound)
-                        {
-                            if (!isMid)
-                            {
-                                previousTransform = hitCard.GetComponent<RectTransform>().localPosition;
-                                previousRotation = hitCard.transform.rotation;
-                                middleCard = hitCard;
-                                handToMid = true;
-                                isMid = true;
+                                if (index < nbTirageDebut - 1)
+                                {
+                                    RollCard();
+                                    index++;
+                                }
+                                else
+                                {
+                                    inChosenTime = false;
+                                    //MapComposent.Instance.Opening();
+                                    //MapComposent.Instance.Check();
+                                    var cM = CharacterManager.Instance;
+
+                                    if (cM.currentPlayer == null || cM.currentPlayer.state != PlayerMovement.States.WIN)
+                                    {
+                                        Grid.Instance.functionStart();
+                                    }
+                                    else
+                                    {
+                                        CharacterManager.Instance.returnToMap();
+                                    }
+                                }
                             }
-                            else if (isMid && middleCard == hitCard)
+
+                            if (inRound)
                             {
-                                midToHand = true;
+                                if (!isMid)
+                                {
+                                    previousTransform = hitCard.GetComponent<RectTransform>().localPosition;
+                                    previousRotation = hitCard.transform.rotation;
+                                    middleCard = hitCard;
+                                    handToMid = true;
+                                    isMid = true;
+                                }
+                                else if (isMid && middleCard == hitCard)
+                                {
+                                    midToHand = true;
+                                }
                             }
                         }
                     }

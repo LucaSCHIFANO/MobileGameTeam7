@@ -277,11 +277,6 @@ public class MapComposent : MonoBehaviour
             //var room10 = Instantiate(Boss, salle10.position, salle10.rotation, salle10.transform);
 
         }
-
-        else if (position == 100)
-        {
-
-        }
     }
 
     public void Create(GameObject TypeSalle, Transform Emplacement, int position, int progression)
@@ -318,6 +313,11 @@ public class MapComposent : MonoBehaviour
         MapUI.SetActive(true);
         Time.timeScale = 0f;
         MapOpen = true;
+
+        if (position == 100)
+        {
+            Debug.Log("tu as gagné");
+        }
     }
 
     public void Closing()

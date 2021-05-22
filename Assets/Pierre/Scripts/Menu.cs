@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
 {
     public GameObject creditsMenuUI;
     public GameObject MenuUI;
+    public GameObject OptionsUI;
 
     public bool isConnectedToGooglePlayServices;
 
@@ -32,22 +33,12 @@ public class Menu : MonoBehaviour
 
     public void BouttonJouer()
     {
-        SceneManager.LoadScene("ScenePierre");
+        SceneManager.LoadScene("SceneLuca");
     }
 
     public void BouttonTuto()
     {
         SceneManager.LoadScene("Tuto");
-    }
-
-    public void BouttonCredits()
-    {
-        
-    }
-
-    public void BouttonOptions()
-    {
-        //SceneManager.LoadScene("Options");
     }
 
     public void BouttonQuitter()
@@ -59,12 +50,21 @@ public class Menu : MonoBehaviour
     {
         MenuUI.SetActive(false);
         creditsMenuUI.SetActive(true);
+        OptionsUI.SetActive(false);
     }
 
     public void CreditsDisable()
     {
+        MenuUI.SetActive(false);
+        creditsMenuUI.SetActive(false);
+        OptionsUI.SetActive(true);
+    }
+
+    public void OptionDisable()
+    {
         MenuUI.SetActive(true);
         creditsMenuUI.SetActive(false);
+        OptionsUI.SetActive(false);
     }
 
 

@@ -47,6 +47,9 @@ public class BoutonInfo : MonoBehaviour
                 MapComposent.Instance.disableOldBouton();
 
                 MapComposent.Instance.Check();
+
+                CharacterManager.Instance.sS.HP += (int)(CharacterManager.Instance.sS.maxHP / 2);
+                Mathf.Clamp(CharacterManager.Instance.sS.HP, 1, CharacterManager.Instance.sS.maxHP);
                 //MapComposent.Instance.Closing();
 
                 break;
@@ -70,14 +73,14 @@ public class BoutonInfo : MonoBehaviour
 
                 Grid.Instance.levelID = idLevel;
                 Grid.Instance.progress = progression;
-                ///Grid.Instance.deleteMap(true);
+                Grid.Instance.deleteMap(true);
 
                 MapComposent.Instance.position = positionMap;
 
                 MapComposent.Instance.disableOldBouton();
 
                 MapComposent.Instance.Check();
-                //MapComposent.Instance.Closing();
+                MapComposent.Instance.Closing();
 
                 break;
             default:

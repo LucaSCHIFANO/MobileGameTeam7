@@ -40,10 +40,14 @@ public class MoveCam : MonoBehaviour
 
         if (Input.GetMouseButton(0) && Input.touchCount < 2)
         {
-            var charac = CharacterManager.Instance;
-            if (charac.currentPlayer != null && (charac.currentPlayer.state != PlayerMovement.States.WIN && charac.currentPlayer.state != PlayerMovement.States.WAIT)) {
-                Vector3 direction = touchPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Camera.main.transform.position += direction;
+            if (!MenuPause.GameIsPaused)
+            {
+                var charac = CharacterManager.Instance;
+                if (charac.currentPlayer != null && (charac.currentPlayer.state != PlayerMovement.States.WIN && charac.currentPlayer.state != PlayerMovement.States.WAIT))
+                {
+                    Vector3 direction = touchPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Camera.main.transform.position += direction;
+                }
             }
         }
 
