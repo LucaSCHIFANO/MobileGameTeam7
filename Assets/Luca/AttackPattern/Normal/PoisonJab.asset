@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PoisonJab
   m_EditorClassIdentifier: 
   patternName: PoisonJab
+  description: 
   range: 1
   row_column: 1
   throughWall: 0
@@ -26,3 +27,4 @@ MonoBehaviour:
   effect: 1
   duration: 3
   intensity: 3
+  artwork: {fileID: 21300000, guid: 939a45863c78e2e428fa8bda09eddf0d, type: 3}

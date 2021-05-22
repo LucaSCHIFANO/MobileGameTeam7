@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DemonArrow
   m_EditorClassIdentifier: 
   patternName: DemonArrow
+  description: 
   range: 6
   row_column: 0
   throughWall: 0
@@ -23,3 +24,7 @@ MonoBehaviour:
   element: 1
   AOE: 0
   aoeEffect: {fileID: 0}
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: 5afb14b7d7bb90242ac194530d2223d5, type: 3}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Slap
   m_EditorClassIdentifier: 
   patternName: Slap
+  description: 
   range: 1
   row_column: 1
   throughWall: 0
@@ -23,3 +24,7 @@ MonoBehaviour:
   element: 0
   AOE: 0
   aoeEffect: {fileID: 0}
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: fa762b0f81d5dbf4da799a4508859f53, type: 3}

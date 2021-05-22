@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Root
   m_EditorClassIdentifier: 
   patternName: Root
+  description: 
   range: 6
   row_column: 0
   throughWall: 0
@@ -23,3 +24,7 @@ MonoBehaviour:
   element: 3
   AOE: 0
   aoeEffect: {fileID: 0}
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: fd947fd83269ed34b92cea419e49a521, type: 3}

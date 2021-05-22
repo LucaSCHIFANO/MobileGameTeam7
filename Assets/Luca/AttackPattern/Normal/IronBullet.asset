@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: IronBullet
   m_EditorClassIdentifier: 
   patternName: IronBullet
+  description: 
   range: 4
   row_column: 0
   throughWall: 0
@@ -23,3 +24,7 @@ MonoBehaviour:
   element: 0
   AOE: 0
   aoeEffect: {fileID: 0}
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: 44291bddd51931e48b2967f15f5ebe95, type: 3}

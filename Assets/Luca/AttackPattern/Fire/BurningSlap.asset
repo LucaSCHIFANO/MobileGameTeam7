@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BurningSlap
   m_EditorClassIdentifier: 
   patternName: BurningSlap
+  description: 
   range: 2
   row_column: 0
   throughWall: 0
@@ -23,3 +24,7 @@ MonoBehaviour:
   element: 1
   AOE: 0
   aoeEffect: {fileID: 0}
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: 01c9ba91c1d004e40939069c4b3d2221, type: 3}
