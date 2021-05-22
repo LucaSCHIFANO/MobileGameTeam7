@@ -158,7 +158,6 @@ public class Enemy : MonoBehaviour
                 if (panel.actualPanelCount <= attackMonster.attackParam.range && (panel.x == player.xPos || panel.y == player.yPos) )
                 {
                     otherPosList.Add(panel);
-                    Debug.Log(panel);
                 }
             }
         }
@@ -219,6 +218,7 @@ public class Enemy : MonoBehaviour
         }
 
         characterState = PlayerMovement.States.WAIT;
+        stats.effectActu();
         PhaseManager.Instance.checkAllEnemies();
     }
 

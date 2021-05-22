@@ -47,6 +47,9 @@ public class BoutonInfo : MonoBehaviour
                 MapComposent.Instance.disableOldBouton();
 
                 MapComposent.Instance.Check();
+
+                CharacterManager.Instance.sS.HP += (int)(CharacterManager.Instance.sS.maxHP / 2);
+                Mathf.Clamp(CharacterManager.Instance.sS.HP, 1, CharacterManager.Instance.sS.maxHP);
                 //MapComposent.Instance.Closing();
 
                 break;
@@ -60,6 +63,8 @@ public class BoutonInfo : MonoBehaviour
 
                 MapComposent.Instance.disableOldBouton();
 
+                MapComposent.Instance.OnLATrouve();
+                
                 MapComposent.Instance.Check();
 
                 //MapComposent.Instance.Closing();

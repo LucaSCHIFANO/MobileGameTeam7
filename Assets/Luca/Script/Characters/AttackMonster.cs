@@ -35,7 +35,7 @@ public class AttackMonster : MonoBehaviour
         {
             if (panel.actualPanelCount <= maxPanelCount)
             {
-                if (panel.canBeCrossed)
+                if (panel.canBeCrossed || panel.canShotThrought)
                 {
                     if(panel.isOccupied == true && panel.unitOn.name == "Player")
                     {
@@ -64,16 +64,13 @@ public class AttackMonster : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (attackParam.throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                             {
                                 seePlayer = true;
                                 BattleManager.Instance.currentAttackParam = attackParam;
                             }
-                        }
                     }
                     else
                     {
@@ -108,7 +105,7 @@ public class AttackMonster : MonoBehaviour
                 {
                     if (attackParam.throughWall || actuPanel.canBeCrossed)
                     {
-                        if (actuPanel.canBeCrossed)
+                        if (actuPanel.canBeCrossed || actuPanel.canShotThrought)
                         {
                             if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                             {
@@ -150,14 +147,12 @@ public class AttackMonster : MonoBehaviour
                 {
                     if (attackParam.throughWall || actuPanel.canBeCrossed)
                     {
-                        if (actuPanel.canBeCrossed)
+                        if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                         {
-                            if (actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
-                            {
-                                seePlayer = true;
-                                BattleManager.Instance.currentAttackParam = attackParam;
-                            }
+                            seePlayer = true;
+                            BattleManager.Instance.currentAttackParam = attackParam;
                         }
+
                     }
                     else
                     {
@@ -192,15 +187,12 @@ public class AttackMonster : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (attackParam.throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
+                        if(actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
                         {
-                            if(actuPanel.isOccupied == true && actuPanel.unitOn.name == "Player")
-                            {
-                                seePlayer = true;
-                                BattleManager.Instance.currentAttackParam = attackParam;
-                            }
+                            seePlayer = true;
+                            BattleManager.Instance.currentAttackParam = attackParam;
                         }
                     }
                     else

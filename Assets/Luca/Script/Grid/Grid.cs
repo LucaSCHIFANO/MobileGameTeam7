@@ -44,7 +44,6 @@ public class Grid : MonoBehaviour
     {
         _instance = this;
 
-
         /*awake2();
         awake2Alpha();
         createEnemies();
@@ -122,10 +121,22 @@ public class Grid : MonoBehaviour
                         newPanel.baseColor = new Color(0.1792f, 0.0518f, 0);
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
+                        newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.BRIDGE:
                         newPanel.baseColor = new Color(0.5943f, 0.1720f, 0);
                         newPanel.movementCost = 1;
+                        break;
+                    case GridPattern.panelType.HOLE:
+                        newPanel.baseColor = new Color(0.45f, 0.45f, 0.45f);
+                        newPanel.movementCost = 255;
+                        newPanel.canBeCrossed = false;
+                        break;
+                    case GridPattern.panelType.CHEST:
+                        newPanel.baseColor = new Color(0.7f, 0.5f, 0.5f);
+                        newPanel.movementCost = 1;
+                        newPanel.canBeOpen = true;
+                        newPanel.isOpen = false;
                         break;
                     default:
                         Debug.Log("ya un pb");
@@ -240,6 +251,16 @@ public class Grid : MonoBehaviour
 
         PhaseManager.Instance.phase = PhaseManager.actualPhase.PLAYER;
         en.name = "Player";
+
+        if(CharacterManager.Instance.sS.firstTime == false)
+        {
+            CharacterManager.Instance.sS.setValues(enE.stats);
+            enE.stats.HP = enE.stats.maxHP;
+        }
+        else
+        {
+            setPlayerStats(enE.stats, CharacterManager.Instance.sS.loadValue());
+        }
 
         resetClicked();
     }
@@ -458,5 +479,18 @@ public class Grid : MonoBehaviour
         }
         path.Reverse();
         return path;
+    }
+
+
+    private void setPlayerStats(Stats stats, Stats stats2)
+    {
+        stats.level = stats2.level;
+        stats.maxHP = stats2.maxHP;
+        stats.HP = stats2.HP;
+        stats.strenght = stats2.strenght;
+        stats.defense = stats2.defense;
+        stats.speed = stats2.speed;
+        stats.maxActionPoint = stats2.maxActionPoint;
+        stats.actionPoint = stats2.maxActionPoint;
     }
 }
