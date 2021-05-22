@@ -6,6 +6,7 @@ using UnityEngine;
 public class AttackParam : ScriptableObject
 {
     public string patternName;
+    public string description;
 
     public int range;
     public bool row_column;
@@ -26,4 +27,6 @@ public class AttackParam : ScriptableObject
     public Stats.EFFECT effect;
     public int duration;
     public int intensity;
+
+    public Sprite artwork;
 }

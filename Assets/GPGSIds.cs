@@ -26,6 +26,7 @@ public static class GPGSIds
 {
         public const string leaderboard_best_time = "CgkIrqKCzZoeEAIQAQ"; // <GPGSID>
         public const string achievement_beat_the_final_boss = "CgkIrqKCzZoeEAIQAA"; // <GPGSID>
+        public const string achievement_finish_the_first_level = "CgkIrqKCzZoeEAIQAw"; // <GPGSID>
 
 }
 

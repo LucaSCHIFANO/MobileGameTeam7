@@ -252,6 +252,16 @@ public class Grid : MonoBehaviour
         PhaseManager.Instance.phase = PhaseManager.actualPhase.PLAYER;
         en.name = "Player";
 
+        if(CharacterManager.Instance.sS.firstTime == false)
+        {
+            CharacterManager.Instance.sS.setValues(enE.stats);
+            enE.stats.HP = enE.stats.maxHP;
+        }
+        else
+        {
+            setPlayerStats(enE.stats, CharacterManager.Instance.sS.loadValue());
+        }
+
         resetClicked();
     }
 
@@ -469,5 +479,18 @@ public class Grid : MonoBehaviour
         }
         path.Reverse();
         return path;
+    }
+
+
+    private void setPlayerStats(Stats stats, Stats stats2)
+    {
+        stats.level = stats2.level;
+        stats.maxHP = stats2.maxHP;
+        stats.HP = stats2.HP;
+        stats.strenght = stats2.strenght;
+        stats.defense = stats2.defense;
+        stats.speed = stats2.speed;
+        stats.maxActionPoint = stats2.maxActionPoint;
+        stats.actionPoint = stats2.maxActionPoint;
     }
 }

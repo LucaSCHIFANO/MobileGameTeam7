@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         /*lastX = xPos;
         lastY = yPos;*/
         stats.actionPoint = stats.maxActionPoint;
-        stats.HP = stats.maxHP;
+        //stats.HP = stats.maxHP;
 
         UiActionManager.Instance.setMovePoint(); // affiche a l'écran les mouvement points 
     }

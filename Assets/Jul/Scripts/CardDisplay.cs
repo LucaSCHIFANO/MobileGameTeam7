@@ -19,24 +19,24 @@ public class CardDisplay : MonoBehaviour
 
     void Start()
     {
-        nameText.text = card.name;
-        descriptionText.text = card.description;
+        nameText.text = card.attackParam.patternName;
+        descriptionText.text = card.attackParam.description;
 
-        artworkImage.sprite = card.artwork;
+        artworkImage.sprite = card.attackParam.artwork;
 
-        attackText.text = card.attackDamage.ToString();
-        actionCostText.text = card.actionCost.ToString();
+        attackText.text = card.attackParam.damage.ToString();
+        actionCostText.text = card.attackParam.APNeeded.ToString();
     }
 
     public void UpdateCard()
     {
-        nameText.text = card.name;
-        descriptionText.text = card.description;
+        nameText.text = card.attackParam.patternName;
+        descriptionText.text = card.attackParam.description;
 
-        artworkImage.sprite = card.artwork;
+        artworkImage.sprite = card.attackParam.artwork;
 
-        attackText.text = card.attackDamage.ToString();
-        actionCostText.text = card.actionCost.ToString();
+        attackText.text = card.attackParam.damage.ToString();
+        actionCostText.text = card.attackParam.APNeeded.ToString();
     }
 
     private void Update()

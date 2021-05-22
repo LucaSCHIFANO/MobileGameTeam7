@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AhhGraou
   m_EditorClassIdentifier: 
   patternName: Jesuispasgentil
+  description: 
   range: 10
   row_column: 0
   throughWall: 1
@@ -23,3 +24,7 @@ MonoBehaviour:
   element: 0
   AOE: 0
   aoeEffect: {fileID: 0}
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: 8f05bc18ddc71854fbcf9e291b49d334, type: 3}

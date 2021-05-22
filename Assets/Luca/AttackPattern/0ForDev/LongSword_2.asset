@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: LongSword_2
   m_EditorClassIdentifier: 
   patternName: LongSword
+  description: 
   range: 2
   row_column: 1
   throughWall: 0
   APNeeded: 2
   damage: 5
+  push: 0
+  pull: 0
+  element: 0
+  AOE: 0
+  aoeEffect: {fileID: 0}
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: d029cbe4a9868934f8264ea8fec48d72, type: 3}
