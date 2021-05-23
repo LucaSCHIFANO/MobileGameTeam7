@@ -12,6 +12,9 @@ public class SaveStats : MonoBehaviour
     public int speed;
     public int maxActionPoint;
 
+    public Stats.ELEMENT element;
+    public int elementCombo;
+
     public bool firstTime = false;
     
 
@@ -24,11 +27,13 @@ public class SaveStats : MonoBehaviour
         defense = stats.defense;
         speed = stats.speed;
         maxActionPoint = stats.maxActionPoint;
+        element = stats.element;
+        elementCombo = stats.elementCombo;
 
         firstTime = true;
     }
 
-    public Stats loadValue()
+    public Stats loadValue() // a changer aussi dans grid setPLayerStats
     {
         Stats the = new Stats();
 
@@ -40,6 +45,8 @@ public class SaveStats : MonoBehaviour
         the.speed = speed;
         the.maxActionPoint = maxActionPoint;
         the.actionPoint = maxActionPoint;
+        the.element = element;
+        the.elementCombo = elementCombo;
 
         return the;
     }

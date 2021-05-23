@@ -482,7 +482,7 @@ public class Grid : MonoBehaviour
     }
 
 
-    private void setPlayerStats(Stats stats, Stats stats2)
+    private void setPlayerStats(Stats stats, Stats stats2) // a changer aussi dans saveStats
     {
         stats.level = stats2.level;
         stats.maxHP = stats2.maxHP;
@@ -492,5 +492,7 @@ public class Grid : MonoBehaviour
         stats.speed = stats2.speed;
         stats.maxActionPoint = stats2.maxActionPoint;
         stats.actionPoint = stats2.maxActionPoint;
+        stats.element = stats2.element;
+        stats.elementCombo = stats2.elementCombo;
     }
 }

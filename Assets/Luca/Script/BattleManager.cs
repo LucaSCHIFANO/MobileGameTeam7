@@ -89,7 +89,7 @@ public class BattleManager : MonoBehaviour
             if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
             {
                 att.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
-                att.GetComponent<Stats>().element = currentAttackParam.element;
+                ElementInteract.Instance.changeElement(att.element,currentAttackParam.element);
                 UiActionManager.Instance.showButton();
                 UiActionManager.Instance.HidePortrait();
             }

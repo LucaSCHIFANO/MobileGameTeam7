@@ -114,7 +114,7 @@ public class ClicklManager : MonoBehaviour
 
                                                 Grid.Instance.resetClicked();
                                                 player.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
-                                                player.stats.element = BattleManager.Instance.currentAttackParam.element;
+                                                ElementInteract.Instance.changeElement(player.stats.element, BattleManager.Instance.currentAttackParam.element);
                                                 UiActionManager.Instance.showButton();
                                                 UiActionManager.Instance.HidePortrait();
                                             }
@@ -237,7 +237,7 @@ public class ClicklManager : MonoBehaviour
 
                                             Grid.Instance.resetClicked();
                                             player.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
-                                            player.stats.element = BattleManager.Instance.currentAttackParam.element;
+                                            ElementInteract.Instance.changeElement(player.stats.element, BattleManager.Instance.currentAttackParam.element);
                                             UiActionManager.Instance.showButton();
                                             UiActionManager.Instance.HidePortrait();
                                         }

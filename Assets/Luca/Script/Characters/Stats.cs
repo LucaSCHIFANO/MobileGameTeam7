@@ -13,7 +13,9 @@ public class Stats : MonoBehaviour
     public int speed;
     public int maxActionPoint;
     public int actionPoint;
+
     public ELEMENT element;
+    public int elementCombo;
 
     public EFFECT effect;
     public int numberOfTurn;
