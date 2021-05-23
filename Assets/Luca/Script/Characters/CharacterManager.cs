@@ -109,7 +109,7 @@ public class CharacterManager : MonoBehaviour
     public void returnToMap()
     {
         MapComposent.Instance.Opening();
-            MapComposent.Instance.Check();
+        MapComposent.Instance.Check();
         Grid.Instance.deleteMap(false);
     }
 }

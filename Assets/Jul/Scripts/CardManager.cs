@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
@@ -38,6 +39,9 @@ public class CardManager : MonoBehaviour
     public Transform handPanel;
     private Vector3 previousTransform;
     private Quaternion previousRotation;
+
+
+    public Text chooseCardText;
 
     private static CardManager _instance = null;
 
@@ -132,6 +136,7 @@ public class CardManager : MonoBehaviour
                                 else
                                 {
                                     inChosenTime = false;
+                                    chooseCardText.gameObject.SetActive(false);
                                     //MapComposent.Instance.Opening();
                                     //MapComposent.Instance.Check();
                                     var cM = CharacterManager.Instance;
@@ -274,6 +279,8 @@ public class CardManager : MonoBehaviour
     {
         inChosenTime = true;
         RollCard();
+        chooseCardText.gameObject.SetActive(true);
+
     }
 
     public void startCombat()
@@ -354,5 +361,6 @@ public class CardManager : MonoBehaviour
     {
         inRound = false;
         inChosenTime = true;
+        chooseCardText.gameObject.SetActive(true);
     }
 }

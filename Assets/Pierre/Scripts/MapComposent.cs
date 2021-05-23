@@ -43,6 +43,10 @@ public class MapComposent : MonoBehaviour
 
     private static MapComposent _instance = null;
 
+
+    public GameObject winScreen;
+    public Text infoText;
+
     public static MapComposent Instance
     {
         get => _instance;
@@ -316,7 +320,21 @@ public class MapComposent : MonoBehaviour
 
         if (position == 100)
         {
-            Debug.Log("tu as gagné");
+            MapUI.SetActive(false);
+            winScreen.SetActive(true);
+            GameObject.Find("NOT").GetComponent<Text>().text = "Nombre de tour : " + PhaseManager.Instance.numberOfTurn;
+
+            if(PhaseManager.Instance.numberOfTurn < PhaseManager.Instance.numberOfTurnRecord || PhaseManager.Instance.numberOfTurnRecord == 0)
+            {
+                PlayerPrefs.SetInt("NumberOfTurn", PhaseManager.Instance.numberOfTurn);
+                
+                GameObject.Find("OldRecord").GetComponent<Text>().text = "It's a NewRecord !!";
+            }
+            else
+            {
+                GameObject.Find("OldRecord").GetComponent<Text>().text = "Record : " + PhaseManager.Instance.numberOfTurnRecord;
+            }
+
         }
     }
 

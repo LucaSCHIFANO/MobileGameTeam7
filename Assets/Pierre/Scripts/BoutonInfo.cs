@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class BoutonInfo : MonoBehaviour
 {
@@ -20,71 +22,107 @@ public class BoutonInfo : MonoBehaviour
 
     public void sendInfo()
     {
-        switch (tor)
+        if (!MapComposent.Instance.infoText.gameObject.activeInHierarchy)
         {
-            case typeOfRoom.ENEMY:
+            switch (tor)
+            {
+                case typeOfRoom.ENEMY:
 
-                Grid.Instance.levelID = idLevel;
-                Grid.Instance.progress = progression;
-                Grid.Instance.deleteMap(true);
+                    Grid.Instance.levelID = idLevel;
+                    Grid.Instance.progress = progression;
+                    //Grid.Instance.deleteMap(true);
 
-                MapComposent.Instance.position = positionMap;
+                    MapComposent.Instance.position = positionMap;
 
-                MapComposent.Instance.disableOldBouton();
+                    MapComposent.Instance.disableOldBouton();
 
-                MapComposent.Instance.Check();
-                MapComposent.Instance.Closing();
+                    MapComposent.Instance.Check();
+                    //MapComposent.Instance.Closing();
 
-                break;
-            case typeOfRoom.REST:
+                    break;
+                case typeOfRoom.REST:
 
-                Grid.Instance.levelID = idLevel;
-                Grid.Instance.progress = progression;
-                //Grid.Instance.deleteMap(true);
+                    Grid.Instance.levelID = idLevel;
+                    Grid.Instance.progress = progression;
+                    //Grid.Instance.deleteMap(true);
 
-                MapComposent.Instance.position = positionMap;
+                    MapComposent.Instance.position = positionMap;
 
-                MapComposent.Instance.disableOldBouton();
+                    MapComposent.Instance.disableOldBouton();
 
-                MapComposent.Instance.Check();
+                    MapComposent.Instance.Check();
 
-                CharacterManager.Instance.sS.HP += (int)(CharacterManager.Instance.sS.maxHP / 2);
-                Mathf.Clamp(CharacterManager.Instance.sS.HP, 1, CharacterManager.Instance.sS.maxHP);
-                //MapComposent.Instance.Closing();
+                    CharacterManager.Instance.sS.HP += (int)(CharacterManager.Instance.sS.maxHP / 2);
+                    CharacterManager.Instance.sS.HP = Mathf.Clamp(CharacterManager.Instance.sS.HP, 1, CharacterManager.Instance.sS.maxHP);
 
-                break;
-            case typeOfRoom.TREASURE:
+                    StartCoroutine(infoMap(tor));
 
-                Grid.Instance.levelID = idLevel;
-                Grid.Instance.progress = progression;
-                //Grid.Instance.deleteMap(true);
+                    //MapComposent.Instance.Closing();
 
-                MapComposent.Instance.position = positionMap;
+                    break;
+                case typeOfRoom.TREASURE:
 
-                MapComposent.Instance.disableOldBouton();
+                    Grid.Instance.levelID = idLevel;
+                    Grid.Instance.progress = progression;
+                    //Grid.Instance.deleteMap(true);
 
-                MapComposent.Instance.OnLATrouve();
-                
-                MapComposent.Instance.Check();
+                    MapComposent.Instance.position = positionMap;
 
-                //MapComposent.Instance.Closing();
-                break;
-            case typeOfRoom.BOSS:
+                    MapComposent.Instance.disableOldBouton();
 
-                Grid.Instance.levelID = idLevel;
-                Grid.Instance.progress = progression;
-                Grid.Instance.deleteMap(true);
+                    MapComposent.Instance.OnLATrouve();
 
-                MapComposent.Instance.position = positionMap;
+                    MapComposent.Instance.Check();
 
-                MapComposent.Instance.disableOldBouton();
 
-                MapComposent.Instance.Check();
-                MapComposent.Instance.Closing();
+                    var cmi = CharacterManager.Instance;
+                    cmi.sS.maxHP += 3;
+                    cmi.sS.HP += 3;
+                    cmi.sS.strenght += 2;
+                    cmi.sS.defense += 2;
 
-                break;
-            default:
-                break;
+                    StartCoroutine(infoMap(tor));
+
+                    //MapComposent.Instance.Closing();
+                    break;
+                case typeOfRoom.BOSS:
+
+                    Grid.Instance.levelID = idLevel;
+                    Grid.Instance.progress = progression;
+                    Grid.Instance.deleteMap(true);
+
+                    MapComposent.Instance.position = positionMap;
+
+                    MapComposent.Instance.disableOldBouton();
+
+                    MapComposent.Instance.Check();
+                    MapComposent.Instance.Closing();
+
+                    break;
+                default:
+                    break;
+            }
         }
+    }
+
+
+    public IEnumerator infoMap(typeOfRoom room)
+    {
+        var mapci = MapComposent.Instance;
+        mapci.infoText.gameObject.SetActive(true);
+        
+        if(room == typeOfRoom.REST)
+        {
+            var hp = (int)(CharacterManager.Instance.sS.maxHP / 2);
+            mapci.infoText.text = hp + " HP recovered !";
+        }
+        else if (room == typeOfRoom.TREASURE)
+        {
+            mapci.infoText.text = "Str, Def +2, HPMax + 3 !";
+        }
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        mapci.infoText.gameObject.SetActive(false);
     }
 }
