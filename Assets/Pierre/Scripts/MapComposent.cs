@@ -41,11 +41,10 @@ public class MapComposent : MonoBehaviour
 
     private int ToutLOrDuCaptain = 0;
 
-    private static MapComposent _instance = null;
-
-
     public GameObject winScreen;
     public Text infoText;
+    
+    private static MapComposent _instance = null;
 
     public static MapComposent Instance
     {
@@ -317,6 +316,8 @@ public class MapComposent : MonoBehaviour
         MapUI.SetActive(true);
         Time.timeScale = 0f;
         MapOpen = true;
+        AudioManager.Instance.Play("GlobalMap");
+        AudioManager.Instance.Stop("BattleMap1");
 
         if (position == 100)
         {
@@ -343,5 +344,8 @@ public class MapComposent : MonoBehaviour
         MapUI.SetActive(false);
         Time.timeScale = 1f;
         MapOpen = false;
+
+        AudioManager.Instance.Stop("GlobalMap");
+        AudioManager.Instance.Play("BattleMap1");
     }
 }

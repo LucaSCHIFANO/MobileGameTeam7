@@ -563,7 +563,15 @@ MonoBehaviour:
   - name: BattleMap1
     clip: {fileID: 8300000, guid: 3948641b3779a8b419489937d7598eac, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
-    volume: 0
+    volume: 0.1
+    pitch: 1
+    mute: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: GlobalMap
+    clip: {fileID: 8300000, guid: 4fbec42802b3677438427e4565026635, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
+    volume: 0.1
     pitch: 1
     mute: 0
     loop: 1
