@@ -14,6 +14,8 @@ public class Menu : MonoBehaviour
     public GameObject MenuUI;
     public GameObject OptionsUI;
 
+    public GameObject fade;
+
     public bool isConnectedToGooglePlayServices;
 
 
@@ -33,6 +35,13 @@ public class Menu : MonoBehaviour
 
     public void BouttonJouer()
     {
+        Instantiate(fade, transform.position, transform.rotation, gameObject.transform);
+        StartCoroutine("waitforthat");
+    }
+
+    private IEnumerator waitforthat()
+    {
+        yield return new WaitForSeconds(0.6f);
         SceneManager.LoadScene("SceneLuca");
     }
 

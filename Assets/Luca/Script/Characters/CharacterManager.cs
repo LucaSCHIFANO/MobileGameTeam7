@@ -89,16 +89,16 @@ public class CharacterManager : MonoBehaviour
             }
         }
 
-        if(playerList.Count == 0)
+        if (playerList.Count == 0)
         {
             Debug.Log("You died");
         }
-        else if(enemyList.Count == 0)
+        else if (enemyList.Count == 0)
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
 
-            sS .setValues(currentPlayer.stats);
+            sS.setValues(currentPlayer.stats);
 
             CardManager.Instance.RollCard();
             CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
@@ -109,6 +109,12 @@ public class CharacterManager : MonoBehaviour
     public void returnToMap()
     {
         MapComposent.Instance.Opening();
+        StartCoroutine("waitforopen");
+    }
+
+    private IEnumerator waitforopen()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
         MapComposent.Instance.Check();
         Grid.Instance.deleteMap(false);
     }

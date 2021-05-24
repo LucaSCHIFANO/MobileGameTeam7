@@ -36,8 +36,8 @@ public class BoutonInfo : MonoBehaviour
 
                     MapComposent.Instance.disableOldBouton();
 
-                    MapComposent.Instance.Check();
-                    //MapComposent.Instance.Closing();
+                    //MapComposent.Instance.Check();
+                    MapComposent.Instance.Closing();
 
                     break;
                 case typeOfRoom.REST:
@@ -89,13 +89,13 @@ public class BoutonInfo : MonoBehaviour
 
                     Grid.Instance.levelID = idLevel;
                     Grid.Instance.progress = progression;
-                    Grid.Instance.deleteMap(true);
+                    //Grid.Instance.deleteMap(true);
 
                     MapComposent.Instance.position = positionMap;
 
                     MapComposent.Instance.disableOldBouton();
 
-                    MapComposent.Instance.Check();
+                    //MapComposent.Instance.Check();
                     MapComposent.Instance.Closing();
 
                     break;

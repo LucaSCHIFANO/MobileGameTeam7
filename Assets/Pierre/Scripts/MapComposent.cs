@@ -43,7 +43,9 @@ public class MapComposent : MonoBehaviour
 
     public GameObject winScreen;
     public Text infoText;
-    
+
+    public GameObject fade;
+
     private static MapComposent _instance = null;
 
     public static MapComposent Instance
@@ -55,10 +57,10 @@ public class MapComposent : MonoBehaviour
         _instance = this;
     }
 
-        void Start()
+    void Start()
     {
         MapUI.SetActive(false);
-                //Opening();
+        //Opening();
     }
 
 
@@ -77,7 +79,7 @@ public class MapComposent : MonoBehaviour
             Check();
             //OnChildClick(salle7H);
         }
-        
+
     }
 
     public void Check()
@@ -86,7 +88,7 @@ public class MapComposent : MonoBehaviour
         {
             //var room1 = Instantiate(Enemy, salle1.position, salle1.rotation, salle1.transform);
             Create(Enemy, salle1, 10, 0);
-            
+
             MapComposent.Instance.disableOldBouton();
 
             RandomRoom = Random.Range(0, TypeRoom.Length);
@@ -113,7 +115,7 @@ public class MapComposent : MonoBehaviour
             Create(TypeRoom[RandomRoom], salle3H, 30, 2);
             //var room3H = Instantiate(TypeRoom[RandomRoom], salle3H.position, salle3H.rotation, salle3H.transform);
         }
-        else if(position == 21)
+        else if (position == 21)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
@@ -126,7 +128,7 @@ public class MapComposent : MonoBehaviour
             Create(TypeRoom[RandomRoom], salle3H, 30, 2);
             //var room3H = Instantiate(TypeRoom[RandomRoom], salle3H.position, salle3H.rotation, salle3H.transform);
         }
-        else if(position == 22)
+        else if (position == 22)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
@@ -147,7 +149,7 @@ public class MapComposent : MonoBehaviour
                 TypeRoom[RandomRoom] = Enemy;
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Treasure;
-            else 
+            else
                 Create(TypeRoom[RandomRoom], salle4, 41, 3);
             //var room4 = Instantiate(TypeRoom[RandomRoom], salle4.position, salle4.rotation, salle4.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
@@ -313,6 +315,13 @@ public class MapComposent : MonoBehaviour
 
     public void Opening()
     {
+        Instantiate(fade, transform.position, transform.rotation, gameObject.transform);
+        StartCoroutine("waitforopen");
+    }
+
+    private IEnumerator waitforopen()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
         MapUI.SetActive(true);
         Time.timeScale = 0f;
         MapOpen = true;
@@ -325,10 +334,10 @@ public class MapComposent : MonoBehaviour
             winScreen.SetActive(true);
             GameObject.Find("NOT").GetComponent<Text>().text = "Nombre de tour : " + PhaseManager.Instance.numberOfTurn;
 
-            if(PhaseManager.Instance.numberOfTurn < PhaseManager.Instance.numberOfTurnRecord || PhaseManager.Instance.numberOfTurnRecord == 0)
+            if (PhaseManager.Instance.numberOfTurn < PhaseManager.Instance.numberOfTurnRecord || PhaseManager.Instance.numberOfTurnRecord == 0)
             {
                 PlayerPrefs.SetInt("NumberOfTurn", PhaseManager.Instance.numberOfTurn);
-                
+
                 GameObject.Find("OldRecord").GetComponent<Text>().text = "It's a NewRecord !!";
             }
             else
@@ -341,11 +350,21 @@ public class MapComposent : MonoBehaviour
 
     public void Closing()
     {
+        Instantiate(fade, transform.position, transform.rotation, gameObject.transform);
+        StartCoroutine("waitforclose");
+    }
+
+    private IEnumerator waitforclose()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
         MapUI.SetActive(false);
         Time.timeScale = 1f;
         MapOpen = false;
 
         AudioManager.Instance.Stop("GlobalMap");
         AudioManager.Instance.Play("BattleMap1");
+
+        Check();
+        Grid.Instance.deleteMap(true);
     }
 }
