@@ -307,18 +307,21 @@ public class CardManager : MonoBehaviour
         var number = Random.Range(0, cardList.Count);
         newCard.GetComponent<CardDisplay>().card = cardList[number];
         newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
+        newCard.GetComponent<CardDisplay>().Start();
         actualRoll[0] = newCard;
 
         number = Random.Range(0, cardList.Count);
         newCard = Instantiate(cardPrefab, (transform.position + new Vector3(0, 0, 0)), Quaternion.identity, canvas.transform);
         newCard.GetComponent<CardDisplay>().card = cardList[number];
         newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
+        newCard.GetComponent<CardDisplay>().Start();
         actualRoll[1] = newCard;
 
         number = Random.Range(0, cardList.Count);
         newCard = Instantiate(cardPrefab, (transform.position + new Vector3(6, 0, 0)), Quaternion.identity, canvas.transform);
         newCard.GetComponent<CardDisplay>().card = cardList[number];
         newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
+        newCard.GetComponent<CardDisplay>().Start();
         actualRoll[2] = newCard;
     }
 

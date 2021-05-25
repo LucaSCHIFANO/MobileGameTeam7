@@ -21,14 +21,16 @@ public class ClicklManager : MonoBehaviour
 
     void Update() // check les differentes possibilité de click
     {
-        if (Input.touchCount > 0)
+        ///if (Input.touchCount > 0)
+        if(Input.GetMouseButton(0))
         {
             if (!MenuPause.GameIsPaused)
             {
-                Touch touch = Input.GetTouch(0);
-                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+                /*Touch touch = Input.GetTouch(0);
+                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);*/
 
-                if (touch.phase == TouchPhase.Began)
+                //if (touch.phase == TouchPhase.Began)
+                if(Input.GetMouseButtonDown(0))
                 {
                     Collider2D touchedCollier = Physics2D.OverlapPoint(touchPosition);
 
@@ -76,12 +78,15 @@ public class ClicklManager : MonoBehaviour
                                             }
                                             else
                                             {
-                                                BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
-                                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                UiActionManager.Instance.setMovePoint();
-                                                currentPanel = null;
-                                                CardManager.Instance.UseCard();
-                                                CardManager.Instance.midToHand = false;
+                                                if (touchedPanel.unitOn != null)
+                                                {
+                                                    BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
+                                                    CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                                    UiActionManager.Instance.setMovePoint();
+                                                    currentPanel = null;
+                                                    CardManager.Instance.UseCard();
+                                                    CardManager.Instance.midToHand = false;
+                                                }
                                             }
                                         }
                                         else if (player.state == PlayerMovement.States.AOESELECT)
@@ -192,11 +197,11 @@ public class ClicklManager : MonoBehaviour
                                             
                                             else
                                             {
-                                                BattleManager.Instance.attackUnit(player.stats, charact.stats, false);
-                                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                currentPanel = null;
-                                                CardManager.Instance.UseCard();
-                                                CardManager.Instance.midToHand = false;
+                                                    BattleManager.Instance.attackUnit(player.stats, charact.stats, false);
+                                                    CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                                    currentPanel = null;
+                                                    CardManager.Instance.UseCard();
+                                                    CardManager.Instance.midToHand = false;
                                             }
                                         }
                                         else

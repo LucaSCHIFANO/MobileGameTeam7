@@ -17,23 +17,23 @@ public class CardDisplay : MonoBehaviour
     public TextMeshProUGUI attackText;
     public TextMeshProUGUI actionCostText;
 
-    void Start()
+    public void Start()
     {
-        if (card != null || attackParam != null)
+        if (card != null && attackParam != null)
         {
-            nameText.text = card.attackParam.patternName;
-            descriptionText.text = card.attackParam.description;
+            nameText.text = attackParam.patternName;
+            descriptionText.text = attackParam.description;
 
-            artworkImage.sprite = card.attackParam.artwork;
+            artworkImage.sprite = attackParam.artwork;
 
-            attackText.text = card.attackParam.damage.ToString();
-            actionCostText.text = card.attackParam.APNeeded.ToString();
+            attackText.text = attackParam.damage.ToString();
+            actionCostText.text = attackParam.APNeeded.ToString();
         }
     }
 
     public void UpdateCard()
     {
-        if (card != null || attackParam != null)
+        if (card != null && attackParam != null)
         {
             nameText.text = card.attackParam.patternName;
             descriptionText.text = card.attackParam.description;
