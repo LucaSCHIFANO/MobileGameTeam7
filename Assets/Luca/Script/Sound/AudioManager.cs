@@ -6,12 +6,19 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    private static AudioManager _instance = null;
+    public static AudioManager Instance
+    {
+        get => _instance;
+    }
+
     void Start()
     {
         Play("BattleMap1");
     }
     void Awake()
     {
+        _instance = this;
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();

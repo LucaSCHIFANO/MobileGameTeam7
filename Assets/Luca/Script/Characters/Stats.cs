@@ -13,10 +13,13 @@ public class Stats : MonoBehaviour
     public int speed;
     public int maxActionPoint;
     public int actionPoint;
+
     public ELEMENT element;
+    public int elementCombo;
 
     public EFFECT effect;
     public int numberOfTurn;
+    public int intesity;
 
     public enum ELEMENT
     {
@@ -39,13 +42,16 @@ public class Stats : MonoBehaviour
         {
             if(effect == EFFECT.POISON)
             {
-                if(HP > 1)
-                {
-                    HP--; 
-                }
-            }else if (effect == EFFECT.REGEN)
+                HP -= intesity;
+                HP = Mathf.Clamp(HP, 1, maxHP);
+
+                BattleManager.Instance.showDamage(intesity, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f));
+                
+
+            }
+            else if (effect == EFFECT.REGEN)
             {
-                HP++;
+                HP += intesity;
                 HP = Mathf.Clamp(HP, 0, maxHP);
             }
 

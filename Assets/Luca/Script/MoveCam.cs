@@ -32,16 +32,23 @@ public class MoveCam : MonoBehaviour
 
     public void moveCam()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Input.touchCount < 2)
         {
             //Touch touch = Input.GetTouch(0);
             touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && Input.touchCount < 2)
         {
-            Vector3 direction = touchPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Camera.main.transform.position += direction;
+            if (!MenuPause.GameIsPaused)
+            {
+                var charac = CharacterManager.Instance;
+                if (charac.currentPlayer != null && (charac.currentPlayer.state != PlayerMovement.States.WIN && charac.currentPlayer.state != PlayerMovement.States.WAIT))
+                {
+                    Vector3 direction = touchPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Camera.main.transform.position += direction;
+                }
+            }
         }
 
         if(Camera.main.transform.position.x < leftLimit.position.x)

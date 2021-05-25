@@ -41,6 +41,11 @@ public class MapComposent : MonoBehaviour
 
     private int ToutLOrDuCaptain = 0;
 
+    public GameObject winScreen;
+    public Text infoText;
+
+    public GameObject fade;
+
     private static MapComposent _instance = null;
 
     public static MapComposent Instance
@@ -52,12 +57,10 @@ public class MapComposent : MonoBehaviour
         _instance = this;
     }
 
-
-
-        void Start()
+    void Start()
     {
         MapUI.SetActive(false);
-                //Opening();
+        //Opening();
     }
 
 
@@ -76,7 +79,7 @@ public class MapComposent : MonoBehaviour
             Check();
             //OnChildClick(salle7H);
         }
-        
+
     }
 
     public void Check()
@@ -84,18 +87,18 @@ public class MapComposent : MonoBehaviour
         if (position == 10)
         {
             //var room1 = Instantiate(Enemy, salle1.position, salle1.rotation, salle1.transform);
-            Create(Enemy, salle1, 10);
-            
+            Create(Enemy, salle1, 10, 0);
+
             MapComposent.Instance.disableOldBouton();
 
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle2, 21);
+            Create(TypeRoom[RandomRoom], salle2, 21, 1);
             //var room2 = Instantiate(TypeRoom[RandomRoom], salle2.position, salle2.rotation, salle2.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle2H, 20);
+            Create(TypeRoom[RandomRoom], salle2H, 20, 1);
             //var room2H = Instantiate(TypeRoom[RandomRoom], salle2H.position, salle2H.rotation, salle2H.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle2B, 22);
+            Create(TypeRoom[RandomRoom], salle2B, 22, 1);
             //var room2B = Instantiate(TypeRoom[RandomRoom], salle2B.position, salle2B.rotation, salle2B.transform);
         }
 
@@ -104,38 +107,38 @@ public class MapComposent : MonoBehaviour
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle3, 31);
+            Create(TypeRoom[RandomRoom], salle3, 31, 2);
             //var room3 = Instantiate(TypeRoom[RandomRoom], salle3.position, salle3.rotation, salle3.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle3H, 30);
+            Create(TypeRoom[RandomRoom], salle3H, 30, 2);
             //var room3H = Instantiate(TypeRoom[RandomRoom], salle3H.position, salle3H.rotation, salle3H.transform);
         }
-        else if(position == 21)
+        else if (position == 21)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle3B, 32);
+            Create(TypeRoom[RandomRoom], salle3B, 32, 2);
             //var room3B = Instantiate(TypeRoom[RandomRoom], salle3B.position, salle3B.rotation, salle3B.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle3H, 30);
+            Create(TypeRoom[RandomRoom], salle3H, 30, 2);
             //var room3H = Instantiate(TypeRoom[RandomRoom], salle3H.position, salle3H.rotation, salle3H.transform);
         }
-        else if(position == 22)
+        else if (position == 22)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle3, 31);
+            Create(TypeRoom[RandomRoom], salle3, 31, 2);
             //var room3 = Instantiate(TypeRoom[RandomRoom], salle3.position, salle3.rotation, salle3.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle3B, 32);
+            Create(TypeRoom[RandomRoom], salle3B, 32, 2);
             //var room3B = Instantiate(TypeRoom[RandomRoom], salle3B.position, salle3B.rotation, salle3B.transform);
         }
 
@@ -144,12 +147,18 @@ public class MapComposent : MonoBehaviour
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle4, 41);
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+                TypeRoom[RandomRoom] = Treasure;
+            else
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
             //var room4 = Instantiate(TypeRoom[RandomRoom], salle4.position, salle4.rotation, salle4.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle4H, 40);
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+                TypeRoom[RandomRoom] = Treasure;
+            else
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
             //var room4H = Instantiate(TypeRoom[RandomRoom], salle4H.position, salle4H.rotation, salle4H.transform);
         }
         else if (position == 31)
@@ -157,12 +166,18 @@ public class MapComposent : MonoBehaviour
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle4B, 42);
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+                TypeRoom[RandomRoom] = Treasure;
+            else
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
             //var room4B = Instantiate(TypeRoom[RandomRoom], salle4B.position, salle4B.rotation, salle4B.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle4H, 40);
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+                TypeRoom[RandomRoom] = Treasure;
+            else
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
             //var room4H = Instantiate(TypeRoom[RandomRoom], salle4H.position, salle4H.rotation, salle4H.transform);
         }
         else if (position == 32)
@@ -170,108 +185,110 @@ public class MapComposent : MonoBehaviour
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle4, 41);
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+                TypeRoom[RandomRoom] = Treasure;
+            else
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
             //var room4 = Instantiate(TypeRoom[RandomRoom], salle4.position, salle4.rotation, salle4.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
                 TypeRoom[RandomRoom] = Enemy;
-            Create(TypeRoom[RandomRoom], salle4B, 42);
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+                TypeRoom[RandomRoom] = Treasure;
+            else
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
             //var room4B = Instantiate(TypeRoom[RandomRoom], salle4B.position, salle4B.rotation, salle4B.transform);
         }
 
         else if (position == 40)
         {
-            Create(Boss, salle5, 50);
+            Create(Boss, salle5, 50, 4);
             //var room5 = Instantiate(Boss, salle5.position, salle5.rotation, salle5.transform);
         }
         else if (position == 41)
         {
-            Create(Boss, salle5, 50);
+            Create(Boss, salle5, 50, 4);
             //var room5 = Instantiate(Boss, salle5.position, salle5.rotation, salle5.transform);
         }
         else if (position == 42)
         {
-            Create(Boss, salle5, 50);
+            Create(Boss, salle5, 50, 4);
             //var room5 = Instantiate(Boss, salle5.position, salle5.rotation, salle5.transform);
         }
 
         else if (position == 50)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle6B, 61);
+            Create(TypeRoom[RandomRoom], salle6B, 61, 5);
             //var room6B = Instantiate(TypeRoom[RandomRoom], salle6B.position, salle6B.rotation, salle6B.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle6H, 60);
+            Create(TypeRoom[RandomRoom], salle6H, 60, 5);
             //var room6H = Instantiate(TypeRoom[RandomRoom], salle6H.position, salle6H.rotation, salle6H.transform);
         }
 
         else if (position == 60)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle7, 71);
+            Create(TypeRoom[RandomRoom], salle7, 71, 6);
             //var room7 = Instantiate(TypeRoom[RandomRoom], salle7.position, salle7.rotation, salle7.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle7H, 70);
+            Create(TypeRoom[RandomRoom], salle7H, 70, 6);
             //var room7H = Instantiate(TypeRoom[RandomRoom], salle7H.position, salle7H.rotation, salle7H.transform);
         }
         else if (position == 61)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle7, 71);
+            Create(TypeRoom[RandomRoom], salle7, 71, 6);
             //var room7 = Instantiate(TypeRoom[RandomRoom], salle7.position, salle7.rotation, salle7.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            Create(TypeRoom[RandomRoom], salle7B, 72);
+            Create(TypeRoom[RandomRoom], salle7B, 72, 6);
             //var room7B = Instantiate(TypeRoom[RandomRoom], salle7B.position, salle7B.rotation, salle7B.transform);
         }
 
         else if (position == 70)
         {
-            Create(Treasure, salle8H, 81);
+            Create(Treasure, salle8H, 81, 7);
             //var room8B = Instantiate(Rest, salle8B.position, salle8B.rotation, salle8B.transform);
             //var room8H = Instantiate(Treasure, salle8H.position, salle8H.rotation, salle8H.transform);
         }
         else if (position == 71)
         {
-            Create(Rest, salle8B, 81);
-            Create(Treasure, salle8H, 80);
+            Create(Rest, salle8B, 81, 7);
+            Create(Treasure, salle8H, 80, 7);
             //var room8B = Instantiate(Rest, salle8B.position, salle8B.rotation, salle8B.transform);
             //var room8H = Instantiate(Treasure, salle8H.position, salle8H.rotation, salle8H.transform);
         }
         else if (position == 72)
         {
-            Create(Rest, salle8B, 81);
+            Create(Rest, salle8B, 81, 7);
             //var room8B = Instantiate(Rest, salle8B.position, salle8B.rotation, salle8B.transform);
             //var room8H = Instantiate(Treasure, salle8H.position, salle8H.rotation, salle8H.transform);
         }
 
         else if (position == 80)
         {
-            Create(Enemy, salle9, 90);
+            Create(Enemy, salle9, 90, 8);
             //var room9 = Instantiate(Enemy, salle9.position, salle9.rotation, salle9.transform);
         }
         else if (position == 81)
         {
-            Create(Enemy, salle9, 90);
+            Create(Enemy, salle9, 90, 8);
             //var room9 = Instantiate(Enemy, salle9.position, salle9.rotation, salle9.transform);
         }
 
         else if (position == 90)
         {
-            Create(Boss, salle10, 100);
+            Create(Boss, salle10, 100, 9);
             //var room10 = Instantiate(Boss, salle10.position, salle10.rotation, salle10.transform);
-
-        }
-
-        else if (position == 100)
-        {
 
         }
     }
 
-    public void Create(GameObject TypeSalle, Transform Emplacement, int position)
+    public void Create(GameObject TypeSalle, Transform Emplacement, int position, int progression)
     {
         GameObject NewRoom = (GameObject)Instantiate(TypeSalle, Emplacement.position, Quaternion.identity, Emplacement.transform);
         NewRoom.GetComponent<BoutonInfo>().positionMap = position;
+        NewRoom.GetComponent<BoutonInfo>().progression = progression;
 
         NewRoom.GetComponent<Button>().interactable = true;
     }
@@ -298,15 +315,56 @@ public class MapComposent : MonoBehaviour
 
     public void Opening()
     {
+        Instantiate(fade, transform.position, transform.rotation, gameObject.transform);
+        StartCoroutine("waitforopen");
+    }
+
+    private IEnumerator waitforopen()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
         MapUI.SetActive(true);
         Time.timeScale = 0f;
         MapOpen = true;
+        AudioManager.Instance.Play("GlobalMap");
+        AudioManager.Instance.Stop("BattleMap1");
+
+        if (position == 100)
+        {
+            MapUI.SetActive(false);
+            winScreen.SetActive(true);
+            GameObject.Find("NOT").GetComponent<Text>().text = "Nombre de tour : " + PhaseManager.Instance.numberOfTurn;
+
+            if (PhaseManager.Instance.numberOfTurn < PhaseManager.Instance.numberOfTurnRecord || PhaseManager.Instance.numberOfTurnRecord == 0)
+            {
+                PlayerPrefs.SetInt("NumberOfTurn", PhaseManager.Instance.numberOfTurn);
+
+                GameObject.Find("OldRecord").GetComponent<Text>().text = "It's a NewRecord !!";
+            }
+            else
+            {
+                GameObject.Find("OldRecord").GetComponent<Text>().text = "Record : " + PhaseManager.Instance.numberOfTurnRecord;
+            }
+
+        }
     }
 
     public void Closing()
     {
+        Instantiate(fade, transform.position, transform.rotation, gameObject.transform);
+        StartCoroutine("waitforclose");
+    }
+
+    private IEnumerator waitforclose()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
         MapUI.SetActive(false);
         Time.timeScale = 1f;
         MapOpen = false;
+
+        AudioManager.Instance.Stop("GlobalMap");
+        AudioManager.Instance.Play("BattleMap1");
+
+        Check();
+        Grid.Instance.deleteMap(true);
     }
 }

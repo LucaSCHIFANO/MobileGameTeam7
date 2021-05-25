@@ -68,13 +68,11 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
+
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
-                        }
                     }
                     else
                     {
@@ -107,13 +105,10 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
-                        }
                     }
                     else
                     {
@@ -146,13 +141,10 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
-                        }
                     }
                     else
                     {
@@ -187,13 +179,10 @@ public class TestAttackRange : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= maxPanelCount)
                 {
-                    if (throughWall || actuPanel.canBeCrossed)
+                    if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
-                        }
                     }
                     else
                     {

@@ -22,6 +22,8 @@ public class UiActionManager : MonoBehaviour
     public Slider HPBar;
     public Text element;
 
+    public GameObject apleft;
+
     public ShowRangeAttack sra;
 
 
@@ -44,6 +46,7 @@ public class UiActionManager : MonoBehaviour
         buttonCancel.SetActive(false);
         unitPortrait.SetActive(false);
         use.SetActive(false);
+        apleft.SetActive(false);
     }
 
     public void hideButton()
@@ -52,6 +55,7 @@ public class UiActionManager : MonoBehaviour
         buttonCancel.SetActive(true);
         deck.SetActive(false);
         use.SetActive(false);
+        apleft.SetActive(false);
     }
 
     public void showDeck()
@@ -63,6 +67,8 @@ public class UiActionManager : MonoBehaviour
             buttonCancel.SetActive(true);
             use.SetActive(true);
             unitPortrait.SetActive(false);
+            apleft.SetActive(true);
+            apleft.GetComponent<Text>().text = " AP Left : " + CharacterManager.Instance.currentPlayer.stats.actionPoint;
 
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
@@ -104,6 +110,7 @@ public class UiActionManager : MonoBehaviour
         deck.SetActive(false);
         use.SetActive(false);
         unitPortrait.SetActive(false);
+        apleft.SetActive(false);
     }
 
     public void endTurn()
