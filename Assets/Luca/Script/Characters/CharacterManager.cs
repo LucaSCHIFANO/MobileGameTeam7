@@ -8,6 +8,7 @@ public class CharacterManager : MonoBehaviour
     public List<GameObject> enemyList = new List<GameObject>();
 
     public PlayerMovement currentPlayer;
+    public SaveStats sS;
 
     public int countMoveEnemy = 0;
 
@@ -21,6 +22,7 @@ public class CharacterManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        sS = GetComponent<SaveStats>();
     }
 
 
@@ -87,14 +89,16 @@ public class CharacterManager : MonoBehaviour
             }
         }
 
-        if(playerList.Count == 0)
+        if (playerList.Count == 0)
         {
             Debug.Log("You died");
         }
-        else if(enemyList.Count == 0)
+        else if (enemyList.Count == 0)
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
+
+            sS.setValues(currentPlayer.stats);
 
             CardManager.Instance.RollCard();
             CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
@@ -105,7 +109,13 @@ public class CharacterManager : MonoBehaviour
     public void returnToMap()
     {
         MapComposent.Instance.Opening();
-            MapComposent.Instance.Check();
+        StartCoroutine("waitforopen");
+    }
+
+    private IEnumerator waitforopen()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
+        MapComposent.Instance.Check();
         Grid.Instance.deleteMap(false);
     }
 }

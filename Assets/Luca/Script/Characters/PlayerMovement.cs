@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         /*lastX = xPos;
         lastY = yPos;*/
         stats.actionPoint = stats.maxActionPoint;
-        stats.HP = stats.maxHP;
+        //stats.HP = stats.maxHP;
 
         UiActionManager.Instance.setMovePoint(); // affiche a l'écran les mouvement points 
     }
@@ -113,6 +113,12 @@ public class PlayerMovement : MonoBehaviour
     {
         state = States.WAIT;
         stats.actionPoint = stats.maxActionPoint;
+
+        if(Grid.Instance.gridArray[xPos, - yPos].canBeOpen && !Grid.Instance.gridArray[xPos, -yPos].isOpen)
+        {
+            Grid.Instance.gridArray[xPos, -yPos].isOpen = true;
+            Debug.Log("chest opened");
+        }
 
         stats.effectActu();
 

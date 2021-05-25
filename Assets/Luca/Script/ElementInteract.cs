@@ -61,4 +61,17 @@ public class ElementInteract : MonoBehaviour
         }
         
     }
+
+    public void changeElement(Stats.ELEMENT chara, Stats.ELEMENT att)
+    {
+        if (chara == att)
+        {
+            CharacterManager.Instance.currentPlayer.stats.elementCombo += 1;
+        }
+        else
+        {
+            CharacterManager.Instance.currentPlayer.stats.element = att;
+            CharacterManager.Instance.currentPlayer.stats.elementCombo = 1;
+        }
+    }
 }
