@@ -75,6 +75,11 @@ public class BattleManager : MonoBehaviour
             {
                 def.effect = Stats.EFFECT.POISON;
             }
+            else if (currentAttackParam.effect == Stats.EFFECT.LIFESTEAL)
+            {
+                att.HP += (int)(damage * 0.1f);
+                att.HP = Mathf.Clamp(att.HP, 0, att.maxHP);
+            }
 
             def.intesity = currentAttackParam.intensity;
             def.numberOfTurn = currentAttackParam.duration;

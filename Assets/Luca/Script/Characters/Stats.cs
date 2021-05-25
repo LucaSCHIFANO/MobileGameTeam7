@@ -40,6 +40,7 @@ public class Stats : MonoBehaviour
         NORMAL,
         POISON,
         REGEN, 
+        LIFESTEAL,
     }
 
     public void effectActu()

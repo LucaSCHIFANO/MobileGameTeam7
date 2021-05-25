@@ -100,9 +100,16 @@ public class CharacterManager : MonoBehaviour
 
             sS.setValues(currentPlayer.stats);
 
-            CardManager.Instance.RollCard();
-            CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
-            CardManager.Instance.toChoice();
+            if(Grid.Instance.progress != 9)
+            {
+                CardManager.Instance.RollCard();
+                CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
+                CardManager.Instance.toChoice();
+            }
+            else
+            {
+                returnToMap();
+            }
         }
     }
 

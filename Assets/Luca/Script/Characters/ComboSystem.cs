@@ -37,7 +37,11 @@ public class ComboSystem : MonoBehaviour
 
     public void comboEffect(Stats.ELEMENT elem, int number)
     {
+
         var player = CharacterManager.Instance.currentPlayer;
+        player.stats.boostAtt = 0;
+        player.stats.boostDef = 0;
+        player.stats.boostAP = 0;
         switch (elem)
         {
             case Stats.ELEMENT.NORMAL:
