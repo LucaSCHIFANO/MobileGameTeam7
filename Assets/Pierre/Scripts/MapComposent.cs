@@ -186,12 +186,16 @@ public class MapComposent : MonoBehaviour
                 Create(TypeRoom[RandomRoom], salle4, 41);
             //var room4 = Instantiate(TypeRoom[RandomRoom], salle4.position, salle4.rotation, salle4.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
+            if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure) { 
                 TypeRoom[RandomRoom] = Enemy;
-            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
-                TypeRoom[RandomRoom] = Treasure;
-            else
                 Create(TypeRoom[RandomRoom], salle4B, 41);
+            }
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure) { 
+                TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4B, 41);
+            }
+            else
+            { Create(TypeRoom[RandomRoom], salle4B, 41); }
             //var room4B = Instantiate(TypeRoom[RandomRoom], salle4B.position, salle4B.rotation, salle4B.transform);
         }
 
