@@ -146,36 +146,81 @@ public class MapComposent : MonoBehaviour
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Enemy;
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+            }
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+            }
+            else if (ToutLOrDuCaptain == 0)
+            {
+                TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+            }
             else
-                Create(TypeRoom[RandomRoom], salle4, 41, 3);
+            Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+
             //var room4 = Instantiate(TypeRoom[RandomRoom], salle4.position, salle4.rotation, salle4.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Enemy;
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
+            }
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
+            }
+            else if (ToutLOrDuCaptain == 0)
+            {
+                TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
+            }
             else
-                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
             //var room4H = Instantiate(TypeRoom[RandomRoom], salle4H.position, salle4H.rotation, salle4H.transform);
         }
         else if (position == 31)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Enemy;
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
+            }
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
+            }
+            else if (ToutLOrDuCaptain == 0)
+            {
+                TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
+            }
             else
                 Create(TypeRoom[RandomRoom], salle4B, 42, 3);
             //var room4B = Instantiate(TypeRoom[RandomRoom], salle4B.position, salle4B.rotation, salle4B.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Enemy;
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+            }
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+            }
+            else if (ToutLOrDuCaptain == 0)
+            {
+                TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4H, 40, 3);
+            }
             else
                 Create(TypeRoom[RandomRoom], salle4H, 40, 3);
             //var room4H = Instantiate(TypeRoom[RandomRoom], salle4H.position, salle4H.rotation, salle4H.transform);
@@ -184,20 +229,38 @@ public class MapComposent : MonoBehaviour
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
             if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Enemy;
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
+            }
             else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
+            }
+            else if (ToutLOrDuCaptain == 0)
+            {
+                TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4, 41, 3);
+            }
             else
                 Create(TypeRoom[RandomRoom], salle4, 41, 3);
             //var room4 = Instantiate(TypeRoom[RandomRoom], salle4.position, salle4.rotation, salle4.transform);
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure) { 
+            if (ToutLOrDuCaptain == 1 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Enemy;
-                Create(TypeRoom[RandomRoom], salle4B, 41);
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
             }
-            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure) { 
+            else if (ToutLOrDuCaptain == 0 && TypeRoom[RandomRoom] == Treasure)
+            {
                 TypeRoom[RandomRoom] = Treasure;
-                Create(TypeRoom[RandomRoom], salle4B, 41);
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
+            }
+            else if (ToutLOrDuCaptain == 0)
+            {
+                TypeRoom[RandomRoom] = Treasure;
+                Create(TypeRoom[RandomRoom], salle4B, 42, 3);
             }
             else
                 Create(TypeRoom[RandomRoom], salle4B, 42, 3);
