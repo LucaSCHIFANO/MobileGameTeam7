@@ -61,6 +61,13 @@ public class PhaseManager : MonoBehaviour
             UiActionManager.Instance.showButton();
             CardManager.Instance.startCombat();
 
+            if(CharacterManager.Instance.currentPlayer != null)
+            {
+                CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
+
+                ComboSystem.Instance.comboEffect(CharacterManager.Instance.currentPlayer.stats.element, CharacterManager.Instance.currentPlayer.stats.elementCombo);
+            }
+
         }
     }
 

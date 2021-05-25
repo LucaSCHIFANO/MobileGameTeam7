@@ -27,14 +27,14 @@ public class BattleManager : MonoBehaviour
         Debug.Log("test attck");
         float multiplicator = ElementInteract.Instance.interaction(currentAttackParam.element, def.element);
 
-        int totalAtt = (int)((att.strenght + currentAttackParam.damage) * multiplicator);
+        int totalAtt = (int)((att.strenght + currentAttackParam.damage + att.boostAtt) * multiplicator);
         
         var damage = 0;
 
 
-        if (totalAtt - def.defense > 0)
+        if (totalAtt - (def.defense + def.boostDef) > 0)
         {
-            damage = totalAtt - def.defense;
+            damage = totalAtt - (def.defense + def.boostDef);
         }
 
         def.HP -= damage;
@@ -75,6 +75,11 @@ public class BattleManager : MonoBehaviour
             {
                 def.effect = Stats.EFFECT.POISON;
             }
+            else if (currentAttackParam.effect == Stats.EFFECT.LIFESTEAL)
+            {
+                att.HP += (int)(damage * 0.1f);
+                att.HP = Mathf.Clamp(att.HP, 0, att.maxHP);
+            }
 
             def.intesity = currentAttackParam.intensity;
             def.numberOfTurn = currentAttackParam.duration;
@@ -92,6 +97,7 @@ public class BattleManager : MonoBehaviour
                 ElementInteract.Instance.changeElement(att.element,currentAttackParam.element);
                 UiActionManager.Instance.showButton();
                 UiActionManager.Instance.HidePortrait();
+                ComboSystem.Instance.comboEffect(CharacterManager.Instance.currentPlayer.stats.element, CharacterManager.Instance.currentPlayer.stats.elementCombo);
             }
         }
 

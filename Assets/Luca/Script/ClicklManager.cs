@@ -67,15 +67,14 @@ public class ClicklManager : MonoBehaviour
 
                                         else if (player.state == PlayerMovement.States.ACTION)
                                         {
-                                            if (BattleManager.Instance.currentAttackParam.AOE)
+                                            if (BattleManager.Instance.currentAttackParam.AOE && !BattleManager.Instance.currentAttackParam.around)
                                             {
                                                 player.state = PlayerMovement.States.AOESELECT;
                                                 UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
                                                 CardManager.Instance.UseCard();
                                                 CardManager.Instance.midToHand = false;
                                             }
-
-                                            else if (touchedPanel.unitOn != null)
+                                            else
                                             {
                                                 BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
                                                 CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
@@ -103,6 +102,7 @@ public class ClicklManager : MonoBehaviour
                                                             BattleManager.Instance.attackUnit(player.stats, player.stats, true);
                                                             Debug.Log("hit myself");
                                                         }
+
                                                     }
                                                 }
 
@@ -182,13 +182,14 @@ public class ClicklManager : MonoBehaviour
 
                                         if (actualPanel == currentPanel)
                                         {
-                                            if (BattleManager.Instance.currentAttackParam.AOE)
+                                            if (BattleManager.Instance.currentAttackParam.AOE && !BattleManager.Instance.currentAttackParam.around)
                                             {
                                                 player.state = PlayerMovement.States.AOESELECT;
                                                 UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
                                                 CardManager.Instance.UseCard();
                                                 CardManager.Instance.midToHand = false;
                                             }
+                                            
                                             else
                                             {
                                                 BattleManager.Instance.attackUnit(player.stats, charact.stats, false);

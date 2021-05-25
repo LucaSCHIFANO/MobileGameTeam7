@@ -14,6 +14,12 @@ public class Stats : MonoBehaviour
     public int maxActionPoint;
     public int actionPoint;
 
+
+    public int boostAtt;
+    public int boostDef;
+    public int boostAP;
+    public int boostAPUsed;
+
     public ELEMENT element;
     public int elementCombo;
 
@@ -34,6 +40,7 @@ public class Stats : MonoBehaviour
         NORMAL,
         POISON,
         REGEN, 
+        LIFESTEAL,
     }
 
     public void effectActu()
