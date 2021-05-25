@@ -26,8 +26,9 @@ public class ClicklManager : MonoBehaviour
         {
             if (!MenuPause.GameIsPaused)
             {
-                /*Touch touch = Input.GetTouch(0);
-                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);*/
+                //Touch touch = Input.GetTouch(0);
+                //Touch touch = Input.GetMouseButton(0);
+                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(/*touch.position*/ Input.mousePosition);
 
                 //if (touch.phase == TouchPhase.Began)
                 if(Input.GetMouseButtonDown(0))
