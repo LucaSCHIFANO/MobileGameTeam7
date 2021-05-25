@@ -677,7 +677,6 @@ public class GridPattern : MonoBehaviour
                 gridref.locationEnemy.Add(new Vector2(4, -7));
 
 
-
                 gridref.playerSpawn.Add(new Vector2(6, 0));
                 gridref.playerSpawn.Add(new Vector2(7, -6));
 
@@ -685,6 +684,33 @@ public class GridPattern : MonoBehaviour
                 break;
 
             case 23:
+                pattern = new panelType[,]
+                {
+                  {panelType.GRASS,panelType.WATER,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS},
+                  {panelType.GRASS,panelType.CHEST,panelType.GRASS,panelType.GRASS},
+                  {panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WALL},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+
+
+                };
+                gridref.height = 8;
+                gridref.width = 4;
+
+                gridref.locationEnemy.Add(new Vector2(0, 0));
+                gridref.locationEnemy.Add(new Vector2(2, -6));
+
+
+                gridref.playerSpawn.Add(new Vector2(3, 0));
+                gridref.playerSpawn.Add(new Vector2(0, -5));
+
+                Debug.Log("fire");
+                break;
+
+            case 24:
                 pattern = new panelType[,]
                 {
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
@@ -705,7 +731,7 @@ public class GridPattern : MonoBehaviour
                 gridref.locationEnemy.Add(new Vector2(7, -1));
                 gridref.locationEnemy.Add(new Vector2(4, -4));
                 gridref.locationEnemy.Add(new Vector2(5, -7));
-                
+
 
 
 

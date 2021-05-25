@@ -1066,6 +1066,7 @@ GameObject:
   - component: {fileID: 174045047}
   - component: {fileID: 174045048}
   - component: {fileID: 174045049}
+  - component: {fileID: 174045050}
   m_Layer: 0
   m_Name: CharacterManager
   m_TagString: Untagged
@@ -1150,6 +1151,19 @@ MonoBehaviour:
   e3: 1
   e4: 2
   e5: 3
+--- !u!114 &174045050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174045045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d64a0b80e5d424eab5de71e072bcb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardList: []
 --- !u!1 &184895378
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,7 +3366,7 @@ MonoBehaviour:
   cellSize: 2
   panel: {fileID: 7635196711641401961, guid: e007d0c9546ce134d8e94ec62ddce458, type: 3}
   panelAlpha: {fileID: 7388167128119430108, guid: 24250fe6db8672e47bf6751ec21ad174, type: 3}
-  levelID: 21
+  levelID: 23
   progress: 0
   openList: []
   closeList: []

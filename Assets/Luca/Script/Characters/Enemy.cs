@@ -101,6 +101,7 @@ public class Enemy : MonoBehaviour
                 }
             }
 
+            
             foreach (var panel in finalPath)
             {
                 if (panel.actualMovementCost <= stats.actionPoint)
@@ -108,8 +109,8 @@ public class Enemy : MonoBehaviour
                     finalPath2.Add(panel);
                 }
             }
-
-            StartCoroutine(movement(finalPath2));
+         
+        StartCoroutine(movement(finalPath2));
     }
 
 
