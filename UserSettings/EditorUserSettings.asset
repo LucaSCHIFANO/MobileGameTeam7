@@ -24,7 +24,11 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c6c1313191d06392b277e38271427fb
       flags: 0
     RecentlyUsedScenePath-6:
+<<<<<<< HEAD
+      value: 22424703114646680e0b0227036c711501241b2f222d0c252167083debf42d
+=======
       value: 22424703114646680e0b0227036c6c1313191d0d0817747e38271427fb
+>>>>>>> Prog
       flags: 0
     UnityRemoteDevice:
       value: 0a7e6748245b10
