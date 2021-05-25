@@ -21,14 +21,16 @@ public class ClicklManager : MonoBehaviour
 
     void Update() // check les differentes possibilité de click
     {
-        if (Input.touchCount > 0)
+        ///if (Input.touchCount > 0)
+        if(Input.GetMouseButton(0))
         {
             if (!MenuPause.GameIsPaused)
             {
-                Touch touch = Input.GetTouch(0);
-                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+                /*Touch touch = Input.GetTouch(0);
+                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);*/
 
-                if (touch.phase == TouchPhase.Began)
+                //if (touch.phase == TouchPhase.Began)
+                if(Input.GetMouseButtonDown(0))
                 {
                     Collider2D touchedCollier = Physics2D.OverlapPoint(touchPosition);
 
