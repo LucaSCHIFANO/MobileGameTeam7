@@ -21,8 +21,9 @@ public class Menu : MonoBehaviour
 
     private void Awake()
     {
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
+       // PlayGamesPlatform.DebugLogEnabled = true;
+            //PlayGamesPlatform.Activate();
+        
     }
 
     private void Start()
@@ -30,7 +31,7 @@ public class Menu : MonoBehaviour
         MenuUI.SetActive(true);
         creditsMenuUI.SetActive(false);
 
-        SignInToGooglePlayServices();
+        // SignInToGooglePlayServices();
     }
 
     public void BouttonJouer()
@@ -77,7 +78,7 @@ public class Menu : MonoBehaviour
     }
 
 
-    public void SignInToGooglePlayServices()
+    /* public void SignInToGooglePlayServices()
     {
         PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (result) => {
             switch (result)
@@ -90,5 +91,5 @@ public class Menu : MonoBehaviour
                     break;
             }
         });
-    }
+    } */
 }
