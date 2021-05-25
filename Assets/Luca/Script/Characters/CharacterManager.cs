@@ -40,6 +40,8 @@ public class CharacterManager : MonoBehaviour
                 enemyList.Add(chara);
             }
         }
+        EnemiesBoard.Instance.CheckList();
+
     }
 
     public void enemiesMovement() // fait bougé un ennemi
@@ -83,6 +85,7 @@ public class CharacterManager : MonoBehaviour
             {
                 if (chara.GetComponent<Stats>().HP <= 0)
                 {
+                    EnemiesBoard.Instance.boardList.Remove(chara);
                     enemyList.Remove(chara);
                     Destroy(chara);
                 }
@@ -92,11 +95,13 @@ public class CharacterManager : MonoBehaviour
         if (playerList.Count == 0)
         {
             Debug.Log("You died");
+            EnemiesBoard.Instance.ClearList();
         }
         else if (enemyList.Count == 0)
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
+            EnemiesBoard.Instance.ClearList();
 
             sS.setValues(currentPlayer.stats);
 
