@@ -363,7 +363,7 @@ MonoBehaviour:
   strenght: 0
   defense: 0
   speed: 0
-  maxActionPoint: 5
+  maxActionPoint: 6
   actionPoint: 0
   boostAtt: 0
   boostDef: 0
@@ -435,4 +435,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3632318192473419819}
   sr: {fileID: 4152684584330165421}
-  pm: {fileID: 0}

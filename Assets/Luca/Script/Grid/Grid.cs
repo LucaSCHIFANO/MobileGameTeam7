@@ -33,6 +33,7 @@ public class Grid : MonoBehaviour
     public MoveCam mC;
 
     public List<Sprite> listSprites = new List<Sprite>();
+    public List<Sprite> listSpritesAlpha = new List<Sprite>();
 
 
 
@@ -108,16 +109,16 @@ public class Grid : MonoBehaviour
                     case GridPattern.panelType.GRASS:
                         visu.sprite = listSprites[0]; 
                         //newPanel.baseColor = new Color(0.006f, 0.7075f, 0);
-                        //newPanel.movementCost = 1;
+                        newPanel.movementCost = 1;
                         break;
                     case GridPattern.panelType.PATH:
                         visu.sprite = listSprites[1];
-                        newPanel.baseColor = new Color(0.8207f, 0.7423f, 0.3832f);
+                        //newPanel.baseColor = new Color(0.8207f, 0.7423f, 0.3832f);
                         newPanel.movementCost = 1;
                         break;
                     case GridPattern.panelType.FOREST:
                         visu.sprite = listSprites[2];
-                        newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
+                        //newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
                         newPanel.movementCost = 3;
                         break;
                     case GridPattern.panelType.WATER:
@@ -134,12 +135,12 @@ public class Grid : MonoBehaviour
                         break;
                     case GridPattern.panelType.BRIDGE:
                         visu.sprite = listSprites[0];
-                        visu.color = new Color(0.5943f, 0.1720f, 0);
+                        //visu.color = new Color(0.5943f, 0.1720f, 0);
                         newPanel.movementCost = 1;
                         break;
                     case GridPattern.panelType.HOLE:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.45f, 0.45f, 0.45f);
+                        //visu.sprite = listSprites[0];
+                        //visu.color = new Color(0.45f, 0.45f, 0.45f);
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
                         break;
@@ -197,6 +198,7 @@ public class Grid : MonoBehaviour
                 newPanel.setValue(i, j, 0, 0);
                 newPanel.name = i + " , " + j + " alpha mode";
 
+
                 /*switch (myGridPanel[j, i])
                 {
                     case GridPattern.panelType.GRASS:
@@ -229,8 +231,9 @@ public class Grid : MonoBehaviour
                         break;
                 }*/
 
-                newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
                 newPanel.transform.parent = GameObject.Find("TheGridAlpha").transform;
+                newPanel.baseColor = Color.white;
+                newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
 
             }
         }
@@ -290,8 +293,10 @@ public class Grid : MonoBehaviour
     {
         foreach (var VECTOR in playerSpawn)
         {
-            var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y];
-            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 0.5f);
+            var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+            //alphaPanel.sprite = Grid.Instance.listSpritesAlpha[0];
+
             Grid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
         }
     }
@@ -452,7 +457,7 @@ public class Grid : MonoBehaviour
                 Panel panelToCheck = gridArray[i, j];
                 Panel alphaPanel = gridArrayAlpha[i, j];
                 panelToCheck.canBeClick = false;
-                alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
+                alphaPanel.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
                 panelToCheck.actualPanelCount = 0;
             }
         }

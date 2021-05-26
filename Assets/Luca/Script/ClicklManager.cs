@@ -53,8 +53,9 @@ public class ClicklManager : MonoBehaviour
                                     {
                                         if (currentPanel != null)
                                         {
-                                            var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].GetComponent<SpriteRenderer>();
-                                            panelColor.color = new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 0.5f);
+                                            var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                            panelColor.color = new Color(1, 1, 1, 0.5f);
+                                            panelColor.sprite = Grid.Instance.listSpritesAlpha[0];
                                         }
                                         currentPanel = touchedPanel;
                                     }
@@ -281,8 +282,8 @@ public class ClicklManager : MonoBehaviour
 
     public void shinningPannel()
     {
-        var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].GetComponent<SpriteRenderer>();
-        panelColor.color = Color.Lerp(new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 0.5f), new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 1f), Mathf.PingPong(Time.time * 5, 0.5f));
+        var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+        panelColor.color = Color.Lerp(new Color(1, 1, 1, 0.5f), new Color(1, 1, 1, 1f), Mathf.PingPong(Time.time * 5, 0.5f));
     }
 
 

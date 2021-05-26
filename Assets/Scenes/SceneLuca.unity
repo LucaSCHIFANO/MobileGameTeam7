@@ -3378,9 +3378,14 @@ MonoBehaviour:
   enemy: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
   mC: {fileID: 260224054}
   listSprites:
-  - {fileID: 21300000, guid: 76697a024cb62c142b304e2ceb66909b, type: 3}
-  - {fileID: 21300000, guid: de5c0b4ef977073458ba6bd63a5bed78, type: 3}
-  - {fileID: 21300000, guid: 489c1589856069548bfaf15c68573f4e, type: 3}
+  - {fileID: 21300000, guid: e84fb5e5af7c2b247bccc89cfba94d22, type: 3}
+  - {fileID: 21300000, guid: c873fc03b73711242a1dda578abc6fbe, type: 3}
+  - {fileID: 21300000, guid: 12f94bd2f33c82247a0d8fe8e6a9b3d4, type: 3}
+  - {fileID: 21300000, guid: 78f6345f9c0022140ba9e804065c770e, type: 3}
+  listSpritesAlpha:
+  - {fileID: 21300000, guid: 498ec891f7dceaf4a980d759d51780b8, type: 3}
+  - {fileID: 21300000, guid: fba5957a8f3487e4b8bc6013a253826d, type: 3}
+  - {fileID: 21300000, guid: 2b665bdfe13714749b191288e88dd087, type: 3}
 --- !u!4 &670730764
 Transform:
   m_ObjectHideFlags: 0
