@@ -138,6 +138,11 @@ public class Grid : MonoBehaviour
                         newPanel.canBeOpen = true;
                         newPanel.isOpen = false;
                         break;
+                    case GridPattern.panelType.POISON:
+                        newPanel.baseColor = new Color(0.5f, 0f, 0.3f);
+                        newPanel.movementCost = 3;
+                        
+                        break;
                     default:
                         Debug.Log("ya un pb");
                         break;
@@ -325,7 +330,7 @@ public class Grid : MonoBehaviour
 
     }
 
-    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)  // trouve le chemins le plus court pour allez sur une case
+    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd, bool enemy)  // trouve le chemins le plus court pour allez sur une case
     {
         openList.Clear();
         closeList.Clear();
@@ -359,7 +364,30 @@ public class Grid : MonoBehaviour
                     continue;
                 }
 
-                if (!voisin.canBeCrossed || voisin.unitOn != null)
+                if (!voisin.canBeCrossed)
+                {
+                    closeList.Add(voisin);
+                    continue;
+
+                }
+                
+                else if (enemy && voisin.unitOn != null)
+                {
+                    int tentativeGCost = currentPanel.GCost + CalculateHCost(currentPanel, voisin);
+                    if (tentativeGCost < voisin.GCost)
+                    {
+                        voisin.prevousPanel = currentPanel;
+                        voisin.GCost = tentativeGCost;
+                        voisin.HCost = CalculateHCost(voisin, endPanel);
+                        voisin.ActuFCost();
+
+                        if (!openList.Contains(voisin))
+                        {
+                            openList.Add(voisin);
+                        }
+                    }
+
+                }else if (!enemy && voisin.unitOn != null)
                 {
                     closeList.Add(voisin);
                     continue;

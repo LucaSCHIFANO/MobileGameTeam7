@@ -17,12 +17,14 @@ public class GridPattern : MonoBehaviour
         BRIDGE, // 1 deplacement
         HOLE, // 255 deplacement mais peut tirer a travers
         CHEST, // 1 depl mais coffre
+        POISON, // 3 deplacement + degats 
     }
 
     public panelType[,] createPattern(int id) // les patterns
     {
+        var number = Random.Range(0, 7);
 
-        switch (id)
+        switch (number)
         {
             case 0:
                 pattern = new panelType[,]
@@ -621,6 +623,124 @@ public class GridPattern : MonoBehaviour
                 Debug.Log("fire");
                 break;
 
+            case 21:
+                pattern = new panelType[,]
+                {
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.POISON,panelType.POISON,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.POISON,panelType.POISON,panelType.GRASS,panelType.WALL,panelType.WALL},
+                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.POISON,panelType.POISON,panelType.GRASS,panelType.WALL,panelType.WALL},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.POISON,panelType.POISON,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+
+
+                };
+                gridref.height = 8;
+                gridref.width = 8;
+
+                gridref.locationEnemy.Add(new Vector2(6, -1));
+                gridref.locationEnemy.Add(new Vector2(5, -3));
+                gridref.locationEnemy.Add(new Vector2(2, -4));
+                gridref.locationEnemy.Add(new Vector2(0, -6));
+
+
+
+                gridref.playerSpawn.Add(new Vector2(1, 0));
+                gridref.playerSpawn.Add(new Vector2(6, -6));
+
+                Debug.Log("fire");
+                break;
+
+
+            case 22:
+                pattern = new panelType[,]
+                {
+                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.WATER,panelType.GRASS,panelType.GRASS},
+                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.WATER,panelType.GRASS,panelType.GRASS},
+                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.WATER,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+
+
+                };
+                gridref.height = 8;
+                gridref.width = 8;
+
+                gridref.locationEnemy.Add(new Vector2(2, 0));
+                gridref.locationEnemy.Add(new Vector2(0, -1));
+                gridref.locationEnemy.Add(new Vector2(2, -4));
+                gridref.locationEnemy.Add(new Vector2(0, -6));
+                gridref.locationEnemy.Add(new Vector2(4, -7));
+
+
+                gridref.playerSpawn.Add(new Vector2(6, 0));
+                gridref.playerSpawn.Add(new Vector2(7, -6));
+
+                Debug.Log("fire");
+                break;
+
+            case 23:
+                pattern = new panelType[,]
+                {
+                  {panelType.GRASS,panelType.WATER,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS},
+                  {panelType.GRASS,panelType.CHEST,panelType.GRASS,panelType.GRASS},
+                  {panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WALL},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+
+
+                };
+                gridref.height = 8;
+                gridref.width = 4;
+
+                gridref.locationEnemy.Add(new Vector2(0, 0));
+                gridref.locationEnemy.Add(new Vector2(2, -6));
+
+
+                gridref.playerSpawn.Add(new Vector2(3, 0));
+                gridref.playerSpawn.Add(new Vector2(0, -5));
+
+                Debug.Log("fire");
+                break;
+
+            case 24:
+                pattern = new panelType[,]
+                {
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.GRASS},
+                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.WATER,panelType.WATER,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+
+
+                };
+                gridref.height = 8;
+                gridref.width = 8;
+
+                gridref.locationEnemy.Add(new Vector2(4, 0));
+                gridref.locationEnemy.Add(new Vector2(7, -1));
+                gridref.locationEnemy.Add(new Vector2(4, -4));
+                gridref.locationEnemy.Add(new Vector2(5, -7));
+
+
+
+
+                gridref.playerSpawn.Add(new Vector2(0, 0));
+                gridref.playerSpawn.Add(new Vector2(0, -6));
+
+                Debug.Log("fire");
+                break;
 
             default:
                 break;
