@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 
   range: 3
   row_column: 1
-  throughWall: 0
+  throughWall: 1
   APNeeded: 2
   damage: 2
   push: 0

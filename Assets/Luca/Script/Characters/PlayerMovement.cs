@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Stats stats;
 
-    private GameObject panelToGo;
+    public GameObject panelToGo;
 
     public States state = 0;
     public enum States  

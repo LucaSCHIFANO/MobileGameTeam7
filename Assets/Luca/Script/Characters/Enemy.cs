@@ -119,10 +119,10 @@ public class Enemy : MonoBehaviour
                 }
             }
 
-        foreach (var item in finalPath)
+        /*foreach (var item in finalPath)
         {
             Debug.Log(item.name);
-        }
+        }*/
 
             StartCoroutine(movement(finalPath2));
     }
