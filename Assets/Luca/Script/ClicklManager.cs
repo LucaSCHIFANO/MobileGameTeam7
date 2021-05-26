@@ -64,7 +64,7 @@ public class ClicklManager : MonoBehaviour
 
                                         if (player.state == PlayerMovement.States.SELECTED)
                                         {
-                                            player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y)));
+                                            player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y, false)));
                                             currentPanel = null;
                                         }
 
@@ -134,7 +134,7 @@ public class ClicklManager : MonoBehaviour
                                         if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<PlayerMovement>())
                                         {
                                             Grid.Instance.resetClicked();
-                                            BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
+                                            BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos, false);
                                             BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
 
                                             UiActionManager.Instance.hideButton();
@@ -159,7 +159,7 @@ public class ClicklManager : MonoBehaviour
                                     if (player.state == PlayerMovement.States.IDLE && player.stats.actionPoint > 0)
                                     {
                                         Grid.Instance.resetClicked();
-                                        BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
+                                        BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos, false);
                                         BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
 
                                         UiActionManager.Instance.hideButton();

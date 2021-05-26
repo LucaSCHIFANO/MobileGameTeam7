@@ -37,7 +37,7 @@ public class BlueRedGrid : MonoBehaviour
 
 
 
-    public void movementsPossible(int xStart, int yStart)
+    public void movementsPossible(int xStart, int yStart, bool enemy)
     {
         openList.Clear();
         closeList.Clear();
@@ -76,7 +76,25 @@ public class BlueRedGrid : MonoBehaviour
                     }
                     else
                     {
-                        if ((!voisin.canBeCrossed || voisin.unitOn != null))
+                        if ((!voisin.canBeCrossed))
+                        {
+                            closeList.Add(voisin);
+                            voisin.actualMovementCost = int.MaxValue;
+                            continue;
+                        }
+
+                        else if (voisin.unitOn != null && enemy)
+                        {
+                            voisin.prevousPanel = panel;
+                            voisin.actualMovementCost = voisin.movementCost + panel.actualMovementCost;
+
+                            if (!openList.Contains(voisin))
+                            {
+                                openList.Add(voisin);
+                            }
+                        }
+
+                        else if (voisin.unitOn != null && !enemy)
                         {
                             closeList.Add(voisin);
                             voisin.actualMovementCost = int.MaxValue;
