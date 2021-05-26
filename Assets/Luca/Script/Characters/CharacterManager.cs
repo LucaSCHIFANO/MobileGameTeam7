@@ -85,8 +85,8 @@ public class CharacterManager : MonoBehaviour
             {
                 if (chara.GetComponent<Stats>().HP <= 0)
                 {
-                    EnemiesBoard.Instance.boardList.Remove(chara);
                     enemyList.Remove(chara);
+                    EnemiesBoard.Instance.CheckList();
                     Destroy(chara);
                 }
             }
