@@ -213,6 +213,8 @@ MonoBehaviour:
   yPos: 0
   characterState: 0
   stats: {fileID: 0}
+  attackMonster: {fileID: 0}
+  pattern: 0
 --- !u!114 &2125179589904228848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,12 +227,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed089b1e59eef945a9df55d9c646194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characName: 
   level: 0
+  maxHP: 0
+  HP: 0
   strenght: 0
   defense: 0
   speed: 0
   maxActionPoint: 3
   actionPoint: 0
+  boostAtt: 0
+  boostDef: 0
+  boostAP: 0
+  boostAPUsed: 0
+  element: 0
+  elementCombo: 0
+  effect: 0
+  numberOfTurn: 0
+  intesity: 0
 --- !u!114 &433343789525343234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackParam: {fileID: 11400000, guid: 28c0ef5a8b403ce4a9cefcf71bdbcfe4, type: 2}
+  seePlayer: 0
 --- !u!61 &314154826846627505
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -138,6 +138,11 @@ public class Grid : MonoBehaviour
                         newPanel.canBeOpen = true;
                         newPanel.isOpen = false;
                         break;
+                    case GridPattern.panelType.POISON:
+                        newPanel.baseColor = new Color(0.5f, 0f, 0.3f);
+                        newPanel.movementCost = 3;
+                        
+                        break;
                     default:
                         Debug.Log("ya un pb");
                         break;
