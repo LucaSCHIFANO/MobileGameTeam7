@@ -22,9 +22,9 @@ public class GridPattern : MonoBehaviour
 
     public panelType[,] createPattern(int id) // les patterns
     {
-        var number = Random.Range(0, 7);
+        var number = Random.Range(0, 31);
 
-        switch (id)
+        switch (number)
         {
             case 0:
                 pattern = new panelType[,]
