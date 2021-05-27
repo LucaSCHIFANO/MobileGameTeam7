@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CardManager : MonoBehaviour
 {
@@ -33,12 +34,17 @@ public class CardManager : MonoBehaviour
 
     private GameObject[] actualRoll = new GameObject[3];
     private int index = 0;
+
     //Hearthstone Style
     public Transform startLocation;
     public float gap;
     public Transform handPanel;
+    public Transform cardPosition;
     private Vector3 previousTransform;
+    private Vector3 previousScale;
     private Quaternion previousRotation;
+
+    public GameObject cardInfos;
 
 
     public Text chooseCardText;
@@ -58,7 +64,7 @@ public class CardManager : MonoBehaviour
     void Start()
     {
         gap = 1.5f;
-        midRotation = Quaternion.Euler(0f, 0f, 0f);
+        midRotation = Quaternion.Euler(0f, 180f, 0f);
     }
 
     void Update()
@@ -158,6 +164,7 @@ public class CardManager : MonoBehaviour
                                 {
                                     previousTransform = hitCard.GetComponent<RectTransform>().localPosition;
                                     previousRotation = hitCard.transform.rotation;
+                                    previousScale = hitCard.transform.localScale;
                                     middleCard = hitCard;
                                     handToMid = true;
                                     isMid = true;
@@ -179,12 +186,25 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
-            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, transform.position, 7f * Time.deltaTime);
+            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition, 7f * Time.deltaTime);
             middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, midRotation, 7f * Time.deltaTime);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, transform.position) < 15f) // trouver la bonne valuer avec la speed
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
+            {
+                middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
+                middleCard.GetComponent<CardDisplay>().artworkImage.sprite = middleCard.GetComponent<CardDisplay>().card.backArtwork;
+                middleCard.GetComponent<CardDisplay>().actionCostText.text = "";
+                middleCard.GetComponent<CardDisplay>().attackText.text = "";
+                middleCard.GetComponent<CardDisplay>().nameText.text = "";
+                cardInfos = middleCard.transform.GetChild(5).gameObject;
+                cardInfos.SetActive(true);
+                CardInfos.Instance.card = middleCard.GetComponent<CardDisplay>();
+                CardInfos.Instance.UpdateInfos();
+            }
+
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition) < 5f) // trouver la bonne valuer avec la speed
             {
                 handToMid = false;
-                middleCard.GetComponent<RectTransform>().localPosition = handPanel.position;
+                middleCard.GetComponent<RectTransform>().localPosition = cardPosition.localPosition;
             }
         }
 
@@ -196,7 +216,14 @@ public class CardManager : MonoBehaviour
             }
             middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, previousTransform, 5f * Time.deltaTime);
             middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, previousRotation, 5f * Time.deltaTime);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) < 15f)
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
+            {
+                middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, previousScale, 7f * Time.deltaTime);
+                CardInfos.Instance.card = null;
+                cardInfos.SetActive(false);
+                middleCard.GetComponent<CardDisplay>().UpdateCard();
+            }
+            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) < 5f)
             {
                 midToHand = false;
                 middleCard.GetComponent<RectTransform>().localPosition = previousTransform;

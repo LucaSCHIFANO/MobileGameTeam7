@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UiActionManager : MonoBehaviour
 {
@@ -22,9 +23,14 @@ public class UiActionManager : MonoBehaviour
     public Slider HPBar;
     public Text element;
 
-    public GameObject apleft;
+    public TextMeshProUGUI apleft;
 
     public ShowRangeAttack sra;
+
+    public GameObject enemiesBoard;
+    public GameObject button;
+    public Sprite minusButtonImage;
+    public Sprite plusButtonImage;
 
 
     private static UiActionManager _instance = null;
@@ -38,15 +44,22 @@ public class UiActionManager : MonoBehaviour
         _instance = this;
     }
 
-
+    private void Update()
+    {
+        if (apleft.gameObject.activeInHierarchy)
+        {
+            apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+            HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
+        }
+    }
 
     public void showButton()
     {
         buttonHand.SetActive(true);
         buttonCancel.SetActive(false);
-        unitPortrait.SetActive(false);
+        unitPortrait.SetActive(true);
         use.SetActive(false);
-        apleft.SetActive(false);
+        //apleft.SetActive(false);
     }
 
     public void hideButton()
@@ -55,7 +68,7 @@ public class UiActionManager : MonoBehaviour
         buttonCancel.SetActive(true);
         deck.SetActive(false);
         use.SetActive(false);
-        apleft.SetActive(false);
+        //apleft.SetActive(false);
     }
 
     public void showDeck()
@@ -66,9 +79,9 @@ public class UiActionManager : MonoBehaviour
             buttonHand.SetActive(false);
             buttonCancel.SetActive(true);
             use.SetActive(true);
-            unitPortrait.SetActive(false);
-            apleft.SetActive(true);
-            apleft.GetComponent<Text>().text = " AP Left : " + CharacterManager.Instance.currentPlayer.stats.actionPoint;
+            //unitPortrait.SetActive(false);
+            //apleft.SetActive(true);
+            //apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
 
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
@@ -115,7 +128,7 @@ public class UiActionManager : MonoBehaviour
         deck.SetActive(false);
         use.SetActive(false);
         unitPortrait.SetActive(false);
-        apleft.SetActive(false);
+        //apleft.SetActive(false);
     }
 
     public void endTurn()
@@ -177,7 +190,7 @@ public class UiActionManager : MonoBehaviour
 
     public void HidePortrait()
     {
-        unitPortrait.SetActive(false);
+        //unitPortrait.SetActive(false);
     }
 
     public void cancelButton()
@@ -213,6 +226,21 @@ public class UiActionManager : MonoBehaviour
         hideButton();
         sra.testAttackRange(param, x, y);
 
+    }
+
+    public void EnemiesBoardState()
+    {
+        if (enemiesBoard.activeInHierarchy)
+        {
+            enemiesBoard.SetActive(false);
+            button.GetComponent<Image>().sprite = plusButtonImage;
+        }
+        else
+        {
+            enemiesBoard.SetActive(true);
+            button.GetComponent<Image>().sprite = minusButtonImage;
+            EnemiesBoard.Instance.CheckList();
+        }
     }
 
 }
