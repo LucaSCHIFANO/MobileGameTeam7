@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HexEyes
   m_EditorClassIdentifier: 
   patternName: Hex Eyes
-  description: Poison, Inflicts 5 dmg for 3 turns
+  description: Deals a high amount of Poison during 3 turns
   range: 4
   row_column: 0
   throughWall: 1

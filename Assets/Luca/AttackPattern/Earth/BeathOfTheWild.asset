@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BeathOfTheWild
   m_EditorClassIdentifier: 
   patternName: Breath Of The Wild
-  description: Inflicts 10 damage and pushes back 3 cells
+  description: A powerfull wind that pushes the enemy back for 3 squares
   range: 3
   row_column: 1
   throughWall: 0
