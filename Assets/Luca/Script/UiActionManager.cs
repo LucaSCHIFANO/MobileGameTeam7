@@ -44,21 +44,13 @@ public class UiActionManager : MonoBehaviour
         _instance = this;
     }
 
-    private void Update()
-    {
-        if (apleft.gameObject.activeInHierarchy)
-        {
-            apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
-            HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
-        }
-    }
-
     public void showButton()
     {
         buttonHand.SetActive(true);
         buttonCancel.SetActive(false);
         unitPortrait.SetActive(true);
         use.SetActive(false);
+        apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
         //apleft.SetActive(false);
     }
 
@@ -81,7 +73,7 @@ public class UiActionManager : MonoBehaviour
             use.SetActive(true);
             //unitPortrait.SetActive(false);
             //apleft.SetActive(true);
-            //apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+            apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
 
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
