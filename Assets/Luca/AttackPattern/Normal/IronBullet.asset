@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IronBullet
   m_EditorClassIdentifier: 
   patternName: IronBullet
-  description: 
+  description: 'A bullet made in a deep forge '
   range: 4
   row_column: 0
   throughWall: 0

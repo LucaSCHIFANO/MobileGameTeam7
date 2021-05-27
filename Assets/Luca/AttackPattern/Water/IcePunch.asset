@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IcePunch
   m_EditorClassIdentifier: 
   patternName: Ice Punch
-  description: 
+  description: 'Frost your enemy '
   range: 2
   row_column: 0
   throughWall: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slap
   m_EditorClassIdentifier: 
   patternName: Slap
-  description: 
+  description: A violent slap
   range: 1
   row_column: 1
   throughWall: 0
@@ -24,6 +24,7 @@ MonoBehaviour:
   element: 0
   AOE: 0
   aoeEffect: {fileID: 0}
+  around: 0
   effect: 0
   duration: 0
   intensity: 0

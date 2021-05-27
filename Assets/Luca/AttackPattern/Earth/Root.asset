@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Root
   m_EditorClassIdentifier: 
   patternName: Root
-  description: 
+  description: A root comes out of the ground, hit an enemy
   range: 4
   row_column: 0
   throughWall: 0
