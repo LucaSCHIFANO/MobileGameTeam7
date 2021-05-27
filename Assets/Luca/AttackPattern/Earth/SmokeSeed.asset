@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Smoke Seed
   description: 
-  range: 3
+  range: 4
   row_column: 0
   throughWall: 0
   APNeeded: 3
-  damage: 2
+  damage: 5
   push: 0
   pull: 0
   element: 3

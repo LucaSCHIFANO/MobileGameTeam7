@@ -379,8 +379,7 @@ public class GridPattern : MonoBehaviour
 
                 gridref.locationEnemy.Add(new Vector2(1, 0));
                 gridref.locationEnemy.Add(new Vector2(0, -2));
-                gridref.locationEnemy.Add(new Vector2(5, 0));
-                gridref.locationEnemy.Add(new Vector2(4, -2));
+                gridref.locationEnemy.Add(new Vector2(5, 0));               
                 gridref.locationEnemy.Add(new Vector2(4, -4));
 
 
@@ -926,12 +925,12 @@ public class GridPattern : MonoBehaviour
                 pattern = new panelType[,]
                 {
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
-                  {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.WATER,panelType.WATER,panelType.WALL,panelType.WALL,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WATER,panelType.WATER,panelType.WALL,panelType.GRASS,panelType.GRASS},
                   {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.WATER,panelType.WATER,panelType.WALL,panelType.WALL,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.GRASS},
                   {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.WATER,panelType.WATER,panelType.WALL,panelType.WALL,panelType.GRASS},
-                  {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.WATER,panelType.WATER,panelType.WALL,panelType.WALL,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WATER,panelType.WATER,panelType.WALL,panelType.GRASS,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
 
 
