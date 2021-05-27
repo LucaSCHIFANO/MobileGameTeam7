@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: Epee
   description: c'est une epee
   artwork: {fileID: 21300000, guid: 36ffc06688609a64980feed5d6804238, type: 3}
+  backArtwork: {fileID: 21300000, guid: 10b7688cf5887aa4da6f833993fa6b8d, type: 3}
   attackDamage: 3
   actionCost: 1
   attackParam: {fileID: 11400000, guid: 28c0ef5a8b403ce4a9cefcf71bdbcfe4, type: 2}

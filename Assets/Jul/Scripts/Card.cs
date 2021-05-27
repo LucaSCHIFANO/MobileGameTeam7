@@ -9,6 +9,7 @@ public class Card : ScriptableObject
     public string description;
 
     public Sprite artwork;
+    public Sprite backArtwork;
 
     public int attackDamage;
     public int actionCost;

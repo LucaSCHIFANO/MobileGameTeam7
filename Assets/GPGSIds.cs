@@ -24,9 +24,29 @@
 
 public static class GPGSIds
 {
+        public const string achievement_not_a_scratch = "CgkIrqKCzZoeEAIQFQ"; // <GPGSID>
+        public const string achievement_grinder = "CgkIrqKCzZoeEAIQEg"; // <GPGSID>
+        public const string achievement_endless_destruction = "CgkIrqKCzZoeEAIQDQ"; // <GPGSID>
+        public const string achievement_a_legend_is_born = "CgkIrqKCzZoeEAIQBQ"; // <GPGSID>
+        public const string achievement_stubborn = "CgkIrqKCzZoeEAIQBw"; // <GPGSID>
+        public const string achievement_why_not = "CgkIrqKCzZoeEAIQFw"; // <GPGSID>
+        public const string achievement_the_way_of_fire = "CgkIrqKCzZoeEAIQCg"; // <GPGSID>
+        public const string achievement_heartless = "CgkIrqKCzZoeEAIQEA"; // <GPGSID>
+        public const string achievement_impregnable_fortress = "CgkIrqKCzZoeEAIQDw"; // <GPGSID>
+        public const string achievement_genocide = "CgkIrqKCzZoeEAIQFA"; // <GPGSID>
+        public const string achievement_ruthless = "CgkIrqKCzZoeEAIQCQ"; // <GPGSID>
+        public const string achievement_god_among_gods = "CgkIrqKCzZoeEAIQEw"; // <GPGSID>
+        public const string achievement_the_way_of_nature = "CgkIrqKCzZoeEAIQCw"; // <GPGSID>
+        public const string achievement_blitzkrieg = "CgkIrqKCzZoeEAIQBg"; // <GPGSID>
+        public const string achievement_a_step_is_a_step = "CgkIrqKCzZoeEAIQBA"; // <GPGSID>
+        public const string achievement_end_of_the_road = "CgkIrqKCzZoeEAIQAA"; // <GPGSID>
+        public const string achievement_never_gonna_give_you_up = "CgkIrqKCzZoeEAIQEQ"; // <GPGSID>
         public const string leaderboard_best_time = "CgkIrqKCzZoeEAIQAQ"; // <GPGSID>
-        public const string achievement_beat_the_final_boss = "CgkIrqKCzZoeEAIQAA"; // <GPGSID>
-        public const string achievement_finish_the_first_level = "CgkIrqKCzZoeEAIQAw"; // <GPGSID>
+        public const string achievement_slaughter = "CgkIrqKCzZoeEAIQCA"; // <GPGSID>
+        public const string achievement_the_way_of_water = "CgkIrqKCzZoeEAIQDA"; // <GPGSID>
+        public const string achievement_speed_of_light = "CgkIrqKCzZoeEAIQDg"; // <GPGSID>
+        public const string achievement_savage = "CgkIrqKCzZoeEAIQFg"; // <GPGSID>
+        public const string achievement_halfway_through_hell = "CgkIrqKCzZoeEAIQAw"; // <GPGSID>
 
 }
 

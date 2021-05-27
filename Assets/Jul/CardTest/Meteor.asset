@@ -15,6 +15,7 @@ MonoBehaviour:
   cardName: x
   description: x
   artwork: {fileID: 21300000, guid: 8f05bc18ddc71854fbcf9e291b49d334, type: 3}
+  backArtwork: {fileID: 21300000, guid: 7a31041e504d4184ba5afc095b3f7841, type: 3}
   attackDamage: 0
   actionCost: 0
   attackParam: {fileID: 11400000, guid: 75ed75b2463ff154f96b0f8aeed740c0, type: 2}
