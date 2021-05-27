@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SmokeSeed
   m_EditorClassIdentifier: 
   patternName: Smoke Seed
-  description: 
+  description: Throw a seed that looks like a bomb. Deals Poison in a circle zone
+    during 3 turns
   range: 4
   row_column: 0
   throughWall: 0

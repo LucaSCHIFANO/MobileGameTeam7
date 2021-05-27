@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Meteor
   m_EditorClassIdentifier: 
   patternName: Meteor
-  description: 
+  description: A rain of meteors fall down on the enemies
   range: 3
   row_column: 1
   throughWall: 1

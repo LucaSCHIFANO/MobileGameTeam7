@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: HellEmbrace
   m_EditorClassIdentifier: 
   patternName: Hell Embrace
-  description: 
-  range: 5
-  row_column: 1
+  description: Flammes are comming out of the ground in a circle zone
+  range: 4
+  row_column: 0
   throughWall: 0
   APNeeded: 2
-  damage: 1000
+  damage: 4
   push: 0
   pull: 1
   element: 1
-  AOE: 0
+  AOE: 1
   aoeEffect: {fileID: 0}
-  around: 0
+  around: 1
   effect: 0
   duration: 0
   intensity: 0

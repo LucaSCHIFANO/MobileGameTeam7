@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
             if(notFirst != 0)
             {
                 stats.actionPoint -= panel.movementCost;
+                UiActionManager.Instance.apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
             }
             notFirst++;
         }

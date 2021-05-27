@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WindShot
   m_EditorClassIdentifier: 
   patternName: WindShot
-  description: 
+  description: An air flow that pushes the victim 1 square away
   range: 3
   row_column: 1
   throughWall: 0
