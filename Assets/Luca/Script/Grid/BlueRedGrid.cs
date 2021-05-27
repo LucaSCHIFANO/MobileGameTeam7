@@ -27,8 +27,9 @@ public class BlueRedGrid : MonoBehaviour
         {
             if (panel.actualMovementCost <= maxMovementPlayer && panel.prevousPanel != null)
             {
-                var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y];
-                alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(0,0,1,0.5f);
+                var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                alphaPanel.sprite = Grid.Instance.listSpritesAlpha[0];
                 panel.canBeClick = true;
             }
         }
@@ -37,7 +38,7 @@ public class BlueRedGrid : MonoBehaviour
 
 
 
-    public void movementsPossible(int xStart, int yStart)
+    public void movementsPossible(int xStart, int yStart, bool enemy)
     {
         openList.Clear();
         closeList.Clear();
@@ -76,7 +77,25 @@ public class BlueRedGrid : MonoBehaviour
                     }
                     else
                     {
-                        if ((!voisin.canBeCrossed || voisin.unitOn != null))
+                        if ((!voisin.canBeCrossed))
+                        {
+                            closeList.Add(voisin);
+                            voisin.actualMovementCost = int.MaxValue;
+                            continue;
+                        }
+
+                        else if (voisin.unitOn != null && enemy)
+                        {
+                            voisin.prevousPanel = panel;
+                            voisin.actualMovementCost = voisin.movementCost + panel.actualMovementCost;
+
+                            if (!openList.Contains(voisin))
+                            {
+                                openList.Add(voisin);
+                            }
+                        }
+
+                        else if (voisin.unitOn != null && !enemy)
                         {
                             closeList.Add(voisin);
                             voisin.actualMovementCost = int.MaxValue;

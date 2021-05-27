@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-using GooglePlayGames;
-using UnityEngine.SocialPlatforms;
-using GooglePlayGames.BasicApi;
-
 public class Menu : MonoBehaviour
 {
     public GameObject creditsMenuUI;
@@ -16,21 +12,10 @@ public class Menu : MonoBehaviour
 
     public GameObject fade;
 
-    public bool isConnectedToGooglePlayServices;
-
-
-    private void Awake()
-    {
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
-    }
-
     private void Start()
     {
         MenuUI.SetActive(true);
         creditsMenuUI.SetActive(false);
-
-        SignInToGooglePlayServices();
     }
 
     public void BouttonJouer()
@@ -76,19 +61,19 @@ public class Menu : MonoBehaviour
         OptionsUI.SetActive(false);
     }
 
-
-    public void SignInToGooglePlayServices()
+    public void googleTrophies()
     {
-        PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (result) => {
-            switch (result)
-            {
-                case SignInStatus.Success:
-                    isConnectedToGooglePlayServices = true;
-                    break;
-                default:
-                    isConnectedToGooglePlayServices = false;
-                    break;
-            }
-        });
+        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {
+            Social.ShowAchievementsUI();
+        }
+    }
+
+    public void googleLeaderBoard()
+    {
+        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {
+            Social.ShowLeaderboardUI();
+        }
     }
 }

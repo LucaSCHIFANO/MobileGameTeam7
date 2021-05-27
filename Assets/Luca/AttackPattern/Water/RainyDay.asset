@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
-  m_Name: PoisonJab
+  m_Name: RainyDay
   m_EditorClassIdentifier: 
-  patternName: PoisonJab
+  patternName: Rainy Day
   description: 
-  range: 1
+  range: 5
   row_column: 1
-  throughWall: 0
-  APNeeded: 2
-  damage: 3
+  throughWall: 1
+  APNeeded: 3
+  damage: 8
   push: 0
   pull: 0
-  element: 0
-  AOE: 0
+  element: 2
+  AOE: 1
   aoeEffect: {fileID: 0}
-  effect: 1
-  duration: 3
-  intensity: 3
-  artwork: {fileID: 21300000, guid: 939a45863c78e2e428fa8bda09eddf0d, type: 3}
+  around: 1
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 0}

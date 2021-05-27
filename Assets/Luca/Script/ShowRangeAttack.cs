@@ -41,8 +41,9 @@ public class ShowRangeAttack : MonoBehaviour
 
         var actuPanel = Grid.Instance.gridArray[x, -y];
         actuPanel.canBeClick = true;
-        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-        alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>(); ;
+        alphaPanel.color = new Color(1, 1, 1, 0.5f);
+        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
     }
 
@@ -56,8 +57,9 @@ public class ShowRangeAttack : MonoBehaviour
                 if (panel.canBeCrossed)
                 {
                     panel.canBeClick = true;
-                    var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y];
-                    alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                    var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                    alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                    alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
                 }
             }
         }
@@ -83,12 +85,21 @@ public class ShowRangeAttack : MonoBehaviour
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
                             actuPanel.canBeClick = true;
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                            if(actuPanel.unitOn != null && !attackParam.throughWall)
+                        if (actuPanel.unitOn != null)
                             { 
-                                random = true;
+                                if(actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                                {
+                                    actuPanel.canBeClick = false;
+                                }
+
+                                else if ( !attackParam.throughWall)
+                                {
+                                    random = true;
+                                }
                             }
                     }
                     else
@@ -125,13 +136,22 @@ public class ShowRangeAttack : MonoBehaviour
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
                             actuPanel.canBeClick = true;
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                        if (actuPanel.unitOn != null)
+                        {
+                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                            {
+                                actuPanel.canBeClick = false;
+                            }
+
+                            else if (!attackParam.throughWall)
                             {
                                 random = true;
                             }
+                        }
                     }
                     else
                     {
@@ -167,13 +187,22 @@ public class ShowRangeAttack : MonoBehaviour
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
                             actuPanel.canBeClick = true;
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                        if (actuPanel.unitOn != null)
+                        {
+                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                            {
+                                actuPanel.canBeClick = false;
+                            }
+
+                            else if (!attackParam.throughWall)
                             {
                                 random = true;
                             }
+                        }
                     }
                     else
                     {
@@ -211,13 +240,22 @@ public class ShowRangeAttack : MonoBehaviour
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
                             actuPanel.canBeClick = true;
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                        if (actuPanel.unitOn != null)
+                        {
+                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                            {
+                                actuPanel.canBeClick = false;
+                            }
+
+                            else if (!attackParam.throughWall)
                             {
                                 random = true;
                             }
+                        }
                     }
                     else
                     {

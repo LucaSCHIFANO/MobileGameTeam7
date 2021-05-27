@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class CharacterManager : MonoBehaviour
 
     public PlayerMovement currentPlayer;
     public SaveStats sS;
+
+    public bool noDamage = true;
+    public bool isHealed = false;
 
     public int countMoveEnemy = 0;
 
@@ -40,6 +44,8 @@ public class CharacterManager : MonoBehaviour
                 enemyList.Add(chara);
             }
         }
+        EnemiesBoard.Instance.CheckList();
+
     }
 
     public void enemiesMovement() // fait bougé un ennemi
@@ -84,25 +90,93 @@ public class CharacterManager : MonoBehaviour
                 if (chara.GetComponent<Stats>().HP <= 0)
                 {
                     enemyList.Remove(chara);
+                    EnemiesBoard.Instance.CheckList();
                     Destroy(chara);
+                    PhaseManager.Instance.monsterInOneTurn++;
+
+                    if(BattleManager.Instance.currentAttackParam.range == 1){
+
+                        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                        {
+                            Social.ReportProgress(GPGSIds.achievement_savage, 100.0f, null);
+                        }
+                    }
+
+                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    {
+                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_ruthless, 25, null);
+                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_heartless, 50, null);
+                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_genocide, 100, null);
+                    }
                 }
             }
         }
 
+
         if (playerList.Count == 0)
         {
             Debug.Log("You died");
+            EnemiesBoard.Instance.ClearList();
+
+            if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+            {
+                //Social.ReportProgress(GPGSIds.achievement_never_gonna_give_you_up, 10.0f, null);
+                GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_never_gonna_give_you_up, 10, null);
+            }
+
+            SceneManager.LoadScene("MainMenu");
         }
+
         else if (enemyList.Count == 0)
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
+            EnemiesBoard.Instance.ClearList();
 
             sS.setValues(currentPlayer.stats);
 
-            CardManager.Instance.RollCard();
-            CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
-            CardManager.Instance.toChoice();
+            if(PhaseManager.Instance.monsterInOneTurn >= 3)
+            {
+                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {
+                    Social.ReportProgress(GPGSIds.achievement_slaughter, 100.0f, null);
+                }
+            }
+
+            if(PhaseManager.Instance.numberOfTurnBattle <= 3)
+            {
+                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {
+                    Social.ReportProgress(GPGSIds.achievement_blitzkrieg, 100.0f, null);
+                }
+            }
+
+            if (ComboSystem.Instance.onlyOneElem)
+            {
+                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {
+                    Social.ReportProgress(GPGSIds.achievement_stubborn, 100.0f, null);
+                }
+            }
+
+            if (noDamage)
+            {
+                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {
+                    Social.ReportProgress(GPGSIds.achievement_not_a_scratch, 100.0f, null);
+                }
+            }
+
+            if(Grid.Instance.progress != 9)
+            {
+                CardManager.Instance.RollCard();
+                CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
+                CardManager.Instance.toChoice();
+            }
+            else
+            {
+                returnToMap();
+            }
         }
     }
 
@@ -117,5 +191,11 @@ public class CharacterManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.6f);
         MapComposent.Instance.Check();
         Grid.Instance.deleteMap(false);
+
+        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {
+            Social.ReportProgress(GPGSIds.achievement_a_legend_is_born, 100.0f, null);
+            GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_grinder, 30, null);
+        }
     }
 }

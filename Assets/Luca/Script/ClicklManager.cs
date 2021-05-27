@@ -21,14 +21,17 @@ public class ClicklManager : MonoBehaviour
 
     void Update() // check les differentes possibilité de click
     {
-        if (Input.touchCount > 0)
+        ///if (Input.touchCount > 0)
+        if(Input.GetMouseButton(0))
         {
             if (!MenuPause.GameIsPaused)
             {
-                Touch touch = Input.GetTouch(0);
-                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+                //Touch touch = Input.GetTouch(0);
+                //Touch touch = Input.GetMouseButton(0);
+                Vector2 touchPosition = Camera.main.ScreenToWorldPoint(/*touch.position*/ Input.mousePosition);
 
-                if (touch.phase == TouchPhase.Began)
+                //if (touch.phase == TouchPhase.Began)
+                if(Input.GetMouseButtonDown(0))
                 {
                     Collider2D touchedCollier = Physics2D.OverlapPoint(touchPosition);
 
@@ -50,8 +53,9 @@ public class ClicklManager : MonoBehaviour
                                     {
                                         if (currentPanel != null)
                                         {
-                                            var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].GetComponent<SpriteRenderer>();
-                                            panelColor.color = new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 0.5f);
+                                            var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                            panelColor.color = new Color(1, 1, 1, 0.5f);
+                                            panelColor.sprite = Grid.Instance.listSpritesAlpha[0];
                                         }
                                         currentPanel = touchedPanel;
                                     }
@@ -61,28 +65,30 @@ public class ClicklManager : MonoBehaviour
 
                                         if (player.state == PlayerMovement.States.SELECTED)
                                         {
-                                            player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y)));
+                                            player.StartCoroutine(player.movement(Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y, false)));
                                             currentPanel = null;
                                         }
 
                                         else if (player.state == PlayerMovement.States.ACTION)
                                         {
-                                            if (BattleManager.Instance.currentAttackParam.AOE)
+                                            if (BattleManager.Instance.currentAttackParam.AOE && !BattleManager.Instance.currentAttackParam.around)
                                             {
                                                 player.state = PlayerMovement.States.AOESELECT;
                                                 UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
                                                 CardManager.Instance.UseCard();
                                                 CardManager.Instance.midToHand = false;
                                             }
-
-                                            else if (touchedPanel.unitOn != null)
+                                            else
                                             {
-                                                BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
-                                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                UiActionManager.Instance.setMovePoint();
-                                                currentPanel = null;
-                                                CardManager.Instance.UseCard();
-                                                CardManager.Instance.midToHand = false;
+                                                if (touchedPanel.unitOn != null)
+                                                {
+                                                    BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
+                                                    CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                                    UiActionManager.Instance.setMovePoint();
+                                                    currentPanel = null;
+                                                    CardManager.Instance.UseCard();
+                                                    CardManager.Instance.midToHand = false;
+                                                }
                                             }
                                         }
                                         else if (player.state == PlayerMovement.States.AOESELECT)
@@ -103,6 +109,7 @@ public class ClicklManager : MonoBehaviour
                                                             BattleManager.Instance.attackUnit(player.stats, player.stats, true);
                                                             Debug.Log("hit myself");
                                                         }
+
                                                     }
                                                 }
 
@@ -128,7 +135,7 @@ public class ClicklManager : MonoBehaviour
                                         if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<PlayerMovement>())
                                         {
                                             Grid.Instance.resetClicked();
-                                            BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
+                                            BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos, false);
                                             BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
 
                                             UiActionManager.Instance.hideButton();
@@ -153,7 +160,7 @@ public class ClicklManager : MonoBehaviour
                                     if (player.state == PlayerMovement.States.IDLE && player.stats.actionPoint > 0)
                                     {
                                         Grid.Instance.resetClicked();
-                                        BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos);
+                                        BlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos, false);
                                         BlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
 
                                         UiActionManager.Instance.hideButton();
@@ -182,20 +189,21 @@ public class ClicklManager : MonoBehaviour
 
                                         if (actualPanel == currentPanel)
                                         {
-                                            if (BattleManager.Instance.currentAttackParam.AOE)
+                                            if (BattleManager.Instance.currentAttackParam.AOE && !BattleManager.Instance.currentAttackParam.around)
                                             {
                                                 player.state = PlayerMovement.States.AOESELECT;
                                                 UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
                                                 CardManager.Instance.UseCard();
                                                 CardManager.Instance.midToHand = false;
                                             }
+                                            
                                             else
                                             {
-                                                BattleManager.Instance.attackUnit(player.stats, charact.stats, false);
-                                                CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                currentPanel = null;
-                                                CardManager.Instance.UseCard();
-                                                CardManager.Instance.midToHand = false;
+                                                    BattleManager.Instance.attackUnit(player.stats, charact.stats, false);
+                                                    CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                                    currentPanel = null;
+                                                    CardManager.Instance.UseCard();
+                                                    CardManager.Instance.midToHand = false;
                                             }
                                         }
                                         else
@@ -274,8 +282,8 @@ public class ClicklManager : MonoBehaviour
 
     public void shinningPannel()
     {
-        var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].GetComponent<SpriteRenderer>();
-        panelColor.color = Color.Lerp(new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 0.5f), new Color(panelColor.color.r, panelColor.color.g, panelColor.color.b, 1f), Mathf.PingPong(Time.time * 5, 0.5f));
+        var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+        panelColor.color = Color.Lerp(new Color(1, 1, 1, 0.5f), new Color(1, 1, 1, 1f), Mathf.PingPong(Time.time * 5, 0.5f));
     }
 
 

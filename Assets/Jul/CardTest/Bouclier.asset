@@ -17,4 +17,4 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: 8f05bc18ddc71854fbcf9e291b49d334, type: 3}
   attackDamage: 1
   actionCost: 1
-  attackParam: {fileID: 11400000, guid: c01485432ecccb44893953497f7b250e, type: 2}
+  attackParam: {fileID: 11400000, guid: 0f1ca1297cb1f904fbfba19d3bf0a5d8, type: 2}

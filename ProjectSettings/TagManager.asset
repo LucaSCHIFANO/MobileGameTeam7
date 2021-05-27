@@ -13,6 +13,7 @@ TagManager:
   - BossMap
   - Card
   - BoutonLevel
+  - ggplay
   layers:
   - Default
   - TransparentFX

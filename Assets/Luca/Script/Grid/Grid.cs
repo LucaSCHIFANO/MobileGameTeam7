@@ -32,6 +32,9 @@ public class Grid : MonoBehaviour
 
     public MoveCam mC;
 
+    public List<Sprite> listSprites = new List<Sprite>();
+    public List<Sprite> listSpritesAlpha = new List<Sprite>();
+
 
 
     private static Grid _instance = null;
@@ -99,44 +102,60 @@ public class Grid : MonoBehaviour
                 newPanel.setValue(i, j, 0, 0);
                 newPanel.name = i + " , " + j;
 
+                var visu = newPanel.transform.GetChild(0).GetComponent<SpriteRenderer>();
+
                 switch (myGridPanel[j, i])
                 {
                     case GridPattern.panelType.GRASS:
-                        newPanel.baseColor = new Color(0.006f, 0.7075f, 0);
+                        visu.sprite = listSprites[0]; 
+                        //newPanel.baseColor = new Color(0.006f, 0.7075f, 0);
                         newPanel.movementCost = 1;
                         break;
                     case GridPattern.panelType.PATH:
-                        newPanel.baseColor = new Color(0.8207f, 0.7423f, 0.3832f);
+                        visu.sprite = listSprites[1];
+                        //newPanel.baseColor = new Color(0.8207f, 0.7423f, 0.3832f);
                         newPanel.movementCost = 1;
                         break;
                     case GridPattern.panelType.FOREST:
-                        newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
+                        visu.sprite = listSprites[2];
+                        //newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
                         newPanel.movementCost = 3;
                         break;
                     case GridPattern.panelType.WATER:
-                        newPanel.baseColor = new Color(0.0342f, 0.401f, 0.6603f);
+                        visu.sprite = listSprites[0];
+                        visu.color = new Color(0.0342f, 0.401f, 0.6603f);
                         newPanel.movementCost = 4;
                         break;
                     case GridPattern.panelType.WALL:
-                        newPanel.baseColor = new Color(0.1792f, 0.0518f, 0);
+                        visu.sprite = listSprites[0];
+                        visu.color = new Color(0.1792f, 0.0518f, 0);
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
                         newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.BRIDGE:
-                        newPanel.baseColor = new Color(0.5943f, 0.1720f, 0);
+                        visu.sprite = listSprites[0];
+                        //visu.color = new Color(0.5943f, 0.1720f, 0);
                         newPanel.movementCost = 1;
                         break;
                     case GridPattern.panelType.HOLE:
-                        newPanel.baseColor = new Color(0.45f, 0.45f, 0.45f);
+                        //visu.sprite = listSprites[0];
+                        //visu.color = new Color(0.45f, 0.45f, 0.45f);
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
                         break;
                     case GridPattern.panelType.CHEST:
-                        newPanel.baseColor = new Color(0.7f, 0.5f, 0.5f);
+                        visu.sprite = listSprites[0];
+                        visu.color = new Color(0.7f, 0.5f, 0.5f);
                         newPanel.movementCost = 1;
                         newPanel.canBeOpen = true;
                         newPanel.isOpen = false;
+                        break;
+                    case GridPattern.panelType.POISON:
+                        visu.sprite = listSprites[0];
+                        visu.color = new Color(0.5f, 0f, 0.3f);
+                        newPanel.movementCost = 3;
+                        
                         break;
                     default:
                         Debug.Log("ya un pb");
@@ -179,6 +198,7 @@ public class Grid : MonoBehaviour
                 newPanel.setValue(i, j, 0, 0);
                 newPanel.name = i + " , " + j + " alpha mode";
 
+
                 /*switch (myGridPanel[j, i])
                 {
                     case GridPattern.panelType.GRASS:
@@ -211,8 +231,9 @@ public class Grid : MonoBehaviour
                         break;
                 }*/
 
-                newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
                 newPanel.transform.parent = GameObject.Find("TheGridAlpha").transform;
+                newPanel.baseColor = Color.white;
+                newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
 
             }
         }
@@ -261,6 +282,11 @@ public class Grid : MonoBehaviour
         {
             setPlayerStats(enE.stats, CharacterManager.Instance.sS.loadValue());
         }
+        CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
+
+        ComboSystem.Instance.comboEffect(enE.stats.element, enE.stats.elementCombo);
+        ComboSystem.Instance.resetSave();
+        CharacterManager.Instance.noDamage = true;
 
         resetClicked();
     }
@@ -269,8 +295,10 @@ public class Grid : MonoBehaviour
     {
         foreach (var VECTOR in playerSpawn)
         {
-            var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y];
-            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 0.5f);
+            var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+            //alphaPanel.sprite = Grid.Instance.listSpritesAlpha[0];
+
             Grid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
         }
     }
@@ -322,7 +350,7 @@ public class Grid : MonoBehaviour
 
     }
 
-    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd)  // trouve le chemins le plus court pour allez sur une case
+    public List<Panel> PathFinding(int xStart, int yStart, int xEnd, int yEnd, bool enemy)  // trouve le chemins le plus court pour allez sur une case
     {
         openList.Clear();
         closeList.Clear();
@@ -356,7 +384,30 @@ public class Grid : MonoBehaviour
                     continue;
                 }
 
-                if (!voisin.canBeCrossed || voisin.unitOn != null)
+                if (!voisin.canBeCrossed)
+                {
+                    closeList.Add(voisin);
+                    continue;
+
+                }
+                
+                else if (enemy && voisin.unitOn != null)
+                {
+                    int tentativeGCost = currentPanel.GCost + CalculateHCost(currentPanel, voisin);
+                    if (tentativeGCost < voisin.GCost)
+                    {
+                        voisin.prevousPanel = currentPanel;
+                        voisin.GCost = tentativeGCost;
+                        voisin.HCost = CalculateHCost(voisin, endPanel);
+                        voisin.ActuFCost();
+
+                        if (!openList.Contains(voisin))
+                        {
+                            openList.Add(voisin);
+                        }
+                    }
+
+                }else if (!enemy && voisin.unitOn != null)
                 {
                     closeList.Add(voisin);
                     continue;
@@ -408,7 +459,7 @@ public class Grid : MonoBehaviour
                 Panel panelToCheck = gridArray[i, j];
                 Panel alphaPanel = gridArrayAlpha[i, j];
                 panelToCheck.canBeClick = false;
-                alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
+                alphaPanel.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = panelToCheck.baseColor;
                 panelToCheck.actualPanelCount = 0;
             }
         }
