@@ -32,9 +32,9 @@ public class CardInfos : MonoBehaviour
 
     public void UpdateInfos()
     {
-        portee.text = "Portée : " + card.attackParam.range.ToString() + " cases";
-        puissance.text = "Puissance : " + card.attackParam.damage.ToString();
-        cout.text =  "Coût : " + card.attackParam.APNeeded.ToString() + " AP";
+        portee.text = "Range : " + card.attackParam.range.ToString() + " blocks";
+        puissance.text = "Power : " + card.attackParam.damage.ToString();
+        cout.text =  "Cost : " + card.attackParam.APNeeded.ToString() + " AP";
         description.text = "Description : " + card.attackParam.description;
         cardName.text = card.attackParam.patternName;
 

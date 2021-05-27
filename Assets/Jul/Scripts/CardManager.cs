@@ -191,11 +191,11 @@ public class CardManager : MonoBehaviour
             if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
-                middleCard.GetComponent<CardDisplay>().artworkImage.sprite = middleCard.GetComponent<CardDisplay>().card.backArtwork;
                 middleCard.GetComponent<CardDisplay>().actionCostText.text = "";
                 middleCard.GetComponent<CardDisplay>().attackText.text = "";
                 middleCard.GetComponent<CardDisplay>().nameText.text = "";
-                cardInfos = middleCard.transform.GetChild(5).gameObject;
+                middleCard.GetComponent<CardDisplay>().artworkImage.gameObject.SetActive(false);
+                cardInfos = middleCard.transform.GetChild(6).gameObject;
                 cardInfos.SetActive(true);
                 CardInfos.Instance.card = middleCard.GetComponent<CardDisplay>();
                 CardInfos.Instance.UpdateInfos();
@@ -220,6 +220,7 @@ public class CardManager : MonoBehaviour
             {
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, previousScale, 7f * Time.deltaTime);
                 CardInfos.Instance.card = null;
+                middleCard.GetComponent<CardDisplay>().artworkImage.gameObject.SetActive(true);
                 cardInfos.SetActive(false);
                 middleCard.GetComponent<CardDisplay>().UpdateCard();
             }
