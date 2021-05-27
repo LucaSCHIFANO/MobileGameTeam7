@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Ice Punch
   description: 
-  range: 1
+  range: 2
   row_column: 0
   throughWall: 0
   APNeeded: 1

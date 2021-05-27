@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Aqua Whip
   description: 
-  range: 2
-  row_column: 0
+  range: 4
+  row_column: 1
   throughWall: 0
   APNeeded: 2
-  damage: 6
+  damage: 8
   push: 0
   pull: 0
   element: 2

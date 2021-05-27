@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HexEyes
   m_EditorClassIdentifier: 
   patternName: Hex Eyes
-  description: 
-  range: 3
-  row_column: 1
+  description: Poison, Inflicts 5 dmg for 3 turns
+  range: 4
+  row_column: 0
   throughWall: 1
   APNeeded: 2
   damage: 2

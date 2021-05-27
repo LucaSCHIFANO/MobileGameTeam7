@@ -3366,7 +3366,7 @@ MonoBehaviour:
   cellSize: 2
   panel: {fileID: 7635196711641401961, guid: e007d0c9546ce134d8e94ec62ddce458, type: 3}
   panelAlpha: {fileID: 7388167128119430108, guid: 24250fe6db8672e47bf6751ec21ad174, type: 3}
-  levelID: 23
+  levelID: 18
   progress: 0
   openList: []
   closeList: []
@@ -3429,9 +3429,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listEnAttack:
-  - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
+  - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
   - {fileID: 11400000, guid: 180afc0f9f209044ca804839c7da62e8, type: 2}
-  - {fileID: 11400000, guid: 005268a5e884c9543a97017869fa8b65, type: 2}
+  - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
   - {fileID: 11400000, guid: 69ecbb99035c7f946b25016be2d9fe01, type: 2}
 --- !u!1 &694832651
 GameObject:
@@ -8216,7 +8216,6 @@ MonoBehaviour:
   canvas: {fileID: 974637995}
   cardPrefab: {fileID: 8318987361052222005, guid: d163574b3b5de3745a295d1f66155e2f, type: 3}
   cardList:
-  - {fileID: 11400000, guid: a63f26ea3e8b05441b3ebece6c6a8528, type: 2}
   - {fileID: 11400000, guid: 24a5750234aa389468ccfbfb175a4e11, type: 2}
   - {fileID: 11400000, guid: 80b285aaa35df0447bd40ca43dcdbe6a, type: 2}
   - {fileID: 11400000, guid: 93ff9ce04a66e964b99b1871df5f8d87, type: 2}
@@ -8228,9 +8227,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7d33788cbe577d24cbfe575c59fe520e, type: 2}
   - {fileID: 11400000, guid: 13f7535754efa654aa0b1586db519723, type: 2}
   - {fileID: 11400000, guid: 6fc3030e29d808340a57eddb9f989580, type: 2}
-  - {fileID: 11400000, guid: a63f26ea3e8b05441b3ebece6c6a8528, type: 2}
+  - {fileID: 11400000, guid: 36f321abf23c4d042b808a4287e3aabc, type: 2}
+  - {fileID: 11400000, guid: b84a1a44ee33ab2429a9d22badd51435, type: 2}
+  - {fileID: 11400000, guid: 79b714f60aee8944fa4363ae100b472d, type: 2}
+  - {fileID: 11400000, guid: 67780489d8a1dda4eb899446329b5523, type: 2}
+  - {fileID: 11400000, guid: 1a0b63e086954934697b5f936d9f7995, type: 2}
+  - {fileID: 11400000, guid: f5bbf32b121bea64b96132d38efb525f, type: 2}
+  - {fileID: 11400000, guid: 5b89b5b08d21a2f40bb959c9c5290eb3, type: 2}
+  - {fileID: 11400000, guid: 1cc8b4610e84c0c4ca792805d3cbcfae, type: 2}
+  - {fileID: 11400000, guid: f0015d2dd67b6de40a970d46f55aa1fe, type: 2}
+  - {fileID: 11400000, guid: 6da6851bc458c584aa1776627153d3ee, type: 2}
+  - {fileID: 11400000, guid: f92ebeacffc1afb4ab036a4d77ae4b06, type: 2}
+  - {fileID: 11400000, guid: cda04ed53a3dd6843b38b26a3c935a44, type: 2}
+  - {fileID: 11400000, guid: 689bd03ff7c62274a98efc4cf47ef5cc, type: 2}
   attackParams:
-  - {fileID: 11400000, guid: c01485432ecccb44893953497f7b250e, type: 2}
   - {fileID: 11400000, guid: 28c0ef5a8b403ce4a9cefcf71bdbcfe4, type: 2}
   - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
   - {fileID: 11400000, guid: daaf1bfb553e984419751bef3e480941, type: 2}
@@ -8242,7 +8252,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6a9ec904e14074d4fb828870c84031b0, type: 2}
   - {fileID: 11400000, guid: 205bbc23ec37af248baef21bb7ff37ab, type: 2}
   - {fileID: 11400000, guid: 3cc5ea4754387a64faabacc5cef0f2b9, type: 2}
+  - {fileID: 11400000, guid: 27c6396da9961f944bee4ede91999956, type: 2}
+  - {fileID: 11400000, guid: 078c47fd00db83840934f0d8f396bdce, type: 2}
+  - {fileID: 11400000, guid: a24bf4f28a6dfbf4d8621d6dcf1d575b, type: 2}
+  - {fileID: 11400000, guid: 719ce17e9a4b4924b98accabd81f9035, type: 2}
+  - {fileID: 11400000, guid: f73649c164797ea4396163ba572273d6, type: 2}
   - {fileID: 11400000, guid: bc05abfee77a4ba4e8ecc33e8ba6e873, type: 2}
+  - {fileID: 11400000, guid: 75ed75b2463ff154f96b0f8aeed740c0, type: 2}
+  - {fileID: 11400000, guid: d1a3d8b84a498d44a826c59a38aada5a, type: 2}
+  - {fileID: 11400000, guid: a210dac06f845c043a5628189638e628, type: 2}
+  - {fileID: 11400000, guid: 1f7838a3aed8e674c92de304ea92b06e, type: 2}
+  - {fileID: 11400000, guid: 6d7cf3d8f237942468316b94f1912dc0, type: 2}
+  - {fileID: 11400000, guid: 0f1ca1297cb1f904fbfba19d3bf0a5d8, type: 2}
+  - {fileID: 11400000, guid: 6a8adaf69ac75bf4f9298fda4c4288ef, type: 2}
   handToMid: 0
   midToHand: 0
   middleCard: {fileID: 0}

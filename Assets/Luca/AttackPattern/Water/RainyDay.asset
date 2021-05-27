@@ -17,8 +17,8 @@ MonoBehaviour:
   range: 5
   row_column: 1
   throughWall: 1
-  APNeeded: 2
-  damage: 3
+  APNeeded: 3
+  damage: 8
   push: 0
   pull: 0
   element: 2
