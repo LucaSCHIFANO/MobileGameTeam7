@@ -12,6 +12,10 @@ public class PhaseManager : MonoBehaviour
 
     public GameObject uiColor;
 
+    public int numberOfTurn;
+
+    public int numberOfTurnRecord;
+
     public enum actualPhase
     {
         PLAYER,
@@ -29,6 +33,7 @@ public class PhaseManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        numberOfTurnRecord = PlayerPrefs.GetInt("NumberOfTurn");
     }
 
 
@@ -49,11 +54,19 @@ public class PhaseManager : MonoBehaviour
         }
         else if (phase == actualPhase.PLAYER && !oneTime)
         {
+            numberOfTurn++;
             oneTime = true;
             CharacterManager.Instance.resetAllCharacter();
             uiColor.GetComponent<Image>().color = Color.blue;
             UiActionManager.Instance.showButton();
             CardManager.Instance.startCombat();
+
+            if(CharacterManager.Instance.currentPlayer != null)
+            {
+                CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
+
+                ComboSystem.Instance.comboEffect(CharacterManager.Instance.currentPlayer.stats.element, CharacterManager.Instance.currentPlayer.stats.elementCombo);
+            }
 
         }
     }

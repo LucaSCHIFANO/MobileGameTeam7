@@ -27,30 +27,28 @@ public class BattleManager : MonoBehaviour
         Debug.Log("test attck");
         float multiplicator = ElementInteract.Instance.interaction(currentAttackParam.element, def.element);
 
-        int totalAtt = (int)((att.strenght + currentAttackParam.damage) * multiplicator);
+        int totalAtt = (int)((att.strenght + currentAttackParam.damage + att.boostAtt) * multiplicator);
         
         var damage = 0;
 
 
-        if (totalAtt - def.defense > 0)
+        if (totalAtt - (def.defense + def.boostDef) > 0)
         {
-            damage = totalAtt - def.defense;
+            damage = totalAtt - (def.defense + def.boostDef);
         }
 
         def.HP -= damage;
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
-        var txt = Instantiate(floatingText, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
-        txt.GetComponent<TextMeshPro>().text = damage.ToString();
-        txt.GetComponent<MeshRenderer>().sortingOrder = 100;
         if (att.GetComponent<PlayerMovement>())
         {
-            txt.GetComponent<TextMeshPro>().color = Color.cyan;
+            showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue);
         }
         else
         {
-            txt.GetComponent<TextMeshPro>().color = Color.red;
+            showDamage(damage, def.gameObject.transform.GetChild(0), Color.red);
         }
+        
 
         if (currentAttackParam.pull || currentAttackParam.push)
         {
@@ -70,6 +68,23 @@ public class BattleManager : MonoBehaviour
             }
         }
 
+        if (currentAttackParam.effect != Stats.EFFECT.NORMAL)
+        {
+
+            if (currentAttackParam.effect == Stats.EFFECT.POISON)
+            {
+                def.effect = Stats.EFFECT.POISON;
+            }
+            else if (currentAttackParam.effect == Stats.EFFECT.LIFESTEAL)
+            {
+                att.HP += (int)(damage * 0.1f);
+                att.HP = Mathf.Clamp(att.HP, 0, att.maxHP);
+            }
+
+            def.intesity = currentAttackParam.intensity;
+            def.numberOfTurn = currentAttackParam.duration;
+        }
+
         if (!aoe)
         {
             CharacterManager.Instance.StartCoroutine("checkAlive");
@@ -79,9 +94,10 @@ public class BattleManager : MonoBehaviour
             if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
             {
                 att.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
-                att.GetComponent<Stats>().element = currentAttackParam.element;
+                ElementInteract.Instance.changeElement(att.element,currentAttackParam.element);
                 UiActionManager.Instance.showButton();
                 UiActionManager.Instance.HidePortrait();
+                ComboSystem.Instance.comboEffect(CharacterManager.Instance.currentPlayer.stats.element, CharacterManager.Instance.currentPlayer.stats.elementCombo);
             }
         }
 
@@ -369,4 +385,14 @@ public class BattleManager : MonoBehaviour
             }
         }
     }
+
+   public void showDamage(int damage, Transform position, Color color)
+   {
+        var txt = Instantiate(floatingText, position.position, position.rotation);
+        txt.GetComponent<TextMeshPro>().text = damage.ToString();
+        txt.GetComponent<MeshRenderer>().sortingOrder = 100;
+
+        txt.GetComponent<TextMeshPro>().color = color;
+    }
+
 }

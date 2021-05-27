@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
 
         int minPath = int.MaxValue;
 
-        BlueRedGrid.Instance.movementsPossible(xPos, yPos);
+        BlueRedGrid.Instance.movementsPossible(xPos, yPos, true);
 
         foreach (var target in allPlayerPos)
         {
@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
 
             foreach (var voisin in allVoisinsPlayers)
             {
-            List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y);
+            List<Panel> listPanel = Grid.Instance.PathFinding(xPos, yPos, (int)voisin.x, (int)voisin.y, true);
                 
                 if (listPanel != null)
                 {
@@ -108,6 +108,21 @@ public class Enemy : MonoBehaviour
                     finalPath2.Add(panel);
                 }
             }
+
+            while(finalPath2[finalPath2.Count - 1].unitOn)
+            {
+                finalPath2.RemoveAt(finalPath2.Count - 1);
+
+                if(finalPath2.Count == 0)
+                {
+                break;
+                }
+            }
+
+        foreach (var item in finalPath)
+        {
+            Debug.Log(item.name);
+        }
 
             StartCoroutine(movement(finalPath2));
     }
@@ -158,7 +173,6 @@ public class Enemy : MonoBehaviour
                 if (panel.actualPanelCount <= attackMonster.attackParam.range && (panel.x == player.xPos || panel.y == player.yPos) )
                 {
                     otherPosList.Add(panel);
-                    Debug.Log(panel);
                 }
             }
         }
@@ -212,13 +226,14 @@ public class Enemy : MonoBehaviour
 
         panelToGo = null;
         yield return new WaitForSeconds(0.3f);
-        if (noNeedToMove == false)
+        /*if (noNeedToMove == false)
         {
             xPos = panelsList[panelsList.Count - 1].x;
             yPos = -panelsList[panelsList.Count - 1].y;
-        }
+        }*/
 
         characterState = PlayerMovement.States.WAIT;
+        stats.effectActu();
         PhaseManager.Instance.checkAllEnemies();
     }
 

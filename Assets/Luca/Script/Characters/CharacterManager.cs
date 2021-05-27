@@ -8,6 +8,7 @@ public class CharacterManager : MonoBehaviour
     public List<GameObject> enemyList = new List<GameObject>();
 
     public PlayerMovement currentPlayer;
+    public SaveStats sS;
 
     public int countMoveEnemy = 0;
 
@@ -21,6 +22,7 @@ public class CharacterManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        sS = GetComponent<SaveStats>();
     }
 
 
@@ -38,6 +40,8 @@ public class CharacterManager : MonoBehaviour
                 enemyList.Add(chara);
             }
         }
+        EnemiesBoard.Instance.CheckList();
+
     }
 
     public void enemiesMovement() // fait bougé un ennemi
@@ -81,23 +85,49 @@ public class CharacterManager : MonoBehaviour
             {
                 if (chara.GetComponent<Stats>().HP <= 0)
                 {
+                    EnemiesBoard.Instance.boardList.Remove(chara);
                     enemyList.Remove(chara);
                     Destroy(chara);
                 }
             }
         }
 
-        if(playerList.Count == 0)
+        if (playerList.Count == 0)
         {
             Debug.Log("You died");
+            EnemiesBoard.Instance.ClearList();
         }
-        else if(enemyList.Count == 0)
+        else if (enemyList.Count == 0)
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
-            MapComposent.Instance.Opening();
-            MapComposent.Instance.Check();
-            Grid.Instance.deleteMap(false);
+            EnemiesBoard.Instance.ClearList();
+
+            sS.setValues(currentPlayer.stats);
+
+            if(Grid.Instance.progress != 9)
+            {
+                CardManager.Instance.RollCard();
+                CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
+                CardManager.Instance.toChoice();
+            }
+            else
+            {
+                returnToMap();
+            }
         }
+    }
+
+    public void returnToMap()
+    {
+        MapComposent.Instance.Opening();
+        StartCoroutine("waitforopen");
+    }
+
+    private IEnumerator waitforopen()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
+        MapComposent.Instance.Check();
+        Grid.Instance.deleteMap(false);
     }
 }

@@ -80,19 +80,24 @@ public class ShowRangeAttack : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= attackParam.range)
                 {
-                    if (attackParam.throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
 
-                            if(actuPanel.unitOn != null && !attackParam.throughWall)
+                            if(actuPanel.unitOn != null)
                             { 
-                                random = true;
+                                if(actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                                {
+                                    actuPanel.canBeClick = false;
+                                }
+
+                                else if ( !attackParam.throughWall)
+                                {
+                                    random = true;
+                                }
                             }
-                        }
                     }
                     else
                     {
@@ -125,15 +130,20 @@ public class ShowRangeAttack : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= attackParam.range)
                 {
-                    if (attackParam.throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
 
-                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                        if (actuPanel.unitOn != null)
+                        {
+                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                            {
+                                actuPanel.canBeClick = false;
+                            }
+
+                            else if (!attackParam.throughWall)
                             {
                                 random = true;
                             }
@@ -170,15 +180,20 @@ public class ShowRangeAttack : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= attackParam.range)
                 {
-                    if (attackParam.throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
 
-                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                        if (actuPanel.unitOn != null)
+                        {
+                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                            {
+                                actuPanel.canBeClick = false;
+                            }
+
+                            else if (!attackParam.throughWall)
                             {
                                 random = true;
                             }
@@ -217,15 +232,20 @@ public class ShowRangeAttack : MonoBehaviour
 
                 if (actuPanel.actualPanelCount <= attackParam.range)
                 {
-                    if (attackParam.throughWall || actuPanel.canBeCrossed)
+                    if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                        if (actuPanel.canBeCrossed)
-                        {
                             actuPanel.canBeClick = true;
                             var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
                             alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
 
-                            if (actuPanel.unitOn != null && !attackParam.throughWall)
+                        if (actuPanel.unitOn != null)
+                        {
+                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                            {
+                                actuPanel.canBeClick = false;
+                            }
+
+                            else if (!attackParam.throughWall)
                             {
                                 random = true;
                             }

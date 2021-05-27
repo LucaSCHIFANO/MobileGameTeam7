@@ -231,11 +231,17 @@ MonoBehaviour:
   strenght: 0
   defense: 0
   speed: 0
-  maxActionPoint: 5
+  maxActionPoint: 6
   actionPoint: 0
+  boostAtt: 0
+  boostDef: 0
+  boostAP: 0
+  boostAPUsed: 0
   element: 0
+  elementCombo: 0
   effect: 0
   numberOfTurn: 0
+  intesity: 0
 --- !u!61 &373878670402899203
 BoxCollider2D:
   m_ObjectHideFlags: 0

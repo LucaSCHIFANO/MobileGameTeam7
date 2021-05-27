@@ -6,28 +6,13 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
-      flags: 0
-    RecentlyUsedScenePath-1:
-      value: 22424703114646680e0b0227036c72111f19352f223d68252320092a
-      flags: 0
-    RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c6c1313191d00392468252320092a
       flags: 0
-    RecentlyUsedScenePath-3:
-      value: 22424703114646680e0b0227036c6c1313191d1a252d34222867083debf42d
-      flags: 0
-    RecentlyUsedScenePath-4:
+    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c6c1313191d06392b277e38271427fb
       flags: 0
-    RecentlyUsedScenePath-5:
-      value: 22424703114646680e0b0227036c6c1313191d0d0866333e243d04
-      flags: 0
-    UnityRemoteDevice:
-      value: 225f4d46245b0d4902070862342649191512
-      flags: 0
-    UnityRemoteJoystickSource:
-      value: 315459091150
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c6c1313191d0d0817747e38271427fb
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

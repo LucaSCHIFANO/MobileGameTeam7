@@ -22,6 +22,8 @@ public class UiActionManager : MonoBehaviour
     public Slider HPBar;
     public Text element;
 
+    public GameObject apleft;
+
     public ShowRangeAttack sra;
 
 
@@ -44,6 +46,7 @@ public class UiActionManager : MonoBehaviour
         buttonCancel.SetActive(false);
         unitPortrait.SetActive(false);
         use.SetActive(false);
+        apleft.SetActive(false);
     }
 
     public void hideButton()
@@ -52,6 +55,7 @@ public class UiActionManager : MonoBehaviour
         buttonCancel.SetActive(true);
         deck.SetActive(false);
         use.SetActive(false);
+        apleft.SetActive(false);
     }
 
     public void showDeck()
@@ -63,12 +67,14 @@ public class UiActionManager : MonoBehaviour
             buttonCancel.SetActive(true);
             use.SetActive(true);
             unitPortrait.SetActive(false);
+            apleft.SetActive(true);
+            apleft.GetComponent<Text>().text = " AP Left : " + CharacterManager.Instance.currentPlayer.stats.actionPoint;
 
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
             player.state = PlayerMovement.States.SELECTCARD;
 
-            CardManager.Instance.handPanel.GetComponent<Animator>().SetTrigger("Show");
+            cardM.handPanel.GetComponent<Animator>().SetTrigger("Show");
         }
     }
 
@@ -91,6 +97,11 @@ public class UiActionManager : MonoBehaviour
                         cardM.handPanel.GetComponent<Animator>().SetTrigger("Hide");
                         cardM.chosenCard = cardM.middleCard;
 
+                        if (BattleManager.Instance.currentAttackParam.around)
+                        {
+                            CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.AOESELECT;
+                        }
+
                     }
                 }
             }
@@ -104,6 +115,7 @@ public class UiActionManager : MonoBehaviour
         deck.SetActive(false);
         use.SetActive(false);
         unitPortrait.SetActive(false);
+        apleft.SetActive(false);
     }
 
     public void endTurn()
@@ -126,18 +138,41 @@ public class UiActionManager : MonoBehaviour
 
         if (stats.gameObject.GetComponent<Enemy>())
         {
-            unitSTR.text = "STR : " + stats.strenght.ToString() + " + " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.damage + "   "  + "Range : " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.range;
+            unitSTR.text = "STR : " + stats.strenght.ToString() + " + " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.damage + "   " + "Range : " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.range;
             imageBG.color = new Color(1, 0.4481132f, 0.4481132f, 0.5f);
         }
         else
         {
-            unitSTR.text = "STR : " + stats.strenght.ToString();
+            unitSTR.text = "STR : " + (stats.strenght + stats.boostAtt).ToString();
             imageBG.color = new Color(0, 0.5876393f, 1, 0.5f);
         }
 
-        unitDEF.text = "DEF : " + stats.defense.ToString();
+        unitDEF.text = "DEF : " + (stats.defense + stats.boostDef).ToString();
         unitAP.text = "AP : " + stats.actionPoint.ToString();
-        element.text = "Elem : " + stats.element.ToString();
+
+        if (stats.gameObject.GetComponent<PlayerMovement>())
+        {
+            if (stats.element == Stats.ELEMENT.RED)
+            {
+                element.text = "Elem : " + stats.element.ToString() + "  STR +" + stats.boostAtt;
+            }
+            else if (stats.element == Stats.ELEMENT.BLUE)
+            {
+                element.text = "Elem : " + stats.element.ToString() + "  DEF +" + stats.boostDef;
+            }
+            else if (stats.element == Stats.ELEMENT.GREEN)
+            {
+                element.text = "Elem : " + stats.element.ToString() + "  AP +" + stats.boostAP;
+            }
+            else
+            {
+                element.text = "Elem : " + stats.element.ToString();
+            }
+        }
+        else
+        {
+            element.text = "Elem : " + stats.element.ToString();
+        }
     }
 
     public void HidePortrait()
