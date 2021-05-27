@@ -60,4 +60,20 @@ public class Menu : MonoBehaviour
         creditsMenuUI.SetActive(false);
         OptionsUI.SetActive(false);
     }
+
+    public void googleTrophies()
+    {
+        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {
+            Social.ShowAchievementsUI();
+        }
+    }
+
+    public void googleLeaderBoard()
+    {
+        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {
+            Social.ShowLeaderboardUI();
+        }
+    }
 }

@@ -11,6 +11,18 @@ public class MoveCam : MonoBehaviour
     public Transform bottomLimit;
     public Transform upLimit;
 
+    public Vector3 startPos;
+
+    private void Awake()
+    {
+        startPos = transform.position;
+    }
+
+    public void replace()
+    {
+        transform.position = startPos;
+    }
+
     public void functionStart()
     {
         Vector3 transWoutZ = new Vector3(transform.position.x, transform.position.y, 0);
@@ -43,7 +55,15 @@ public class MoveCam : MonoBehaviour
             if (!MenuPause.GameIsPaused)
             {
                 var charac = CharacterManager.Instance;
-                if (charac.currentPlayer != null && (charac.currentPlayer.state != PlayerMovement.States.WIN && charac.currentPlayer.state != PlayerMovement.States.WAIT))
+                if (charac.currentPlayer != null)
+                {
+                    if ((charac.currentPlayer.state != PlayerMovement.States.WIN && charac.currentPlayer.state != PlayerMovement.States.WAIT))
+                    {
+                        Vector3 direction = touchPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        Camera.main.transform.position += direction;
+                    }
+                }
+                else
                 {
                     Vector3 direction = touchPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Camera.main.transform.position += direction;
