@@ -854,7 +854,7 @@ public class GridPattern : MonoBehaviour
                 gridref.locationEnemy.Add(new Vector2(7, -7));
 
 
-                gridref.playerSpawn.Add(new Vector2(4, 0));
+                gridref.playerSpawn.Add(new Vector2(1, 0));
                 gridref.playerSpawn.Add(new Vector2(4, -7));
                 gridref.playerSpawn.Add(new Vector2(7, -2));
 
