@@ -49,4 +49,9 @@ public class CardDisplay : MonoBehaviour
     {
         
     }
+
+    public void DisplayInfos()
+    {
+
+    }
 }

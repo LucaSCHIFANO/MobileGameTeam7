@@ -40,7 +40,11 @@ public class CharacterManager : MonoBehaviour
                 enemyList.Add(chara);
             }
         }
-        EnemiesBoard.Instance.CheckList();
+
+        if (EnemiesBoard.Instance)
+        {
+            EnemiesBoard.Instance.CheckList();
+        }
 
     }
 
