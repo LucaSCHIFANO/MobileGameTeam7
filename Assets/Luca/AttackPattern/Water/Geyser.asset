@@ -29,3 +29,4 @@ MonoBehaviour:
   duration: 0
   intensity: 0
   artwork: {fileID: 0}
+  BackGround: {fileID: 21300000, guid: 6869c2b6f91b19d4bb055ab090b06969, type: 3}
