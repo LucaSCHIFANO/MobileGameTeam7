@@ -37,7 +37,7 @@ public class BoutonInfo : MonoBehaviour
                     MapComposent.Instance.disableOldBouton();
 
                     MapComposent.Instance.Check();
-                    //MapComposent.Instance.Closing();
+                    MapComposent.Instance.Closing();
 
                     break;
                 case typeOfRoom.REST:
@@ -54,6 +54,8 @@ public class BoutonInfo : MonoBehaviour
 
                     CharacterManager.Instance.sS.HP += (int)(CharacterManager.Instance.sS.maxHP / 2);
                     CharacterManager.Instance.sS.HP = Mathf.Clamp(CharacterManager.Instance.sS.HP, 1, CharacterManager.Instance.sS.maxHP);
+
+                    CharacterManager.Instance.isHealed = true;
 
                     StartCoroutine(infoMap(tor));
 
@@ -96,7 +98,7 @@ public class BoutonInfo : MonoBehaviour
                     MapComposent.Instance.disableOldBouton();
 
                     MapComposent.Instance.Check();
-                    //MapComposent.Instance.Closing();
+                    MapComposent.Instance.Closing();
 
                     break;
                 default:

@@ -36,8 +36,10 @@ public class TestAttackRange : MonoBehaviour
             {
                 if (panel.canBeCrossed)
                 {
-                    var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y];
-                    alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1,0,0,0.5f);
+                    var alphaPanel = Grid.Instance.gridArrayAlpha[panel.x, panel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                    alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                    alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
+
                 }
             }
         }
@@ -71,8 +73,9 @@ public class TestAttackRange : MonoBehaviour
                     if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
 
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(alphaPanel.color.r, alphaPanel.color.g, alphaPanel.color.b, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
                     }
                     else
                     {
@@ -107,8 +110,9 @@ public class TestAttackRange : MonoBehaviour
                 {
                     if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(alphaPanel.color.r, alphaPanel.color.g, alphaPanel.color.b, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
                     }
                     else
                     {
@@ -143,8 +147,9 @@ public class TestAttackRange : MonoBehaviour
                 {
                     if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(alphaPanel.color.r, alphaPanel.color.g, alphaPanel.color.b, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
                     }
                     else
                     {
@@ -181,8 +186,9 @@ public class TestAttackRange : MonoBehaviour
                 {
                     if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y];
-                            alphaPanel.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                        alphaPanel.color = new Color(0, 0, 0, 0.5f);
+                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
                     }
                     else
                     {

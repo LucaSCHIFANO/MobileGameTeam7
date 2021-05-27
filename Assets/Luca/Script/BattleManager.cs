@@ -47,6 +47,11 @@ public class BattleManager : MonoBehaviour
         else
         {
             showDamage(damage, def.gameObject.transform.GetChild(0), Color.red);
+
+            if(damage > 0)
+            {
+                CharacterManager.Instance.noDamage = false;
+            }
         }
         
 
@@ -79,6 +84,11 @@ public class BattleManager : MonoBehaviour
             {
                 att.HP += (int)(damage * 0.1f);
                 att.HP = Mathf.Clamp(att.HP, 0, att.maxHP);
+
+                if ((int)(damage * 0.1f) > 0)
+                {
+                    CharacterManager.Instance.isHealed = true;
+                }
             }
 
             def.intesity = currentAttackParam.intensity;

@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MapTp : MonoBehaviour
+public class Tuto : MonoBehaviour
 {
     
 
-    
-
-    
 
     void Update()
     {

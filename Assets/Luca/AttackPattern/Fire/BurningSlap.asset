@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: BurningSlap
   description: 
-  range: 2
+  range: 1
   row_column: 0
   throughWall: 0
   APNeeded: 2
@@ -24,6 +24,7 @@ MonoBehaviour:
   element: 1
   AOE: 0
   aoeEffect: {fileID: 0}
+  around: 0
   effect: 0
   duration: 0
   intensity: 0
