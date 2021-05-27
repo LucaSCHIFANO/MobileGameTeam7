@@ -75,7 +75,7 @@ public class ClicklManager : MonoBehaviour
                                             {
                                                 player.state = PlayerMovement.States.AOESELECT;
                                                 UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
-                                                CardManager.Instance.UseCard();
+                                                //CardManager.Instance.UseCard();
                                                 CardManager.Instance.midToHand = false;
                                             }
                                             else
@@ -102,6 +102,7 @@ public class ClicklManager : MonoBehaviour
                                                         if (panel.unitOn.GetComponent<Enemy>())
                                                         {
                                                             BattleManager.Instance.attackUnit(player.stats, panel.unitOn.GetComponent<Enemy>().stats, true);
+                                                            CardManager.Instance.UseCard();
                                                             Debug.Log("hit enemy");
                                                         }
                                                         else
@@ -193,7 +194,7 @@ public class ClicklManager : MonoBehaviour
                                             {
                                                 player.state = PlayerMovement.States.AOESELECT;
                                                 UiActionManager.Instance.showAttackRange(BattleManager.Instance.currentAttackParam.aoeEffect, currentPanel.x, -currentPanel.y);
-                                                CardManager.Instance.UseCard();
+                                                //CardManager.Instance.UseCard();
                                                 CardManager.Instance.midToHand = false;
                                             }
                                             
@@ -229,6 +230,7 @@ public class ClicklManager : MonoBehaviour
                                                     if (panel.unitOn.GetComponent<Enemy>())
                                                     {
                                                         BattleManager.Instance.attackUnit(player.stats, panel.unitOn.GetComponent<Enemy>().stats, true);
+                                                        CardManager.Instance.UseCard();
                                                     }
                                                     else
                                                     {

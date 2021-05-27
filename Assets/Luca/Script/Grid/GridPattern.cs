@@ -36,9 +36,9 @@ public class GridPattern : MonoBehaviour
                     {panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.FOREST,panelType.FOREST,panelType.FOREST,},
                     {panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.PATH,panelType.PATH,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.GRASS,},
                     {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
-                    {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.WALL,panelType.WALL,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
-                    {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.WALL,panelType.WALL,panelType.FOREST,panelType.CHEST,panelType.PATH,panelType.GRASS,},
-                    {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
+                    {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.HOLE,panelType.HOLE,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
+                    {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.HOLE,panelType.HOLE,panelType.FOREST,panelType.CHEST,panelType.PATH,panelType.GRASS,},
+                    {panelType.WALL,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS,},
 
                 };
                 gridref.height = 10; // taille de la grille 

@@ -38,6 +38,7 @@ public class BattleManager : MonoBehaviour
         }
 
         def.HP -= damage;
+        def.HP = Mathf.Clamp(def.HP, 0, def.maxHP);
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
         if (att.GetComponent<PlayerMovement>())
@@ -57,20 +58,20 @@ public class BattleManager : MonoBehaviour
 
         if (currentAttackParam.pull || currentAttackParam.push)
         {
-            if (att.gameObject.GetComponent<PlayerMovement>())
-            {
-                var attScript = att.gameObject.GetComponent<PlayerMovement>();
-                var defScript = def.gameObject.GetComponent<Enemy>();
+                if (att.gameObject.GetComponent<PlayerMovement>())
+                {
+                    var attScript = att.gameObject.GetComponent<PlayerMovement>();
+                    var defScript = def.gameObject.GetComponent<Enemy>();
 
-                PushPool(attScript, defScript);
-            }
-            else
-            {
-                var attScript = att.gameObject.GetComponent<Enemy>();
-                var defScript = def.gameObject.GetComponent<PlayerMovement>();
+                    PushPool(attScript, defScript);
+                }
+                else
+                {
+                    var attScript = att.gameObject.GetComponent<Enemy>();
+                    var defScript = def.gameObject.GetComponent<PlayerMovement>();
 
-                PushPool(attScript, defScript);
-            }
+                    PushPool(attScript, defScript);
+                }
         }
 
         if (currentAttackParam.effect != Stats.EFFECT.NORMAL)
@@ -129,7 +130,7 @@ public class BattleManager : MonoBehaviour
                         if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
                         {
                             Debug.Log("tu peux aller en haut ");
-                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1], attPos));
                         }
                         else
                         {
@@ -142,7 +143,7 @@ public class BattleManager : MonoBehaviour
                     if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
                     {
                         Debug.Log("tu peux aller en bas ");
-                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1], attPos));
                     }
                     else
                     {
@@ -161,7 +162,7 @@ public class BattleManager : MonoBehaviour
                         if (grid[defPos.xPos, -defPos.yPos + 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos + 1].isOccupied) // si la case apres est pas occupé
                         {
                             Debug.Log("tu peux aller en bas ");
-                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1]));
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos + 1], attPos));
                         }
                         else
                         {
@@ -173,7 +174,7 @@ public class BattleManager : MonoBehaviour
                 {
                     if (grid[defPos.xPos, -defPos.yPos - 1].canBeCrossed && !grid[defPos.xPos, -defPos.yPos - 1].isOccupied) // si la case apres est pas occupé
                     {
-                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1]));
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos, -defPos.yPos - 1], attPos));
                         Debug.Log("tu peux aller en haut ");
                     }
                     else
@@ -197,7 +198,7 @@ public class BattleManager : MonoBehaviour
                         if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                         {
                             Debug.Log("tu peux aller a droite ");
-                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos], attPos));
                         }
                         else
                         {
@@ -210,7 +211,7 @@ public class BattleManager : MonoBehaviour
                     if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                     {
                         Debug.Log("tu peux aller a gauche ");
-                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos], attPos));
                     }
                     else
                     {
@@ -227,7 +228,7 @@ public class BattleManager : MonoBehaviour
                         if (grid[defPos.xPos - 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos - 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                         {
                             Debug.Log("tu peux aller a gauche ");
-                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos]));
+                            defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos - 1, -defPos.yPos], attPos));
                         }
                         else
                         {
@@ -240,7 +241,7 @@ public class BattleManager : MonoBehaviour
                     if (grid[defPos.xPos + 1, -defPos.yPos].canBeCrossed && !grid[defPos.xPos + 1, -defPos.yPos].isOccupied) // si la case apres est pas occupé
                     {
                         Debug.Log("tu peux aller a droite ");
-                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos]));
+                        defPos.StartCoroutine(defPos.isPushOrPull(grid[defPos.xPos + 1, -defPos.yPos], attPos));
                     }
                     else
                     {
@@ -251,11 +252,14 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-
+    private IEnumerator waitPush(PlayerMovement att, Enemy def)
+    {
+        yield return new WaitForSeconds(1.5f);
+        PushPool(att, def);
+    }
 
     public void PushPool(Enemy attPos, PlayerMovement defPos)
     {
-
         var grid = Grid.Instance.gridArray;
         var gridScript = Grid.Instance;
 

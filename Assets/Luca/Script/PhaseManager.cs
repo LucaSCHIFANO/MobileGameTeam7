@@ -99,6 +99,8 @@ public class PhaseManager : MonoBehaviour
 
     public void checkAllEnemies() // check si tous les ennemies ont joués
     {
+        CharacterManager.Instance.StartCoroutine("checkAlive");
+
         int number = 0;
         foreach (var enemy in CharacterManager.Instance.enemyList)
         {
@@ -108,6 +110,7 @@ public class PhaseManager : MonoBehaviour
             }
         }
 
+        
         if (number == 0)
         {
             phase = actualPhase.PLAYER;
@@ -123,7 +126,14 @@ public class PhaseManager : MonoBehaviour
         }
         else
         {
-            CharacterManager.Instance.countMoveEnemy++;
+
+            int numberbefore = CharacterManager.Instance.enemyList.Count;
+
+            if (CharacterManager.Instance.enemyList.Count >= numberbefore)
+            {
+                CharacterManager.Instance.countMoveEnemy++;
+            }
+
             CharacterManager.Instance.enemiesMovement();
         }
     }
