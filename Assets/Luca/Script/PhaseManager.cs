@@ -16,6 +16,9 @@ public class PhaseManager : MonoBehaviour
 
     public int numberOfTurnRecord;
 
+    public int monsterInOneTurn;
+    public int numberOfTurnBattle;
+
     public enum actualPhase
     {
         PLAYER,
@@ -55,17 +58,21 @@ public class PhaseManager : MonoBehaviour
         else if (phase == actualPhase.PLAYER && !oneTime)
         {
             numberOfTurn++;
+            numberOfTurnBattle++;
             oneTime = true;
             CharacterManager.Instance.resetAllCharacter();
             uiColor.GetComponent<Image>().color = Color.blue;
             UiActionManager.Instance.showButton();
             CardManager.Instance.startCombat();
 
+            monsterInOneTurn = 0;
+
             if(CharacterManager.Instance.currentPlayer != null)
             {
                 CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
 
                 ComboSystem.Instance.comboEffect(CharacterManager.Instance.currentPlayer.stats.element, CharacterManager.Instance.currentPlayer.stats.elementCombo);
+                ComboSystem.Instance.resetSave();
             }
 
         }

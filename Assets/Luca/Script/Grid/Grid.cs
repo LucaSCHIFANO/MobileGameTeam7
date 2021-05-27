@@ -285,6 +285,8 @@ public class Grid : MonoBehaviour
         CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
 
         ComboSystem.Instance.comboEffect(enE.stats.element, enE.stats.elementCombo);
+        ComboSystem.Instance.resetSave();
+        CharacterManager.Instance.noDamage = true;
 
         resetClicked();
     }

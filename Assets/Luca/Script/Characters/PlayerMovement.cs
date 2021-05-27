@@ -91,6 +91,11 @@ public class PlayerMovement : MonoBehaviour
         UiActionManager.Instance.setMovePoint();
         //PhaseManager.Instance.checkAllPlayer();
 
+        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {
+            Social.ReportProgress(GPGSIds.achievement_a_step_is_a_step, 100.0f, null);
+        }
+
     }
 
     public void trueMovement()
