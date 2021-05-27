@@ -244,7 +244,7 @@ public class Enemy : MonoBehaviour
 
 
 
-    public IEnumerator isPushOrPull(Panel panelToMove, PlayerMovement attPos)
+    public IEnumerator isPushOrPull(Panel panelToMove)
     {
         panelToGo = panelToMove.gameObject;
         yield return new WaitForSeconds(0.2f);
