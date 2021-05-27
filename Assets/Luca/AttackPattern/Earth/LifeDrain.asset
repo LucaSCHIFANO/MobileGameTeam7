@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LifeDrain
   m_EditorClassIdentifier: 
   patternName: Life Drain
-  description: 
+  description: You drain the life of an enemy (50 % of life steel)
   range: 2
   row_column: 0
   throughWall: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IceShard
   m_EditorClassIdentifier: 
   patternName: IceShard
-  description: 
+  description: A sharp piece of ice that slashes your enemy
   range: 5
   row_column: 0
   throughWall: 0

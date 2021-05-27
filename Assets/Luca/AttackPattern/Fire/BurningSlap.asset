@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BurningSlap
   m_EditorClassIdentifier: 
   patternName: BurningSlap
-  description: 
+  description: A brutal fire punch despite a short range
   range: 1
   row_column: 0
   throughWall: 0
