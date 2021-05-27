@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Root
   description: 
-  range: 6
+  range: 4
   row_column: 0
   throughWall: 0
   APNeeded: 2
@@ -24,6 +24,7 @@ MonoBehaviour:
   element: 3
   AOE: 0
   aoeEffect: {fileID: 0}
+  around: 0
   effect: 0
   duration: 0
   intensity: 0

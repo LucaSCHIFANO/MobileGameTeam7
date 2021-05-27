@@ -17,13 +17,14 @@ MonoBehaviour:
   range: 4
   row_column: 0
   throughWall: 0
-  APNeeded: 2
+  APNeeded: 3
   damage: 12
   push: 0
   pull: 0
   element: 0
   AOE: 0
   aoeEffect: {fileID: 0}
+  around: 0
   effect: 0
   duration: 0
   intensity: 0

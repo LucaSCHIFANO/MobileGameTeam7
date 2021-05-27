@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
   m_Name: WindShot
   m_EditorClassIdentifier: 
-  patternName: WIndShot
+  patternName: WindShot
   description: 
   range: 3
   row_column: 1
   throughWall: 0
   APNeeded: 2
-  damage: 7
+  damage: 8
   push: 1
   pull: 0
   element: 0
   AOE: 0
   aoeEffect: {fileID: 0}
+  around: 0
   effect: 0
   duration: 0
   intensity: 0
