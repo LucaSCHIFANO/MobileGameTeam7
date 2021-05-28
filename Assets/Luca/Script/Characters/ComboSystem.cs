@@ -168,5 +168,8 @@ public class ComboSystem : MonoBehaviour
             default:
                 break;
         }
+
+        UiActionManager.Instance.defText.text = CharacterManager.Instance.currentPlayer.stats.defense.ToString();
+        UiActionManager.Instance.attText.text = CharacterManager.Instance.currentPlayer.stats.strenght.ToString();
     }
 }

@@ -91,7 +91,6 @@ public class ClicklManager : MonoBehaviour
                                                 {
                                                     BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
                                                     CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                    UiActionManager.Instance.setMovePoint();
                                                     currentPanel = null;
                                                     CardManager.Instance.UseCard();
                                                     CardManager.Instance.midToHand = false;
