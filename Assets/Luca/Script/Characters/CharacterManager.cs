@@ -44,12 +44,6 @@ public class CharacterManager : MonoBehaviour
                 enemyList.Add(chara);
             }
         }
-
-        if (EnemiesBoard.Instance)
-        {
-            EnemiesBoard.Instance.CheckList();
-        }
-
     }
 
     public void enemiesMovement() // fait bougé un ennemi
@@ -95,7 +89,6 @@ public class CharacterManager : MonoBehaviour
                 if (chara.GetComponent<Stats>().HP <= 0)
                 {
                     enemyList.Remove(chara);
-                    EnemiesBoard.Instance.CheckList();
                     Destroy(chara);
                     PhaseManager.Instance.monsterInOneTurn++;
 
@@ -125,7 +118,6 @@ public class CharacterManager : MonoBehaviour
         if (playerList.Count == 0)
         {
             Debug.Log("You died");
-            EnemiesBoard.Instance.ClearList();
 
             if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
             {
@@ -140,7 +132,6 @@ public class CharacterManager : MonoBehaviour
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
-            EnemiesBoard.Instance.ClearList();
 
             sS.setValues(currentPlayer.stats);
 
