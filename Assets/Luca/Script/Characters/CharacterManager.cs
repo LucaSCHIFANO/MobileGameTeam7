@@ -56,6 +56,7 @@ public class CharacterManager : MonoBehaviour
     {
         var enemy = enemyList[countMoveEnemy];
         enemy.GetComponent<Enemy>().mouvementCheck();
+        //StartCoroutine("checkAlive");
     }
 
     public void resetAllCharacter() // met tous les persos en etat idle
@@ -98,11 +99,15 @@ public class CharacterManager : MonoBehaviour
                     Destroy(chara);
                     PhaseManager.Instance.monsterInOneTurn++;
 
-                    if(BattleManager.Instance.currentAttackParam.range == 1){
-
-                        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
+                    {
+                        if (BattleManager.Instance.currentAttackParam && BattleManager.Instance.currentAttackParam.range == 1)
                         {
-                            Social.ReportProgress(GPGSIds.achievement_savage, 100.0f, null);
+
+                            if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                            {
+                                Social.ReportProgress(GPGSIds.achievement_savage, 100.0f, null);
+                            }
                         }
                     }
 

@@ -107,7 +107,7 @@ public class Grid : MonoBehaviour
                 switch (myGridPanel[j, i])
                 {
                     case GridPattern.panelType.GRASS:
-                        visu.sprite = listSprites[0]; 
+                        visu.sprite = listSprites[1]; 
                         //newPanel.baseColor = new Color(0.006f, 0.7075f, 0);
                         newPanel.movementCost = 1;
                         break;
@@ -119,12 +119,12 @@ public class Grid : MonoBehaviour
                     case GridPattern.panelType.FOREST:
                         visu.sprite = listSprites[2];
                         //newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
-                        newPanel.movementCost = 3;
+                        newPanel.movementCost = 2;
                         break;
                     case GridPattern.panelType.WATER:
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.0342f, 0.401f, 0.6603f);
-                        newPanel.movementCost = 4;
+                        newPanel.movementCost = 3;
                         break;
                     case GridPattern.panelType.WALL:
                         visu.sprite = listSprites[0];
@@ -141,6 +141,7 @@ public class Grid : MonoBehaviour
                     case GridPattern.panelType.HOLE:
                         //visu.sprite = listSprites[0];
                         //visu.color = new Color(0.45f, 0.45f, 0.45f);
+                        visu.sprite = null;
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
                         break;
@@ -158,7 +159,7 @@ public class Grid : MonoBehaviour
                         
                         break;
                     default:
-                        Debug.Log("ya un pb");
+                        Debug.Log("ya un pb conar");
                         break;
                 }
 
@@ -259,7 +260,7 @@ public class Grid : MonoBehaviour
 
     public void createPlayer(Panel panel)
     {
-        Debug.Log("creatkon du joueur");
+        Debug.Log("creation du joueur");
         var en = Instantiate(playerPrefab, Vector2.zero, transform.rotation);
         var enE = en.GetComponent<PlayerMovement>();
         CharacterManager.Instance.currentPlayer = enE;
@@ -282,6 +283,25 @@ public class Grid : MonoBehaviour
         {
             setPlayerStats(enE.stats, CharacterManager.Instance.sS.loadValue());
         }
+
+        switch (CharacterManager.Instance.currentPlayer.stats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[2];
+                break;
+            default:
+                break;
+        }
+
         CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
 
         ComboSystem.Instance.comboEffect(enE.stats.element, enE.stats.elementCombo);

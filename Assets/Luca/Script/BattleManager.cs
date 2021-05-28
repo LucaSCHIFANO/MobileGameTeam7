@@ -39,6 +39,7 @@ public class BattleManager : MonoBehaviour
 
         def.HP -= damage;
         UiActionManager.Instance.HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
+        UiActionManager.Instance.currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
 
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 

@@ -73,5 +73,23 @@ public class ElementInteract : MonoBehaviour
             CharacterManager.Instance.currentPlayer.stats.element = att;
             CharacterManager.Instance.currentPlayer.stats.elementCombo = 1;
         }
+
+        switch (CharacterManager.Instance.currentPlayer.stats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[2];
+                break;
+            default:
+                break;
+        }
     }
 }
