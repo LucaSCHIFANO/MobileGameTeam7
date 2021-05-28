@@ -119,12 +119,12 @@ public class Grid : MonoBehaviour
                     case GridPattern.panelType.FOREST:
                         visu.sprite = listSprites[2];
                         //newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
-                        newPanel.movementCost = 3;
+                        newPanel.movementCost = 2;
                         break;
                     case GridPattern.panelType.WATER:
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.0342f, 0.401f, 0.6603f);
-                        newPanel.movementCost = 4;
+                        newPanel.movementCost = 3;
                         break;
                     case GridPattern.panelType.WALL:
                         visu.sprite = listSprites[0];
