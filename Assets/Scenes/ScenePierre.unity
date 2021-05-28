@@ -1997,16 +1997,16 @@ MonoBehaviour:
   position: 1
   MapUI: {fileID: 509874178}
   TypeRoom:
-  - {fileID: 4225508990122013188, guid: 224c7622d7581bb40bdf8c90c27c713d, type: 3}
-  - {fileID: 4225508990122013188, guid: 224c7622d7581bb40bdf8c90c27c713d, type: 3}
-  - {fileID: 4225508990122013188, guid: 224c7622d7581bb40bdf8c90c27c713d, type: 3}
-  - {fileID: 4225508990122013188, guid: 224c7622d7581bb40bdf8c90c27c713d, type: 3}
-  - {fileID: 4225508990122013188, guid: 224c7622d7581bb40bdf8c90c27c713d, type: 3}
-  - {fileID: 4225508990122013188, guid: 224c7622d7581bb40bdf8c90c27c713d, type: 3}
-  - {fileID: 4225508990122013188, guid: 224c7622d7581bb40bdf8c90c27c713d, type: 3}
-  - {fileID: 1426804615404336400, guid: 0b1b6bd6085ded748a86d2a1daf6da04, type: 3}
-  - {fileID: 1426804615404336400, guid: 0b1b6bd6085ded748a86d2a1daf6da04, type: 3}
-  - {fileID: 8940952260074045429, guid: 4278e3eadab3a2b4683136895d83b5b2, type: 3}
+  - {fileID: 7576124828549776263}
+  - {fileID: 7576124828549776263}
+  - {fileID: 7576124828549776263}
+  - {fileID: 7576124828549776263}
+  - {fileID: 7576124828549776263}
+  - {fileID: 7576124828549776263}
+  - {fileID: 7576124828549776263}
+  - {fileID: 7576124828549776263}
+  - {fileID: 6350728481186352950}
+  - {fileID: 6608973777823546016}
   Enemy: {fileID: 7576124828549776263}
   Rest: {fileID: 6608973777823546016}
   Treasure: {fileID: 6350728481186352950}
@@ -2031,6 +2031,9 @@ MonoBehaviour:
   salle8B: {fileID: 594552091}
   salle9: {fileID: 1274610859}
   salle10: {fileID: 1389159515}
+  winScreen: {fileID: 0}
+  infoText: {fileID: 0}
+  fade: {fileID: 0}
 --- !u!1 &1564197060
 GameObject:
   m_ObjectHideFlags: 0
