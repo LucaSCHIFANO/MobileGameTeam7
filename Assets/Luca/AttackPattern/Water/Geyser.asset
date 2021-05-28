@@ -17,6 +17,9 @@ MonoBehaviour:
 <<<<<<< Prog
 <<<<<<< Prog
 <<<<<<< Prog
+<<<<<<< Prog
+=======
+>>>>>>> Modif
 =======
 >>>>>>> Modif
   range: 3
@@ -24,10 +27,16 @@ MonoBehaviour:
   range: 2
 >>>>>>> Modif
 <<<<<<< Prog
+<<<<<<< Prog
 =======
   range: 2
 >>>>>>> Modif
 =======
+>>>>>>> Modif
+=======
+=======
+  range: 2
+>>>>>>> Modif
 >>>>>>> Modif
   row_column: 0
   throughWall: 0
