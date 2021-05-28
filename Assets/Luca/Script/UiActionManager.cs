@@ -90,6 +90,22 @@ public class UiActionManager : MonoBehaviour
             cardM.handPanel.GetComponent<Animator>().SetTrigger("Show");
         }
     }
+    public void showDeckForced()
+    {
+        var cardM = CardManager.Instance;
+        buttonHand.SetActive(false);
+        buttonCancel.SetActive(true);
+        use.SetActive(true);
+        //unitPortrait.SetActive(false);
+        //apleft.SetActive(true);
+        apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+
+        var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
+
+        player.state = PlayerMovement.States.SELECTCARD;
+
+        cardM.handPanel.GetComponent<Animator>().SetTrigger("Show");
+    }
 
     public void useCard()
     {
@@ -132,7 +148,11 @@ public class UiActionManager : MonoBehaviour
 
     public void endTurn()
     {
-        CharacterManager.Instance.currentPlayer.endTurn();
+        var cardM = CardManager.Instance;
+        if (!cardM.handToMid && !cardM.midToHand)
+        {
+            CharacterManager.Instance.currentPlayer.endTurn();
+        }
     }
 
     public void ShowPortrait(Stats stats)

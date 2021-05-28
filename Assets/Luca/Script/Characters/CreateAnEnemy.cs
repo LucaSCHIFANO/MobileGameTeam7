@@ -27,7 +27,10 @@ public class CreateAnEnemy : MonoBehaviour
         for (int i = 0; i < numberOfRoll; i++)
         {
             Debug.Log(upgradeValue + " " + upgradeProba + " " + numberOfRoll + " " + i);
-            switch (idLevel) // neutre, green, blue, red
+
+            var number = Random.Range(0, 4);
+
+            switch (number) // neutre, green, blue, red
             {
                 case 0:
                     enemy.stats.characName = "Skully";
@@ -42,6 +45,9 @@ public class CreateAnEnemy : MonoBehaviour
 
                     enemy.attackMonster.attackParam = listEnAttack[0];
                     enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
+                    enemy.gameObject.name = "Skully";
                     break;
 
                 case 1:
@@ -57,6 +63,9 @@ public class CreateAnEnemy : MonoBehaviour
 
                     enemy.attackMonster.attackParam = listEnAttack[1];
                     enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
+
+                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.green;
+                    enemy.gameObject.name = "A plant...";
                     break;
 
                 case 2:
@@ -72,6 +81,9 @@ public class CreateAnEnemy : MonoBehaviour
 
                     enemy.attackMonster.attackParam = listEnAttack[2];
                     enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.blue;
+                    enemy.gameObject.name = "Bububle";
                     break;
 
                 case 3:
@@ -87,6 +99,9 @@ public class CreateAnEnemy : MonoBehaviour
 
                     enemy.attackMonster.attackParam = listEnAttack[3];
                     enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
+
+                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
+                    enemy.gameObject.name = "Fiya Foxu";
                     break;
 
 
