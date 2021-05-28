@@ -32,6 +32,10 @@ public class UiActionManager : MonoBehaviour
     public Image elementImage;
     public Sprite[] elementInfos = new Sprite[4];
 
+    public Image[] inGame = new Image[5];
+    public List<Sprite> heroSprites = new List<Sprite>();
+    public List<Sprite> enemySprites = new List<Sprite>();
+
     [Header("Enemies Board")]
     public GameObject enemiesBoard;
     public GameObject button;
@@ -254,6 +258,70 @@ public class UiActionManager : MonoBehaviour
             enemiesBoard.SetActive(true);
             button.GetComponent<Image>().sprite = minusButtonImage;
             EnemiesBoard.Instance.CheckList();
+        }
+    }
+
+    public void EnemyToHero(Stats playerStats)
+    {
+        for (int i = 0; i < inGame.Length; i++)
+        {
+            inGame[i].sprite = heroSprites[i];
+        }
+
+        apleft.text = playerStats.actionPoint.ToString();
+        maxHP.text = playerStats.maxHP.ToString();
+        currenntHP.text = playerStats.HP.ToString();
+        defText.text = (playerStats.defense + playerStats.boostDef).ToString();
+        attText.text = (playerStats.strenght + playerStats.boostAtt).ToString();
+
+        switch (playerStats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                elementImage.sprite =elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                elementImage.sprite = elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+               elementImage.sprite = elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                elementImage.sprite = elementInfos[2];
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void HeroToEnemy(Stats enemyStats)
+    {
+        for (int i = 0; i < inGame.Length; i++)
+        {
+            inGame[i].sprite = enemySprites[i];
+        }
+
+        apleft.text = enemyStats.actionPoint.ToString();
+        maxHP.text = enemyStats.maxHP.ToString();
+        currenntHP.text = enemyStats.HP.ToString();
+        defText.text = (enemyStats.defense + enemyStats.boostDef).ToString();
+        attText.text = (enemyStats.strenght + enemyStats.boostAtt).ToString();
+
+        switch (enemyStats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                elementImage.sprite = elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                elementImage.sprite = elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+                elementImage.sprite = elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                elementImage.sprite = elementInfos[2];
+                break;
+            default:
+                break;
         }
     }
 

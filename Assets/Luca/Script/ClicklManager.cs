@@ -175,6 +175,7 @@ public class ClicklManager : MonoBehaviour
                                         player.state = PlayerMovement.States.SELECTED;
 
                                         UiActionManager.Instance.ShowPortrait(player.stats);
+                                        UiActionManager.Instance.EnemyToHero(player.stats);
 
                                     }
                                     else if (player.state == PlayerMovement.States.SELECTED)
@@ -222,6 +223,7 @@ public class ClicklManager : MonoBehaviour
                                     else if (player.state == PlayerMovement.States.IDLE)
                                     {
                                         UiActionManager.Instance.ShowPortrait(charact.stats);
+                                        UiActionManager.Instance.HeroToEnemy(charact.stats);
 
                                     }
 
