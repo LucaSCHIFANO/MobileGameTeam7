@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class UiActionManager : MonoBehaviour
 {
@@ -32,6 +31,10 @@ public class UiActionManager : MonoBehaviour
     public TextMeshProUGUI attText;
     public Image elementImage;
     public Sprite[] elementInfos = new Sprite[4];
+
+    public Image[] inGame = new Image[5];
+    public List<Sprite> heroSprites = new List<Sprite>();
+    public List<Sprite> enemySprites = new List<Sprite>();
 
     [Header("Enemies Board")]
     public GameObject enemiesBoard;
@@ -258,21 +261,68 @@ public class UiActionManager : MonoBehaviour
         }
     }
 
-
-    public IEnumerator startButWait()
+    public void EnemyToHero(Stats playerStats)
     {
-        var mc = MapComposent.Instance;
-        var fade = Instantiate(mc.fade, transform.position, transform.rotation, gameObject.transform);
-        yield return new WaitForSeconds(0.6f);
-        CardManager.Instance.inChosenTime = false;
-        Grid.Instance.functionStart();
+        for (int i = 0; i < inGame.Length; i++)
+        {
+            inGame[i].sprite = heroSprites[i];
+        }
+
+        apleft.text = playerStats.actionPoint.ToString();
+        maxHP.text = playerStats.maxHP.ToString();
+        currenntHP.text = playerStats.HP.ToString();
+        defText.text = (playerStats.defense + playerStats.boostDef).ToString();
+        attText.text = (playerStats.strenght + playerStats.boostAtt).ToString();
+
+        switch (playerStats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                elementImage.sprite =elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                elementImage.sprite = elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+               elementImage.sprite = elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                elementImage.sprite = elementInfos[2];
+                break;
+            default:
+                break;
+        }
     }
 
-    public IEnumerator backToMenu()
+    public void HeroToEnemy(Stats enemyStats)
     {
-        var mc = MapComposent.Instance;
-        var fade = Instantiate(mc.fade, transform.position, transform.rotation, gameObject.transform);
-        yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene("MainMenu");
+        for (int i = 0; i < inGame.Length; i++)
+        {
+            inGame[i].sprite = enemySprites[i];
+        }
+
+        apleft.text = enemyStats.actionPoint.ToString();
+        maxHP.text = enemyStats.maxHP.ToString();
+        currenntHP.text = enemyStats.HP.ToString();
+        defText.text = (enemyStats.defense + enemyStats.boostDef).ToString();
+        attText.text = (enemyStats.strenght + enemyStats.boostAtt).ToString();
+
+        switch (enemyStats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                elementImage.sprite = elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                elementImage.sprite = elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+                elementImage.sprite = elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                elementImage.sprite = elementInfos[2];
+                break;
+            default:
+                break;
+        }
     }
+
 }
