@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UiActionManager : MonoBehaviour
 {
@@ -257,4 +258,21 @@ public class UiActionManager : MonoBehaviour
         }
     }
 
+
+    public IEnumerator startButWait()
+    {
+        var mc = MapComposent.Instance;
+        var fade = Instantiate(mc.fade, transform.position, transform.rotation, gameObject.transform);
+        yield return new WaitForSeconds(0.6f);
+        CardManager.Instance.inChosenTime = false;
+        Grid.Instance.functionStart();
+    }
+
+    public IEnumerator backToMenu()
+    {
+        var mc = MapComposent.Instance;
+        var fade = Instantiate(mc.fade, transform.position, transform.rotation, gameObject.transform);
+        yield return new WaitForSeconds(0.6f);
+        SceneManager.LoadScene("MainMenu");
+    }
 }

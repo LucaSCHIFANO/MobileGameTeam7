@@ -358,7 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characName: Hero
   level: 0
-  maxHP: 15
+  maxHP: 40
   HP: 0
   strenght: 0
   defense: 0

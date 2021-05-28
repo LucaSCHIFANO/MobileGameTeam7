@@ -236,7 +236,7 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 12;
                 gridref.width = 7;
 
-                gridref.locationEnemy.Add(new Vector2(0, 0));
+                //gridref.locationEnemy.Add(new Vector2(0, 0));
                 gridref.locationEnemy.Add(new Vector2(6, -3));
                 gridref.locationEnemy.Add(new Vector2(2, -8));
                 gridref.locationEnemy.Add(new Vector2(5, -9));
@@ -264,7 +264,7 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 8;
                 gridref.width = 8;
 
-                gridref.locationEnemy.Add(new Vector2(1, 0));
+                //gridref.locationEnemy.Add(new Vector2(1, 0));
                 gridref.locationEnemy.Add(new Vector2(6, 0));
                 gridref.locationEnemy.Add(new Vector2(0, -4));
                 gridref.locationEnemy.Add(new Vector2(3, -2));
@@ -292,10 +292,10 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 8;
                 gridref.width = 8;
 
-                gridref.locationEnemy.Add(new Vector2(2, 0));
+                //gridref.locationEnemy.Add(new Vector2(2, 0));
                 gridref.locationEnemy.Add(new Vector2(5, 0));
                 gridref.locationEnemy.Add(new Vector2(0, -2));
-                gridref.locationEnemy.Add(new Vector2(7, -3));
+                //gridref.locationEnemy.Add(new Vector2(7, -3));
                 gridref.locationEnemy.Add(new Vector2(6, -6));
 
                 gridref.playerSpawn.Add(new Vector2(0, -5));
@@ -322,7 +322,7 @@ public class GridPattern : MonoBehaviour
                 gridref.width = 8;
 
                 gridref.locationEnemy.Add(new Vector2(0, -2));
-                gridref.locationEnemy.Add(new Vector2(0, -5));
+               // gridref.locationEnemy.Add(new Vector2(0, -5));
                 gridref.locationEnemy.Add(new Vector2(7, -2));
                 gridref.locationEnemy.Add(new Vector2(6, -5));
 
@@ -379,7 +379,7 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 8;
                 gridref.width = 8;
 
-                gridref.locationEnemy.Add(new Vector2(1, 0));
+               //gridref.locationEnemy.Add(new Vector2(1, 0));
                 gridref.locationEnemy.Add(new Vector2(0, -2));
                 gridref.locationEnemy.Add(new Vector2(5, 0));               
                 gridref.locationEnemy.Add(new Vector2(4, -4));
@@ -554,8 +554,8 @@ public class GridPattern : MonoBehaviour
                 gridref.locationEnemy.Add(new Vector2(0, 0));
                 gridref.locationEnemy.Add(new Vector2(7, 0));
                 gridref.locationEnemy.Add(new Vector2(2, -3));
-                gridref.locationEnemy.Add(new Vector2(3, -7));
-                gridref.locationEnemy.Add(new Vector2(4, -7));
+               // gridref.locationEnemy.Add(new Vector2(3, -7));
+                //gridref.locationEnemy.Add(new Vector2(4, -7));
 
 
                 gridref.playerSpawn.Add(new Vector2(0, -7));
@@ -582,8 +582,8 @@ public class GridPattern : MonoBehaviour
                 gridref.width = 8;
 
                 gridref.locationEnemy.Add(new Vector2(0, 0));
-                gridref.locationEnemy.Add(new Vector2(3, 0));
-                gridref.locationEnemy.Add(new Vector2(4, 0));
+                //gridref.locationEnemy.Add(new Vector2(3, 0));
+                //gridref.locationEnemy.Add(new Vector2(4, 0));
                 gridref.locationEnemy.Add(new Vector2(7, 0));
                 gridref.locationEnemy.Add(new Vector2(4, -4));
 
@@ -611,7 +611,7 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 8;
                 gridref.width = 8;
 
-                gridref.locationEnemy.Add(new Vector2(4, 0));
+                //gridref.locationEnemy.Add(new Vector2(4, 0));
                 gridref.locationEnemy.Add(new Vector2(3, -3));
                 gridref.locationEnemy.Add(new Vector2(2, -5));
                 gridref.locationEnemy.Add(new Vector2(7, 0));
@@ -643,7 +643,7 @@ public class GridPattern : MonoBehaviour
 
                 gridref.locationEnemy.Add(new Vector2(6, -1));
                 gridref.locationEnemy.Add(new Vector2(5, -3));
-                gridref.locationEnemy.Add(new Vector2(2, -4));
+                //gridref.locationEnemy.Add(new Vector2(2, -4));
                 gridref.locationEnemy.Add(new Vector2(0, -6));
 
 
@@ -672,8 +672,8 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 8;
                 gridref.width = 8;
 
-                gridref.locationEnemy.Add(new Vector2(2, 0));
-                gridref.locationEnemy.Add(new Vector2(0, -1));
+                //gridref.locationEnemy.Add(new Vector2(2, 0));
+                //gridref.locationEnemy.Add(new Vector2(0, -1));
                 gridref.locationEnemy.Add(new Vector2(2, -4));
                 gridref.locationEnemy.Add(new Vector2(0, -6));
                 gridref.locationEnemy.Add(new Vector2(4, -7));
@@ -731,7 +731,7 @@ public class GridPattern : MonoBehaviour
 
                 gridref.locationEnemy.Add(new Vector2(4, 0));
                 gridref.locationEnemy.Add(new Vector2(7, -1));
-                gridref.locationEnemy.Add(new Vector2(4, -4));
+                //gridref.locationEnemy.Add(new Vector2(4, -4));
                 gridref.locationEnemy.Add(new Vector2(5, -7));
 
 
@@ -794,7 +794,7 @@ public class GridPattern : MonoBehaviour
 
                 gridref.locationEnemy.Add(new Vector2(6, 0));
                 gridref.locationEnemy.Add(new Vector2(0, -2));
-                gridref.locationEnemy.Add(new Vector2(0, -7));
+                //gridref.locationEnemy.Add(new Vector2(0, -7));
                 gridref.locationEnemy.Add(new Vector2(7, -7));
 
 
@@ -821,7 +821,7 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 8;
                 gridref.width = 8;
 
-                gridref.locationEnemy.Add(new Vector2(3, 0));
+                //gridref.locationEnemy.Add(new Vector2(3, 0));
                 gridref.locationEnemy.Add(new Vector2(0, -2));
                 gridref.locationEnemy.Add(new Vector2(0, -6));
                 gridref.locationEnemy.Add(new Vector2(7, -5));
@@ -851,7 +851,7 @@ public class GridPattern : MonoBehaviour
                 gridref.width = 8;
 
                 gridref.locationEnemy.Add(new Vector2(6, 0));
-                gridref.locationEnemy.Add(new Vector2(0, -2));
+                //gridref.locationEnemy.Add(new Vector2(0, -2));
                 gridref.locationEnemy.Add(new Vector2(0, -7));
                 gridref.locationEnemy.Add(new Vector2(7, -7));
 
@@ -940,7 +940,7 @@ public class GridPattern : MonoBehaviour
                 gridref.height = 8;
                 gridref.width = 8;
 
-                gridref.locationEnemy.Add(new Vector2(0, 0));
+                //gridref.locationEnemy.Add(new Vector2(0, 0));
                 gridref.locationEnemy.Add(new Vector2(7, 0));
                 gridref.locationEnemy.Add(new Vector2(0, -7));
                 gridref.locationEnemy.Add(new Vector2(7, -7));

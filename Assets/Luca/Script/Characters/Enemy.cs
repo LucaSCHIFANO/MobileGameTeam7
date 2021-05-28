@@ -201,6 +201,8 @@ public class Enemy : MonoBehaviour
             {
                 //transform.position = Vector3.MoveTowards(transform.position, panel.gameObject.transform.position, 20f);
                 panelToGo = panel.gameObject;
+                var canAttack = !panel.isOccupied;
+
                 yield return new WaitForSeconds(0.2f);
 
                 if (notFirst != 0)
@@ -212,7 +214,7 @@ public class Enemy : MonoBehaviour
                 yPos = -panel.y;
 
                 attackMonster.testAttackRange(panel.x, -panel.y);
-                if (attackMonster.seePlayer)
+                if (attackMonster.seePlayer && canAttack)
                 {
                     BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>(), false);
                     break;

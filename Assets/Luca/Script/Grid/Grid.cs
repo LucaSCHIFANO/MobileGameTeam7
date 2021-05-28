@@ -35,6 +35,14 @@ public class Grid : MonoBehaviour
     public List<Sprite> listSprites = new List<Sprite>();
     public List<Sprite> listSpritesAlpha = new List<Sprite>();
 
+    public List<GameObject> bgList = new List<GameObject>(); // 0 et 1 = 8x8
+    public List<Transform> bgListTrans = new List<Transform>(); // 0 et 1 = 8x8
+
+    private GameObject front;
+    private GameObject back;
+    
+    
+
 
 
     private static Grid _instance = null;
@@ -167,6 +175,14 @@ public class Grid : MonoBehaviour
                 newPanel.transform.parent = GameObject.Find("TheGrid").transform;
 
             }
+        }
+
+        if(height == 8 && width == 8)
+        {
+            back = Instantiate(bgList[0], bgListTrans[0].position, transform.rotation);
+           
+            front = Instantiate(bgList[1], bgListTrans[1].position, transform.rotation);
+            
         }
     }
 
@@ -344,6 +360,10 @@ public class Grid : MonoBehaviour
 
         width = 0;
         height = 0;
+
+        Destroy(front);
+        Destroy(back);
+
 
         ClicklManager.Instance.currentPanel = null;
 

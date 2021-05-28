@@ -13,7 +13,7 @@ public class DestroyWTime : MonoBehaviour
 
     private IEnumerator wait()
     {
-        yield return new WaitForSecondsRealtime(timeToDestroy); 
+        yield return new WaitForSecondsRealtime(timeToDestroy * 1.5f); 
         Destroy(gameObject);
     }
 }
