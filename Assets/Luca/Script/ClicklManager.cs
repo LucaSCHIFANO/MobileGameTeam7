@@ -325,7 +325,7 @@ public class ClicklManager : MonoBehaviour
         {
             Grid.Instance.resetClicked();
             player.state = PlayerMovement.States.SELECTCARD;
-            UiActionManager.Instance.showDeck();
+            UiActionManager.Instance.showDeckForced();
         }
         
         else if (player.state == PlayerMovement.States.AOESELECT)
