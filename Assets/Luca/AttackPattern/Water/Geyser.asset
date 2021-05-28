@@ -15,7 +15,11 @@ MonoBehaviour:
   patternName: Geyser
   description: You invoke a source of boiling water under your enemies
 <<<<<<< Prog
+<<<<<<< Prog
   range: 3
+=======
+  range: 2
+>>>>>>> Modif
 =======
   range: 2
 >>>>>>> Modif
