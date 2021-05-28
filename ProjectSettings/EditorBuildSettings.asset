@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneLuca.unity
     guid: 22e36817c65ec84459c7d67fe18f36a3
   - enabled: 1
+    path: Assets/Scenes/NewSceneJul.unity
+    guid: 7f44d006a3b082544905e8749b39ec3f
+  - enabled: 1
     path: Assets/Scenes/ScenePierre.unity
     guid: e950b47da65a21b4ab3d536917058bff
   - enabled: 1

@@ -50,9 +50,10 @@ public class Stats : MonoBehaviour
             if(effect == EFFECT.POISON)
             {
                 HP -= intesity;
-                HP = Mathf.Clamp(HP, 1, maxHP);
+                HP = Mathf.Clamp(HP, 0, maxHP);
 
                 BattleManager.Instance.showDamage(intesity, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f));
+
                 
 
             }

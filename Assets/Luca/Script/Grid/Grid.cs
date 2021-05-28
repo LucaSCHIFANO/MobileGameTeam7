@@ -107,7 +107,7 @@ public class Grid : MonoBehaviour
                 switch (myGridPanel[j, i])
                 {
                     case GridPattern.panelType.GRASS:
-                        visu.sprite = listSprites[0]; 
+                        visu.sprite = listSprites[1]; 
                         //newPanel.baseColor = new Color(0.006f, 0.7075f, 0);
                         newPanel.movementCost = 1;
                         break;
@@ -141,6 +141,7 @@ public class Grid : MonoBehaviour
                     case GridPattern.panelType.HOLE:
                         //visu.sprite = listSprites[0];
                         //visu.color = new Color(0.45f, 0.45f, 0.45f);
+                        visu.sprite = null;
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
                         break;

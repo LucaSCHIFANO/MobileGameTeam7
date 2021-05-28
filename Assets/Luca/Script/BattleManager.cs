@@ -38,11 +38,14 @@ public class BattleManager : MonoBehaviour
         }
 
         def.HP -= damage;
+        UiActionManager.Instance.HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
+
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
         if (att.GetComponent<PlayerMovement>())
         {
             showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue);
+            UiActionManager.Instance.apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
         }
         else
         {
