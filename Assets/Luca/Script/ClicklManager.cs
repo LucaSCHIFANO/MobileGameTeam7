@@ -55,7 +55,14 @@ public class ClicklManager : MonoBehaviour
                                         {
                                             var panelColor = Grid.Instance.gridArrayAlpha[currentPanel.x, currentPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
                                             panelColor.color = new Color(1, 1, 1, 0.5f);
-                                            panelColor.sprite = Grid.Instance.listSpritesAlpha[0];
+                                            if(player.state == PlayerMovement.States.ACTION || player.state == PlayerMovement.States.AOESELECT)
+                                            {
+                                                panelColor.sprite = Grid.Instance.listSpritesAlpha[1];
+                                            }
+                                            else
+                                            {
+                                                panelColor.sprite = Grid.Instance.listSpritesAlpha[0];
+                                            }
                                         }
                                         currentPanel = touchedPanel;
                                     }
