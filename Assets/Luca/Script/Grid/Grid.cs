@@ -127,8 +127,8 @@ public class Grid : MonoBehaviour
                         newPanel.movementCost = 3;
                         break;
                     case GridPattern.panelType.WALL:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.1792f, 0.0518f, 0);
+                        visu.sprite = listSprites[4];
+                        //visu.color = new Color(0.1792f, 0.0518f, 0);
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
                         newPanel.canShotThrought = false;
