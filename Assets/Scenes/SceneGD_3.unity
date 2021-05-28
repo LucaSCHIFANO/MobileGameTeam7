@@ -3736,9 +3736,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listEnAttack:
-  - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
+  - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
   - {fileID: 11400000, guid: 180afc0f9f209044ca804839c7da62e8, type: 2}
-  - {fileID: 11400000, guid: 005268a5e884c9543a97017869fa8b65, type: 2}
+  - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
   - {fileID: 11400000, guid: 69ecbb99035c7f946b25016be2d9fe01, type: 2}
 --- !u!1 &692020110
 GameObject:
@@ -9242,8 +9242,6 @@ MonoBehaviour:
   canvas: {fileID: 974637995}
   cardPrefab: {fileID: 8318987361052222005, guid: d163574b3b5de3745a295d1f66155e2f, type: 3}
   cardList:
-  - {fileID: 11400000, guid: 24a5750234aa389468ccfbfb175a4e11, type: 2}
-  - {fileID: 11400000, guid: 80b285aaa35df0447bd40ca43dcdbe6a, type: 2}
   - {fileID: 11400000, guid: 93ff9ce04a66e964b99b1871df5f8d87, type: 2}
   - {fileID: 11400000, guid: f736435fcba5e53479376a6f7972a7d6, type: 2}
   - {fileID: 11400000, guid: e955946e9a76c9f4ea24c2561b6beb48, type: 2}
@@ -9267,8 +9265,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cda04ed53a3dd6843b38b26a3c935a44, type: 2}
   - {fileID: 11400000, guid: 689bd03ff7c62274a98efc4cf47ef5cc, type: 2}
   attackParams:
-  - {fileID: 11400000, guid: 28c0ef5a8b403ce4a9cefcf71bdbcfe4, type: 2}
-  - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
   - {fileID: 11400000, guid: daaf1bfb553e984419751bef3e480941, type: 2}
   - {fileID: 11400000, guid: 4294b477e9c534f4aa8fcafd54970135, type: 2}
   - {fileID: 11400000, guid: e86b371c046a3ed4e96508a814a7fd16, type: 2}
