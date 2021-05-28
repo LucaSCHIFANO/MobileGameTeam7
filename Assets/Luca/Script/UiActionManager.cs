@@ -125,7 +125,11 @@ public class UiActionManager : MonoBehaviour
 
     public void endTurn()
     {
-        CharacterManager.Instance.currentPlayer.endTurn();
+        var cardM = CardManager.Instance;
+        if (!cardM.handToMid && !cardM.midToHand)
+        {
+            CharacterManager.Instance.currentPlayer.endTurn();
+        }
     }
 
     public void setMovePoint()
