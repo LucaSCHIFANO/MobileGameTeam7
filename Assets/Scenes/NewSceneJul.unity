@@ -5270,7 +5270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.680054, y: -340}
+  m_AnchoredPosition: {x: -9.680054, y: -339.99997}
   m_SizeDelta: {x: -904.09, y: -798.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899397794
@@ -6833,7 +6833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.680054, y: -340}
+  m_AnchoredPosition: {x: -9.680054, y: -339.99997}
   m_SizeDelta: {x: -904.09, y: -798.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083481688
@@ -7041,7 +7041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -710, y: 0}
+  m_AnchoredPosition: {x: -715, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1126965795
@@ -9242,8 +9242,6 @@ MonoBehaviour:
   canvas: {fileID: 974637995}
   cardPrefab: {fileID: 8318987361052222005, guid: d163574b3b5de3745a295d1f66155e2f, type: 3}
   cardList:
-  - {fileID: 11400000, guid: 24a5750234aa389468ccfbfb175a4e11, type: 2}
-  - {fileID: 11400000, guid: 80b285aaa35df0447bd40ca43dcdbe6a, type: 2}
   - {fileID: 11400000, guid: 93ff9ce04a66e964b99b1871df5f8d87, type: 2}
   - {fileID: 11400000, guid: f736435fcba5e53479376a6f7972a7d6, type: 2}
   - {fileID: 11400000, guid: e955946e9a76c9f4ea24c2561b6beb48, type: 2}
@@ -9266,8 +9264,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f92ebeacffc1afb4ab036a4d77ae4b06, type: 2}
   - {fileID: 11400000, guid: cda04ed53a3dd6843b38b26a3c935a44, type: 2}
   attackParams:
-  - {fileID: 11400000, guid: 28c0ef5a8b403ce4a9cefcf71bdbcfe4, type: 2}
-  - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
   - {fileID: 11400000, guid: daaf1bfb553e984419751bef3e480941, type: 2}
   - {fileID: 11400000, guid: 4294b477e9c534f4aa8fcafd54970135, type: 2}
   - {fileID: 11400000, guid: e86b371c046a3ed4e96508a814a7fd16, type: 2}
@@ -9456,7 +9452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: -60.299988, y: -60}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1674400895

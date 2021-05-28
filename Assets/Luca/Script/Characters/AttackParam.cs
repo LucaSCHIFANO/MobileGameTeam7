@@ -31,4 +31,5 @@ public class AttackParam : ScriptableObject
     public int intensity;
 
     public Sprite artwork;
+    public Sprite BackGround;
 }

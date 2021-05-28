@@ -12,6 +12,7 @@ public class CardDisplay : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
 
+    public Image backGroundImage;
     public Image artworkImage;
 
     public TextMeshProUGUI attackText;
@@ -24,10 +25,17 @@ public class CardDisplay : MonoBehaviour
             nameText.text = attackParam.patternName;
             descriptionText.text = attackParam.description;
 
+            backGroundImage.sprite = attackParam.BackGround;
             artworkImage.sprite = attackParam.artwork;
+
 
             attackText.text = attackParam.damage.ToString();
             actionCostText.text = attackParam.APNeeded.ToString();
+        }
+
+        if (attackParam.artwork == null)
+        {
+            artworkImage.gameObject.SetActive(false);
         }
     }
 
@@ -38,20 +46,16 @@ public class CardDisplay : MonoBehaviour
             nameText.text = card.attackParam.patternName;
             descriptionText.text = card.attackParam.description;
 
+            backGroundImage.sprite = card.attackParam.BackGround;
             artworkImage.sprite = card.attackParam.artwork;
 
             attackText.text = card.attackParam.damage.ToString();
             actionCostText.text = card.attackParam.APNeeded.ToString();
         }
-    }
 
-    private void Update()
-    {
-        
-    }
-
-    public void DisplayInfos()
-    {
-
+        if (attackParam.artwork == null)
+        {
+            artworkImage.gameObject.SetActive(false);
+        }
     }
 }
