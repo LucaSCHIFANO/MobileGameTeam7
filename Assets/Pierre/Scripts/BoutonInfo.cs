@@ -72,7 +72,7 @@ public class BoutonInfo : MonoBehaviour
 
                     MapComposent.Instance.disableOldBouton();
 
-                    MapComposent.Instance.OnLATrouve();
+                    //MapComposent.Instance.OnLATrouve();
 
                     MapComposent.Instance.Check();
 
