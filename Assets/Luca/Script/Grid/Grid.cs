@@ -112,7 +112,7 @@ public class Grid : MonoBehaviour
                         newPanel.movementCost = 1;
                         break;
                     case GridPattern.panelType.PATH:
-                        visu.sprite = listSprites[1];
+                        visu.sprite = listSprites[0];
                         //newPanel.baseColor = new Color(0.8207f, 0.7423f, 0.3832f);
                         newPanel.movementCost = 1;
                         break;
