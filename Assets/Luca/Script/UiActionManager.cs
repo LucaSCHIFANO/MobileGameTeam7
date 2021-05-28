@@ -6,32 +6,39 @@ using TMPro;
 
 public class UiActionManager : MonoBehaviour
 {
+    [Header("Buttons")]
     public GameObject buttonHand;
     public GameObject buttonCancel;
     public GameObject deck;
     public GameObject use;
 
-    public Text moveLeft;
-
-    public GameObject unitPortrait;
+    [Header("Random Texts")]
     public Image imageBG;
     public Text unitName;
     public Text unitHP;
     public Text unitSTR;
     public Text unitDEF;
     public Text unitAP;
-    public Slider HPBar;
     public Text element;
 
+    [Header("Hero Infos")]
+    public Slider HPBar;
     public TextMeshProUGUI apleft;
+    public TextMeshProUGUI currenntHP;
+    public TextMeshProUGUI maxHP;
+    public GameObject unitPortrait;
+    public TextMeshProUGUI defText;
+    public TextMeshProUGUI attText;
+    public Image elementImage;
+    public Sprite[] elementInfos = new Sprite[4];
 
-    public ShowRangeAttack sra;
-
+    [Header("Enemies Board")]
     public GameObject enemiesBoard;
     public GameObject button;
     public Sprite minusButtonImage;
     public Sprite plusButtonImage;
 
+    public ShowRangeAttack sra;
 
     private static UiActionManager _instance = null;
 
@@ -51,7 +58,10 @@ public class UiActionManager : MonoBehaviour
         unitPortrait.SetActive(true);
         use.SetActive(false);
         apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
-        //apleft.SetActive(false);
+        maxHP.text = CharacterManager.Instance.currentPlayer.stats.maxHP.ToString();
+        currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
+        defText.text = CharacterManager.Instance.currentPlayer.stats.defense.ToString();
+        attText.text = CharacterManager.Instance.currentPlayer.stats.strenght.ToString();
     }
 
     public void hideButton()
@@ -60,7 +70,6 @@ public class UiActionManager : MonoBehaviour
         buttonCancel.SetActive(true);
         deck.SetActive(false);
         use.SetActive(false);
-        //apleft.SetActive(false);
     }
 
     public void showDeck()
@@ -71,9 +80,8 @@ public class UiActionManager : MonoBehaviour
             buttonHand.SetActive(false);
             buttonCancel.SetActive(true);
             use.SetActive(true);
-            //unitPortrait.SetActive(false);
-            //apleft.SetActive(true);
             apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+            currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
 
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
@@ -120,17 +128,11 @@ public class UiActionManager : MonoBehaviour
         deck.SetActive(false);
         use.SetActive(false);
         unitPortrait.SetActive(false);
-        //apleft.SetActive(false);
     }
 
     public void endTurn()
     {
         CharacterManager.Instance.currentPlayer.endTurn();
-    }
-
-    public void setMovePoint()
-    {
-        moveLeft.text = "AP : " + CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 
     public void ShowPortrait(Stats stats)

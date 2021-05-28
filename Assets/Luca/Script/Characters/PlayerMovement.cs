@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
         stats.actionPoint = stats.maxActionPoint;
         //stats.HP = stats.maxHP;
 
-        UiActionManager.Instance.setMovePoint(); // affiche a l'écran les mouvement points 
     }
 
     void Update()
@@ -89,7 +88,6 @@ public class PlayerMovement : MonoBehaviour
         state = States.IDLE;
         UiActionManager.Instance.showButton();
 
-        UiActionManager.Instance.setMovePoint();
         //PhaseManager.Instance.checkAllPlayer();
 
         if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
@@ -129,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
         stats.effectActu();
 
         UiActionManager.Instance.hideAll();
-        UiActionManager.Instance.setMovePoint();
         PhaseManager.Instance.checkAllPlayer();
         CardManager.Instance.EndRound();
     }
