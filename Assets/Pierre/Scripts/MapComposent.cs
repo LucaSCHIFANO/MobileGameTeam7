@@ -737,4 +737,9 @@ public class MapComposent : MonoBehaviour
         Grid.Instance.deleteMap(true);
         Camera.main.GetComponent<MoveCam>().replace();
     }
+
+    public void fadeOutIn()
+    {
+        Instantiate(fade, transform.position, transform.rotation, gameObject.transform);
+    }
 }

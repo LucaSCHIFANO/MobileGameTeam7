@@ -22,9 +22,9 @@ public class GridPattern : MonoBehaviour
 
     public panelType[,] createPattern(int id) // les patterns
     {
-        var number = Random.Range(0, 31);
+        var number = Random.Range(1, 31);
 
-        switch (number)
+        switch (id)
         {
             case 0:
                 pattern = new panelType[,]
@@ -418,7 +418,7 @@ public class GridPattern : MonoBehaviour
                 gridref.locationEnemy.Add(new Vector2(6, -9));
 
 
-                gridref.playerSpawn.Add(new Vector2(1, -1));
+                gridref.playerSpawn.Add(new Vector2(1, -0));
                 gridref.playerSpawn.Add(new Vector2(1, -10));
 
                 Debug.Log("fire");
