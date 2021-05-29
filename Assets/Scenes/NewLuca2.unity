@@ -3936,7 +3936,7 @@ MonoBehaviour:
   cellSize: 2
   panel: {fileID: 7635196711641401961, guid: e007d0c9546ce134d8e94ec62ddce458, type: 3}
   panelAlpha: {fileID: 7388167128119430108, guid: 24250fe6db8672e47bf6751ec21ad174, type: 3}
-  levelID: 8
+  levelID: 29
   progress: 0
   openList: []
   closeList: []
@@ -3944,6 +3944,7 @@ MonoBehaviour:
   playerSpawn: []
   playerPrefab: {fileID: 4391244545055928749, guid: a26c6c7cf9ae8984fb22478eaf0339f2, type: 3}
   enemy: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
+  holoPlayer: {fileID: 4451149331830433231, guid: eb4f24bf41481af4eb0e184c64796d6c, type: 3}
   mC: {fileID: 260224054}
   listSprites:
   - {fileID: 21300000, guid: 7e1899ea62ee26e45b3fbaa4e05bf757, type: 3}
@@ -3957,9 +3958,13 @@ MonoBehaviour:
   bgList:
   - {fileID: 254556042631337423, guid: 19efc46e1a36aec4cbf2d0d17a1a7218, type: 3}
   - {fileID: 5769864970190913787, guid: ba65bdcc58f0ed94ba8e1c79c6482c5e, type: 3}
+  - {fileID: 8452229058072284554, guid: d587300c11460c64a86682ca3a6af085, type: 3}
+  - {fileID: 8191129370414867243, guid: e3de132cfca752445ba8e4bf8484c720, type: 3}
   bgListTrans:
   - {fileID: 627094763}
   - {fileID: 1572518925}
+  - {fileID: 1849018762}
+  - {fileID: 1253818025}
 --- !u!4 &670730764
 Transform:
   m_ObjectHideFlags: 0
@@ -6231,6 +6236,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0e020e591c6e66a48a010cb9e96b5374, type: 3}
   - {fileID: 21300000, guid: 7750d2657f9f19e48ba074199d2821c2, type: 3}
   - {fileID: 21300000, guid: 6380dc0a08ded9a4bbd4767d5b527977, type: 3}
+  inGame:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  heroSprites: []
+  enemySprites: []
   enemiesBoard: {fileID: 692020110}
   button: {fileID: 128577141}
   minusButtonImage: {fileID: 21300000, guid: ba9348043e6ef804a825b799d33e6fe9, type: 3}
@@ -8024,6 +8037,36 @@ Transform:
   m_Father: {fileID: 804466412}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1253818024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1253818025}
+  m_Layer: 0
+  m_Name: BG9x9Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1253818025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253818024}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5882201, y: -4.949296, z: 5.1561165}
+  m_LocalScale: {x: 1.1999999, y: 1.1999999, z: 1.1999999}
+  m_Children: []
+  m_Father: {fileID: 1462277527}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257775540
 GameObject:
   m_ObjectHideFlags: 0
@@ -9202,6 +9245,8 @@ Transform:
   m_Children:
   - {fileID: 627094763}
   - {fileID: 1572518925}
+  - {fileID: 1849018762}
+  - {fileID: 1253818025}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10578,6 +10623,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812217065}
   m_CullTransparentMesh: 1
+--- !u!1 &1849018761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1849018762}
+  m_Layer: 0
+  m_Name: BG9x9Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1849018762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849018761}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.4282202, y: 3.2007046, z: 5.1561165}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_Children: []
+  m_Father: {fileID: 1462277527}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861855370
 GameObject:
   m_ObjectHideFlags: 0

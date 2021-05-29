@@ -64,7 +64,25 @@ public class ClicklManager : MonoBehaviour
                                                 panelColor.sprite = Grid.Instance.listSpritesAlpha[0];
                                             }
                                         }
+                                        
                                         currentPanel = touchedPanel;
+
+                                        if (player.state == PlayerMovement.States.SELECTED)
+                                        {
+
+                                            foreach (var item in Grid.Instance.gridArrayAlpha)
+                                            {
+                                                Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.Instance.listSpritesAlpha[0];
+                                            }
+
+
+                                            var pathShine = Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y, false);
+                                            foreach (var item in pathShine)
+                                            {
+                                                var panelColor = Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                                panelColor.sprite = Grid.Instance.listSpritesAlpha[2];
+                                            }
+                                        }
                                     }
 
                                     else
