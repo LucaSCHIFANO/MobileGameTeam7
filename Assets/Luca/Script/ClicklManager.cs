@@ -171,7 +171,18 @@ public class ClicklManager : MonoBehaviour
                                         }
                                         else if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<Enemy>())
                                         {
-                                            UiActionManager.Instance.ShowPortrait(touchedPanel.unitOn.GetComponent<Enemy>().stats);
+                                            //UiActionManager.Instance.ShowPortrait(touchedPanel.unitOn.GetComponent<Enemy>().stats);
+
+                                            foreach (var item in Grid.Instance.gridArrayAlpha)
+                                            {
+                                                Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.Instance.listSpritesAlpha[0];
+                                                Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+                                            }
+
+                                            UiActionManager.Instance.HeroToEnemy(touchedPanel.unitOn.GetComponent<Enemy>().stats);
+                                            var alphaPanel = Grid.Instance.gridArrayAlpha[touchedPanel.x, touchedPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                                            alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
                                         }
                                     }
                                 }
@@ -241,7 +252,17 @@ public class ClicklManager : MonoBehaviour
                                     else if (player.state == PlayerMovement.States.IDLE)
                                     {
                                         UiActionManager.Instance.ShowPortrait(charact.stats);
-                                        UiActionManager.Instance.HeroToEnemy(charact.stats);
+
+                                        foreach (var item in Grid.Instance.gridArrayAlpha)
+                                        {
+                                            Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.Instance.listSpritesAlpha[0];
+                                            Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+                                        }
+
+                                        UiActionManager.Instance.HeroToEnemy(actualPanel.unitOn.GetComponent<Enemy>().stats);
+                                        var alphaPanel = Grid.Instance.gridArrayAlpha[actualPanel.x, actualPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
                                     }
 
