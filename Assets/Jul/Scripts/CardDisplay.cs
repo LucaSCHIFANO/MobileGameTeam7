@@ -9,7 +9,6 @@ public class CardDisplay : MonoBehaviour
     public Card card;
     public AttackParam attackParam;
 
-    public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
 
     public Image backGroundImage;
@@ -22,15 +21,13 @@ public class CardDisplay : MonoBehaviour
     {
         if (card != null && attackParam != null)
         {
-            nameText.text = attackParam.patternName;
+            attackText.text = attackParam.damage.ToString();
+            actionCostText.text = attackParam.APNeeded.ToString();
+
             descriptionText.text = attackParam.description;
 
             backGroundImage.sprite = attackParam.BackGround;
             artworkImage.sprite = attackParam.artwork;
-
-
-            attackText.text = attackParam.damage.ToString();
-            actionCostText.text = attackParam.APNeeded.ToString();
         }
 
         if (attackParam.artwork == null)
@@ -43,14 +40,13 @@ public class CardDisplay : MonoBehaviour
     {
         if (card != null && attackParam != null)
         {
-            nameText.text = card.attackParam.patternName;
+            attackText.text = attackParam.damage.ToString();
+            actionCostText.text = attackParam.APNeeded.ToString();
+
             descriptionText.text = card.attackParam.description;
 
             backGroundImage.sprite = card.attackParam.BackGround;
             artworkImage.sprite = card.attackParam.artwork;
-
-            attackText.text = card.attackParam.damage.ToString();
-            actionCostText.text = card.attackParam.APNeeded.ToString();
         }
 
         if (attackParam.artwork == null)
