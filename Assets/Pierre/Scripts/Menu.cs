@@ -27,7 +27,7 @@ public class Menu : MonoBehaviour
     private IEnumerator waitforthat()
     {
         yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene("SceneLuca");
+        SceneManager.LoadScene("NewLuca2");
     }
 
     public void BouttonTuto()
@@ -63,17 +63,17 @@ public class Menu : MonoBehaviour
 
     public void googleTrophies()
     {
-        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-        {
+        /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {*/
             Social.ShowAchievementsUI();
-        }
+        //}
     }
 
     public void googleLeaderBoard()
     {
-        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-        {
+        /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {*/
             Social.ShowLeaderboardUI();
-        }
+        //}
     }
 }

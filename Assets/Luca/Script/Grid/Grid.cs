@@ -27,6 +27,7 @@ public class Grid : MonoBehaviour
     
     public GameObject playerPrefab;
     public GameObject enemy;
+    public GameObject holoPlayer;
     
     private CreateAnEnemy cae;
 
@@ -34,6 +35,15 @@ public class Grid : MonoBehaviour
 
     public List<Sprite> listSprites = new List<Sprite>();
     public List<Sprite> listSpritesAlpha = new List<Sprite>();
+
+    public List<GameObject> bgList = new List<GameObject>(); // 0 et 1 = 8x8
+    public List<Transform> bgListTrans = new List<Transform>(); // 0 et 1 = 8x8
+
+    private GameObject front;
+    private GameObject back;
+
+    
+    
 
 
 
@@ -168,6 +178,18 @@ public class Grid : MonoBehaviour
 
             }
         }
+
+        if(height == 8 && width == 8)
+        {
+            back = Instantiate(bgList[0], bgListTrans[0].position, transform.rotation);
+           
+            front = Instantiate(bgList[1], bgListTrans[1].position, transform.rotation);
+        }else if(height == 9 && width == 9)
+        {
+            back = Instantiate(bgList[2], bgListTrans[2].position, transform.rotation);
+
+            front = Instantiate(bgList[3], bgListTrans[3].position, transform.rotation);
+        }
     }
 
     void awake2Alpha() // crée la grid en transparent
@@ -260,6 +282,12 @@ public class Grid : MonoBehaviour
 
     public void createPlayer(Panel panel)
     {
+        var holo = GameObject.FindGameObjectsWithTag("Holo");
+        foreach (var item in holo)
+        {
+            Destroy(item);
+        }
+
         Debug.Log("creation du joueur");
         var en = Instantiate(playerPrefab, Vector2.zero, transform.rotation);
         var enE = en.GetComponent<PlayerMovement>();
@@ -317,6 +345,7 @@ public class Grid : MonoBehaviour
         {
             var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
             alphaPanel.color = new Color(1, 1, 1, 0.5f);
+            Instantiate(holoPlayer, alphaPanel.transform.position, alphaPanel.transform.rotation);
             //alphaPanel.sprite = Grid.Instance.listSpritesAlpha[0];
 
             Grid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
@@ -344,6 +373,10 @@ public class Grid : MonoBehaviour
 
         width = 0;
         height = 0;
+
+        Destroy(front);
+        Destroy(back);
+
 
         ClicklManager.Instance.currentPanel = null;
 

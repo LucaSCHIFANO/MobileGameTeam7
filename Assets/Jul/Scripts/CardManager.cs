@@ -14,7 +14,7 @@ public class CardManager : MonoBehaviour
     public List<Card> cardList = new List<Card>();
     public List<AttackParam> attackParams = new List<AttackParam>();
 
-    private bool inChosenTime = false;
+    public bool inChosenTime = false;
     private bool inRound = false;
     private bool isMid = false;
 
@@ -141,7 +141,6 @@ public class CardManager : MonoBehaviour
                                 }
                                 else
                                 {
-                                    inChosenTime = false;
                                     chooseCardText.gameObject.SetActive(false);
                                     //MapComposent.Instance.Opening();
                                     //MapComposent.Instance.Check();
@@ -149,7 +148,7 @@ public class CardManager : MonoBehaviour
 
                                     if (cM.currentPlayer == null || cM.currentPlayer.state != PlayerMovement.States.WIN)
                                     {
-                                        Grid.Instance.functionStart();
+                                        UiActionManager.Instance.StartCoroutine("startButWait");
                                     }
                                     else
                                     {
@@ -331,6 +330,7 @@ public class CardManager : MonoBehaviour
             discard.Add(chosenCard.GetComponent<CardDisplay>().card);
             hand.Remove(chosenCard);
             Destroy(chosenCard);
+            chosenCard = null;
             isMid = false;
             FitCards();
         }

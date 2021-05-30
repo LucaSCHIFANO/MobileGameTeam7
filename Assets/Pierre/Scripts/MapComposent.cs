@@ -667,7 +667,6 @@ public class MapComposent : MonoBehaviour
         Time.timeScale = 0f;
         MapOpen = true;
         AudioManager.Instance.Play("GlobalMap");
-        AudioManager.Instance.Stop("BattleMap1");
 
         if (position == 100)
         {
@@ -675,18 +674,18 @@ public class MapComposent : MonoBehaviour
             winScreen.SetActive(true);
             GameObject.Find("NOT").GetComponent<Text>().text = "Nombre de tour : " + PhaseManager.Instance.numberOfTurn;
 
-            if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-            {
+           /* if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+            {*/
                 Social.ReportProgress(GPGSIds.achievement_end_of_the_road, 100.0f, null);
                 GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_why_not, 2, null);
-            }
+            //}
 
             if (!CharacterManager.Instance.isHealed)
             {
-                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                {
+                /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {*/
                     Social.ReportProgress(GPGSIds.achievement_god_among_gods, 100.0f, null);
-                }
+                //}
             }
 
             if (PhaseManager.Instance.numberOfTurn < PhaseManager.Instance.numberOfTurnRecord || PhaseManager.Instance.numberOfTurnRecord == 0)
@@ -695,13 +694,13 @@ public class MapComposent : MonoBehaviour
 
                 GameObject.Find("OldRecord").GetComponent<Text>().text = "It's a NewRecord !!";
 
-                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                {
+                /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {*/
                     Social.ReportScore(PhaseManager.Instance.numberOfTurn, GPGSIds.leaderboard_best_time, (success) =>
                     {
                         if (!success) Debug.LogError("Unable to post highScore");
                     });
-                }
+               // }
             }
             else
             {
@@ -710,10 +709,10 @@ public class MapComposent : MonoBehaviour
 
         }else if (position == 50)
         {
-            if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-            {
+            /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+            {*/
                 Social.ReportProgress(GPGSIds.achievement_halfway_through_hell, 100.0f, null);
-            }
+            //}
         }
     }
 
@@ -736,5 +735,10 @@ public class MapComposent : MonoBehaviour
         Check();
         Grid.Instance.deleteMap(true);
         Camera.main.GetComponent<MoveCam>().replace();
+    }
+
+    public void fadeOutIn()
+    {
+        Instantiate(fade, transform.position, transform.rotation, gameObject.transform);
     }
 }

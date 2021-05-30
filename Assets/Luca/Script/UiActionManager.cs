@@ -190,10 +190,10 @@ public class UiActionManager : MonoBehaviour
 
     public void EnemyToHero(Stats playerStats)
     {
-        for (int i = 0; i < inGame.Length; i++)
+        /*for (int i = 0; i < inGame.Length; i++)
         {
             inGame[i].sprite = heroSprites[i];
-        }
+        }*/
 
         apleft.text = playerStats.actionPoint.ToString();
         maxHP.text = playerStats.maxHP.ToString();
@@ -222,10 +222,10 @@ public class UiActionManager : MonoBehaviour
 
     public void HeroToEnemy(Stats enemyStats)
     {
-        for (int i = 0; i < inGame.Length; i++)
+        /*for (int i = 0; i < inGame.Length; i++)
         {
             inGame[i].sprite = enemySprites[i];
-        }
+        }*/
 
         apleft.text = enemyStats.actionPoint.ToString();
         maxHP.text = enemyStats.maxHP.ToString();
@@ -250,6 +250,14 @@ public class UiActionManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public IEnumerator startButWait()
+    {
+        CardManager.Instance.inChosenTime = false;
+        MapComposent.Instance.fadeOutIn();
+        yield return new WaitForSeconds(0.6f);
+        Grid.Instance.functionStart();
     }
 
 }
