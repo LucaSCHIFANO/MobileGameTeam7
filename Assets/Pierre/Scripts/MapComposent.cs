@@ -667,7 +667,6 @@ public class MapComposent : MonoBehaviour
         Time.timeScale = 0f;
         MapOpen = true;
         AudioManager.Instance.Play("GlobalMap");
-        AudioManager.Instance.Stop("BattleMap1");
 
         if (position == 100)
         {
