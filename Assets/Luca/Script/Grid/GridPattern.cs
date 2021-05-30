@@ -24,7 +24,7 @@ public class GridPattern : MonoBehaviour
     {
         var number = Random.Range(1, 31);
 
-        switch (id)
+        switch (number)
         {
             case 0:
                 pattern = new panelType[,]

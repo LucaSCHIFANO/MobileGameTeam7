@@ -143,6 +143,9 @@ public class CharacterManager : MonoBehaviour
             UiActionManager.Instance.hideAll();
             EnemiesBoard.Instance.ClearList();
 
+            AudioManager.Instance.Stop("BattleMap1");
+            AudioManager.Instance.Play("Victory!");
+
             sS.setValues(currentPlayer.stats);
 
             if(PhaseManager.Instance.monsterInOneTurn >= 3)
