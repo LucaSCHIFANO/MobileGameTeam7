@@ -22,7 +22,7 @@ public class UiActionManager : MonoBehaviour
     public Image elementImage;
     public Sprite[] elementInfos = new Sprite[4];
 
-    public Image[] inGame = new Image[5];
+    public Image[] inGame = new Image[4];
     public List<Sprite> heroSprites = new List<Sprite>();
     public List<Sprite> enemySprites = new List<Sprite>();
 
@@ -193,10 +193,10 @@ public class UiActionManager : MonoBehaviour
 
     public void EnemyToHero(Stats playerStats)
     {
-        /*for (int i = 0; i < inGame.Length; i++)
+        for (int i = 0; i < inGame.Length; i++)
         {
             inGame[i].sprite = heroSprites[i];
-        }*/
+        }
 
         apleft.text = playerStats.actionPoint.ToString();
         maxHP.text = playerStats.maxHP.ToString();
@@ -226,10 +226,10 @@ public class UiActionManager : MonoBehaviour
 
     public void HeroToEnemy(Stats enemyStats)
     {
-        /*for (int i = 0; i < inGame.Length; i++)
+        for (int i = 0; i < inGame.Length; i++)
         {
             inGame[i].sprite = enemySprites[i];
-        }*/
+        }
 
         apleft.text = enemyStats.actionPoint.ToString();
         maxHP.text = enemyStats.maxHP.ToString();
