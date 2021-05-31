@@ -240,22 +240,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: BattleMap1
-    clip: {fileID: 8300000, guid: 3948641b3779a8b419489937d7598eac, type: 3}
+  - name: Menu
+    clip: {fileID: 8300000, guid: ac872a5ddce64d14da2319224bca1129, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
-    volume: 0
+    volume: 0.1
     pitch: 1
     mute: 0
     loop: 1
     source: {fileID: 0}
-  - name: RGETest
-    clip: {fileID: 8300000, guid: dcd5bc35bd9a54f4c90cc4a02548c8a9, type: 3}
-    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
-    volume: 0
-    pitch: 1
-    mute: 0
-    loop: 0
-    source: {fileID: 0}
+  menu: 1
 --- !u!114 &122626781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,7 +1992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0000038146973, y: 55.9}
+  m_AnchoredPosition: {x: -0.0000038146973, y: 55.899994}
   m_SizeDelta: {x: 211.5, y: 62.600006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002574189

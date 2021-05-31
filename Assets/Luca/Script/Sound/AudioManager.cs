@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    public bool menu;
 
     private static AudioManager _instance = null;
     public static AudioManager Instance
@@ -14,7 +15,14 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("BattleMap1");
+        if (menu)
+        {
+            Play("Menu");
+        }
+        else
+        {
+            Play("BattleMap1");
+        }
     }
     void Awake()
     {

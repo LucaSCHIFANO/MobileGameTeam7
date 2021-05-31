@@ -2188,9 +2188,9 @@ TextureImporter:
       name: Anims idle_feu_85
       rect:
         serializedVersion: 2
-        x: 519
+        x: 516
         y: 5850
-        width: 509
+        width: 512
         height: 1127
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -2230,9 +2230,9 @@ TextureImporter:
       name: Anims idle_feu_87
       rect:
         serializedVersion: 2
-        x: 1523
+        x: 1540
         y: 5850
-        width: 530
+        width: 515
         height: 1127
       alignment: 7
       pivot: {x: 0.5, y: 0}
