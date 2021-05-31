@@ -252,6 +252,8 @@ public class CardManager : MonoBehaviour
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
                 middleCard.GetComponent<CardDisplay>().actionCostText.text = "";
                 middleCard.GetComponent<CardDisplay>().attackText.text = "";
+                middleCard.GetComponent<CardDisplay>().strong.gameObject.SetActive(false);
+                middleCard.GetComponent<CardDisplay>().weak.gameObject.SetActive(false);
                 middleCard.GetComponent<CardDisplay>().artworkImage.gameObject.SetActive(false);
                 cardInfos = middleCard.transform.GetChild(6).gameObject;
                 cardInfos.SetActive(true);
