@@ -27,7 +27,7 @@ public class Menu : MonoBehaviour
     private IEnumerator waitforthat()
     {
         yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene("NewLuca2");
+        SceneManager.LoadScene("NewSceneJul");
     }
 
     public void BouttonTuto()

@@ -727,6 +727,7 @@ MonoBehaviour:
     mute: 0
     loop: 0
     source: {fileID: 0}
+  menu: 0
 --- !u!1 &70186766
 GameObject:
   m_ObjectHideFlags: 0
@@ -10451,7 +10452,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nbTirageDebut: 10
   howManyInHand: 5
-  canvas: {fileID: 974637995}
   cardPrefab: {fileID: 8318987361052222005, guid: d163574b3b5de3745a295d1f66155e2f, type: 3}
   cardList:
   - {fileID: 11400000, guid: 93ff9ce04a66e964b99b1871df5f8d87, type: 2}
@@ -10497,17 +10497,26 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1f7838a3aed8e674c92de304ea92b06e, type: 2}
   - {fileID: 11400000, guid: 6d7cf3d8f237942468316b94f1912dc0, type: 2}
   - {fileID: 11400000, guid: 0f1ca1297cb1f904fbfba19d3bf0a5d8, type: 2}
+  cardInfos: {fileID: 0}
+  canvas: {fileID: 974637995}
+  pauseButton: {fileID: 0}
+  bin: {fileID: 0}
   inChosenTime: 0
+  chooseCardText: {fileID: 363701599}
+  deckSelection: {fileID: 0}
+  deckObject: {fileID: 0}
+  deckPosition: []
+  rollCardIsChose: 0
   handToMid: 0
   midToHand: 0
+  inRound: 0
   middleCard: {fileID: 0}
   chosenCard: {fileID: 0}
+  rollCard: {fileID: 0}
   startLocation: {fileID: 1887949847}
   gap: 1
   handPanel: {fileID: 411351869}
   cardPosition: {fileID: 1088603448}
-  cardInfos: {fileID: 0}
-  chooseCardText: {fileID: 363701599}
 --- !u!4 &1625963888
 Transform:
   m_ObjectHideFlags: 0
