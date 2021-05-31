@@ -70,6 +70,9 @@ public class UiActionManager : MonoBehaviour
             apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
             currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
 
+            EnemyToHero(CharacterManager.Instance.currentPlayer.stats);
+            ShowPortrait(CharacterManager.Instance.currentPlayer.stats);
+
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
             player.state = PlayerMovement.States.SELECTCARD;
@@ -200,6 +203,7 @@ public class UiActionManager : MonoBehaviour
         currenntHP.text = playerStats.HP.ToString();
         defText.text = (playerStats.defense + playerStats.boostDef).ToString();
         attText.text = (playerStats.strenght + playerStats.boostAtt).ToString();
+
 
         switch (playerStats.element)
         {
