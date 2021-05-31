@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Stats stats;
     public AttackMonster attackMonster;
 
-    private GameObject panelToGo;
+    public GameObject panelToGo;
 
     public Pattern pattern;
 

@@ -137,11 +137,12 @@ public class Grid : MonoBehaviour
                         newPanel.movementCost = 3;
                         break;
                     case GridPattern.panelType.WALL:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.1792f, 0.0518f, 0);
+                        /*visu.sprite = listSprites[0];
+                        visu.color = new Color(0.1792f, 0.0518f, 0);*/
+                        visu.sprite = null;
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
-                        newPanel.canShotThrought = false;
+                        //newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.BRIDGE:
                         visu.sprite = listSprites[0];
@@ -181,14 +182,65 @@ public class Grid : MonoBehaviour
 
         if(height == 8 && width == 8)
         {
-            back = Instantiate(bgList[0], bgListTrans[0].position, transform.rotation);
-           
-            front = Instantiate(bgList[1], bgListTrans[1].position, transform.rotation);
+            if (Random.Range(0, 2) == 0)
+            {
+                back = Instantiate(bgList[0], bgListTrans[0].position, transform.rotation);
+
+                front = Instantiate(bgList[1], bgListTrans[1].position, transform.rotation);
+            }
+            else
+            {
+                back = Instantiate(bgList[18], bgListTrans[0].position, transform.rotation);
+
+                front = Instantiate(bgList[19], bgListTrans[1].position, transform.rotation);
+            }
+
         }else if(height == 9 && width == 9)
         {
             back = Instantiate(bgList[2], bgListTrans[2].position, transform.rotation);
 
             front = Instantiate(bgList[3], bgListTrans[3].position, transform.rotation);
+        }else if (height == 6 && width == 6)
+        {
+            back = Instantiate(bgList[4], bgListTrans[4].position, transform.rotation);
+
+            front = Instantiate(bgList[5], bgListTrans[5].position, transform.rotation);
+        }
+        else if (height == 10 && width == 10)
+        {
+            back = Instantiate(bgList[6], bgListTrans[6].position, transform.rotation);
+
+            front = Instantiate(bgList[7], bgListTrans[7].position, transform.rotation);
+        }
+        else if (height == 8 && width == 7)
+        {
+            back = Instantiate(bgList[8], bgListTrans[8].position, transform.rotation);
+
+            front = Instantiate(bgList[9], bgListTrans[9].position, transform.rotation);
+        }
+        else if (height == 12 && width == 7)
+        {
+            back = Instantiate(bgList[10], bgListTrans[10].position, transform.rotation);
+
+            front = Instantiate(bgList[11], bgListTrans[11].position, transform.rotation);
+        }
+        else if (height == 7 && width == 7)
+        {
+            back = Instantiate(bgList[12], bgListTrans[12].position, transform.rotation);
+
+            front = Instantiate(bgList[13], bgListTrans[13].position, transform.rotation);
+        }
+        else if (height == 10 && width == 8)
+        {
+            back = Instantiate(bgList[14], bgListTrans[14].position, transform.rotation);
+
+            front = Instantiate(bgList[15], bgListTrans[15].position, transform.rotation);
+        }
+        else if (height == 8 && width == 4)
+        {
+            back = Instantiate(bgList[16], bgListTrans[16].position, transform.rotation);
+
+            front = Instantiate(bgList[17], bgListTrans[17].position, transform.rotation);
         }
     }
 
