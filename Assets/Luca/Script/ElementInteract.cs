@@ -36,7 +36,7 @@ public class ElementInteract : MonoBehaviour
             }
             else if (att == Stats.ELEMENT.BLUE && def == Stats.ELEMENT.RED)
             {
-                return 2f;
+                return 1.5f;
             }
             else if (att == Stats.ELEMENT.RED && def == Stats.ELEMENT.BLUE)
             {
@@ -44,11 +44,11 @@ public class ElementInteract : MonoBehaviour
             }
             else if (att == Stats.ELEMENT.RED && def == Stats.ELEMENT.GREEN)
             {
-                return 2f;
+                return 1.5f;
             }
             else if (att == Stats.ELEMENT.GREEN && def == Stats.ELEMENT.BLUE)
             {
-                return 2f;
+                return 1.5f;
             }
             else if (att == Stats.ELEMENT.GREEN && def == Stats.ELEMENT.RED)
             {

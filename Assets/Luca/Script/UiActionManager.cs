@@ -9,17 +9,7 @@ public class UiActionManager : MonoBehaviour
     [Header("Buttons")]
     public GameObject buttonHand;
     public GameObject buttonCancel;
-    public GameObject deck;
     public GameObject use;
-
-    [Header("Random Texts")]
-    public Image imageBG;
-    public Text unitName;
-    public Text unitHP;
-    public Text unitSTR;
-    public Text unitDEF;
-    public Text unitAP;
-    public Text element;
 
     [Header("Hero Infos")]
     public Slider HPBar;
@@ -35,12 +25,6 @@ public class UiActionManager : MonoBehaviour
     public Image[] inGame = new Image[5];
     public List<Sprite> heroSprites = new List<Sprite>();
     public List<Sprite> enemySprites = new List<Sprite>();
-
-    [Header("Enemies Board")]
-    public GameObject enemiesBoard;
-    public GameObject button;
-    public Sprite minusButtonImage;
-    public Sprite plusButtonImage;
 
     public ShowRangeAttack sra;
 
@@ -72,7 +56,6 @@ public class UiActionManager : MonoBehaviour
     {
         buttonHand.SetActive(false);
         buttonCancel.SetActive(true);
-        deck.SetActive(false);
         use.SetActive(false);
     }
 
@@ -86,6 +69,9 @@ public class UiActionManager : MonoBehaviour
             use.SetActive(true);
             apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
             currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
+
+            EnemyToHero(CharacterManager.Instance.currentPlayer.stats);
+            ShowPortrait(CharacterManager.Instance.currentPlayer.stats);
 
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
@@ -145,7 +131,6 @@ public class UiActionManager : MonoBehaviour
     {
         buttonHand.SetActive(false);
         buttonCancel.SetActive(false);
-        deck.SetActive(false);
         use.SetActive(false);
         unitPortrait.SetActive(false);
     }
@@ -162,48 +147,8 @@ public class UiActionManager : MonoBehaviour
     public void ShowPortrait(Stats stats)
     {
         unitPortrait.SetActive(true);
-        unitName.text = stats.characName;
-        unitHP.text = stats.HP + " / " + stats.maxHP + " PV";
         HPBar.maxValue = stats.maxHP;
         HPBar.value = stats.HP;
-
-        if (stats.gameObject.GetComponent<Enemy>())
-        {
-            unitSTR.text = "STR : " + stats.strenght.ToString() + " + " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.damage + "   " + "Range : " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.range;
-            imageBG.color = new Color(1, 0.4481132f, 0.4481132f, 0.5f);
-        }
-        else
-        {
-            unitSTR.text = "STR : " + (stats.strenght + stats.boostAtt).ToString();
-            imageBG.color = new Color(0, 0.5876393f, 1, 0.5f);
-        }
-
-        unitDEF.text = "DEF : " + (stats.defense + stats.boostDef).ToString();
-        unitAP.text = "AP : " + stats.actionPoint.ToString();
-
-        if (stats.gameObject.GetComponent<PlayerMovement>())
-        {
-            if (stats.element == Stats.ELEMENT.RED)
-            {
-                element.text = "Elem : " + stats.element.ToString() + "  STR +" + stats.boostAtt;
-            }
-            else if (stats.element == Stats.ELEMENT.BLUE)
-            {
-                element.text = "Elem : " + stats.element.ToString() + "  DEF +" + stats.boostDef;
-            }
-            else if (stats.element == Stats.ELEMENT.GREEN)
-            {
-                element.text = "Elem : " + stats.element.ToString() + "  AP +" + stats.boostAP;
-            }
-            else
-            {
-                element.text = "Elem : " + stats.element.ToString();
-            }
-        }
-        else
-        {
-            element.text = "Elem : " + stats.element.ToString();
-        }
     }
 
     public void HidePortrait()
@@ -246,21 +191,6 @@ public class UiActionManager : MonoBehaviour
 
     }
 
-    public void EnemiesBoardState()
-    {
-        if (enemiesBoard.activeInHierarchy)
-        {
-            enemiesBoard.SetActive(false);
-            button.GetComponent<Image>().sprite = plusButtonImage;
-        }
-        else
-        {
-            enemiesBoard.SetActive(true);
-            button.GetComponent<Image>().sprite = minusButtonImage;
-            EnemiesBoard.Instance.CheckList();
-        }
-    }
-
     public void EnemyToHero(Stats playerStats)
     {
         /*for (int i = 0; i < inGame.Length; i++)
@@ -273,6 +203,7 @@ public class UiActionManager : MonoBehaviour
         currenntHP.text = playerStats.HP.ToString();
         defText.text = (playerStats.defense + playerStats.boostDef).ToString();
         attText.text = (playerStats.strenght + playerStats.boostAtt).ToString();
+
 
         switch (playerStats.element)
         {

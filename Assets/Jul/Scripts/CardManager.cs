@@ -63,7 +63,7 @@ public class CardManager : MonoBehaviour
 
     void Start()
     {
-        gap = 1.5f;
+        //gap = 1.5f;
         midRotation = Quaternion.Euler(0f, 180f, 0f);
     }
 
@@ -192,9 +192,8 @@ public class CardManager : MonoBehaviour
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
                 middleCard.GetComponent<CardDisplay>().actionCostText.text = "";
                 middleCard.GetComponent<CardDisplay>().attackText.text = "";
-                middleCard.GetComponent<CardDisplay>().nameText.text = "";
                 middleCard.GetComponent<CardDisplay>().artworkImage.gameObject.SetActive(false);
-                cardInfos = middleCard.transform.GetChild(6).gameObject;
+                cardInfos = middleCard.transform.GetChild(4).gameObject;
                 cardInfos.SetActive(true);
                 CardInfos.Instance.card = middleCard.GetComponent<CardDisplay>();
                 CardInfos.Instance.UpdateInfos();
@@ -252,38 +251,10 @@ public class CardManager : MonoBehaviour
             return;
         }
 
-        if (numberOfCards <= 5)
-        {
-            totalTwist = 40f;
-            if (numberOfCards <= 4)
-            {
-                totalTwist = 30f;
-                if (numberOfCards <= 3)
-                {
-                    totalTwist = 20f;
-                    if (numberOfCards <= 1)
-                    {
-                        totalTwist = 0f;
-                    }
-                }
-            }
-        }
-
-        float twistedPerCard = totalTwist / numberOfCards;
-        float startTwist = -1f * (totalTwist / 2f);
 
         for (int i = 0; i < numberOfCards; i++)
         {
             hand[i].transform.position = new Vector3(startLocation.position.x + (i * gap), startLocation.position.y, i);
-            float twistForThisCard = startTwist + (i * twistedPerCard);
-            hand[i].transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
-            hand[i].transform.Rotate(0f, 0f, -twistForThisCard);
-
-            float scalingFactor = 0.01f;
-            float nudgeThisCard = Mathf.Abs(twistForThisCard);
-            nudgeThisCard *= scalingFactor;
-            hand[0].transform.Translate(0f, -nudgeThisCard, 0f);
-            hand[numberOfCards - 1].transform.Translate(0f, -nudgeThisCard, 0f);
         }
 
         if (numberOfCards % 2 != 0)

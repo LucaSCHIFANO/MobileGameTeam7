@@ -667,7 +667,6 @@ public class MapComposent : MonoBehaviour
         Time.timeScale = 0f;
         MapOpen = true;
         AudioManager.Instance.Play("GlobalMap");
-        AudioManager.Instance.Stop("BattleMap1");
 
         if (position == 100)
         {
@@ -678,7 +677,7 @@ public class MapComposent : MonoBehaviour
            /* if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
             {*/
                 Social.ReportProgress(GPGSIds.achievement_end_of_the_road, 100.0f, null);
-                GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_why_not, 2, null);
+                GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_why_not, 1, null); //2
             //}
 
             if (!CharacterManager.Instance.isHealed)

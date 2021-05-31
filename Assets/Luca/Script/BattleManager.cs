@@ -112,6 +112,20 @@ public class BattleManager : MonoBehaviour
                 UiActionManager.Instance.showButton();
                 UiActionManager.Instance.HidePortrait();
                 ComboSystem.Instance.comboEffect(CharacterManager.Instance.currentPlayer.stats.element, CharacterManager.Instance.currentPlayer.stats.elementCombo);
+
+                UiActionManager.Instance.EnemyToHero(CharacterManager.Instance.currentPlayer.stats);
+                UiActionManager.Instance.ShowPortrait(CharacterManager.Instance.currentPlayer.stats);
+
+                foreach (var item in Grid.Instance.gridArrayAlpha)
+                {
+                    Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.Instance.listSpritesAlpha[0];
+                    Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+                }
+            }
+            else
+            {
+                UiActionManager.Instance.EnemyToHero(CharacterManager.Instance.currentPlayer.stats);
+                UiActionManager.Instance.ShowPortrait(CharacterManager.Instance.currentPlayer.stats);
             }
         }
 
