@@ -483,6 +483,7 @@ MonoBehaviour:
     mute: 0
     loop: 0
     source: {fileID: 0}
+  menu: 0
 --- !u!1 &62497301
 GameObject:
   m_ObjectHideFlags: 0
@@ -8457,7 +8458,7 @@ MonoBehaviour:
   chosenCard: {fileID: 0}
   rollCard: {fileID: 0}
   startLocation: {fileID: 1887949847}
-  gap: 2
+  gap: 2.5
   handPanel: {fileID: 411351869}
   cardPosition: {fileID: 1088603448}
 --- !u!4 &1625963888
