@@ -9,45 +9,50 @@ public class CardManager : MonoBehaviour
     [Header("KDO LES GD")]
     public int nbTirageDebut = 5;
     public int howManyInHand = 5;
-    public Canvas canvas;
     public GameObject cardPrefab;
     public List<Card> cardList = new List<Card>();
     public List<AttackParam> attackParams = new List<AttackParam>();
+    public GameObject cardInfos;
 
-    public bool inChosenTime = false;
-    private bool inRound = false;
-    private bool isMid = false;
-
-    public bool handToMid = false;
-    public bool midToHand = false;
-    private Quaternion midRotation;
-
-    private float totalTwist;
-
-    private List<Card> deck = new List<Card>();
-
-    private List<GameObject> hand = new List<GameObject>();
-    public GameObject middleCard = null;
-    public GameObject chosenCard = null;
-
+    [Header("Random")]
+    public Canvas canvas;
+    public GameObject pauseButton;
+    public Transform bin;
     private List<Card> discard = new List<Card>();
 
-    private GameObject[] actualRoll = new GameObject[3];
+    [Header("RollCard")]
+    public bool inChosenTime = false;
+    public Text chooseCardText;
+    public GameObject deckSelection;
+    public Transform deckObject;
+    private List<Card> deck = new List<Card>();
+    private List<GameObject> actualRoll = new List<GameObject>();
     private int index = 0;
+    public Transform[] deckPosition;
+    private int deckPositionIndex = 0;
+    public bool rollCardIsChose = false;
 
-    //Hearthstone Style
+    [Header("In Round")]
+    public bool handToMid = false;
+    public bool midToHand = false;
+    public bool inRound = false;
+    private bool isMid = false;
+    private List<GameObject> hand = new List<GameObject>();
+    public GameObject middleCard = null;
+
+    public GameObject chosenCard = null;
+    public GameObject rollCard = null;
+ 
+
+    [Header("HearthStone Style")]
     public Transform startLocation;
     public float gap;
     public Transform handPanel;
     public Transform cardPosition;
+    private Quaternion midRotation;
+    private Quaternion previousRotation;
     private Vector3 previousTransform;
     private Vector3 previousScale;
-    private Quaternion previousRotation;
-
-    public GameObject cardInfos;
-
-
-    public Text chooseCardText;
 
     private static CardManager _instance = null;
 
@@ -127,24 +132,34 @@ public class CardManager : MonoBehaviour
                             {
                                 deck.Add(hitCard.GetComponent<CardDisplay>().card);
                                 hitCard.GetComponent<CardDisplay>().card.attackParam = hitCard.GetComponent<CardDisplay>().attackParam;
-
-                                for (int i = 0; i < actualRoll.Length; i++)
-                                {
-                                    Destroy(actualRoll[i]);
-                                    actualRoll[i] = null;
-                                }
+                                rollCard = hitCard;
+                                rollCard.transform.SetParent(deckObject);
+                                rollCardIsChose = true;
 
                                 if (index < nbTirageDebut - 1)
                                 {
-                                    RollCard();
-                                    index++;
+                                    
                                 }
                                 else
                                 {
                                     chooseCardText.gameObject.SetActive(false);
+                                    pauseButton.SetActive(true);
                                     //MapComposent.Instance.Opening();
                                     //MapComposent.Instance.Check();
                                     var cM = CharacterManager.Instance;
+
+                                    for (int i = 0; i < actualRoll.Count; i++)
+                                    {
+                                        Destroy(actualRoll[i]);
+                                    }
+                                    actualRoll.Clear();
+
+                                    for (int i = 0; i < deckObject.childCount; i++)
+                                    {
+                                        Destroy(deckObject.GetChild(i).gameObject);
+                                    }
+                                    deckSelection.SetActive(false);
+                                    rollCardIsChose = false;
 
                                     if (cM.currentPlayer == null || cM.currentPlayer.state != PlayerMovement.States.WIN)
                                     {
@@ -162,7 +177,7 @@ public class CardManager : MonoBehaviour
                                 if (!isMid)
                                 {
                                     previousTransform = hitCard.GetComponent<RectTransform>().localPosition;
-                                    previousRotation = hitCard.transform.rotation;
+                                    previousRotation = hitCard.GetComponent<RectTransform>().rotation;
                                     previousScale = hitCard.transform.localScale;
                                     middleCard = hitCard;
                                     handToMid = true;
@@ -179,6 +194,51 @@ public class CardManager : MonoBehaviour
             }
         }
 
+        if (rollCardIsChose)
+        {
+            if (!rollCard)
+            {
+                return;
+            }
+
+            for (int i = 0; i < actualRoll.Count; i++)
+            {
+                if (actualRoll[i] == rollCard)
+                {
+                   
+                }
+                else
+                {
+                    actualRoll[i].transform.position = Vector3.Lerp(actualRoll[i].transform.position, bin.position, 5f * Time.deltaTime);
+                    actualRoll[i].transform.localScale = Vector3.Lerp(actualRoll[i].transform.localScale, new Vector3(.01f, .01f, .01f), 5f * Time.deltaTime);
+                }
+
+                if (Vector2.Distance(actualRoll[i].transform.position, bin.position) < .1f)
+                {
+                    Destroy(actualRoll[i]);
+                    actualRoll.RemoveAt(i);
+                }
+            }
+
+            rollCard.transform.position = Vector3.Lerp(rollCard.transform.position, deckPosition[deckPositionIndex].position, 5f * Time.deltaTime);
+            rollCard.transform.localScale = Vector3.Lerp(rollCard.transform.localScale, new Vector3(.4f, .4f, .4f), 5f * Time.deltaTime);
+
+            if (Vector2.Distance(rollCard.transform.position, deckPosition[deckPositionIndex].position) < .01f)
+            {
+                rollCard.transform.position = deckPosition[deckPositionIndex].position;
+                rollCard.transform.localScale = new Vector3(.4f, .4f, .4f);
+                deckPositionIndex++;
+                actualRoll.Clear();
+                rollCardIsChose = false;
+                rollCard = null;
+                if (index < nbTirageDebut - 1)
+                {
+                    RollCard();
+                    index++;
+                }
+            } 
+        }
+
         if (handToMid)
         {
             if (middleCard == null)
@@ -186,14 +246,14 @@ public class CardManager : MonoBehaviour
                 return;
             }
             middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition, 7f * Time.deltaTime);
-            middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, midRotation, 7f * Time.deltaTime);
+            middleCard.GetComponent<RectTransform>().rotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().rotation, midRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
                 middleCard.GetComponent<CardDisplay>().actionCostText.text = "";
                 middleCard.GetComponent<CardDisplay>().attackText.text = "";
                 middleCard.GetComponent<CardDisplay>().artworkImage.gameObject.SetActive(false);
-                cardInfos = middleCard.transform.GetChild(4).gameObject;
+                cardInfos = middleCard.transform.GetChild(6).gameObject;
                 cardInfos.SetActive(true);
                 CardInfos.Instance.card = middleCard.GetComponent<CardDisplay>();
                 CardInfos.Instance.UpdateInfos();
@@ -213,7 +273,7 @@ public class CardManager : MonoBehaviour
                 return;
             }
             middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, previousTransform, 5f * Time.deltaTime);
-            middleCard.GetComponent<RectTransform>().localRotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().localRotation, previousRotation, 5f * Time.deltaTime);
+            middleCard.GetComponent<RectTransform>().rotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().rotation, previousRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, previousScale, 7f * Time.deltaTime);
@@ -275,10 +335,11 @@ public class CardManager : MonoBehaviour
 
     public void startTheGame()
     {
+        pauseButton.SetActive(false);
         inChosenTime = true;
         RollCard();
         chooseCardText.gameObject.SetActive(true);
-
+        deckSelection.SetActive(true);
     }
 
     public void startCombat()
@@ -300,27 +361,26 @@ public class CardManager : MonoBehaviour
 
     public void RollCard()
     {
-        
-        var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-6, 0, 0)), Quaternion.identity, canvas.transform);
+        var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-3, -1.4f, 0)), Quaternion.identity, canvas.transform);
         var number = Random.Range(0, cardList.Count);
         newCard.GetComponent<CardDisplay>().card = cardList[number];
         newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
         newCard.GetComponent<CardDisplay>().Start();
-        actualRoll[0] = newCard;
+        actualRoll.Add(newCard);
 
         number = Random.Range(0, cardList.Count);
-        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(0, 0, 0)), Quaternion.identity, canvas.transform);
+        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(0, -1.4f, 0)), Quaternion.identity, canvas.transform);
         newCard.GetComponent<CardDisplay>().card = cardList[number];
         newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
         newCard.GetComponent<CardDisplay>().Start();
-        actualRoll[1] = newCard;
+        actualRoll.Add(newCard);
 
         number = Random.Range(0, cardList.Count);
-        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(6, 0, 0)), Quaternion.identity, canvas.transform);
+        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(3, -1.4f, 0)), Quaternion.identity, canvas.transform);
         newCard.GetComponent<CardDisplay>().card = cardList[number];
         newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
         newCard.GetComponent<CardDisplay>().Start();
-        actualRoll[2] = newCard;
+        actualRoll.Add(newCard);
     }
 
     public void UseCard()

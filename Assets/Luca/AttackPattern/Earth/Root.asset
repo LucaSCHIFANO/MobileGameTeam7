@@ -28,5 +28,5 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: c147435465d715d4881c2b77eff55f1d, type: 3}
-  BackGround: {fileID: 21300000, guid: 110abd7114449e14a934c4cb5452a638, type: 3}
+  artwork: {fileID: 21300000, guid: b4f2ecffb98360d49ac50f3cb20ae648, type: 3}
+  BackGround: {fileID: 21300000, guid: 9d8220947d2c93141b5d6d1b9fa13eb0, type: 3}

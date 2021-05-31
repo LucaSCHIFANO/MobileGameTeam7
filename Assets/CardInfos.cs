@@ -36,6 +36,7 @@ public class CardInfos : MonoBehaviour
         puissance.text = "Power : " + card.attackParam.damage.ToString();
         cout.text =  "Cost : " + card.attackParam.APNeeded.ToString() + " AP";
         description.text = "Description : " + card.attackParam.description;
+        cardName.text = cardName.text.ToUpper();
         cardName.text = card.attackParam.patternName;
 
         if (card.attackParam.AOE)
