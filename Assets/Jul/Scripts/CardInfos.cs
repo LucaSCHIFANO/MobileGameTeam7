@@ -17,6 +17,11 @@ public class CardInfos : MonoBehaviour
     public GameObject pushPanel;
     public GameObject pullPanel;
 
+    public Animator aoeAnimator;
+    public Animator poisonAnimator;
+    public Animator pushAnimator;
+    public Animator pullAnimator;
+
     public CardDisplay card;
 
     private static CardInfos _instance = null;
@@ -41,38 +46,46 @@ public class CardInfos : MonoBehaviour
 
         if (card.attackParam.AOE)
         {
-            aoePanel.SetActive(false);
+            aoePanel.GetComponent<Image>().color = new Color(aoePanel.GetComponent<Image>().color.r, aoePanel.GetComponent<Image>().color.g, aoePanel.GetComponent<Image>().color.b, 0f);
+            aoeAnimator.speed = 1f;
         }
         else
         {
-            aoePanel.SetActive(true);
+            aoePanel.GetComponent<Image>().color = new Color(aoePanel.GetComponent<Image>().color.r, aoePanel.GetComponent<Image>().color.g, aoePanel.GetComponent<Image>().color.b, .7f);
+            aoeAnimator.speed = 0f;
         }
 
         if (card.attackParam.pull)
         {
-            pullPanel.SetActive(false);
+            pullPanel.GetComponent<Image>().color = new Color(pullPanel.GetComponent<Image>().color.r, pullPanel.GetComponent<Image>().color.g, pullPanel.GetComponent<Image>().color.b, 0f);
+            pullAnimator.speed = 1f;
         }
         else
         {
-            pullPanel.SetActive(true);
+            pullPanel.GetComponent<Image>().color = new Color(pullPanel.GetComponent<Image>().color.r, pullPanel.GetComponent<Image>().color.g, pullPanel.GetComponent<Image>().color.b, .7f);
+            pullAnimator.speed = 0f;
         }
 
         if (card.attackParam.push)
         {
-            pushPanel.SetActive(false);
+            pushPanel.GetComponent<Image>().color = new Color(pushPanel.GetComponent<Image>().color.r, pushPanel.GetComponent<Image>().color.g, pushPanel.GetComponent<Image>().color.b, 0f);
+            pushAnimator.speed = 1f;
         }
         else
         {
-            pushPanel.SetActive(true);
+            pushPanel.GetComponent<Image>().color = new Color(pushPanel.GetComponent<Image>().color.r, pushPanel.GetComponent<Image>().color.g, pushPanel.GetComponent<Image>().color.b, .7f);
+            pushAnimator.speed = 0f;
         }
 
         if (card.attackParam.effect == Stats.EFFECT.POISON)
         {
-            poisonPanel.SetActive(false);
+            poisonPanel.GetComponent<Image>().color = new Color(poisonPanel.GetComponent<Image>().color.r, poisonPanel.GetComponent<Image>().color.g, poisonPanel.GetComponent<Image>().color.b, 0f);
+            poisonAnimator.speed = 1f;
         }
         else
         {
-            poisonPanel.SetActive(true);
+            poisonPanel.GetComponent<Image>().color = new Color(poisonPanel.GetComponent<Image>().color.r, poisonPanel.GetComponent<Image>().color.g, poisonPanel.GetComponent<Image>().color.b, .7f);
+            poisonAnimator.speed = 0f;
         }
     }
 }

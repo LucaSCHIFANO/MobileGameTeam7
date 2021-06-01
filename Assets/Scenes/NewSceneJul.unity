@@ -3742,10 +3742,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listEnAttack:
-  - {fileID: 11400000, guid: c13a6bcc58b5984488a16a0db855024a, type: 2}
-  - {fileID: 11400000, guid: 180afc0f9f209044ca804839c7da62e8, type: 2}
-  - {fileID: 11400000, guid: 005268a5e884c9543a97017869fa8b65, type: 2}
-  - {fileID: 11400000, guid: 69ecbb99035c7f946b25016be2d9fe01, type: 2}
+  - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
+  - {fileID: 11400000, guid: bdebbc7b1fe559944aff6940133c4ce3, type: 2}
+  - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
+  - {fileID: 11400000, guid: 4a86ab43a5b5d414c8d311cbe9a9c393, type: 2}
 --- !u!1 &685308338
 GameObject:
   m_ObjectHideFlags: 0
@@ -8626,7 +8626,7 @@ MonoBehaviour:
   chosenCard: {fileID: 0}
   rollCard: {fileID: 0}
   startLocation: {fileID: 1887949847}
-  gap: 2.5
+  gap: 2.25
   handPanel: {fileID: 411351869}
   cardPosition: {fileID: 1088603448}
 --- !u!4 &1625963888
