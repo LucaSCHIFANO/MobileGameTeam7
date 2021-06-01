@@ -124,11 +124,11 @@ public class UiActionManager : MonoBehaviour
                         {
                             CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.AOESELECT;
                         }
-
                     }
                 }
             }
         }
+        apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 
     public void hideAll()
