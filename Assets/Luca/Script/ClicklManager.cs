@@ -345,9 +345,13 @@ public class ClicklManager : MonoBehaviour
 
         if (player.state == PlayerMovement.States.SELECTED)
         {
-            Grid.Instance.resetClicked();
-            player.state = PlayerMovement.States.IDLE;
-            UiActionManager.Instance.showButton();
+            var cardM = CardManager.Instance;
+            if (!cardM.handToMid && !cardM.midToHand)
+            {
+                Grid.Instance.resetClicked();
+                player.state = PlayerMovement.States.IDLE;
+                UiActionManager.Instance.showButton();
+            }
         }
 
         else if (player.state == PlayerMovement.States.SELECTCARD)
@@ -366,16 +370,24 @@ public class ClicklManager : MonoBehaviour
 
         else if (player.state == PlayerMovement.States.ACTION)
         {
-            Grid.Instance.resetClicked();
-            player.state = PlayerMovement.States.SELECTCARD;
-            UiActionManager.Instance.showDeckForced();
+            var cardM = CardManager.Instance;
+            if (!cardM.handToMid && !cardM.midToHand)
+            {
+                Grid.Instance.resetClicked();
+                player.state = PlayerMovement.States.SELECTCARD;
+                UiActionManager.Instance.showDeckForced();
+            }
         }
         
         else if (player.state == PlayerMovement.States.AOESELECT)
         {
-            Grid.Instance.resetClicked();
-            player.state = PlayerMovement.States.SELECTCARD;
-            UiActionManager.Instance.showDeck();
+            var cardM = CardManager.Instance;
+            if (!cardM.handToMid && !cardM.midToHand)
+            {
+                Grid.Instance.resetClicked();
+                player.state = PlayerMovement.States.SELECTCARD;
+                UiActionManager.Instance.showDeck();
+            }
         }
     }
 }
