@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Demon Arrow
   description: An arrow made with ferocious demons bones
-  range: 4
+  range: 3
   row_column: 0
   throughWall: 0
   APNeeded: 1
