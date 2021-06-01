@@ -29,5 +29,6 @@ MonoBehaviour:
   effect: 1
   duration: 3
   intensity: 2
-  artwork: {fileID: 21300000, guid: c147435465d715d4881c2b77eff55f1d, type: 3}
-  BackGround: {fileID: 21300000, guid: 110abd7114449e14a934c4cb5452a638, type: 3}
+  artwork: {fileID: 21300000, guid: 5443a9843792f17469371396c033eb47, type: 3}
+  BackGround: {fileID: 21300000, guid: 5d027a65ecad9ca40ba4e0e1248d9809, type: 3}
+  musicName: Dart

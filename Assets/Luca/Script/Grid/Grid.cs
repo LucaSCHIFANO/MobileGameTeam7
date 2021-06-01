@@ -364,7 +364,7 @@ public class Grid : MonoBehaviour
             setPlayerStats(enE.stats, CharacterManager.Instance.sS.loadValue());
         }
 
-        switch (CharacterManager.Instance.currentPlayer.stats.element)
+        /*switch (CharacterManager.Instance.currentPlayer.stats.element)
         {
             case Stats.ELEMENT.NORMAL:
                 UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[3];
@@ -380,7 +380,7 @@ public class Grid : MonoBehaviour
                 break;
             default:
                 break;
-        }
+        }*/
 
         CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
 

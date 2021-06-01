@@ -29,3 +29,5 @@ MonoBehaviour:
   duration: 0
   intensity: 0
   artwork: {fileID: 0}
+  BackGround: {fileID: 0}
+  musicName: Sword
