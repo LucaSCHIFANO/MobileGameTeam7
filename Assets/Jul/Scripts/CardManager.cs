@@ -146,7 +146,6 @@ public class CardManager : MonoBehaviour
                                 else
                                 {
                                     chooseCardText.gameObject.SetActive(false);
-                                    pauseButton.SetActive(true);
                                     //MapComposent.Instance.Opening();
                                     //MapComposent.Instance.Check();
                                     var cM = CharacterManager.Instance;
@@ -360,6 +359,7 @@ public class CardManager : MonoBehaviour
 
     public void startCombat()
     {
+        pauseButton.SetActive(true);
         for (int i = 0; i < howManyInHand; i++)
         {
             var handCard = Instantiate(cardPrefab, startLocation.position, Quaternion.identity, handPanel);

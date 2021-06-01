@@ -22,6 +22,9 @@ public class UiActionManager : MonoBehaviour
     public Image elementImage;
     public Sprite[] elementInfos = new Sprite[4];
 
+    [Header("UI")]
+    public TextMeshProUGUI turnText;
+
     public Image[] inGame = new Image[4];
     public List<Sprite> heroSprites = new List<Sprite>();
     public List<Sprite> enemySprites = new List<Sprite>();
