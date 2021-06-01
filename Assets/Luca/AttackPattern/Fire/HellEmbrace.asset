@@ -30,3 +30,4 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 21300000, guid: df79a42886594e44b9dc3a837a71f9f1, type: 3}
   BackGround: {fileID: 21300000, guid: 0ad7c65920dd06d438d231d471a0b57f, type: 3}
+  musicName: Fire3Long

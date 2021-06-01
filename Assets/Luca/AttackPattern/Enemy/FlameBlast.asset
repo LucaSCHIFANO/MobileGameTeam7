@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
-  m_Name: DemonArrow
+  m_Name: FlameBlast
   m_EditorClassIdentifier: 
-  patternName: DemonArrow
-  description: An arrow made with ferocious demons bones
-  range: 4
+  patternName: FlameBlast
+  description: 
+  range: 2
   row_column: 0
-  throughWall: 0
-  APNeeded: 1
-  damage: 7
+  throughWall: 1
+  APNeeded: 3
+  damage: 4
   push: 0
   pull: 0
   element: 1
@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: 9cd599a547e277944bc5b65fd612af0a, type: 3}
-  BackGround: {fileID: 21300000, guid: 0ad7c65920dd06d438d231d471a0b57f, type: 3}
-  musicName: Swooshogg
+  artwork: {fileID: 0}
+  BackGround: {fileID: 0}
+  musicName: Fire2

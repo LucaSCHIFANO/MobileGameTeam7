@@ -30,3 +30,4 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 21300000, guid: 2f0d077555b8d9342968c526e17be27a, type: 3}
   BackGround: {fileID: 21300000, guid: 9d8220947d2c93141b5d6d1b9fa13eb0, type: 3}
+  musicName: Nature3

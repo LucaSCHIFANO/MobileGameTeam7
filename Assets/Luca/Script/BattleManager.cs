@@ -41,6 +41,8 @@ public class BattleManager : MonoBehaviour
         UiActionManager.Instance.HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
         UiActionManager.Instance.currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
 
+        AudioManager.Instance.Play(currentAttackParam.musicName);
+
         Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
         if (att.GetComponent<PlayerMovement>())
