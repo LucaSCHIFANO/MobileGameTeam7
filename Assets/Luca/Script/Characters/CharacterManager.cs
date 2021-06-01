@@ -44,12 +44,6 @@ public class CharacterManager : MonoBehaviour
                 enemyList.Add(chara);
             }
         }
-
-        if (EnemiesBoard.Instance)
-        {
-            EnemiesBoard.Instance.CheckList();
-        }
-
     }
 
     public void enemiesMovement() // fait bougé un ennemi
@@ -95,7 +89,6 @@ public class CharacterManager : MonoBehaviour
                 if (chara.GetComponent<Stats>().HP <= 0)
                 {
                     enemyList.Remove(chara);
-                    EnemiesBoard.Instance.CheckList();
                     Destroy(chara);
                     PhaseManager.Instance.monsterInOneTurn++;
 
@@ -104,19 +97,19 @@ public class CharacterManager : MonoBehaviour
                         if (BattleManager.Instance.currentAttackParam && BattleManager.Instance.currentAttackParam.range == 1)
                         {
 
-                            if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                            {
+                            /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                            {*/
                                 Social.ReportProgress(GPGSIds.achievement_savage, 100.0f, null);
-                            }
+                            //}
                         }
                     }
 
-                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                    {
-                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_ruthless, 25, null);
-                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_heartless, 50, null);
-                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_genocide, 100, null);
-                    }
+                    /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    {*/
+                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_ruthless, 1, null); // 25
+                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_heartless, 1, null); //50 
+                        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_genocide, 1, null); //100
+                    //}
                 }
             }
         }
@@ -125,55 +118,57 @@ public class CharacterManager : MonoBehaviour
         if (playerList.Count == 0)
         {
             Debug.Log("You died");
-            EnemiesBoard.Instance.ClearList();
 
-            if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-            {
+            /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+            {*/
                 //Social.ReportProgress(GPGSIds.achievement_never_gonna_give_you_up, 10.0f, null);
-                GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_never_gonna_give_you_up, 10, null);
-            }
+                GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_never_gonna_give_you_up, 1, null); //10
+            //}
 
-            SceneManager.LoadScene("MainMenu");
+            //SceneManager.LoadScene("MainMenu");
+            UiActionManager.Instance.StartCoroutine("backToMenu");
         }
 
         else if (enemyList.Count == 0)
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
-            EnemiesBoard.Instance.ClearList();
+
+            AudioManager.Instance.Stop("BattleMap1");
+            AudioManager.Instance.Play("Victory!");
 
             sS.setValues(currentPlayer.stats);
 
             if(PhaseManager.Instance.monsterInOneTurn >= 3)
             {
-                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                {
+                /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {*/
                     Social.ReportProgress(GPGSIds.achievement_slaughter, 100.0f, null);
-                }
+                //}
             }
 
             if(PhaseManager.Instance.numberOfTurnBattle <= 3)
             {
-                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                {
+                /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {*/
                     Social.ReportProgress(GPGSIds.achievement_blitzkrieg, 100.0f, null);
-                }
+                //}
             }
 
             if (ComboSystem.Instance.onlyOneElem)
             {
-                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                {
+                /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {*/
                     Social.ReportProgress(GPGSIds.achievement_stubborn, 100.0f, null);
-                }
+                //}
             }
 
             if (noDamage)
             {
-                if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                {
+                /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                {*/
                     Social.ReportProgress(GPGSIds.achievement_not_a_scratch, 100.0f, null);
-                }
+                //}
             }
 
             if(Grid.Instance.progress != 9)
@@ -191,6 +186,7 @@ public class CharacterManager : MonoBehaviour
 
     public void returnToMap()
     {
+        CardManager.Instance.inChosenTime = false;
         MapComposent.Instance.Opening();
         StartCoroutine("waitforopen");
     }
@@ -201,10 +197,10 @@ public class CharacterManager : MonoBehaviour
         MapComposent.Instance.Check();
         Grid.Instance.deleteMap(false);
 
-        if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-        {
+        /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+        {*/
             Social.ReportProgress(GPGSIds.achievement_a_legend_is_born, 100.0f, null);
-            GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_grinder, 30, null);
-        }
+            GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_grinder, 1, null); //30
+        //}
     }
 }

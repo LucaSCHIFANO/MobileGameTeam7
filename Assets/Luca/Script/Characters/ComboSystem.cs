@@ -76,10 +76,10 @@ public class ComboSystem : MonoBehaviour
                 {
                     player.stats.boostAtt = f2;
 
-                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                     {
                         Social.ReportProgress(GPGSIds.achievement_the_way_of_fire, 100.0f, null);
-                    }
+                    }*/
                 }
                 if (number >= 3)
                 {
@@ -93,10 +93,10 @@ public class ComboSystem : MonoBehaviour
                 {
                     player.stats.boostAtt = f5;
 
-                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                    {
+                    /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    {*/
                         Social.ReportProgress(GPGSIds.achievement_endless_destruction, 100.0f, null);
-                    }
+                   // }
                 }
                 break;
 
@@ -107,10 +107,10 @@ public class ComboSystem : MonoBehaviour
                 {
                     player.stats.boostDef = w2;
 
-                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                    {
+                    /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    {*/
                         Social.ReportProgress(GPGSIds.achievement_the_way_of_water, 100.0f, null);
-                    }
+                    //}
                 }
                 if (number >= 3)
                 {
@@ -124,10 +124,10 @@ public class ComboSystem : MonoBehaviour
                 {
                     player.stats.boostDef = w5;
 
-                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                    {
+                    /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    {*/
                         Social.ReportProgress(GPGSIds.achievement_impregnable_fortress, 100.0f, null);
-                    }
+                    //}
                 }
                 break;
 
@@ -138,10 +138,10 @@ public class ComboSystem : MonoBehaviour
                 {
                     player.stats.boostAP = e2;
 
-                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                    {
+                   /* if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    {*/
                         Social.ReportProgress(GPGSIds.achievement_the_way_of_nature, 100.0f, null);
-                    }
+                    //}
                 }
                 if (number >= 3)
                 {
@@ -155,10 +155,10 @@ public class ComboSystem : MonoBehaviour
                 {
                     player.stats.boostAP = e5;
 
-                    if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                    {
+                    /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
+                    {*/
                         Social.ReportProgress(GPGSIds.achievement_speed_of_light, 100.0f, null);
-                    }
+                    //}
                 }
 
                 player.stats.actionPoint += (player.stats.boostAP - player.stats.boostAPUsed);
@@ -168,5 +168,8 @@ public class ComboSystem : MonoBehaviour
             default:
                 break;
         }
+
+        UiActionManager.Instance.defText.text = (CharacterManager.Instance.currentPlayer.stats.defense + CharacterManager.Instance.currentPlayer.stats.boostDef).ToString();
+        UiActionManager.Instance.attText.text = (CharacterManager.Instance.currentPlayer.stats.strenght + CharacterManager.Instance.currentPlayer.stats.boostAtt).ToString();
     }
 }

@@ -41,14 +41,28 @@ public class MenuPause : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        var mc = MapComposent.Instance;
+        Instantiate(mc.fade, transform.position, transform.rotation, gameObject.transform);
+        StartCoroutine("waitforclose");
     }
+
 
     public void Confirm()
     {
         Time.timeScale = 1f;
+        var mc = MapComposent.Instance;
+        Instantiate(mc.fade, transform.position, transform.rotation, gameObject.transform);
+        StartCoroutine("waitforclose");
+    }
+
+
+    private IEnumerator waitforclose()
+    {
+        yield return new WaitForSecondsRealtime(0.6f);
         SceneManager.LoadScene("MainMenu");
     }
+
+        
 
     public void OptionsActive()
     {

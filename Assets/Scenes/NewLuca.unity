@@ -3712,10 +3712,11 @@ MonoBehaviour:
   enemy: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
   mC: {fileID: 260224054}
   listSprites:
-  - {fileID: 21300000, guid: e84fb5e5af7c2b247bccc89cfba94d22, type: 3}
-  - {fileID: 21300000, guid: c873fc03b73711242a1dda578abc6fbe, type: 3}
-  - {fileID: 21300000, guid: 12f94bd2f33c82247a0d8fe8e6a9b3d4, type: 3}
+  - {fileID: 21300000, guid: 7e1899ea62ee26e45b3fbaa4e05bf757, type: 3}
+  - {fileID: 21300000, guid: 155cb5d927622f94db91f55ae61a38d0, type: 3}
+  - {fileID: 21300000, guid: 6c71e3bf9bd974d4abd9f91459c7d109, type: 3}
   - {fileID: 21300000, guid: 78f6345f9c0022140ba9e804065c770e, type: 3}
+  - {fileID: 21300000, guid: 4fbca928a788f61489b0736cd6558006, type: 3}
   listSpritesAlpha:
   - {fileID: 21300000, guid: 498ec891f7dceaf4a980d759d51780b8, type: 3}
   - {fileID: 21300000, guid: fba5957a8f3487e4b8bc6013a253826d, type: 3}
@@ -5761,22 +5762,31 @@ MonoBehaviour:
   buttonCancel: {fileID: 1769318695}
   deck: {fileID: 2032853119}
   use: {fileID: 794376097}
-  moveLeft: {fileID: 145212390}
-  unitPortrait: {fileID: 1363868914}
   imageBG: {fileID: 736588756}
   unitName: {fileID: 738767330}
   unitHP: {fileID: 1461122191}
   unitSTR: {fileID: 213787466}
   unitDEF: {fileID: 753588527}
   unitAP: {fileID: 145212390}
-  HPBar: {fileID: 524270450}
   element: {fileID: 1432821048}
+  HPBar: {fileID: 524270450}
   apleft: {fileID: 1395277099}
-  sra: {fileID: 974637998}
+  currenntHP: {fileID: 0}
+  maxHP: {fileID: 0}
+  unitPortrait: {fileID: 1363868914}
+  defText: {fileID: 0}
+  attText: {fileID: 0}
+  elementImage: {fileID: 0}
+  elementInfos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   enemiesBoard: {fileID: 692020110}
   button: {fileID: 128577141}
   minusButtonImage: {fileID: 21300000, guid: ba9348043e6ef804a825b799d33e6fe9, type: 3}
   plusButtonImage: {fileID: 21300000, guid: dbcee01fda92f2d4e8203e2da240dd02, type: 3}
+  sra: {fileID: 974637998}
 --- !u!114 &974637998
 MonoBehaviour:
   m_ObjectHideFlags: 0
