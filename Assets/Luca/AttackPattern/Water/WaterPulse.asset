@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: WaterPulse
   description: A wave that push the enemy 1 square away
-  range: 4
+  range: 3
   row_column: 0
   throughWall: 0
   APNeeded: 2

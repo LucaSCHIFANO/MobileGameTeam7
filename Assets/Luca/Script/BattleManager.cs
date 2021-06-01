@@ -88,10 +88,10 @@ public class BattleManager : MonoBehaviour
             }
             else if (currentAttackParam.effect == Stats.EFFECT.LIFESTEAL)
             {
-                att.HP += (int)(damage * 0.1f);
+                att.HP += (int)(damage * 0.5f);
                 att.HP = Mathf.Clamp(att.HP, 0, att.maxHP);
 
-                if ((int)(damage * 0.1f) > 0)
+                if ((int)(damage * 0.5f) > 0)
                 {
                     CharacterManager.Instance.isHealed = true;
                 }

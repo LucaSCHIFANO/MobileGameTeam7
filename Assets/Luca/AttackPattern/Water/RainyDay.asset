@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Rainy Day
   description: A giant storm devastate enemies
-  range: 5
+  range: 4
   row_column: 1
   throughWall: 1
   APNeeded: 3
