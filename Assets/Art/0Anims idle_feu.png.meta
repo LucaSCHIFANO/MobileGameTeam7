@@ -1,0 +1,2412 @@
+fileFormatVersion: 2
+guid: 89aa9e8af932ddf4abedc5461a1003fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7755112052257712228
+    second: Anims idle_feu_0
+  - first:
+      213: 1937761189179692710
+    second: Anims idle_feu_1
+  - first:
+      213: -9125435349658498582
+    second: Anims idle_feu_2
+  - first:
+      213: -1284077853736158523
+    second: Anims idle_feu_3
+  - first:
+      213: -7446568877162327037
+    second: Anims idle_feu_4
+  - first:
+      213: -2790695293942901667
+    second: Anims idle_feu_5
+  - first:
+      213: -8595938517663211157
+    second: Anims idle_feu_6
+  - first:
+      213: 8925570649262568875
+    second: Anims idle_feu_7
+  - first:
+      213: 4216751239058406299
+    second: Anims idle_feu_8
+  - first:
+      213: -1445736298315669983
+    second: Anims idle_feu_9
+  - first:
+      213: -5157500273500852087
+    second: Anims idle_feu_10
+  - first:
+      213: -3349020920017530715
+    second: Anims idle_feu_11
+  - first:
+      213: 8475894474936892691
+    second: Anims idle_feu_12
+  - first:
+      213: 4631055030620290798
+    second: Anims idle_feu_13
+  - first:
+      213: -7318576644057392182
+    second: Anims idle_feu_14
+  - first:
+      213: 3989368190339698920
+    second: Anims idle_feu_15
+  - first:
+      213: -6207514001531668560
+    second: Anims idle_feu_16
+  - first:
+      213: -1109500188710719490
+    second: Anims idle_feu_17
+  - first:
+      213: -1499296346484521397
+    second: Anims idle_feu_18
+  - first:
+      213: -5966462540867201262
+    second: Anims idle_feu_19
+  - first:
+      213: 610315541724409928
+    second: Anims idle_feu_20
+  - first:
+      213: 3127541431630222765
+    second: Anims idle_feu_21
+  - first:
+      213: 277663163464381156
+    second: Anims idle_feu_22
+  - first:
+      213: 6905732455861419383
+    second: Anims idle_feu_23
+  - first:
+      213: 7196917313385185900
+    second: Anims idle_feu_24
+  - first:
+      213: -6402282899119259580
+    second: Anims idle_feu_25
+  - first:
+      213: 6887897672897903509
+    second: Anims idle_feu_26
+  - first:
+      213: -5520488038687468670
+    second: Anims idle_feu_27
+  - first:
+      213: -9200745343360493623
+    second: Anims idle_feu_28
+  - first:
+      213: -3948390369677607182
+    second: Anims idle_feu_29
+  - first:
+      213: -2734488299990886331
+    second: Anims idle_feu_30
+  - first:
+      213: 1692598179623380790
+    second: Anims idle_feu_31
+  - first:
+      213: 501787951355242815
+    second: Anims idle_feu_32
+  - first:
+      213: 6936254952223687758
+    second: Anims idle_feu_33
+  - first:
+      213: 1124099557598252785
+    second: Anims idle_feu_34
+  - first:
+      213: 8549011107624297923
+    second: Anims idle_feu_35
+  - first:
+      213: 5238144741601549114
+    second: Anims idle_feu_36
+  - first:
+      213: -2485910966986828273
+    second: Anims idle_feu_37
+  - first:
+      213: -2968498511724315097
+    second: Anims idle_feu_38
+  - first:
+      213: -418945189519443811
+    second: Anims idle_feu_39
+  - first:
+      213: 1222614831027817451
+    second: Anims idle_feu_40
+  - first:
+      213: 1589705810051375165
+    second: Anims idle_feu_41
+  - first:
+      213: 3757554717522865436
+    second: Anims idle_feu_42
+  - first:
+      213: -4492210216190098594
+    second: Anims idle_feu_43
+  - first:
+      213: -2694364872933000938
+    second: Anims idle_feu_44
+  - first:
+      213: 3668361253978777462
+    second: Anims idle_feu_45
+  - first:
+      213: -6610804100644685782
+    second: Anims idle_feu_46
+  - first:
+      213: 4804068638177842089
+    second: Anims idle_feu_47
+  - first:
+      213: -4070784787051264989
+    second: Anims idle_feu_48
+  - first:
+      213: -4984859393542234584
+    second: Anims idle_feu_49
+  - first:
+      213: 3224849839544583977
+    second: Anims idle_feu_50
+  - first:
+      213: -2589130283650035024
+    second: Anims idle_feu_51
+  - first:
+      213: -2077100221143856257
+    second: Anims idle_feu_52
+  - first:
+      213: 7648506697017750617
+    second: Anims idle_feu_53
+  - first:
+      213: -3110382934073551738
+    second: Anims idle_feu_54
+  - first:
+      213: 7271141445962560574
+    second: Anims idle_feu_55
+  - first:
+      213: -6587487366979876488
+    second: Anims idle_feu_56
+  - first:
+      213: -963977875394477272
+    second: Anims idle_feu_57
+  - first:
+      213: -2473539082343693778
+    second: Anims idle_feu_58
+  - first:
+      213: 3737465236712168035
+    second: Anims idle_feu_59
+  - first:
+      213: -3201393838379347955
+    second: Anims idle_feu_60
+  - first:
+      213: -4782112901054799477
+    second: Anims idle_feu_61
+  - first:
+      213: -4989947735100847871
+    second: Anims idle_feu_62
+  - first:
+      213: 4396680436079307847
+    second: Anims idle_feu_63
+  - first:
+      213: 7633017921735806322
+    second: Anims idle_feu_64
+  - first:
+      213: -8001885705238750712
+    second: Anims idle_feu_65
+  - first:
+      213: 8199890433500958874
+    second: Anims idle_feu_66
+  - first:
+      213: 2518923449671869153
+    second: Anims idle_feu_67
+  - first:
+      213: -7853595492375327073
+    second: Anims idle_feu_68
+  - first:
+      213: 5916996268093598546
+    second: Anims idle_feu_69
+  - first:
+      213: 4988220730495811515
+    second: Anims idle_feu_70
+  - first:
+      213: 1699356052167590915
+    second: Anims idle_feu_71
+  - first:
+      213: -2817863197296980992
+    second: Anims idle_feu_72
+  - first:
+      213: -4827241189204609138
+    second: Anims idle_feu_73
+  - first:
+      213: -925134399321665194
+    second: Anims idle_feu_74
+  - first:
+      213: 7174265172348861783
+    second: Anims idle_feu_75
+  - first:
+      213: 6417456255105789964
+    second: Anims idle_feu_76
+  - first:
+      213: -5917329065019045391
+    second: Anims idle_feu_77
+  - first:
+      213: -5217777666316168601
+    second: Anims idle_feu_78
+  - first:
+      213: 2659995007811559675
+    second: Anims idle_feu_79
+  - first:
+      213: 5411765859657335832
+    second: Anims idle_feu_80
+  - first:
+      213: -3017318573508677225
+    second: Anims idle_feu_81
+  - first:
+      213: -1622948422495155950
+    second: Anims idle_feu_82
+  - first:
+      213: -6591410371234488510
+    second: Anims idle_feu_83
+  - first:
+      213: -8651618388842850207
+    second: Anims idle_feu_84
+  - first:
+      213: -4410742059100453569
+    second: Anims idle_feu_85
+  - first:
+      213: 7832125748333223975
+    second: Anims idle_feu_86
+  - first:
+      213: -8543331716667734576
+    second: Anims idle_feu_87
+  - first:
+      213: 2575673672022372633
+    second: Anims idle_feu_88
+  - first:
+      213: 7985356048451572212
+    second: Anims idle_feu_89
+  - first:
+      213: 8092713420547101380
+    second: Anims idle_feu_90
+  - first:
+      213: -5237992593669028425
+    second: Anims idle_feu_91
+  - first:
+      213: -7833944460761089354
+    second: Anims idle_feu_92
+  - first:
+      213: 8240733750087534224
+    second: Anims idle_feu_93
+  - first:
+      213: -449575311356965829
+    second: Anims idle_feu_94
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims idle_feu_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 7014
+        width: 496
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468eb2cb251bf9b60800000000000000
+      internalID: 7755112052257712228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_1
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 7014
+        width: 488
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6189ce88f44ea10800000000000000
+      internalID: 1937761189179692710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_2
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 7018
+        width: 492
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae900dae5e0fb5180800000000000000
+      internalID: -9125435349658498582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_3
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 7016
+        width: 500
+        height: 1130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca3c10def90e2ee0800000000000000
+      internalID: -1284077853736158523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_4
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 7018
+        width: 496
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30492415f0978a890800000000000000
+      internalID: -7446568877162327037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_5
+      rect:
+        serializedVersion: 2
+        x: 2558
+        y: 7018
+        width: 496
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54dd287a657549d0800000000000000
+      internalID: -2790695293942901667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_6
+      rect:
+        serializedVersion: 2
+        x: 3066
+        y: 7018
+        width: 500
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61269f167715b880800000000000000
+      internalID: -8595938517663211157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_7
+      rect:
+        serializedVersion: 2
+        x: 3574
+        y: 7018
+        width: 508
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5b2fe373ffddb70800000000000000
+      internalID: 8925570649262568875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_8
+      rect:
+        serializedVersion: 2
+        x: 4090
+        y: 7018
+        width: 504
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bb34e19e8e48a30800000000000000
+      internalID: 4216751239058406299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5848
+        width: 518
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e910c1f76bfebe0800000000000000
+      internalID: -1445736298315669983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_10
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 5854
+        width: 504
+        height: 1119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980700da3d0ec68b0800000000000000
+      internalID: -5157500273500852087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_11
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5854
+        width: 502
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0d0059733e581d0800000000000000
+      internalID: -3349020920017530715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_12
+      rect:
+        serializedVersion: 2
+        x: 3582
+        y: 5854
+        width: 500
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d3f442e1d60a570800000000000000
+      internalID: 8475894474936892691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_13
+      rect:
+        serializedVersion: 2
+        x: 4090
+        y: 5854
+        width: 496
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee78639300d44040800000000000000
+      internalID: 4631055030620290798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_14
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 5854
+        width: 492
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb1d7551513f6a90800000000000000
+      internalID: -7318576644057392182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_15
+      rect:
+        serializedVersion: 2
+        x: 5102
+        y: 5854
+        width: 492
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0d0778b351d5730800000000000000
+      internalID: 3989368190339698920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_16
+      rect:
+        serializedVersion: 2
+        x: 5610
+        y: 5858
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7f07887ea7ad9a0800000000000000
+      internalID: -6207514001531668560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_17
+      rect:
+        serializedVersion: 2
+        x: 6114
+        y: 5858
+        width: 492
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff2bade4734a90f0800000000000000
+      internalID: -1109500188710719490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_18
+      rect:
+        serializedVersion: 2
+        x: 6622
+        y: 5855
+        width: 488
+        height: 1119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46cfbe9aed613be0800000000000000
+      internalID: -1499296346484521397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_19
+      rect:
+        serializedVersion: 2
+        x: 7127
+        y: 5858
+        width: 491
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2179fe54eedd23da0800000000000000
+      internalID: -5966462540867201262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_20
+      rect:
+        serializedVersion: 2
+        x: 7631
+        y: 5858
+        width: 487
+        height: 1119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840326960c6487800800000000000000
+      internalID: 610315541724409928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 4702
+        width: 487
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5d2a49c52476b20800000000000000
+      internalID: 3127541431630222765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_22
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 4702
+        width: 484
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e271811d257ad300800000000000000
+      internalID: 277663163464381156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_23
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 4702
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d7189941716df50800000000000000
+      internalID: 6905732455861419383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_24
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 4702
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c62ce266a2690e360800000000000000
+      internalID: 7196917313385185900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_25
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 4702
+        width: 487
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440407ebf958627a0800000000000000
+      internalID: -6402282899119259580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_26
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 4702
+        width: 487
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bb15a907ab69f50800000000000000
+      internalID: 6887897672897903509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_27
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 4704
+        width: 488
+        height: 1110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2839d3ba0694363b0800000000000000
+      internalID: -5520488038687468670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_28
+      rect:
+        serializedVersion: 2
+        x: 3554
+        y: 4705
+        width: 488
+        height: 1109
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c71b2c9bd2605080800000000000000
+      internalID: -9200745343360493623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_29
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 4703
+        width: 488
+        height: 1111
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fefac4d0ef7439c0800000000000000
+      internalID: -3948390369677607182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_30
+      rect:
+        serializedVersion: 2
+        x: 4566
+        y: 4706
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548d49c01652d0ad0800000000000000
+      internalID: -2734488299990886331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_31
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 4702
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637aceb93115d7710800000000000000
+      internalID: 1692598179623380790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_32
+      rect:
+        serializedVersion: 2
+        x: 5574
+        y: 4702
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39a911bb75b6f600800000000000000
+      internalID: 501787951355242815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_33
+      rect:
+        serializedVersion: 2
+        x: 6079
+        y: 4702
+        width: 487
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4446d21127824060800000000000000
+      internalID: 6936254952223687758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_34
+      rect:
+        serializedVersion: 2
+        x: 6586
+        y: 4698
+        width: 487
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe41d6879a999f00800000000000000
+      internalID: 1124099557598252785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_35
+      rect:
+        serializedVersion: 2
+        x: 7087
+        y: 4698
+        width: 491
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5a0dace4034a670800000000000000
+      internalID: 8549011107624297923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_36
+      rect:
+        serializedVersion: 2
+        x: 7594
+        y: 4698
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b9d3db3e0a1b840800000000000000
+      internalID: 5238144741601549114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3538
+        width: 490
+        height: 1119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06908d7525408dd0800000000000000
+      internalID: -2485910966986828273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_38
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 3536
+        width: 488
+        height: 1122
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e7564d456cdc6d0800000000000000
+      internalID: -2968498511724315097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_39
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 3534
+        width: 490
+        height: 1123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98b55ed19b9f2af0800000000000000
+      internalID: -418945189519443811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_40
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 3534
+        width: 488
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb898c06b997f010800000000000000
+      internalID: 1222614831027817451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_41
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 3530
+        width: 488
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30ac79f205cf0610800000000000000
+      internalID: 1589705810051375165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_42
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 3530
+        width: 488
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d2b027b14852430800000000000000
+      internalID: 3757554717522865436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_43
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 3530
+        width: 488
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53cb9feb9678a1c0800000000000000
+      internalID: -4492210216190098594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_44
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 3526
+        width: 490
+        height: 1130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619b9856c61bb9ad0800000000000000
+      internalID: -2694364872933000938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_45
+      rect:
+        serializedVersion: 2
+        x: 4058
+        y: 3526
+        width: 492
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677263bef13a8e230800000000000000
+      internalID: 3668361253978777462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_46
+      rect:
+        serializedVersion: 2
+        x: 4566
+        y: 3526
+        width: 491
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28b06d22b4b144a0800000000000000
+      internalID: -6610804100644685782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_47
+      rect:
+        serializedVersion: 2
+        x: 5070
+        y: 3522
+        width: 488
+        height: 1136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a35f2f29fa7ba240800000000000000
+      internalID: 4804068638177842089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_48
+      rect:
+        serializedVersion: 2
+        x: 5574
+        y: 3522
+        width: 488
+        height: 1135
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324cebaddcaa187c0800000000000000
+      internalID: -4070784787051264989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_49
+      rect:
+        serializedVersion: 2
+        x: 6079
+        y: 3522
+        width: 491
+        height: 1135
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e55a0eac832dab0800000000000000
+      internalID: -4984859393542234584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_50
+      rect:
+        serializedVersion: 2
+        x: 6586
+        y: 3522
+        width: 488
+        height: 1136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927c704d7d7f0cc20800000000000000
+      internalID: 3224849839544583977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_51
+      rect:
+        serializedVersion: 2
+        x: 7088
+        y: 3518
+        width: 490
+        height: 1136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b255dd89bf811cd0800000000000000
+      internalID: -2589130283650035024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_52
+      rect:
+        serializedVersion: 2
+        x: 7594
+        y: 3518
+        width: 488
+        height: 1136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bc5d39a58ac23e0800000000000000
+      internalID: -2077100221143856257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_53
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2334
+        width: 491
+        height: 1140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95470f14154f42a60800000000000000
+      internalID: 7648506697017750617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_54
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 2334
+        width: 488
+        height: 1140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684db137333b5d4d0800000000000000
+      internalID: -3110382934073551738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_55
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 2334
+        width: 488
+        height: 1140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34f736fe9848e460800000000000000
+      internalID: 7271141445962560574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_56
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 2330
+        width: 492
+        height: 1144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8798ac8442b8494a0800000000000000
+      internalID: -6587487366979876488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_57
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 2330
+        width: 491
+        height: 1144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823c6cdca334f92f0800000000000000
+      internalID: -963977875394477272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_58
+      rect:
+        serializedVersion: 2
+        x: 2542
+        y: 2330
+        width: 492
+        height: 1144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22cbda5f493cadd0800000000000000
+      internalID: -2473539082343693778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_59
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 2326
+        width: 492
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a9992b4d42ed330800000000000000
+      internalID: 3737465236712168035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_60
+      rect:
+        serializedVersion: 2
+        x: 3558
+        y: 2326
+        width: 488
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d005645044d5293d0800000000000000
+      internalID: -3201393838379347955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_61
+      rect:
+        serializedVersion: 2
+        x: 4063
+        y: 2326
+        width: 491
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81e0d837a582adb0800000000000000
+      internalID: -4782112901054799477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_62
+      rect:
+        serializedVersion: 2
+        x: 4570
+        y: 2322
+        width: 488
+        height: 1152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1098c8909f420cab0800000000000000
+      internalID: -4989947735100847871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_63
+      rect:
+        serializedVersion: 2
+        x: 5071
+        y: 2322
+        width: 495
+        height: 1152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74caa6fdf85240d30800000000000000
+      internalID: 4396680436079307847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_64
+      rect:
+        serializedVersion: 2
+        x: 5582
+        y: 2322
+        width: 488
+        height: 1152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27dc04dbb5dede960800000000000000
+      internalID: 7633017921735806322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_65
+      rect:
+        serializedVersion: 2
+        x: 6087
+        y: 2318
+        width: 491
+        height: 1160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ad7fdc85793f090800000000000000
+      internalID: -8001885705238750712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_66
+      rect:
+        serializedVersion: 2
+        x: 6592
+        y: 2318
+        width: 490
+        height: 1156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90d2f587ecdbc170800000000000000
+      internalID: 8199890433500958874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_67
+      rect:
+        serializedVersion: 2
+        x: 7098
+        y: 2318
+        width: 492
+        height: 1156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2e71a188305f220800000000000000
+      internalID: 2518923449671869153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_68
+      rect:
+        serializedVersion: 2
+        x: 7606
+        y: 2314
+        width: 491
+        height: 1164
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e0c53828c620390800000000000000
+      internalID: -7853595492375327073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_69
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1114
+        width: 495
+        height: 1160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25be70991c46d1250800000000000000
+      internalID: 5916996268093598546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_70
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 1118
+        width: 492
+        height: 1156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf317e5358b93540800000000000000
+      internalID: 4988220730495811515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_71
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1122
+        width: 488
+        height: 1152
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3040c5c6353559710800000000000000
+      internalID: 1699356052167590915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_72
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 1120
+        width: 492
+        height: 1154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c877b0a50f4e8d0800000000000000
+      internalID: -2817863197296980992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_73
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 1120
+        width: 488
+        height: 1154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e873358d6b1320db0800000000000000
+      internalID: -4827241189204609138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_74
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1126
+        width: 492
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65110f65a234923f0800000000000000
+      internalID: -925134399321665194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_75
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 1126
+        width: 491
+        height: 1148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d7f42d92c109360800000000000000
+      internalID: 7174265172348861783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_76
+      rect:
+        serializedVersion: 2
+        x: 3562
+        y: 1127
+        width: 492
+        height: 1147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00703f76726f0950800000000000000
+      internalID: 6417456255105789964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_77
+      rect:
+        serializedVersion: 2
+        x: 4070
+        y: 1130
+        width: 488
+        height: 1144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f90274119c61eda0800000000000000
+      internalID: -5917329065019045391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_78
+      rect:
+        serializedVersion: 2
+        x: 4574
+        y: 1130
+        width: 488
+        height: 1144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76212428bdab697b0800000000000000
+      internalID: -5217777666316168601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_79
+      rect:
+        serializedVersion: 2
+        x: 5078
+        y: 1130
+        width: 492
+        height: 1144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0abe8cd533ae420800000000000000
+      internalID: 2659995007811559675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_80
+      rect:
+        serializedVersion: 2
+        x: 5583
+        y: 1134
+        width: 491
+        height: 1140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814467860647a1b40800000000000000
+      internalID: 5411765859657335832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_81
+      rect:
+        serializedVersion: 2
+        x: 6090
+        y: 1134
+        width: 488
+        height: 1140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791b3db6eb45026d0800000000000000
+      internalID: -3017318573508677225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_82
+      rect:
+        serializedVersion: 2
+        x: 6591
+        y: 1134
+        width: 492
+        height: 1140
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219456c22012a79e0800000000000000
+      internalID: -1622948422495155950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_83
+      rect:
+        serializedVersion: 2
+        x: 7098
+        y: 1138
+        width: 492
+        height: 1136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f1ebda03b9684a0800000000000000
+      internalID: -6591410371234488510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_84
+      rect:
+        serializedVersion: 2
+        x: 7606
+        y: 1138
+        width: 490
+        height: 1136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168d8c0e9e64fe780800000000000000
+      internalID: -8651618388842850207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_85
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 5850
+        width: 512
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3541736775e9c2c0800000000000000
+      internalID: -4410742059100453569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_86
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 5850
+        width: 489
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720a7992fdc41bc60800000000000000
+      internalID: 7832125748333223975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_87
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 5850
+        width: 515
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d501b5711dff6980800000000000000
+      internalID: -8543331716667734576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_88
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 5851
+        width: 518
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9113836ee81aeb320800000000000000
+      internalID: 2575673672022372633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_89
+      rect:
+        serializedVersion: 2
+        x: 4591
+        y: 7017
+        width: 518
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f119f0940fa1de60800000000000000
+      internalID: 7985356048451572212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_90
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 7017
+        width: 518
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c21fbc9af71f4070800000000000000
+      internalID: 8092713420547101380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_91
+      rect:
+        serializedVersion: 2
+        x: 5621
+        y: 7018
+        width: 518
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b50b36fc79ee47b0800000000000000
+      internalID: -5237992593669028425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_92
+      rect:
+        serializedVersion: 2
+        x: 6140
+        y: 7018
+        width: 518
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba323ad40d384390800000000000000
+      internalID: -7833944460761089354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_93
+      rect:
+        serializedVersion: 2
+        x: 6657
+        y: 7015
+        width: 518
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0964a863fa7fc5270800000000000000
+      internalID: 8240733750087534224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_feu_94
+      rect:
+        serializedVersion: 2
+        x: 7174
+        y: 7016
+        width: 518
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c48c2e2a9c2c9f0800000000000000
+      internalID: -449575311356965829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

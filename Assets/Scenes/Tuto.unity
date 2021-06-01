@@ -2830,7 +2830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 670730763}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Grid, Assembly-CSharp
         m_MethodName: deleteMap
         m_Mode: 6
@@ -3908,10 +3908,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 670730764}
-  - component: {fileID: 670730763}
   - component: {fileID: 670730765}
   - component: {fileID: 670730766}
   - component: {fileID: 670730767}
+  - component: {fileID: 670730763}
+  - component: {fileID: 670730768}
   m_Layer: 0
   m_Name: GridManager
   m_TagString: Untagged
@@ -3928,7 +3929,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 670730762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e3581255a0d5e4b9e1b536f26403c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e8ffe89b0f88f349a46cbb34b52fff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0
@@ -3936,7 +3937,7 @@ MonoBehaviour:
   cellSize: 2
   panel: {fileID: 7635196711641401961, guid: e007d0c9546ce134d8e94ec62ddce458, type: 3}
   panelAlpha: {fileID: 7388167128119430108, guid: 24250fe6db8672e47bf6751ec21ad174, type: 3}
-  levelID: 29
+  levelID: 32
   progress: 0
   openList: []
   closeList: []
@@ -3991,7 +3992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442238ff9ec9c094082560fcc118ea17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridref: {fileID: 670730763}
+  gridref: {fileID: 0}
+  gridreftuto: {fileID: 670730763}
 --- !u!114 &670730766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4023,6 +4025,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 180afc0f9f209044ca804839c7da62e8, type: 2}
   - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
   - {fileID: 11400000, guid: 69ecbb99035c7f946b25016be2d9fe01, type: 2}
+--- !u!114 &670730768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670730762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8b8647726e52141bba1049b6df855a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridref: {fileID: 0}
+  gridreftuto: {fileID: 0}
 --- !u!1 &692020110
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,15 +6230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonHand: {fileID: 234507682}
   buttonCancel: {fileID: 1769318695}
-  deck: {fileID: 2032853119}
   use: {fileID: 794376097}
-  imageBG: {fileID: 736588756}
-  unitName: {fileID: 738767330}
-  unitHP: {fileID: 1461122191}
-  unitSTR: {fileID: 213787466}
-  unitDEF: {fileID: 753588527}
-  unitAP: {fileID: 145212390}
-  element: {fileID: 1432821048}
   HPBar: {fileID: 524270450}
   apleft: {fileID: 1395277099}
   currenntHP: {fileID: 131747359}
@@ -6244,10 +6252,6 @@ MonoBehaviour:
   - {fileID: 0}
   heroSprites: []
   enemySprites: []
-  enemiesBoard: {fileID: 692020110}
-  button: {fileID: 128577141}
-  minusButtonImage: {fileID: 21300000, guid: ba9348043e6ef804a825b799d33e6fe9, type: 3}
-  plusButtonImage: {fileID: 21300000, guid: dbcee01fda92f2d4e8203e2da240dd02, type: 3}
   sra: {fileID: 974637998}
 --- !u!114 &974637998
 MonoBehaviour:
