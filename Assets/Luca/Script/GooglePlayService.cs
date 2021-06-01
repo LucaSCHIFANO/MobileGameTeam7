@@ -32,6 +32,10 @@ public class GooglePlayService : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
 
+
+        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+
+        PlayGamesPlatform.InitializeInstance(config);
         PlayGamesPlatform.DebugLogEnabled = true;
         PlayGamesPlatform.Activate();
     }

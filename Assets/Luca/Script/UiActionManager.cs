@@ -26,6 +26,8 @@ public class UiActionManager : MonoBehaviour
     public List<Sprite> heroSprites = new List<Sprite>();
     public List<Sprite> enemySprites = new List<Sprite>();
 
+    public int speed;
+
     public ShowRangeAttack sra;
 
     private static UiActionManager _instance = null;
@@ -37,6 +39,8 @@ public class UiActionManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+
+        Time.timeScale = speed;
     }
 
     public void showButton()
@@ -120,11 +124,11 @@ public class UiActionManager : MonoBehaviour
                         {
                             CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.AOESELECT;
                         }
-
                     }
                 }
             }
         }
+        apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 
     public void hideAll()

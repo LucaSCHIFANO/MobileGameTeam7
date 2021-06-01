@@ -29,6 +29,6 @@ MonoBehaviour:
   effect: 1
   duration: 3
   intensity: 2
-  artwork: {fileID: 21300000, guid: 59d0938250bc38f408c30221f19257f5, type: 3}
-  BackGround: {fileID: 21300000, guid: 325a4626b5e4b9f49879fa6682c11306, type: 3}
+  artwork: {fileID: 21300000, guid: 6a797ab1da3fca541ab3d44900df436e, type: 3}
+  BackGround: {fileID: 21300000, guid: 96e4614aae0edf148811cd07c75ee8f2, type: 3}
   musicName: Water1
