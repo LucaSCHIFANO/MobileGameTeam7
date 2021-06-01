@@ -18,7 +18,7 @@ MonoBehaviour:
   row_column: 1
   throughWall: 0
   APNeeded: 5
-  damage: 18
+  damage: 16
   push: 0
   pull: 0
   element: 1
@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: c8e95a7c37b833548b8a8487e7cc45a9, type: 3}
-  BackGround: {fileID: 21300000, guid: 252af07567c0c784986c01eefea9c6b8, type: 3}
+  artwork: {fileID: 21300000, guid: ffc74098d52ec104e95754557156a4bb, type: 3}
+  BackGround: {fileID: 21300000, guid: 8dd91c50c59a05546a75ccbf72985f2c, type: 3}
   musicName: Fire1

@@ -133,10 +133,10 @@ public class CardManager : MonoBehaviour
                             if (inChosenTime)
                             {
                                 AudioManager.Instance.Play("Card");
+                                var hitDisplay = hitCard.GetComponent<CardDisplay>();
 
-
-                                deck.Add(hitCard.GetComponent<CardDisplay>().card);
-                                hitCard.GetComponent<CardDisplay>().card.attackParam = hitCard.GetComponent<CardDisplay>().attackParam;
+                                deck.Add(hitDisplay.card);
+                                hitDisplay.card.attackParam = hitDisplay.attackParam;
                                 rollCard = hitCard;
                                 rollCard.transform.SetParent(deckObject);
                                 rollCardIsChose = true;
@@ -148,7 +148,6 @@ public class CardManager : MonoBehaviour
                                 else
                                 {
                                     chooseCardText.gameObject.SetActive(false);
-                                    pauseButton.SetActive(true);
                                     //MapComposent.Instance.Opening();
                                     //MapComposent.Instance.Check();
                                     var cM = CharacterManager.Instance;
@@ -182,9 +181,9 @@ public class CardManager : MonoBehaviour
                                 if (!isMid)
                                 {
                                     AudioManager.Instance.Play("Card");
-
-                                    previousTransform = hitCard.GetComponent<RectTransform>().localPosition;
-                                    previousRotation = hitCard.GetComponent<RectTransform>().rotation;
+                                    var hitTrans = hitCard.GetComponent<RectTransform>();
+                                    previousTransform = hitTrans.localPosition;
+                                    previousRotation = hitTrans.rotation;
                                     previousScale = hitCard.transform.localScale;
                                     middleCard = hitCard;
                                     handToMid = true;
@@ -249,15 +248,18 @@ public class CardManager : MonoBehaviour
 
         if (handToMid)
         {
+            var mdlTrans = middleCard.GetComponent<RectTransform>();
+            var mdlDisplay = middleCard.GetComponent<CardDisplay>();
+            var mdlInfos = middleCard.transform.GetChild(6).gameObject.GetComponent<CardInfos>();
+
             if (middleCard == null)
             {
                 return;
             }
-            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition, 7f * Time.deltaTime);
-            middleCard.GetComponent<RectTransform>().rotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().rotation, midRotation, 7f * Time.deltaTime);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
+            mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, cardPosition.localPosition, 7f * Time.deltaTime);
+            mdlTrans.rotation = Quaternion.Lerp(mdlTrans.rotation, midRotation, 7f * Time.deltaTime);
+            if (Vector2.Distance(mdlTrans.localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
-                var mdlDisplay = middleCard.GetComponent<CardDisplay>();
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
                 mdlDisplay.actionCostText.text = "";
                 mdlDisplay.attackText.text = "";
@@ -266,37 +268,41 @@ public class CardManager : MonoBehaviour
                 mdlDisplay.artworkImage.gameObject.SetActive(false);
                 cardInfos = middleCard.transform.GetChild(6).gameObject;
                 cardInfos.SetActive(true);
-                CardInfos.Instance.card = mdlDisplay;
-                CardInfos.Instance.UpdateInfos();
+                mdlInfos.card = mdlDisplay;
+                mdlInfos.UpdateInfos();
             }
 
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition) < 5f) // trouver la bonne valuer avec la speed
+            if (Vector2.Distance(mdlTrans.localPosition, cardPosition.localPosition) < 5f) // trouver la bonne valuer avec la speed
             {
                 handToMid = false;
-                middleCard.GetComponent<RectTransform>().localPosition = cardPosition.localPosition;
+                mdlTrans.localPosition = cardPosition.localPosition;
             }
         }
 
         if (midToHand)
         {
+            var mdlTrans = middleCard.GetComponent<RectTransform>();
+            var mdlDisplay = middleCard.GetComponent<CardDisplay>();
+            var mdlInfos = middleCard.transform.GetChild(6).gameObject.GetComponent<CardInfos>();
+
             if (middleCard == null)
             {
                 return;
             }
-            middleCard.GetComponent<RectTransform>().localPosition = Vector3.Lerp(middleCard.GetComponent<RectTransform>().localPosition, previousTransform, 5f * Time.deltaTime);
-            middleCard.GetComponent<RectTransform>().rotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().rotation, previousRotation, 7f * Time.deltaTime);
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
+            mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, previousTransform, 5f * Time.deltaTime);
+            mdlTrans.rotation = Quaternion.Lerp(mdlTrans.rotation, previousRotation, 7f * Time.deltaTime);
+            if (Vector2.Distance(mdlTrans.localPosition, previousTransform) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, previousScale, 7f * Time.deltaTime);
-                CardInfos.Instance.card = null;
-                middleCard.GetComponent<CardDisplay>().artworkImage.gameObject.SetActive(true);
+                mdlInfos.card = null;
+                mdlDisplay.artworkImage.gameObject.SetActive(true);
                 cardInfos.SetActive(false);
-                middleCard.GetComponent<CardDisplay>().UpdateCard();
+                mdlDisplay.UpdateCard();
             }
-            if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, previousTransform) < 5f)
+            if (Vector2.Distance(mdlTrans.localPosition, previousTransform) < 5f)
             {
                 midToHand = false;
-                middleCard.GetComponent<RectTransform>().localPosition = previousTransform;
+                mdlTrans.localPosition = previousTransform;
                 middleCard = null;
                 isMid = false;
             }
@@ -339,7 +345,7 @@ public class CardManager : MonoBehaviour
         {
             for (int i = 0; i < numberOfCards; i++)
             {
-                hand[i].transform.position -= new Vector3((numberOfCards / 2) * gap, 0, 0);
+                hand[i].transform.position -= new Vector3((numberOfCards / gap) * 2, 0, 0);
             }
         }
     }
@@ -355,6 +361,7 @@ public class CardManager : MonoBehaviour
 
     public void startCombat()
     {
+        pauseButton.SetActive(true);
         for (int i = 0; i < howManyInHand; i++)
         {
             var handCard = Instantiate(cardPrefab, startLocation.position, Quaternion.identity, handPanel);
@@ -374,23 +381,26 @@ public class CardManager : MonoBehaviour
     {
         var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-3, -1.4f, 0)), Quaternion.identity, canvas.transform);
         var number = Random.Range(0, cardList.Count);
-        newCard.GetComponent<CardDisplay>().card = cardList[number];
-        newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
-        newCard.GetComponent<CardDisplay>().Start();
+        var newDisplay = newCard.GetComponent<CardDisplay>();
+        newDisplay.card = cardList[number];
+        newDisplay.attackParam = attackParams[number];
+        newDisplay.Start();
         actualRoll.Add(newCard);
 
         number = Random.Range(0, cardList.Count);
         newCard = Instantiate(cardPrefab, (transform.position + new Vector3(0, -1.4f, 0)), Quaternion.identity, canvas.transform);
-        newCard.GetComponent<CardDisplay>().card = cardList[number];
-        newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
-        newCard.GetComponent<CardDisplay>().Start();
+        newDisplay = newCard.GetComponent<CardDisplay>();
+        newDisplay.card = cardList[number];
+        newDisplay.attackParam = attackParams[number];
+        newDisplay.Start();
         actualRoll.Add(newCard);
 
         number = Random.Range(0, cardList.Count);
         newCard = Instantiate(cardPrefab, (transform.position + new Vector3(3, -1.4f, 0)), Quaternion.identity, canvas.transform);
-        newCard.GetComponent<CardDisplay>().card = cardList[number];
-        newCard.GetComponent<CardDisplay>().attackParam = attackParams[number];
-        newCard.GetComponent<CardDisplay>().Start();
+        newDisplay = newCard.GetComponent<CardDisplay>();
+        newDisplay.card = cardList[number];
+        newDisplay.attackParam = attackParams[number];
+        newDisplay.Start();
         actualRoll.Add(newCard);
     }
 

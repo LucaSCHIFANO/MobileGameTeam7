@@ -59,6 +59,7 @@ public class PhaseManager : MonoBehaviour
         {
             numberOfTurn++;
             numberOfTurnBattle++;
+            UiActionManager.Instance.turnText.text = "TURN " + numberOfTurnBattle.ToString();
             oneTime = true;
             CharacterManager.Instance.resetAllCharacter();
             uiColor.GetComponent<Image>().color = Color.blue;

@@ -48,7 +48,7 @@ public class BattleManager : MonoBehaviour
         if (att.GetComponent<PlayerMovement>())
         {
             showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue);
-            UiActionManager.Instance.apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+            
         }
         else
         {
@@ -88,10 +88,10 @@ public class BattleManager : MonoBehaviour
             }
             else if (currentAttackParam.effect == Stats.EFFECT.LIFESTEAL)
             {
-                att.HP += (int)(damage * 0.1f);
+                att.HP += (int)(damage * 0.5f);
                 att.HP = Mathf.Clamp(att.HP, 0, att.maxHP);
 
-                if ((int)(damage * 0.1f) > 0)
+                if ((int)(damage * 0.5f) > 0)
                 {
                     CharacterManager.Instance.isHealed = true;
                 }
@@ -131,6 +131,7 @@ public class BattleManager : MonoBehaviour
             }
         }
 
+        UiActionManager.Instance.apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 
     public void PushPool(PlayerMovement attPos, Enemy defPos)

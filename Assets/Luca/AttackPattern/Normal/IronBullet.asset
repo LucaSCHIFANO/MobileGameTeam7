@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
   m_Name: IronBullet
   m_EditorClassIdentifier: 
-  patternName: IronBullet
+  patternName: Iron Bullet
   description: 'A bullet made in a deep forge '
   range: 4
   row_column: 0
   throughWall: 1
   APNeeded: 3
-  damage: 12
+  damage: 11
   push: 0
   pull: 0
   element: 0
@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: 76752a46398f18d47bb7506d06f254e9, type: 3}
-  BackGround: {fileID: 21300000, guid: 5d027a65ecad9ca40ba4e0e1248d9809, type: 3}
+  artwork: {fileID: 21300000, guid: 86bf1eae4b1de954dad6d86c70dedf05, type: 3}
+  BackGround: {fileID: 21300000, guid: 7e066c1adda49b0408c1892622c544fa, type: 3}
   musicName: Gun

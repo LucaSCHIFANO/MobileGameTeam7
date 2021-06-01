@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
   m_Name: IceShard
   m_EditorClassIdentifier: 
-  patternName: IceShard
+  patternName: Ice Shard
   description: A sharp piece of ice that slashes your enemy
   range: 5
   row_column: 0
   throughWall: 0
   APNeeded: 1
-  damage: 4
+  damage: 5
   push: 0
   pull: 0
   element: 2
@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: 2bedbb864bd3ffe48bcad9a34f324071, type: 3}
-  BackGround: {fileID: 21300000, guid: a9c517689b1843742b8b2e561814a4a2, type: 3}
+  artwork: {fileID: 21300000, guid: b575941e8328d79479f6029437478ac7, type: 3}
+  BackGround: {fileID: 21300000, guid: 5a1c5cfc4c919a9438cb02e1a7cdd6cc, type: 3}
   musicName: HookShot

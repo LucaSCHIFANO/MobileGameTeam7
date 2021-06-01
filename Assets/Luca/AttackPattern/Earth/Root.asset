@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Root
   description: A root comes out of the ground, hit an enemy
-  range: 4
+  range: 3
   row_column: 0
   throughWall: 0
   APNeeded: 2
-  damage: 10
+  damage: 9
   push: 0
   pull: 0
   element: 3
@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: 99a0ff79c6acd5544a8544e111a7066e, type: 3}
-  BackGround: {fileID: 21300000, guid: 325a4626b5e4b9f49879fa6682c11306, type: 3}
+  artwork: {fileID: 21300000, guid: 39bb32c83f072ab4eaf056bf1b615aec, type: 3}
+  BackGround: {fileID: 21300000, guid: 96e4614aae0edf148811cd07c75ee8f2, type: 3}
   musicName: Nature2

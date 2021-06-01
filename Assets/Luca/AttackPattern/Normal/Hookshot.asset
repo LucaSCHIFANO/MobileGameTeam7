@@ -18,7 +18,7 @@ MonoBehaviour:
   row_column: 1
   throughWall: 0
   APNeeded: 1
-  damage: 5
+  damage: 6
   push: 0
   pull: 1
   element: 0
@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: 401500798edbd2b47b14182d940c5b8c, type: 3}
-  BackGround: {fileID: 21300000, guid: 5d027a65ecad9ca40ba4e0e1248d9809, type: 3}
+  artwork: {fileID: 21300000, guid: ce1341df1d3e4574193fa44aad5c8684, type: 3}
+  BackGround: {fileID: 21300000, guid: 7e066c1adda49b0408c1892622c544fa, type: 3}
   musicName: HookShot
