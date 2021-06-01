@@ -3538,7 +3538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &634327779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3793,7 +3793,7 @@ MonoBehaviour:
   cellSize: 2
   panel: {fileID: 7635196711641401961, guid: e007d0c9546ce134d8e94ec62ddce458, type: 3}
   panelAlpha: {fileID: 7388167128119430108, guid: 24250fe6db8672e47bf6751ec21ad174, type: 3}
-  levelID: 0
+  levelID: 7
   progress: 0
   openList: []
   closeList: []
@@ -9553,8 +9553,8 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.35
+  m_Color: {r: 0.6933962, g: 1, b: 0.77876437, a: 1}
+  m_Intensity: 0.75
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}

@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _FogSize: 50
+    - _FogSize: 75
     m_Colors:
     - Color_591c41fb407840eeaba94b20a93ba273: {r: 0.37287813, g: 0.8301887, b: 0.30936277, a: 0}
     - _FogSpeed: {r: 0.03, g: 0, b: 0, a: 0}
