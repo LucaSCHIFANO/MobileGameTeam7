@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: 4a60f1926a2b8bc40a31e8087219eb3d, type: 3}
-  BackGround: {fileID: 21300000, guid: f0f14d4e2706af14995f3074c37a9ce1, type: 3}
+  artwork: {fileID: 21300000, guid: 3608d1eccb7fe1049a089c566a0ddefe, type: 3}
+  BackGround: {fileID: 21300000, guid: a9c517689b1843742b8b2e561814a4a2, type: 3}
   musicName: Swoosh

@@ -475,10 +475,178 @@ MonoBehaviour:
     mute: 0
     loop: 1
     source: {fileID: 0}
-  - name: RGETest
-    clip: {fileID: 8300000, guid: dcd5bc35bd9a54f4c90cc4a02548c8a9, type: 3}
+  - name: Victory!
+    clip: {fileID: 8300000, guid: 3348773561ef5f64697c2b23d0761564, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
+    volume: 0.1
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Card
+    clip: {fileID: 8300000, guid: 1c4afef254dd53d4984f6b1b6b4185ed, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
-    volume: 0
+    volume: 0.3
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Fire0
+    clip: {fileID: 8300000, guid: 1e94478c8bc7179468d8c4c3fd757a4b, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Fire1
+    clip: {fileID: 8300000, guid: 0a46a7ee2496e9646857ebf44414b3da, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Fire2
+    clip: {fileID: 8300000, guid: ecf3fed2ad7ba4148874a0461515e962, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Fire3Long
+    clip: {fileID: 8300000, guid: 952f881ef8c5bab498fca226b535c792, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Nature1
+    clip: {fileID: 8300000, guid: be8fd93527d04dd4fa01b1d9ba7500c6, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Nature2
+    clip: {fileID: 8300000, guid: 914f8e37b1277384db6ec40c4027bfa9, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Nature3
+    clip: {fileID: 8300000, guid: fa28d1712f55ffa439201f14c6c8f124, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Nature4
+    clip: {fileID: 8300000, guid: c3a40928a49cd2540aa7913130e0a6fd, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Neutre
+    clip: {fileID: 8300000, guid: 1571cd46d73f2c24aa01ba3ca072a761, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Success
+    clip: {fileID: 8300000, guid: 0b57c67489efaaf498efd4fd8f7ee35a, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Success2
+    clip: {fileID: 8300000, guid: 5d5a91604a12bc840b23154c449e3c62, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Swoosh
+    clip: {fileID: 8300000, guid: 26d3435cbd451f040bb18e1c31a391ee, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Sword
+    clip: {fileID: 8300000, guid: 37aba743f6cbecb49b2aeba4abeaad49, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: UI
+    clip: {fileID: 8300000, guid: 0514008eb32bf804693bf810d028ac6d, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Water0
+    clip: {fileID: 8300000, guid: 4576dc2afe984714fb5cc8755f5e48e6, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Water1
+    clip: {fileID: 8300000, guid: 8f826f218f0da5447a12a1c5fff5e18e, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Water2
+    clip: {fileID: 8300000, guid: 873590b8ee62efa46b8c545a39ef4a63, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: HookShot
+    clip: {fileID: 8300000, guid: d942431a72a431340865b4b8df69a5f1, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Gun
+    clip: {fileID: 8300000, guid: 303438952303da348927ae49e29c2709, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Dart
+    clip: {fileID: 8300000, guid: bab249d6149bec445837763eb06f7325, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
     pitch: 1
     mute: 0
     loop: 0
