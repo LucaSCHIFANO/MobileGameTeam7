@@ -5,7 +5,8 @@ using UnityEngine;
 public class GridPattern : MonoBehaviour
 {
     private panelType[,] pattern;
-    public Grid gridref;
+    public Grid gridref; 
+    public TutoGrid gridreftuto;
 
     public enum panelType // differents type de case
     {
@@ -955,6 +956,7 @@ public class GridPattern : MonoBehaviour
 
             default:
                 break;
+
         }
 
         return pattern;
