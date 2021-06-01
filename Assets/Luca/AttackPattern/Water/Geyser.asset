@@ -28,6 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: b6b162a99f3aeb54fa524f8155a41d73, type: 3}
-  BackGround: {fileID: 21300000, guid: f0f14d4e2706af14995f3074c37a9ce1, type: 3}
+  artwork: {fileID: 21300000, guid: 14fa1fedfa630554d94c98e434843c24, type: 3}
+  BackGround: {fileID: 21300000, guid: a9c517689b1843742b8b2e561814a4a2, type: 3}
   musicName: Water0
