@@ -130,6 +130,9 @@ public class CardManager : MonoBehaviour
                         {
                             if (inChosenTime)
                             {
+                                AudioManager.Instance.Play("Card");
+
+
                                 deck.Add(hitCard.GetComponent<CardDisplay>().card);
                                 hitCard.GetComponent<CardDisplay>().card.attackParam = hitCard.GetComponent<CardDisplay>().attackParam;
                                 rollCard = hitCard;
@@ -176,6 +179,8 @@ public class CardManager : MonoBehaviour
                             {
                                 if (!isMid)
                                 {
+                                    AudioManager.Instance.Play("Card");
+
                                     previousTransform = hitCard.GetComponent<RectTransform>().localPosition;
                                     previousRotation = hitCard.GetComponent<RectTransform>().rotation;
                                     previousScale = hitCard.transform.localScale;
@@ -186,6 +191,7 @@ public class CardManager : MonoBehaviour
                                 else if (isMid && middleCard == hitCard)
                                 {
                                     midToHand = true;
+                                    AudioManager.Instance.Play("Card");
                                 }
                             }
                         }

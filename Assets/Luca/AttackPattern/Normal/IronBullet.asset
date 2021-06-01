@@ -28,5 +28,6 @@ MonoBehaviour:
   effect: 0
   duration: 0
   intensity: 0
-  artwork: {fileID: 21300000, guid: 76752a46398f18d47bb7506d06f254e9, type: 3}
-  BackGround: {fileID: 21300000, guid: 5d027a65ecad9ca40ba4e0e1248d9809, type: 3}
+  artwork: {fileID: 21300000, guid: bf46fd6191eed3a4db0786548676c016, type: 3}
+  BackGround: {fileID: 21300000, guid: 72a103df8f332e44083f65c69d7278f3, type: 3}
+  musicName: Gun
