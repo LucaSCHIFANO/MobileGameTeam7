@@ -72,6 +72,9 @@ public class CardDisplay : MonoBehaviour
 
     public void UpdateCard()
     {
+        strong.gameObject.SetActive(true);
+        weak.gameObject.SetActive(true);
+
         if (card != null && attackParam != null)
         {
             attackText.text = attackParam.damage.ToString();
