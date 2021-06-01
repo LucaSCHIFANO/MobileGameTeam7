@@ -255,15 +255,16 @@ public class CardManager : MonoBehaviour
             middleCard.GetComponent<RectTransform>().rotation = Quaternion.Lerp(middleCard.GetComponent<RectTransform>().rotation, midRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(middleCard.GetComponent<RectTransform>().localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
+                var mdlDisplay = middleCard.GetComponent<CardDisplay>();
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
-                middleCard.GetComponent<CardDisplay>().actionCostText.text = "";
-                middleCard.GetComponent<CardDisplay>().attackText.text = "";
-                middleCard.GetComponent<CardDisplay>().strong.gameObject.SetActive(false);
-                middleCard.GetComponent<CardDisplay>().weak.gameObject.SetActive(false);
-                middleCard.GetComponent<CardDisplay>().artworkImage.gameObject.SetActive(false);
+                mdlDisplay.actionCostText.text = "";
+                mdlDisplay.attackText.text = "";
+                mdlDisplay.strong.gameObject.SetActive(false);
+                mdlDisplay.weak.gameObject.SetActive(false);
+                mdlDisplay.artworkImage.gameObject.SetActive(false);
                 cardInfos = middleCard.transform.GetChild(6).gameObject;
                 cardInfos.SetActive(true);
-                CardInfos.Instance.card = middleCard.GetComponent<CardDisplay>();
+                CardInfos.Instance.card = mdlDisplay;
                 CardInfos.Instance.UpdateInfos();
             }
 
@@ -336,7 +337,7 @@ public class CardManager : MonoBehaviour
         {
             for (int i = 0; i < numberOfCards; i++)
             {
-                hand[i].transform.position -= new Vector3((numberOfCards / gap), 0, 0);
+                hand[i].transform.position -= new Vector3((numberOfCards / 2) * gap, 0, 0);
             }
         }
     }
