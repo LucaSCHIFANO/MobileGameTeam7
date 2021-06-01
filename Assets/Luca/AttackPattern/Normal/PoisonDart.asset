@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5c5da9291276d41a06a2312a55d8c0, type: 3}
   m_Name: PoisonDart
   m_EditorClassIdentifier: 
-  patternName: PoisonDart
+  patternName: Poison Dart
   description: A dart fill with the most lethal toxine which poison the victim during
     3 turns
   range: 3
@@ -29,6 +29,6 @@ MonoBehaviour:
   effect: 1
   duration: 3
   intensity: 2
-  artwork: {fileID: 21300000, guid: 5443a9843792f17469371396c033eb47, type: 3}
-  BackGround: {fileID: 21300000, guid: 5d027a65ecad9ca40ba4e0e1248d9809, type: 3}
+  artwork: {fileID: 21300000, guid: 36667e02d808bee48a0f2f9a9aa2293c, type: 3}
+  BackGround: {fileID: 21300000, guid: 7e066c1adda49b0408c1892622c544fa, type: 3}
   musicName: Dart

@@ -124,11 +124,11 @@ public class UiActionManager : MonoBehaviour
                         {
                             CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.AOESELECT;
                         }
-
                     }
                 }
             }
         }
+        apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 
     public void hideAll()
@@ -265,7 +265,7 @@ public class UiActionManager : MonoBehaviour
         CardManager.Instance.inChosenTime = false;
         MapComposent.Instance.fadeOutIn();
         yield return new WaitForSeconds(0.6f);
-        TutoGrid.Instance.functionStart();
+        Grid.Instance.functionStart();
     }
 
 }

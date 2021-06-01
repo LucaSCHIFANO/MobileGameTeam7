@@ -48,7 +48,7 @@ public class BattleManager : MonoBehaviour
         if (att.GetComponent<PlayerMovement>())
         {
             showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue);
-            UiActionManager.Instance.apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+            
         }
         else
         {
@@ -131,6 +131,7 @@ public class BattleManager : MonoBehaviour
             }
         }
 
+        UiActionManager.Instance.apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
     }
 
     public void PushPool(PlayerMovement attPos, Enemy defPos)

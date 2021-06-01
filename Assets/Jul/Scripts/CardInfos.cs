@@ -24,23 +24,12 @@ public class CardInfos : MonoBehaviour
 
     public CardDisplay card;
 
-    private static CardInfos _instance = null;
-
-    public static CardInfos Instance
-    {
-        get => _instance;
-    }
-    private void Awake()
-    {
-        _instance = this;
-    }
-
     public void UpdateInfos()
     {
         portee.text = "Range : " + card.attackParam.range.ToString() + " blocks";
         puissance.text = "Power : " + card.attackParam.damage.ToString();
         cout.text =  "Cost : " + card.attackParam.APNeeded.ToString() + " AP";
-        description.text = "Description : " + card.attackParam.description;
+        description.text = card.attackParam.description;
         cardName.text = cardName.text.ToUpper();
         cardName.text = card.attackParam.patternName;
 
