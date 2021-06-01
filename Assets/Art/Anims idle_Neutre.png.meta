@@ -1,7 +1,151 @@
 fileFormatVersion: 2
 guid: 9fc9d32d1606ebb42811a3ef26445d15
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5200189319800962247
+    second: Anims idle_Neutre_0
+  - first:
+      213: 8505511772403184755
+    second: Anims idle_Neutre_1
+  - first:
+      213: -663201544679711975
+    second: Anims idle_Neutre_2
+  - first:
+      213: 7175746725677347609
+    second: Anims idle_Neutre_3
+  - first:
+      213: -4182020527181396622
+    second: Anims idle_Neutre_4
+  - first:
+      213: 207166325648114863
+    second: Anims idle_Neutre_5
+  - first:
+      213: 1234498818650830592
+    second: Anims idle_Neutre_6
+  - first:
+      213: -195697739403497801
+    second: Anims idle_Neutre_7
+  - first:
+      213: -7793620116709387251
+    second: Anims idle_Neutre_8
+  - first:
+      213: -696203803148778287
+    second: Anims idle_Neutre_9
+  - first:
+      213: 6219625409418531869
+    second: Anims idle_Neutre_10
+  - first:
+      213: 1434244368834909885
+    second: Anims idle_Neutre_11
+  - first:
+      213: 316755488007163975
+    second: Anims idle_Neutre_12
+  - first:
+      213: 6701448187434390806
+    second: Anims idle_Neutre_13
+  - first:
+      213: 6816906801305079407
+    second: Anims idle_Neutre_14
+  - first:
+      213: 4965239740155425244
+    second: Anims idle_Neutre_15
+  - first:
+      213: -9150989868853681208
+    second: Anims idle_Neutre_16
+  - first:
+      213: -8715203615745017717
+    second: Anims idle_Neutre_17
+  - first:
+      213: -2966734605041676024
+    second: Anims idle_Neutre_18
+  - first:
+      213: 5617164546846239763
+    second: Anims idle_Neutre_19
+  - first:
+      213: -3049539227230531368
+    second: Anims idle_Neutre_20
+  - first:
+      213: -1948304584908148958
+    second: Anims idle_Neutre_21
+  - first:
+      213: 3631719434081055770
+    second: Anims idle_Neutre_22
+  - first:
+      213: 6752061954870183658
+    second: Anims idle_Neutre_23
+  - first:
+      213: 4033299615986805648
+    second: Anims idle_Neutre_24
+  - first:
+      213: -3720021062811362625
+    second: Anims idle_Neutre_25
+  - first:
+      213: -5454074545213688907
+    second: Anims idle_Neutre_26
+  - first:
+      213: 4385161589015527792
+    second: Anims idle_Neutre_27
+  - first:
+      213: 525671687148028520
+    second: Anims idle_Neutre_28
+  - first:
+      213: -7603282713088445300
+    second: Anims idle_Neutre_29
+  - first:
+      213: 770614064802215984
+    second: Anims idle_Neutre_30
+  - first:
+      213: 79568667935110029
+    second: Anims idle_Neutre_31
+  - first:
+      213: 6479446437230636791
+    second: Anims idle_Neutre_32
+  - first:
+      213: -1201880373912952725
+    second: Anims idle_Neutre_33
+  - first:
+      213: 5749814073065550614
+    second: Anims idle_Neutre_34
+  - first:
+      213: -611022853959823018
+    second: Anims idle_Neutre_35
+  - first:
+      213: 923763158584079459
+    second: Anims idle_Neutre_36
+  - first:
+      213: -9043157955934572767
+    second: Anims idle_Neutre_37
+  - first:
+      213: -6800736616689051439
+    second: Anims idle_Neutre_38
+  - first:
+      213: -7995475343047618265
+    second: Anims idle_Neutre_39
+  - first:
+      213: -1100625879793169383
+    second: Anims idle_Neutre_40
+  - first:
+      213: -7453452236900996633
+    second: Anims idle_Neutre_41
+  - first:
+      213: 5617199728945139457
+    second: Anims idle_Neutre_42
+  - first:
+      213: 7467026644293621789
+    second: Anims idle_Neutre_43
+  - first:
+      213: 7247017111557629897
+    second: Anims idle_Neutre_44
+  - first:
+      213: 3094633754184371480
+    second: Anims idle_Neutre_45
+  - first:
+      213: 6346527807125354352
+    second: Anims idle_Neutre_46
+  - first:
+      213: -6093874336463887497
+    second: Anims idle_Neutre_47
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,7 +257,1015 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Anims idle_Neutre_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933cb7c8d5735d7b0800000000000000
+      internalID: -5200189319800962247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_1
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 6982
+        width: 491
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374bef294e5a90670800000000000000
+      internalID: 8505511772403184755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_2
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 6982
+        width: 492
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b10ea75b5dbc6f0800000000000000
+      internalID: -663201544679711975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_3
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 6982
+        width: 492
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913bb26d0af559360800000000000000
+      internalID: 7175746725677347609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_4
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 6982
+        width: 496
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27506f1ec7a76f5c0800000000000000
+      internalID: -4182020527181396622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_5
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 6982
+        width: 496
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4cda1fca000e200800000000000000
+      internalID: 207166325648114863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_6
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 6982
+        width: 500
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00772598222d12110800000000000000
+      internalID: 1234498818650830592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_7
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 6982
+        width: 504
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bee18f51fdb84df0800000000000000
+      internalID: -195697739403497801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 5702
+        width: 508
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04d235dbcf77d390800000000000000
+      internalID: -7793620116709387251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_9
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 5702
+        width: 516
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d48a0664569656f0800000000000000
+      internalID: -696203803148778287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_10
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 5702
+        width: 524
+        height: 1130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14926c5b5c805650800000000000000
+      internalID: 6219625409418531869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_11
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 5702
+        width: 528
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6528d87a577e310800000000000000
+      internalID: 1434244368834909885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_12
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 5702
+        width: 528
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74092572077556400800000000000000
+      internalID: 316755488007163975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_13
+      rect:
+        serializedVersion: 2
+        x: 4902
+        y: 5702
+        width: 524
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61556b4ee93500d50800000000000000
+      internalID: 6701448187434390806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_14
+      rect:
+        serializedVersion: 2
+        x: 5846
+        y: 5702
+        width: 524
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ecbb64e948a9e50800000000000000
+      internalID: 6816906801305079407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_15
+      rect:
+        serializedVersion: 2
+        x: 6794
+        y: 5702
+        width: 518
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1fd989c3318e440800000000000000
+      internalID: 4965239740155425244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_16
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 4426
+        width: 516
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c327c3c237210180800000000000000
+      internalID: -9150989868853681208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_17
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 4426
+        width: 516
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8871529c706d0780800000000000000
+      internalID: -8715203615745017717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_18
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 4426
+        width: 508
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801d1ab589a04d6d0800000000000000
+      internalID: -2966734605041676024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_19
+      rect:
+        serializedVersion: 2
+        x: 3022
+        y: 4426
+        width: 508
+        height: 1126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c20b3f46d24fd40800000000000000
+      internalID: 5617164546846239763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_20
+      rect:
+        serializedVersion: 2
+        x: 3966
+        y: 4426
+        width: 504
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d01e40ea3cdda5d0800000000000000
+      internalID: -3049539227230531368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_21
+      rect:
+        serializedVersion: 2
+        x: 4911
+        y: 4426
+        width: 503
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fe8467d4b36f4e0800000000000000
+      internalID: -1948304584908148958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_22
+      rect:
+        serializedVersion: 2
+        x: 5858
+        y: 4426
+        width: 500
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14b8486595766230800000000000000
+      internalID: 3631719434081055770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_23
+      rect:
+        serializedVersion: 2
+        x: 6802
+        y: 4426
+        width: 496
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae68771f29424bd50800000000000000
+      internalID: 6752061954870183658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3150
+        width: 498
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bec93a1a829f730800000000000000
+      internalID: 4033299615986805648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_25
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 3150
+        width: 492
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba582a8d84df5cc0800000000000000
+      internalID: -3720021062811362625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_26
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 3150
+        width: 491
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3b90a191c3f44b0800000000000000
+      internalID: -5454074545213688907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_27
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 3150
+        width: 491
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07145fb4b393bdc30800000000000000
+      internalID: 4385161589015527792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_28
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 3150
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86240f44d9f8b4700800000000000000
+      internalID: 525671687148028520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_29
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 3150
+        width: 488
+        height: 1113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84be7708a6bb7690800000000000000
+      internalID: -7603282713088445300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_30
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 3150
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038b477b865c1ba00800000000000000
+      internalID: 770614064802215984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_31
+      rect:
+        serializedVersion: 2
+        x: 6810
+        y: 3146
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83f58b284faa1100800000000000000
+      internalID: 79568667935110029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_32
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1870
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe6d40843e9be950800000000000000
+      internalID: 6479446437230636791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_33
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60a762fa20125fe0800000000000000
+      internalID: -1201880373912952725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_34
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6133d958f617bcf40800000000000000
+      internalID: 5749814073065550614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_35
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6515410a3f53587f0800000000000000
+      internalID: -611022853959823018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_36
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3643ffbc2bdd1dc00800000000000000
+      internalID: 923763158584079459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_37
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fa5c470cf308280800000000000000
+      internalID: -9043157955934572767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_38
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8d147341eee91a0800000000000000
+      internalID: -6800736616689051439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_39
+      rect:
+        serializedVersion: 2
+        x: 6810
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721904f898d5a0190800000000000000
+      internalID: -7995475343047618265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_40
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 590
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c835cf79ac9b0f0800000000000000
+      internalID: -1100625879793169383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_41
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 590
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9ec2d3ea4009890800000000000000
+      internalID: -7453452236900996633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_42
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 590
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f023c646d44fd40800000000000000
+      internalID: 5617199728945139457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_43
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 590
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d189f75cb2530a760800000000000000
+      internalID: 7467026644293621789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_44
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 590
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7e197aaa3929460800000000000000
+      internalID: 7247017111557629897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_45
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 590
+        width: 488
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dc71cd00952fa20800000000000000
+      internalID: 3094633754184371480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_46
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 590
+        width: 488
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07778dc4a65631850800000000000000
+      internalID: 6346527807125354352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Neutre_47
+      rect:
+        serializedVersion: 2
+        x: 6810
+        y: 590
+        width: 488
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7736335e3953e6ba0800000000000000
+      internalID: -6093874336463887497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
