@@ -27,6 +27,7 @@ public class Grid : MonoBehaviour
     
     public GameObject playerPrefab;
     public GameObject enemy;
+    public GameObject holoPlayer;
     
     private CreateAnEnemy cae;
 
@@ -34,6 +35,15 @@ public class Grid : MonoBehaviour
 
     public List<Sprite> listSprites = new List<Sprite>();
     public List<Sprite> listSpritesAlpha = new List<Sprite>();
+
+    public List<GameObject> bgList = new List<GameObject>(); // 0 et 1 = 8x8
+    public List<Transform> bgListTrans = new List<Transform>(); // 0 et 1 = 8x8
+
+    private GameObject front;
+    private GameObject back;
+
+    
+    
 
 
 
@@ -127,11 +137,12 @@ public class Grid : MonoBehaviour
                         newPanel.movementCost = 3;
                         break;
                     case GridPattern.panelType.WALL:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.1792f, 0.0518f, 0);
+                        /*visu.sprite = listSprites[0];
+                        visu.color = new Color(0.1792f, 0.0518f, 0);*/
+                        visu.sprite = null;
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
-                        newPanel.canShotThrought = false;
+                        //newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.BRIDGE:
                         visu.sprite = listSprites[0];
@@ -159,7 +170,7 @@ public class Grid : MonoBehaviour
                         
                         break;
                     default:
-                        Debug.Log("ya un pb");
+                        Debug.Log("ya un pb conar");
                         break;
                 }
 
@@ -167,6 +178,69 @@ public class Grid : MonoBehaviour
                 newPanel.transform.parent = GameObject.Find("TheGrid").transform;
 
             }
+        }
+
+        if(height == 8 && width == 8)
+        {
+            if (Random.Range(0, 2) == 0)
+            {
+                back = Instantiate(bgList[0], bgListTrans[0].position, transform.rotation);
+
+                front = Instantiate(bgList[1], bgListTrans[1].position, transform.rotation);
+            }
+            else
+            {
+                back = Instantiate(bgList[18], bgListTrans[0].position, transform.rotation);
+
+                front = Instantiate(bgList[19], bgListTrans[1].position, transform.rotation);
+            }
+
+        }else if(height == 9 && width == 9)
+        {
+            back = Instantiate(bgList[2], bgListTrans[2].position, transform.rotation);
+
+            front = Instantiate(bgList[3], bgListTrans[3].position, transform.rotation);
+        }else if (height == 6 && width == 6)
+        {
+            back = Instantiate(bgList[4], bgListTrans[4].position, transform.rotation);
+
+            front = Instantiate(bgList[5], bgListTrans[5].position, transform.rotation);
+        }
+        else if (height == 10 && width == 10)
+        {
+            back = Instantiate(bgList[6], bgListTrans[6].position, transform.rotation);
+
+            front = Instantiate(bgList[7], bgListTrans[7].position, transform.rotation);
+        }
+        else if (height == 8 && width == 7)
+        {
+            back = Instantiate(bgList[8], bgListTrans[8].position, transform.rotation);
+
+            front = Instantiate(bgList[9], bgListTrans[9].position, transform.rotation);
+        }
+        else if (height == 12 && width == 7)
+        {
+            back = Instantiate(bgList[10], bgListTrans[10].position, transform.rotation);
+
+            front = Instantiate(bgList[11], bgListTrans[11].position, transform.rotation);
+        }
+        else if (height == 7 && width == 7)
+        {
+            back = Instantiate(bgList[12], bgListTrans[12].position, transform.rotation);
+
+            front = Instantiate(bgList[13], bgListTrans[13].position, transform.rotation);
+        }
+        else if (height == 10 && width == 8)
+        {
+            back = Instantiate(bgList[14], bgListTrans[14].position, transform.rotation);
+
+            front = Instantiate(bgList[15], bgListTrans[15].position, transform.rotation);
+        }
+        else if (height == 8 && width == 4)
+        {
+            back = Instantiate(bgList[16], bgListTrans[16].position, transform.rotation);
+
+            front = Instantiate(bgList[17], bgListTrans[17].position, transform.rotation);
         }
     }
 
@@ -260,7 +334,13 @@ public class Grid : MonoBehaviour
 
     public void createPlayer(Panel panel)
     {
-        Debug.Log("creatkon du joueur");
+        var holo = GameObject.FindGameObjectsWithTag("Holo");
+        foreach (var item in holo)
+        {
+            Destroy(item);
+        }
+
+        Debug.Log("creation du joueur");
         var en = Instantiate(playerPrefab, Vector2.zero, transform.rotation);
         var enE = en.GetComponent<PlayerMovement>();
         CharacterManager.Instance.currentPlayer = enE;
@@ -283,6 +363,25 @@ public class Grid : MonoBehaviour
         {
             setPlayerStats(enE.stats, CharacterManager.Instance.sS.loadValue());
         }
+
+        /*switch (CharacterManager.Instance.currentPlayer.stats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[2];
+                break;
+            default:
+                break;
+        }*/
+
         CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
 
         ComboSystem.Instance.comboEffect(enE.stats.element, enE.stats.elementCombo);
@@ -298,6 +397,7 @@ public class Grid : MonoBehaviour
         {
             var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
             alphaPanel.color = new Color(1, 1, 1, 0.5f);
+            Instantiate(holoPlayer, alphaPanel.transform.position, alphaPanel.transform.rotation);
             //alphaPanel.sprite = Grid.Instance.listSpritesAlpha[0];
 
             Grid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
@@ -325,6 +425,10 @@ public class Grid : MonoBehaviour
 
         width = 0;
         height = 0;
+
+        Destroy(front);
+        Destroy(back);
+
 
         ClicklManager.Instance.currentPanel = null;
 

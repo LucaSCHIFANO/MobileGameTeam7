@@ -64,7 +64,25 @@ public class ClicklManager : MonoBehaviour
                                                 panelColor.sprite = Grid.Instance.listSpritesAlpha[0];
                                             }
                                         }
+                                        
                                         currentPanel = touchedPanel;
+
+                                        if (player.state == PlayerMovement.States.SELECTED)
+                                        {
+
+                                            foreach (var item in Grid.Instance.gridArrayAlpha)
+                                            {
+                                                Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.Instance.listSpritesAlpha[0];
+                                            }
+
+
+                                            var pathShine = Grid.Instance.PathFinding(player.xPos, player.yPos, touchedPanel.x, touchedPanel.y, false);
+                                            foreach (var item in pathShine)
+                                            {
+                                                var panelColor = Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                                panelColor.sprite = Grid.Instance.listSpritesAlpha[2];
+                                            }
+                                        }
                                     }
 
                                     else
@@ -91,7 +109,6 @@ public class ClicklManager : MonoBehaviour
                                                 {
                                                     BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
                                                     CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                    UiActionManager.Instance.setMovePoint();
                                                     currentPanel = null;
                                                     CardManager.Instance.UseCard();
                                                     CardManager.Instance.midToHand = false;
@@ -150,11 +167,24 @@ public class ClicklManager : MonoBehaviour
 
                                             player.state = PlayerMovement.States.SELECTED;
 
+                                            UiActionManager.Instance.EnemyToHero(player.stats);
                                             UiActionManager.Instance.ShowPortrait(player.stats);
                                         }
                                         else if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<Enemy>())
                                         {
+                                            //UiActionManager.Instance.ShowPortrait(touchedPanel.unitOn.GetComponent<Enemy>().stats);
+
+                                            foreach (var item in Grid.Instance.gridArrayAlpha)
+                                            {
+                                                Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.Instance.listSpritesAlpha[0];
+                                                Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+                                            }
+
+                                            UiActionManager.Instance.HeroToEnemy(touchedPanel.unitOn.GetComponent<Enemy>().stats);
                                             UiActionManager.Instance.ShowPortrait(touchedPanel.unitOn.GetComponent<Enemy>().stats);
+                                            var alphaPanel = Grid.Instance.gridArrayAlpha[touchedPanel.x, touchedPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                                            alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
                                         }
                                     }
                                 }
@@ -175,6 +205,7 @@ public class ClicklManager : MonoBehaviour
 
                                         player.state = PlayerMovement.States.SELECTED;
 
+                                        UiActionManager.Instance.EnemyToHero(player.stats);
                                         UiActionManager.Instance.ShowPortrait(player.stats);
 
                                     }
@@ -223,6 +254,18 @@ public class ClicklManager : MonoBehaviour
                                     else if (player.state == PlayerMovement.States.IDLE)
                                     {
                                         UiActionManager.Instance.ShowPortrait(charact.stats);
+
+                                        foreach (var item in Grid.Instance.gridArrayAlpha)
+                                        {
+                                            Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Grid.Instance.listSpritesAlpha[0];
+                                            Grid.Instance.gridArrayAlpha[item.x, item.y].transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+                                        }
+
+                                        UiActionManager.Instance.HeroToEnemy(actualPanel.unitOn.GetComponent<Enemy>().stats);
+                                        UiActionManager.Instance.ShowPortrait(actualPanel.unitOn.GetComponent<Enemy>().stats); 
+                                        var alphaPanel = Grid.Instance.gridArrayAlpha[actualPanel.x, actualPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
                                     }
 

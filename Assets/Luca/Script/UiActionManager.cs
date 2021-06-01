@@ -6,32 +6,27 @@ using TMPro;
 
 public class UiActionManager : MonoBehaviour
 {
+    [Header("Buttons")]
     public GameObject buttonHand;
     public GameObject buttonCancel;
-    public GameObject deck;
     public GameObject use;
 
-    public Text moveLeft;
-
-    public GameObject unitPortrait;
-    public Image imageBG;
-    public Text unitName;
-    public Text unitHP;
-    public Text unitSTR;
-    public Text unitDEF;
-    public Text unitAP;
+    [Header("Hero Infos")]
     public Slider HPBar;
-    public Text element;
-
     public TextMeshProUGUI apleft;
+    public TextMeshProUGUI currenntHP;
+    public TextMeshProUGUI maxHP;
+    public GameObject unitPortrait;
+    public TextMeshProUGUI defText;
+    public TextMeshProUGUI attText;
+    public Image elementImage;
+    public Sprite[] elementInfos = new Sprite[4];
+
+    public Image[] inGame = new Image[4];
+    public List<Sprite> heroSprites = new List<Sprite>();
+    public List<Sprite> enemySprites = new List<Sprite>();
 
     public ShowRangeAttack sra;
-
-    public GameObject enemiesBoard;
-    public GameObject button;
-    public Sprite minusButtonImage;
-    public Sprite plusButtonImage;
-
 
     private static UiActionManager _instance = null;
 
@@ -51,16 +46,17 @@ public class UiActionManager : MonoBehaviour
         unitPortrait.SetActive(true);
         use.SetActive(false);
         apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
-        //apleft.SetActive(false);
+        maxHP.text = CharacterManager.Instance.currentPlayer.stats.maxHP.ToString();
+        currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
+        defText.text = CharacterManager.Instance.currentPlayer.stats.defense.ToString();
+        attText.text = CharacterManager.Instance.currentPlayer.stats.strenght.ToString();
     }
 
     public void hideButton()
     {
         buttonHand.SetActive(false);
         buttonCancel.SetActive(true);
-        deck.SetActive(false);
         use.SetActive(false);
-        //apleft.SetActive(false);
     }
 
     public void showDeck()
@@ -71,9 +67,11 @@ public class UiActionManager : MonoBehaviour
             buttonHand.SetActive(false);
             buttonCancel.SetActive(true);
             use.SetActive(true);
-            //unitPortrait.SetActive(false);
-            //apleft.SetActive(true);
             apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
+            currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
+
+            EnemyToHero(CharacterManager.Instance.currentPlayer.stats);
+            ShowPortrait(CharacterManager.Instance.currentPlayer.stats);
 
             var player = CharacterManager.Instance.currentPlayer.GetComponent<PlayerMovement>();
 
@@ -133,10 +131,8 @@ public class UiActionManager : MonoBehaviour
     {
         buttonHand.SetActive(false);
         buttonCancel.SetActive(false);
-        deck.SetActive(false);
         use.SetActive(false);
         unitPortrait.SetActive(false);
-        //apleft.SetActive(false);
     }
 
     public void endTurn()
@@ -148,56 +144,11 @@ public class UiActionManager : MonoBehaviour
         }
     }
 
-    public void setMovePoint()
-    {
-        moveLeft.text = "AP : " + CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
-    }
-
     public void ShowPortrait(Stats stats)
     {
         unitPortrait.SetActive(true);
-        unitName.text = stats.characName;
-        unitHP.text = stats.HP + " / " + stats.maxHP + " PV";
         HPBar.maxValue = stats.maxHP;
         HPBar.value = stats.HP;
-
-        if (stats.gameObject.GetComponent<Enemy>())
-        {
-            unitSTR.text = "STR : " + stats.strenght.ToString() + " + " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.damage + "   " + "Range : " + stats.gameObject.GetComponent<Enemy>().attackMonster.attackParam.range;
-            imageBG.color = new Color(1, 0.4481132f, 0.4481132f, 0.5f);
-        }
-        else
-        {
-            unitSTR.text = "STR : " + (stats.strenght + stats.boostAtt).ToString();
-            imageBG.color = new Color(0, 0.5876393f, 1, 0.5f);
-        }
-
-        unitDEF.text = "DEF : " + (stats.defense + stats.boostDef).ToString();
-        unitAP.text = "AP : " + stats.actionPoint.ToString();
-
-        if (stats.gameObject.GetComponent<PlayerMovement>())
-        {
-            if (stats.element == Stats.ELEMENT.RED)
-            {
-                element.text = "Elem : " + stats.element.ToString() + "  STR +" + stats.boostAtt;
-            }
-            else if (stats.element == Stats.ELEMENT.BLUE)
-            {
-                element.text = "Elem : " + stats.element.ToString() + "  DEF +" + stats.boostDef;
-            }
-            else if (stats.element == Stats.ELEMENT.GREEN)
-            {
-                element.text = "Elem : " + stats.element.ToString() + "  AP +" + stats.boostAP;
-            }
-            else
-            {
-                element.text = "Elem : " + stats.element.ToString();
-            }
-        }
-        else
-        {
-            element.text = "Elem : " + stats.element.ToString();
-        }
     }
 
     public void HidePortrait()
@@ -240,19 +191,77 @@ public class UiActionManager : MonoBehaviour
 
     }
 
-    public void EnemiesBoardState()
+    public void EnemyToHero(Stats playerStats)
     {
-        if (enemiesBoard.activeInHierarchy)
+        for (int i = 0; i < inGame.Length; i++)
         {
-            enemiesBoard.SetActive(false);
-            button.GetComponent<Image>().sprite = plusButtonImage;
+            inGame[i].sprite = heroSprites[i];
         }
-        else
+
+        apleft.text = playerStats.actionPoint.ToString();
+        maxHP.text = playerStats.maxHP.ToString();
+        currenntHP.text = playerStats.HP.ToString();
+        defText.text = (playerStats.defense + playerStats.boostDef).ToString();
+        attText.text = (playerStats.strenght + playerStats.boostAtt).ToString();
+
+
+        switch (playerStats.element)
         {
-            enemiesBoard.SetActive(true);
-            button.GetComponent<Image>().sprite = minusButtonImage;
-            EnemiesBoard.Instance.CheckList();
+            case Stats.ELEMENT.NORMAL:
+                elementImage.sprite =elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                elementImage.sprite = elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+               elementImage.sprite = elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                elementImage.sprite = elementInfos[2];
+                break;
+            default:
+                break;
         }
+    }
+
+    public void HeroToEnemy(Stats enemyStats)
+    {
+        for (int i = 0; i < inGame.Length; i++)
+        {
+            inGame[i].sprite = enemySprites[i];
+        }
+
+        apleft.text = enemyStats.actionPoint.ToString();
+        maxHP.text = enemyStats.maxHP.ToString();
+        currenntHP.text = enemyStats.HP.ToString();
+        defText.text = (enemyStats.defense + enemyStats.boostDef).ToString();
+        attText.text = (enemyStats.strenght + enemyStats.boostAtt).ToString();
+
+        switch (enemyStats.element)
+        {
+            case Stats.ELEMENT.NORMAL:
+                elementImage.sprite = elementInfos[3];
+                break;
+            case Stats.ELEMENT.RED:
+                elementImage.sprite = elementInfos[0];
+                break;
+            case Stats.ELEMENT.BLUE:
+                elementImage.sprite = elementInfos[1];
+                break;
+            case Stats.ELEMENT.GREEN:
+                elementImage.sprite = elementInfos[2];
+                break;
+            default:
+                break;
+        }
+    }
+
+    public IEnumerator startButWait()
+    {
+        CardManager.Instance.inChosenTime = false;
+        MapComposent.Instance.fadeOutIn();
+        yield return new WaitForSeconds(0.6f);
+        Grid.Instance.functionStart();
     }
 
 }
