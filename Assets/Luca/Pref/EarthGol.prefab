@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 8880093701872519212}
   - component: {fileID: 8880093701872519215}
   - component: {fileID: 8880093701872519214}
+  - component: {fileID: 8076834126796437604}
   m_Layer: 0
   m_Name: EarthGol
   m_TagString: Untagged
@@ -248,3 +249,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &8076834126796437604
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880093701872519209}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 4.273671}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 4.88, y: 11.32}
+    newSize: {x: 4.96, y: 11.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.49, y: 6.6329327}
+  m_EdgeRadius: 0

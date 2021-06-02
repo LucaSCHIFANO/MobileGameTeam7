@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce809256edfad24d952c7cac25a5c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 8163143335337599812}
   sr: {fileID: 0}
 --- !u!1 &2424325566671114410
 GameObject:
@@ -394,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterGol
       objectReference: {fileID: 0}
+    - target: {fileID: 3808141271427943582, guid: a1307760478c45446846cca4f76be8e5, type: 3}
+      propertyPath: m_TagString
+      value: ClickableChar
+      objectReference: {fileID: 0}
     - target: {fileID: 5865637332664504521, guid: a1307760478c45446846cca4f76be8e5, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -455,5 +459,10 @@ PrefabInstance:
 --- !u!4 &8163143335337599814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3808141271427943579, guid: a1307760478c45446846cca4f76be8e5, type: 3}
+  m_PrefabInstance: {fileID: 5012633732529696733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8163143335337599812 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3808141271427943577, guid: a1307760478c45446846cca4f76be8e5, type: 3}
   m_PrefabInstance: {fileID: 5012633732529696733}
   m_PrefabAsset: {fileID: 0}

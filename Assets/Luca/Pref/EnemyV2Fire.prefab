@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anims idle_feu_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4946557396595311931, guid: 535d4a41b9e81994996eaa188bf9c6da, type: 3}
+      propertyPath: m_TagString
+      value: ClickableChar
+      objectReference: {fileID: 0}
     - target: {fileID: 4946557396595311933, guid: 535d4a41b9e81994996eaa188bf9c6da, type: 3}
       propertyPath: m_SortingOrder
       value: 5

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UiActionManager : MonoBehaviour
 {
@@ -270,6 +271,14 @@ public class UiActionManager : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         CardManager.Instance.transitionStyle.SetActive(false);
         Grid.Instance.functionStart();
+    }
+
+
+    public IEnumerator backToMenu()
+    {
+        MapComposent.Instance.fadeOutIn();
+        yield return new WaitForSeconds(0.6f);
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

@@ -170,6 +170,7 @@ public class Grid : MonoBehaviour
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.5f, 0f, 0.3f);
                         newPanel.movementCost = 3;
+                        newPanel.isPoison = true;
                         
                         break;
                     default:

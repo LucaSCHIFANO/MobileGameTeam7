@@ -65,6 +65,30 @@ public class Stats : MonoBehaviour
 
             numberOfTurn--;
         }
+
+
+        if (GetComponent<PlayerMovement>())
+        {
+            var me = GetComponent<PlayerMovement>();
+            if(Grid.Instance.gridArray[me.xPos, -me.yPos].isPoison)
+            {
+                HP -= 3;
+                HP = Mathf.Clamp(HP, 0, maxHP);
+
+                BattleManager.Instance.showDamage(3, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f));
+            }
+        }
+        else
+        {
+            var me = GetComponent<Enemy>();
+            if (Grid.Instance.gridArray[me.xPos, -me.yPos].isPoison)
+            {
+                HP -= 3;
+                HP = Mathf.Clamp(HP, 0, maxHP);
+
+                BattleManager.Instance.showDamage(3, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f));
+            }
+        }
     }
 
 }
