@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Meteor
   description: A rain of meteors fall down on enemies
-  range: 3
+  range: 4
   row_column: 0
   throughWall: 0
-  APNeeded: 4
-  damage: 12
+  APNeeded: 3
+  damage: 10
   push: 0
   pull: 0
   element: 1

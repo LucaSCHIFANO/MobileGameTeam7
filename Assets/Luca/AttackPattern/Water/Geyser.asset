@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patternName: Geyser
   description: You invoke a source of boiling water under your enemies
-  range: 3
+  range: 4
   row_column: 0
   throughWall: 0
   APNeeded: 5
