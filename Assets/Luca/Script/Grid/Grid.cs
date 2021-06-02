@@ -123,21 +123,25 @@ public class Grid : MonoBehaviour
                         visu.sprite = listSprites[1]; 
                         //newPanel.baseColor = new Color(0.006f, 0.7075f, 0);
                         newPanel.movementCost = 1;
+                        newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.PATH:
                         visu.sprite = listSprites[0];
                         //newPanel.baseColor = new Color(0.8207f, 0.7423f, 0.3832f);
                         newPanel.movementCost = 1;
+                        newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.FOREST:
                         visu.sprite = listSprites[2];
                         //newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
                         newPanel.movementCost = 2;
+                        newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.WATER:
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.0342f, 0.401f, 0.6603f);
                         newPanel.movementCost = 3;
+                        newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.WALL:
                         /*visu.sprite = listSprites[0];
@@ -151,6 +155,7 @@ public class Grid : MonoBehaviour
                         visu.sprite = listSprites[0];
                         //visu.color = new Color(0.5943f, 0.1720f, 0);
                         newPanel.movementCost = 1;
+                        newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.HOLE:
                         //visu.sprite = listSprites[0];
@@ -165,12 +170,15 @@ public class Grid : MonoBehaviour
                         newPanel.movementCost = 1;
                         newPanel.canBeOpen = true;
                         newPanel.isOpen = false;
+                        newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.POISON:
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.5f, 0f, 0.3f);
                         newPanel.movementCost = 3;
-                        
+                        newPanel.isPoison = true;
+                        newPanel.canShotThrought = false;
+
                         break;
                     default:
                         Debug.Log("ya un pb conar");

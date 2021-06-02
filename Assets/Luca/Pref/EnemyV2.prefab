@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce809256edfad24d952c7cac25a5c8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 1170161760947359593}
   sr: {fileID: 0}
 --- !u!1001 &8126915867372505068
 PrefabInstance:
@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NeutralGol
       objectReference: {fileID: 0}
+    - target: {fileID: 6986671849257699458, guid: 7c51c16cd5b97c84eb78ac52f8da0c9f, type: 3}
+      propertyPath: m_TagString
+      value: ClickableChar
+      objectReference: {fileID: 0}
     - target: {fileID: 6986671849257699460, guid: 7c51c16cd5b97c84eb78ac52f8da0c9f, type: 3}
       propertyPath: m_SortingOrder
       value: 5
@@ -455,5 +459,10 @@ PrefabInstance:
 --- !u!4 &1170161760947359595 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6986671849257699463, guid: 7c51c16cd5b97c84eb78ac52f8da0c9f, type: 3}
+  m_PrefabInstance: {fileID: 8126915867372505068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1170161760947359593 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6986671849257699461, guid: 7c51c16cd5b97c84eb78ac52f8da0c9f, type: 3}
   m_PrefabInstance: {fileID: 8126915867372505068}
   m_PrefabAsset: {fileID: 0}

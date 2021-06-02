@@ -33,6 +33,7 @@ public class Panel : MonoBehaviour
 
     public bool canBeOpen;
     public bool isOpen;
+    public bool isPoison;
 
     private void Start()
     {
