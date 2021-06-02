@@ -8649,7 +8649,7 @@ MonoBehaviour:
   listSpritesAlpha:
   - {fileID: 21300000, guid: 498ec891f7dceaf4a980d759d51780b8, type: 3}
   - {fileID: 21300000, guid: fba5957a8f3487e4b8bc6013a253826d, type: 3}
-  - {fileID: 21300000, guid: 2b665bdfe13714749b191288e88dd087, type: 3}
+  - {fileID: 21300000, guid: 1f654219e436d9e41948a3cbec44e609, type: 3}
   bgList:
   - {fileID: 254556042631337423, guid: 19efc46e1a36aec4cbf2d0d17a1a7218, type: 3}
   - {fileID: 5769864970190913787, guid: ba65bdcc58f0ed94ba8e1c79c6482c5e, type: 3}
@@ -20192,7 +20192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7cb568d292d86f24fabe73df786a3a2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3872c9fff5c18a443aba8f306c227b1e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
