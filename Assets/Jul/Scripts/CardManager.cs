@@ -54,6 +54,8 @@ public class CardManager : MonoBehaviour
     private Vector3 previousTransform;
     private Vector3 previousScale;
 
+    public GameObject transitionStyle;
+
     private static CardManager _instance = null;
 
     public static CardManager Instance

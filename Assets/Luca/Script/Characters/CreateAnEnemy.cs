@@ -28,11 +28,11 @@ public class CreateAnEnemy : MonoBehaviour
         {
             Debug.Log(upgradeValue + " " + upgradeProba + " " + numberOfRoll + " " + i);
 
-            var number = Random.Range(0, 4);
+            var type = enemy.stats.element;
 
-            switch (number) // neutre, green, blue, red
+            switch (type)
             {
-                case 0:
+                case Stats.ELEMENT.NORMAL:
                     enemy.stats.characName = "Skully";
                     enemy.stats.maxHP = 10 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
@@ -46,47 +46,11 @@ public class CreateAnEnemy : MonoBehaviour
                     enemy.attackMonster.attackParam = listEnAttack[0];
                     enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
 
-                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
                     enemy.gameObject.name = "Skully";
                     break;
 
-                case 1:
-                    enemy.stats.characName = "A plant...";
-                    enemy.stats.maxHP = 12 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.HP = enemy.stats.maxHP;
-                    enemy.stats.strenght += upgradeValue + proba(upgradeProba);
-                    enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 4;
-                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
-                    enemy.stats.element = Stats.ELEMENT.GREEN;
 
-                    enemy.attackMonster.attackParam = listEnAttack[1];
-                    enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
-
-                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.green;
-                    enemy.gameObject.name = "A plant...";
-                    break;
-
-                case 2:
-                    enemy.stats.characName = "Bububle";
-                    enemy.stats.maxHP = 7 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.HP = enemy.stats.maxHP;
-                    enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.defense += upgradeValue + proba(upgradeProba);
-                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 4;
-                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
-                    enemy.stats.element = Stats.ELEMENT.BLUE;
-
-                    enemy.attackMonster.attackParam = listEnAttack[2];
-                    enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
-
-                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.blue;
-                    enemy.gameObject.name = "Bububle";
-                    break;
-
-                case 3:
+                case Stats.ELEMENT.RED:
                     enemy.stats.characName = "Fiya Foxu";
                     enemy.stats.maxHP = 6 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
@@ -100,26 +64,49 @@ public class CreateAnEnemy : MonoBehaviour
                     enemy.attackMonster.attackParam = listEnAttack[3];
                     enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
 
-                    enemy.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
                     enemy.gameObject.name = "Fiya Foxu";
                     break;
 
 
-                default:
-                    enemy.stats.characName = "Skully";
-                    enemy.stats.maxHP = 10 + upgradeValue + proba(upgradeProba);
+                case Stats.ELEMENT.BLUE:
+                    enemy.stats.characName = "Bububle";
+                    enemy.stats.maxHP = 7 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
-                    enemy.stats.strenght += upgradeValue + proba(upgradeProba);
+                    enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += upgradeValue + proba(upgradeProba);
                     enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 3;
+                    enemy.stats.maxActionPoint = 4;
                     enemy.stats.actionPoint = enemy.stats.maxActionPoint;
-                    enemy.stats.element = Stats.ELEMENT.NORMAL;
+                    enemy.stats.element = Stats.ELEMENT.BLUE;
 
-                    enemy.attackMonster.attackParam = listEnAttack[0];
+                    enemy.attackMonster.attackParam = listEnAttack[2];
                     enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                    enemy.gameObject.name = "Bububle";
+                    break;
+
+
+                case Stats.ELEMENT.GREEN:
+                    enemy.stats.characName = "A plant...";
+                    enemy.stats.maxHP = 12 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.HP = enemy.stats.maxHP;
+                    enemy.stats.strenght += upgradeValue + proba(upgradeProba);
+                    enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxActionPoint = 4;
+                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                    enemy.stats.element = Stats.ELEMENT.GREEN;
+
+                    enemy.attackMonster.attackParam = listEnAttack[1];
+                    enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
+
+                    enemy.gameObject.name = "A plant...";
+                    break;
+
+                default:
                     break;
             }
+
         }
     }
 

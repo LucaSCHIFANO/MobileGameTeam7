@@ -72,7 +72,6 @@ public class TestAttackRange : MonoBehaviour
                 {
                     if (throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-
                         var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
                         alphaPanel.color = new Color(alphaPanel.color.r, alphaPanel.color.g, alphaPanel.color.b, 0.5f);
                         alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];

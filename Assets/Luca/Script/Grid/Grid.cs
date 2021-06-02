@@ -27,6 +27,9 @@ public class Grid : MonoBehaviour
     
     public GameObject playerPrefab;
     public GameObject enemy;
+    public GameObject enemyFire;
+    public GameObject enemyWater;
+    public GameObject enemyEarth;
     public GameObject holoPlayer;
     
     private CreateAnEnemy cae;
@@ -319,14 +322,39 @@ public class Grid : MonoBehaviour
         cae = GetComponent<CreateAnEnemy>();
         foreach (var VECTOR in locationEnemy)
         {
-            var en = Instantiate(enemy, Vector2.zero, transform.rotation);
+            GameObject en = null;
+            var number = Random.Range(0, 4);
+
+            switch (number)
+            {
+                case 0:
+                    en = Instantiate(enemy, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                case 1:
+                    en = Instantiate(enemyFire, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                case 2:
+                    en = Instantiate(enemyWater, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                case 3:
+                    en = Instantiate(enemyEarth, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                default:
+                    en = Instantiate(enemy, Vector2.zero, transform.rotation); // randomize
+                    break;
+            }
+
             var enE = en.GetComponent<Enemy>();
 
             enE.xPos = (int)VECTOR.x;
             enE.yPos = (int)VECTOR.y;
             enE.Start();
 
-            cae.creation(enE, levelID, progress);
+            cae.creation(enE, levelID, progress); // check type et je fait le truc
         }
         
         locationEnemy.Clear();

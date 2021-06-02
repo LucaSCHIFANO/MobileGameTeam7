@@ -84,23 +84,26 @@ public class ShowRangeAttack : MonoBehaviour
                 {
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
+                        if (!actuPanel.canShotThrought)
+                        {
                             actuPanel.canBeClick = true;
-                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
-                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
-                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
+                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                            alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                        if (actuPanel.unitOn != null)
-                            { 
-                                if(actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                            if (actuPanel.unitOn != null)
+                            {
+                                if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
                                 {
                                     actuPanel.canBeClick = false;
                                 }
 
-                                else if ( !attackParam.throughWall)
+                                else if (!attackParam.throughWall)
                                 {
                                     random = true;
                                 }
                             }
+                        }
                     }
                     else
                     {
@@ -135,21 +138,24 @@ public class ShowRangeAttack : MonoBehaviour
                 {
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                            actuPanel.canBeClick = true;
-                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
-                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
-                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
-
-                        if (actuPanel.unitOn != null)
+                        if (!actuPanel.canShotThrought)
                         {
-                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
-                            {
-                                actuPanel.canBeClick = false;
-                            }
+                            actuPanel.canBeClick = true;
+                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                            alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                            else if (!attackParam.throughWall)
+                            if (actuPanel.unitOn != null)
                             {
-                                random = true;
+                                if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                                {
+                                    actuPanel.canBeClick = false;
+                                }
+
+                                else if (!attackParam.throughWall)
+                                {
+                                    random = true;
+                                }
                             }
                         }
                     }
@@ -186,21 +192,24 @@ public class ShowRangeAttack : MonoBehaviour
                 {
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                            actuPanel.canBeClick = true;
-                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
-                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
-                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
-
-                        if (actuPanel.unitOn != null)
+                        if (!actuPanel.canShotThrought)
                         {
-                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
-                            {
-                                actuPanel.canBeClick = false;
-                            }
+                            actuPanel.canBeClick = true;
+                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                            alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                            else if (!attackParam.throughWall)
+                            if (actuPanel.unitOn != null)
                             {
-                                random = true;
+                                if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                                {
+                                    actuPanel.canBeClick = false;
+                                }
+
+                                else if (!attackParam.throughWall)
+                                {
+                                    random = true;
+                                }
                             }
                         }
                     }
@@ -239,21 +248,24 @@ public class ShowRangeAttack : MonoBehaviour
                 {
                     if (attackParam.throughWall || actuPanel.canBeCrossed || actuPanel.canShotThrought)
                     {
-                            actuPanel.canBeClick = true;
-                        var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
-                        alphaPanel.color = new Color(1, 1, 1, 0.5f);
-                        alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
-
-                        if (actuPanel.unitOn != null)
+                        if (!actuPanel.canShotThrought)
                         {
-                            if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
-                            {
-                                actuPanel.canBeClick = false;
-                            }
+                            actuPanel.canBeClick = true;
+                            var alphaPanel = Grid.Instance.gridArrayAlpha[actuPanel.x, actuPanel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                            alphaPanel.sprite = Grid.Instance.listSpritesAlpha[1];
 
-                            else if (!attackParam.throughWall)
+                            if (actuPanel.unitOn != null)
                             {
-                                random = true;
+                                if (actuPanel.unitOn.GetComponent<PlayerMovement>() && BattleManager.Instance.currentAttackParam.around)
+                                {
+                                    actuPanel.canBeClick = false;
+                                }
+
+                                else if (!attackParam.throughWall)
+                                {
+                                    random = true;
+                                }
                             }
                         }
                     }

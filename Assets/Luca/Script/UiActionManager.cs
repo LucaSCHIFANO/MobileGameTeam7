@@ -268,6 +268,7 @@ public class UiActionManager : MonoBehaviour
         CardManager.Instance.inChosenTime = false;
         MapComposent.Instance.fadeOutIn();
         yield return new WaitForSeconds(0.6f);
+        CardManager.Instance.transitionStyle.SetActive(false);
         Grid.Instance.functionStart();
     }
 
