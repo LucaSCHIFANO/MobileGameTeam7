@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public GameObject panelToGo;
 
     public Pattern pattern;
+    public bool isMoving;
 
     public enum Pattern
     {
@@ -48,6 +49,11 @@ public class Enemy : MonoBehaviour
         if (panelToGo != null)
         {
             trueMovement();
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
         }
     }
 

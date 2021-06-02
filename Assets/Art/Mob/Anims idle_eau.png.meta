@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: de320ce7bd42fb34e83ab6efaef2c3c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2798176164164185525
+    second: Anims idle_eau_0
+  - first:
+      213: 1543337258248341536
+    second: Anims idle_eau_1
+  - first:
+      213: 7543125224741070721
+    second: Anims idle_eau_2
+  - first:
+      213: 4145428155867053462
+    second: Anims idle_eau_3
+  - first:
+      213: -8446763078918671584
+    second: Anims idle_eau_4
+  - first:
+      213: -8021793901018934046
+    second: Anims idle_eau_5
+  - first:
+      213: 4818924028549158382
+    second: Anims idle_eau_6
+  - first:
+      213: 4624489097397986772
+    second: Anims idle_eau_7
+  - first:
+      213: 439951466375444932
+    second: Anims idle_eau_8
+  - first:
+      213: 4406318314338951408
+    second: Anims idle_eau_9
+  - first:
+      213: -6721352208171854154
+    second: Anims idle_eau_10
+  - first:
+      213: 6901980362962289765
+    second: Anims idle_eau_11
+  - first:
+      213: -4090185127286634077
+    second: Anims idle_eau_12
+  - first:
+      213: -3843923686326730271
+    second: Anims idle_eau_13
+  - first:
+      213: 8343221639429170199
+    second: Anims idle_eau_14
+  - first:
+      213: -7352934776872648523
+    second: Anims idle_eau_15
+  - first:
+      213: -5303005393554306781
+    second: Anims idle_eau_16
+  - first:
+      213: 5959759160554681182
+    second: Anims idle_eau_17
+  - first:
+      213: -342238088315164227
+    second: Anims idle_eau_18
+  - first:
+      213: 7729147212995343835
+    second: Anims idle_eau_19
+  - first:
+      213: 4998270824475193003
+    second: Anims idle_eau_20
+  - first:
+      213: -2897864287171214799
+    second: Anims idle_eau_21
+  - first:
+      213: -4150026417381280040
+    second: Anims idle_eau_22
+  - first:
+      213: 3131100728750152888
+    second: Anims idle_eau_23
+  - first:
+      213: -4954623989619064431
+    second: Anims idle_eau_24
+  - first:
+      213: 3508265620992413850
+    second: Anims idle_eau_25
+  - first:
+      213: 1467222689401900104
+    second: Anims idle_eau_26
+  - first:
+      213: -8548082505087200950
+    second: Anims idle_eau_27
+  - first:
+      213: 8413864090430592030
+    second: Anims idle_eau_28
+  - first:
+      213: 7484568721418174828
+    second: Anims idle_eau_29
+  - first:
+      213: 9136682005736892815
+    second: Anims idle_eau_30
+  - first:
+      213: -4304521263536873094
+    second: Anims idle_eau_31
+  - first:
+      213: -443132420550504345
+    second: Anims idle_eau_32
+  - first:
+      213: -2897223036500121234
+    second: Anims idle_eau_33
+  - first:
+      213: -2416830833880909563
+    second: Anims idle_eau_34
+  - first:
+      213: -6337083051579642459
+    second: Anims idle_eau_35
+  - first:
+      213: -2681198446806386808
+    second: Anims idle_eau_36
+  - first:
+      213: 8406584336781823768
+    second: Anims idle_eau_37
+  - first:
+      213: -8425483703881159089
+    second: Anims idle_eau_38
+  - first:
+      213: -5218318573290771024
+    second: Anims idle_eau_39
+  - first:
+      213: 447765566143140898
+    second: Anims idle_eau_40
+  - first:
+      213: 5320710511234330852
+    second: Anims idle_eau_41
+  - first:
+      213: 3816681099261324377
+    second: Anims idle_eau_42
+  - first:
+      213: -1073615981874130794
+    second: Anims idle_eau_43
+  - first:
+      213: -4794797786281157845
+    second: Anims idle_eau_44
+  - first:
+      213: 2231180287542274660
+    second: Anims idle_eau_45
+  - first:
+      213: -4869983826857233071
+    second: Anims idle_eau_46
+  - first:
+      213: -5006144434557898223
+    second: Anims idle_eau_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims idle_eau_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bda8fb556e15d620800000000000000
+      internalID: 2798176164164185525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_1
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 6982
+        width: 491
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02884863f090b6510800000000000000
+      internalID: 1543337258248341536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_2
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 6982
+        width: 492
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187eafc3d609ea860800000000000000
+      internalID: 7543125224741070721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_3
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 6982
+        width: 492
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dbb50c1f4878930800000000000000
+      internalID: 4145428155867053462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_4
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 6982
+        width: 496
+        height: 1132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023fa2b8bb117ca80800000000000000
+      internalID: -8446763078918671584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_5
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 6982
+        width: 496
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e41f54c2fcdca090800000000000000
+      internalID: -8021793901018934046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_6
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 6982
+        width: 500
+        height: 1130
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee554494fd140e240800000000000000
+      internalID: 4818924028549158382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_7
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 6982
+        width: 504
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5e21e155c7d2040800000000000000
+      internalID: 4624489097397986772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 5702
+        width: 508
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c978b717850b1600800000000000000
+      internalID: 439951466375444932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_9
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 5702
+        width: 516
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0a8754923662d30800000000000000
+      internalID: 4406318314338951408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_10
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 5702
+        width: 524
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b611a527c5f8b2a0800000000000000
+      internalID: -6721352208171854154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_11
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 5702
+        width: 528
+        height: 1131
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564c6156292c8cf50800000000000000
+      internalID: 6901980362962289765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_12
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 5702
+        width: 528
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a98e762c4ebc37c0800000000000000
+      internalID: -4090185127286634077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_13
+      rect:
+        serializedVersion: 2
+        x: 4902
+        y: 5702
+        width: 524
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e109c4f5c3a7aac0800000000000000
+      internalID: -3843923686326730271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_14
+      rect:
+        serializedVersion: 2
+        x: 5846
+        y: 5702
+        width: 524
+        height: 1128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714278470e319c370800000000000000
+      internalID: 8343221639429170199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_15
+      rect:
+        serializedVersion: 2
+        x: 6794
+        y: 5702
+        width: 518
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0c3e727c025f990800000000000000
+      internalID: -7352934776872648523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_16
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 4426
+        width: 516
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329073be0b0f766b0800000000000000
+      internalID: -5303005393554306781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_17
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 4426
+        width: 516
+        height: 1124
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53fdbf516155b250800000000000000
+      internalID: 5959759160554681182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_18
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 4426
+        width: 508
+        height: 1126
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9ad5d9540204bf0800000000000000
+      internalID: -342238088315164227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_19
+      rect:
+        serializedVersion: 2
+        x: 3022
+        y: 4426
+        width: 508
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5b94f7072734b60800000000000000
+      internalID: 7729147212995343835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_20
+      rect:
+        serializedVersion: 2
+        x: 3966
+        y: 4426
+        width: 504
+        height: 1127
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeea0835dc6d5540800000000000000
+      internalID: 4998270824475193003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_21
+      rect:
+        serializedVersion: 2
+        x: 4911
+        y: 4426
+        width: 503
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1328edbc8c7b8c7d0800000000000000
+      internalID: -2897864287171214799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_22
+      rect:
+        serializedVersion: 2
+        x: 5858
+        y: 4426
+        width: 500
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6708f06f42866c0800000000000000
+      internalID: -4150026417381280040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_23
+      rect:
+        serializedVersion: 2
+        x: 6802
+        y: 4426
+        width: 496
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc9e150687e37b20800000000000000
+      internalID: 3131100728750152888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3150
+        width: 498
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191802f6bb3ad3bb0800000000000000
+      internalID: -4954623989619064431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_25
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 3150
+        width: 492
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90d7f4aefcdfa030800000000000000
+      internalID: 3508265620992413850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_26
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 3150
+        width: 491
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c8138234f9c5410800000000000000
+      internalID: 1467222689401900104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_27
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 3150
+        width: 491
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41db85504c1f5980800000000000000
+      internalID: -8548082505087200950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_28
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 3150
+        width: 488
+        height: 1114
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14d78acfcc04c470800000000000000
+      internalID: 8413864090430592030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_29
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 3150
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c614121e8978ed760800000000000000
+      internalID: 7484568721418174828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_30
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 3150
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89a6a140e30cce70800000000000000
+      internalID: 9136682005736892815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_31
+      rect:
+        serializedVersion: 2
+        x: 6810
+        y: 3146
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71e4c697b44344c0800000000000000
+      internalID: -4304521263536873094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_32
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760d0ac496da9d9f0800000000000000
+      internalID: -443132420550504345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_33
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69e45a9ffefac7d0800000000000000
+      internalID: -2897223036500121234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_34
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50931585921b57ed0800000000000000
+      internalID: -2416830833880909563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_35
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad62763a882e08a0800000000000000
+      internalID: -6337083051579642459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_36
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887b6cdd7387acad0800000000000000
+      internalID: -2681198446806386808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_37
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 1870
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f4e301aef2aa470800000000000000
+      internalID: 8406584336781823768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_38
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 1870
+        width: 488
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e2251263ba21b80800000000000000
+      internalID: -8425483703881159089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_39
+      rect:
+        serializedVersion: 2
+        x: 6810
+        y: 1870
+        width: 488
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd2e2ac7eec497b0800000000000000
+      internalID: -5218318573290771024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_40
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 590
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2241d98f868c63600800000000000000
+      internalID: 447765566143140898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_41
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 590
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e03fc60506f6d940800000000000000
+      internalID: 5320710511234330852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_42
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 590
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c2b66fc3397f430800000000000000
+      internalID: 3816681099261324377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_43
+      rect:
+        serializedVersion: 2
+        x: 3034
+        y: 590
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690d537e3ffb911f0800000000000000
+      internalID: -1073615981874130794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_44
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 590
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bd1ea31d4757db0800000000000000
+      internalID: -4794797786281157845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_45
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 590
+        width: 488
+        height: 1116
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46aafc476aeb6fe10800000000000000
+      internalID: 2231180287542274660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_46
+      rect:
+        serializedVersion: 2
+        x: 5866
+        y: 590
+        width: 488
+        height: 1123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155f64203875a6cb0800000000000000
+      internalID: -4869983826857233071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_eau_47
+      rect:
+        serializedVersion: 2
+        x: 6810
+        y: 590
+        width: 488
+        height: 1120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112b0e3192a968ab0800000000000000
+      internalID: -5006144434557898223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

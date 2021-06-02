@@ -43,6 +43,10 @@ public class UiActionManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+    private void Update()
+    {
 
         Time.timeScale = speed;
     }

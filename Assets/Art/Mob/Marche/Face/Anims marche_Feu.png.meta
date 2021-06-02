@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: a553de6667db4314a805504632ea261b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2170668142068853179
+    second: Anims marche_Feu_0
+  - first:
+      213: -1420261792726053324
+    second: Anims marche_Feu_1
+  - first:
+      213: 4726785790575735435
+    second: Anims marche_Feu_2
+  - first:
+      213: -4372078889360505656
+    second: Anims marche_Feu_3
+  - first:
+      213: -4924484820249544618
+    second: Anims marche_Feu_4
+  - first:
+      213: -7199020130861578911
+    second: Anims marche_Feu_5
+  - first:
+      213: 6356485140717232724
+    second: Anims marche_Feu_6
+  - first:
+      213: 5863527098230357689
+    second: Anims marche_Feu_7
+  - first:
+      213: -3910749324442272745
+    second: Anims marche_Feu_8
+  - first:
+      213: -3719807866734135754
+    second: Anims marche_Feu_9
+  - first:
+      213: -9011013547720774641
+    second: Anims marche_Feu_10
+  - first:
+      213: 9061147159860122175
+    second: Anims marche_Feu_11
+  - first:
+      213: -3769529791396644804
+    second: Anims marche_Feu_12
+  - first:
+      213: -8023585684960921019
+    second: Anims marche_Feu_13
+  - first:
+      213: 8335074266376876417
+    second: Anims marche_Feu_14
+  - first:
+      213: -5788012488193827000
+    second: Anims marche_Feu_15
+  - first:
+      213: 8329795339378454517
+    second: Anims marche_Feu_16
+  - first:
+      213: 3725307348069786606
+    second: Anims marche_Feu_17
+  - first:
+      213: 1294167869195548335
+    second: Anims marche_Feu_18
+  - first:
+      213: 2237660994180711528
+    second: Anims marche_Feu_19
+  - first:
+      213: -5044466533598187102
+    second: Anims marche_Feu_20
+  - first:
+      213: -3325906496918614172
+    second: Anims marche_Feu_21
+  - first:
+      213: -3705976622055150970
+    second: Anims marche_Feu_22
+  - first:
+      213: 7536952289966624503
+    second: Anims marche_Feu_23
+  - first:
+      213: -4874588165742001556
+    second: Anims marche_Feu_24
+  - first:
+      213: -4686093078035984727
+    second: Anims marche_Feu_25
+  - first:
+      213: -4532261161793752866
+    second: Anims marche_Feu_26
+  - first:
+      213: -3584535037353368625
+    second: Anims marche_Feu_27
+  - first:
+      213: -1245619308864277706
+    second: Anims marche_Feu_28
+  - first:
+      213: -4335246780701260332
+    second: Anims marche_Feu_29
+  - first:
+      213: -8281272168293259720
+    second: Anims marche_Feu_30
+  - first:
+      213: 1733159959608653345
+    second: Anims marche_Feu_31
+  - first:
+      213: -7772275313713864814
+    second: Anims marche_Feu_32
+  - first:
+      213: -3241167188102769833
+    second: Anims marche_Feu_33
+  - first:
+      213: -5817495182917741891
+    second: Anims marche_Feu_34
+  - first:
+      213: -8476191072684091701
+    second: Anims marche_Feu_35
+  - first:
+      213: 9031257896902183930
+    second: Anims marche_Feu_36
+  - first:
+      213: -2186006532542420164
+    second: Anims marche_Feu_37
+  - first:
+      213: -285884618518513271
+    second: Anims marche_Feu_38
+  - first:
+      213: 4680373681541997631
+    second: Anims marche_Feu_39
+  - first:
+      213: 6189478169369076257
+    second: Anims marche_Feu_40
+  - first:
+      213: 972148405515582918
+    second: Anims marche_Feu_41
+  - first:
+      213: 7246267780102206957
+    second: Anims marche_Feu_42
+  - first:
+      213: 2228147036703960245
+    second: Anims marche_Feu_43
+  - first:
+      213: -5486906471776772863
+    second: Anims marche_Feu_44
+  - first:
+      213: 6184015095187885840
+    second: Anims marche_Feu_45
+  - first:
+      213: 359224306572453113
+    second: Anims marche_Feu_46
+  - first:
+      213: -3994360421436208764
+    second: Anims marche_Feu_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims marche_Feu_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9654dac23cf1e10800000000000000
+      internalID: 2170668142068853179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_1
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 6982
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e0184ac673a4ce0800000000000000
+      internalID: -1420261792726053324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_2
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 6982
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8271a802aae89140800000000000000
+      internalID: 4726785790575735435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_3
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 6986
+        width: 484
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4cea51a614353c0800000000000000
+      internalID: -4372078889360505656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_4
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 6986
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658f833a527b8abb0800000000000000
+      internalID: -4924484820249544618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_5
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 6986
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1650c114551f71c90800000000000000
+      internalID: -7199020130861578911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_6
+      rect:
+        serializedVersion: 2
+        x: 5882
+        y: 6990
+        width: 472
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452ef70be85c63850800000000000000
+      internalID: 6356485140717232724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_7
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 6990
+        width: 468
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9beb5ec54de6f5150800000000000000
+      internalID: 5863527098230357689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 5714
+        width: 472
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cf40f953a3ab9c0800000000000000
+      internalID: -3910749324442272745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_9
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 5714
+        width: 471
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636bb9e1476906cc0800000000000000
+      internalID: -3719807866734135754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_10
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 5718
+        width: 464
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ceed5bbe272f280800000000000000
+      internalID: -9011013547720774641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_11
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 5718
+        width: 468
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3290097559afbd70800000000000000
+      internalID: 9061147159860122175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_12
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 5718
+        width: 468
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38fc8560a0ffabc0800000000000000
+      internalID: -3769529791396644804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_13
+      rect:
+        serializedVersion: 2
+        x: 4946
+        y: 5714
+        width: 468
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54abefe845f76a090800000000000000
+      internalID: -8023585684960921019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_14
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 5714
+        width: 470
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181b4e752e12ca370800000000000000
+      internalID: 8335074266376876417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_15
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 5714
+        width: 471
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f9ea5ee49dcafa0800000000000000
+      internalID: -5788012488193827000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 4434
+        width: 482
+        height: 1102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff6b5f5ab0699370800000000000000
+      internalID: 8329795339378454517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_17
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 4434
+        width: 472
+        height: 1102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee32ad8ab43f2b330800000000000000
+      internalID: 3725307348069786606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_18
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 4430
+        width: 476
+        height: 1106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6ff1bf1dec5f110800000000000000
+      internalID: 1294167869195548335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_19
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 4430
+        width: 476
+        height: 1106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86483ed81d4cd0f10800000000000000
+      internalID: 2237660994180711528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_20
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 4430
+        width: 480
+        height: 1106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1b8871a647ef9b0800000000000000
+      internalID: -5044466533598187102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_21
+      rect:
+        serializedVersion: 2
+        x: 4930
+        y: 4430
+        width: 480
+        height: 1106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f800799a108d1d0800000000000000
+      internalID: -3325906496918614172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_22
+      rect:
+        serializedVersion: 2
+        x: 5870
+        y: 4426
+        width: 484
+        height: 1110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a2088b5e9b19cc0800000000000000
+      internalID: -3705976622055150970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_23
+      rect:
+        serializedVersion: 2
+        x: 6814
+        y: 4426
+        width: 484
+        height: 1110
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe078cdc22a89860800000000000000
+      internalID: 7536952289966624503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_24
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3150
+        width: 496
+        height: 1107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6200a2d3ebf95cb0800000000000000
+      internalID: -4874588165742001556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_25
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 3151
+        width: 506
+        height: 1106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae8f3b6c27a7feb0800000000000000
+      internalID: -4686093078035984727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_26
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 3151
+        width: 515
+        height: 1106
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0fbfd7c7c2a11c0800000000000000
+      internalID: -4532261161793752866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_27
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 3158
+        width: 524
+        height: 1099
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc36c9d006c214ec0800000000000000
+      internalID: -3584535037353368625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_28
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 3158
+        width: 532
+        height: 1099
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633f6c196dba6bee0800000000000000
+      internalID: -1245619308864277706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_29
+      rect:
+        serializedVersion: 2
+        x: 4894
+        y: 3162
+        width: 540
+        height: 1095
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d545a6a50c16d3c0800000000000000
+      internalID: -4335246780701260332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_30
+      rect:
+        serializedVersion: 2
+        x: 5834
+        y: 3162
+        width: 548
+        height: 1095
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8362d88c6d2031d80800000000000000
+      internalID: -8281272168293259720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_31
+      rect:
+        serializedVersion: 2
+        x: 6774
+        y: 3166
+        width: 556
+        height: 1091
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1267763fccb6d0810800000000000000
+      internalID: 1733159959608653345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_32
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1890
+        width: 564
+        height: 1088
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f1c8d08c4532490800000000000000
+      internalID: -7772275313713864814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_33
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1894
+        width: 572
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7539b776d9f0503d0800000000000000
+      internalID: -3241167188102769833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_34
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 1894
+        width: 582
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db254ab14fa144fa0800000000000000
+      internalID: -5817495182917741891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_35
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 1898
+        width: 592
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6d350d0258e5a80800000000000000
+      internalID: -8476191072684091701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_36
+      rect:
+        serializedVersion: 2
+        x: 3918
+        y: 1902
+        width: 600
+        height: 1076
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbcbc32539755d70800000000000000
+      internalID: 9031257896902183930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_37
+      rect:
+        serializedVersion: 2
+        x: 4867
+        y: 1898
+        width: 591
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b202ff3aeb9a1e0800000000000000
+      internalID: -2186006532542420164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_38
+      rect:
+        serializedVersion: 2
+        x: 5818
+        y: 1894
+        width: 580
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989b4724475580cf0800000000000000
+      internalID: -285884618518513271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_39
+      rect:
+        serializedVersion: 2
+        x: 6766
+        y: 1894
+        width: 572
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34e560d01704f040800000000000000
+      internalID: 4680373681541997631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_40
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 614
+        width: 564
+        height: 1088
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122674e0a9175e550800000000000000
+      internalID: 6189478169369076257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_41
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 610
+        width: 552
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdf7bbf2d3cd7d00800000000000000
+      internalID: 972148405515582918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_42
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 606
+        width: 540
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5b954572aef8460800000000000000
+      internalID: 7246267780102206957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_43
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 606
+        width: 532
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc2416bce7fbee10800000000000000
+      internalID: 2228147036703960245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_44
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 602
+        width: 524
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d14f182a79ad3b0800000000000000
+      internalID: -5486906471776772863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_45
+      rect:
+        serializedVersion: 2
+        x: 4906
+        y: 598
+        width: 518
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fc35af6f802d550800000000000000
+      internalID: 6184015095187885840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_46
+      rect:
+        serializedVersion: 2
+        x: 5855
+        y: 597
+        width: 507
+        height: 1105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4efe38a983cf400800000000000000
+      internalID: 359224306572453113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Feu_47
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 594
+        width: 496
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4894a671c5e2198c0800000000000000
+      internalID: -3994360421436208764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

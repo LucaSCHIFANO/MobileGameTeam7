@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: 8894206b1e54d4547a2462a091537093
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6350869420804348418
+    second: Anims marche_Eau_0
+  - first:
+      213: -8994112365670564505
+    second: Anims marche_Eau_1
+  - first:
+      213: 1385270541584315583
+    second: Anims marche_Eau_2
+  - first:
+      213: 7705652477551288695
+    second: Anims marche_Eau_3
+  - first:
+      213: -566709530313684793
+    second: Anims marche_Eau_4
+  - first:
+      213: 6067662261938217798
+    second: Anims marche_Eau_5
+  - first:
+      213: 5370752369999379396
+    second: Anims marche_Eau_6
+  - first:
+      213: 545245502835003479
+    second: Anims marche_Eau_7
+  - first:
+      213: -2871820084628592930
+    second: Anims marche_Eau_8
+  - first:
+      213: -3684331495348073170
+    second: Anims marche_Eau_9
+  - first:
+      213: -5900656822414220771
+    second: Anims marche_Eau_10
+  - first:
+      213: -4520868119368689927
+    second: Anims marche_Eau_11
+  - first:
+      213: -8334272651882991883
+    second: Anims marche_Eau_12
+  - first:
+      213: -2541130809063134197
+    second: Anims marche_Eau_13
+  - first:
+      213: -8483581606991132702
+    second: Anims marche_Eau_14
+  - first:
+      213: -5748100169643388852
+    second: Anims marche_Eau_15
+  - first:
+      213: -3246983042729224958
+    second: Anims marche_Eau_16
+  - first:
+      213: -3778366306371577297
+    second: Anims marche_Eau_17
+  - first:
+      213: -2890884715354686172
+    second: Anims marche_Eau_18
+  - first:
+      213: -2337557344122840876
+    second: Anims marche_Eau_19
+  - first:
+      213: -4167451932487577096
+    second: Anims marche_Eau_20
+  - first:
+      213: -2563404074589180778
+    second: Anims marche_Eau_21
+  - first:
+      213: 9105537015517984042
+    second: Anims marche_Eau_22
+  - first:
+      213: -953050886084486494
+    second: Anims marche_Eau_23
+  - first:
+      213: -1774216483299152897
+    second: Anims marche_Eau_24
+  - first:
+      213: 8717062610429588086
+    second: Anims marche_Eau_25
+  - first:
+      213: -4525946451642115884
+    second: Anims marche_Eau_26
+  - first:
+      213: 3392947155215856407
+    second: Anims marche_Eau_27
+  - first:
+      213: 624772408029160916
+    second: Anims marche_Eau_28
+  - first:
+      213: -1132317970716808019
+    second: Anims marche_Eau_29
+  - first:
+      213: 7664755610235223242
+    second: Anims marche_Eau_30
+  - first:
+      213: -7012076682693646142
+    second: Anims marche_Eau_31
+  - first:
+      213: -109973425492355838
+    second: Anims marche_Eau_32
+  - first:
+      213: 3295510809144727002
+    second: Anims marche_Eau_33
+  - first:
+      213: -6862015114510003409
+    second: Anims marche_Eau_34
+  - first:
+      213: -6833318191058133523
+    second: Anims marche_Eau_35
+  - first:
+      213: 2200302416868705657
+    second: Anims marche_Eau_36
+  - first:
+      213: -2672351880489582866
+    second: Anims marche_Eau_37
+  - first:
+      213: 595245636292114414
+    second: Anims marche_Eau_38
+  - first:
+      213: 4593431166733763126
+    second: Anims marche_Eau_39
+  - first:
+      213: 5025062968998171813
+    second: Anims marche_Eau_40
+  - first:
+      213: 5938507903444203940
+    second: Anims marche_Eau_41
+  - first:
+      213: 6625497308236208293
+    second: Anims marche_Eau_42
+  - first:
+      213: 8718427733732646982
+    second: Anims marche_Eau_43
+  - first:
+      213: 618775818130423372
+    second: Anims marche_Eau_44
+  - first:
+      213: 665356371643771646
+    second: Anims marche_Eau_45
+  - first:
+      213: -7858344652388141115
+    second: Anims marche_Eau_46
+  - first:
+      213: -466962049122571982
+    second: Anims marche_Eau_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims marche_Eau_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5e01ef8ed2dd7a0800000000000000
+      internalID: -6350869420804348418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_1
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 6982
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76df14ec47e7e2380800000000000000
+      internalID: -8994112365670564505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_2
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 6982
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb432f4d738793310800000000000000
+      internalID: 1385270541584315583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_3
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 6986
+        width: 484
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771ad0f1a1affea60800000000000000
+      internalID: 7705652477551288695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_4
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 6986
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c803da4fa4a228f0800000000000000
+      internalID: -566709530313684793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_5
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 6986
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643eedbedaaa43450800000000000000
+      internalID: 6067662261938217798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_6
+      rect:
+        serializedVersion: 2
+        x: 5882
+        y: 6990
+        width: 472
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb766633deb88a40800000000000000
+      internalID: 5370752369999379396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_7
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 6990
+        width: 468
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7501cdf55e9119700800000000000000
+      internalID: 545245502835003479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 5714
+        width: 472
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed661ec39de3528d0800000000000000
+      internalID: -2871820084628592930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_9
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 5714
+        width: 471
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d8ef08600aedcc0800000000000000
+      internalID: -3684331495348073170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_10
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 5718
+        width: 464
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12e38e02e7ac1ea0800000000000000
+      internalID: -5900656822414220771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_11
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 5718
+        width: 468
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f614a4e566a241c0800000000000000
+      internalID: -4520868119368689927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_12
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 5718
+        width: 468
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fee2431e27b65c80800000000000000
+      internalID: -8334272651882991883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_13
+      rect:
+        serializedVersion: 2
+        x: 4946
+        y: 5714
+        width: 468
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cadfd1ef61cbcd0800000000000000
+      internalID: -2541130809063134197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_14
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 5714
+        width: 470
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e78144f973444a80800000000000000
+      internalID: -8483581606991132702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_15
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 5714
+        width: 471
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c401b07b955aa30b0800000000000000
+      internalID: -5748100169643388852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 4434
+        width: 482
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205586a302660f2d0800000000000000
+      internalID: -3246983042729224958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_17
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 4434
+        width: 472
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ada6decdb809bc0800000000000000
+      internalID: -3778366306371577297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_18
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 4430
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d7daefaa381e7d0800000000000000
+      internalID: -2890884715354686172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_19
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 4430
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8d37dfaf35f8fd0800000000000000
+      internalID: -2337557344122840876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_20
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 4430
+        width: 480
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f110992c8c3a26c0800000000000000
+      internalID: -4167451932487577096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_21
+      rect:
+        serializedVersion: 2
+        x: 4930
+        y: 4430
+        width: 480
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ca25e5395fc6cd0800000000000000
+      internalID: -2563404074589180778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_22
+      rect:
+        serializedVersion: 2
+        x: 5870
+        y: 4426
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25be132cad5d5e70800000000000000
+      internalID: 9105537015517984042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_23
+      rect:
+        serializedVersion: 2
+        x: 6814
+        y: 4426
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa1012c44516c2f0800000000000000
+      internalID: -953050886084486494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_24
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3150
+        width: 496
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbaf463287b067e0800000000000000
+      internalID: -1774216483299152897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_25
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 3151
+        width: 506
+        height: 1107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672be7b524a39f870800000000000000
+      internalID: 8717062610429588086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_26
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 3151
+        width: 515
+        height: 1107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d89e658eab9031c0800000000000000
+      internalID: -4525946451642115884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_27
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 3158
+        width: 524
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7133058067b261f20800000000000000
+      internalID: 3392947155215856407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_28
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 3158
+        width: 532
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d52b06e133aba800800000000000000
+      internalID: 624772408029160916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_29
+      rect:
+        serializedVersion: 2
+        x: 4894
+        y: 3162
+        width: 540
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac22ae0ec23940f0800000000000000
+      internalID: -1132317970716808019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_30
+      rect:
+        serializedVersion: 2
+        x: 5834
+        y: 3162
+        width: 548
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accb04e2e9eae5a60800000000000000
+      internalID: 7664755610235223242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_31
+      rect:
+        serializedVersion: 2
+        x: 6774
+        y: 3166
+        width: 556
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8ee3e986910be90800000000000000
+      internalID: -7012076682693646142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_32
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1890
+        width: 564
+        height: 1088
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2059bce80cb497ef0800000000000000
+      internalID: -109973425492355838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_33
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1894
+        width: 572
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5188cde910cbd20800000000000000
+      internalID: 3295510809144727002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_34
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 1894
+        width: 582
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2315402c9935c0a0800000000000000
+      internalID: -6862015114510003409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_35
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 1898
+        width: 592
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedd3c84f4d2b21a0800000000000000
+      internalID: -6833318191058133523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_36
+      rect:
+        serializedVersion: 2
+        x: 3918
+        y: 1902
+        width: 600
+        height: 1076
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97584e3f36b098e10800000000000000
+      internalID: 2200302416868705657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_37
+      rect:
+        serializedVersion: 2
+        x: 4867
+        y: 1898
+        width: 591
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee32989f16e9ead0800000000000000
+      internalID: -2672351880489582866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_38
+      rect:
+        serializedVersion: 2
+        x: 5818
+        y: 1894
+        width: 580
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7fa41a0ccb24800800000000000000
+      internalID: 595245636292114414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_39
+      rect:
+        serializedVersion: 2
+        x: 6766
+        y: 1894
+        width: 572
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632cf512f452fbf30800000000000000
+      internalID: 4593431166733763126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_40
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 614
+        width: 564
+        height: 1088
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a41b19752c9cb540800000000000000
+      internalID: 5025062968998171813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_41
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 610
+        width: 552
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a934a08971d96250800000000000000
+      internalID: 5938507903444203940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_42
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 606
+        width: 540
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8d9bdc2be72fb50800000000000000
+      internalID: 6625497308236208293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_43
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 606
+        width: 532
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6406c05e4d31ef870800000000000000
+      internalID: 8718427733732646982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_44
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 602
+        width: 524
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ef3430455569800800000000000000
+      internalID: 618775818130423372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_45
+      rect:
+        serializedVersion: 2
+        x: 4906
+        y: 598
+        width: 518
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efaaed44812db3900800000000000000
+      internalID: 665356371643771646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_46
+      rect:
+        serializedVersion: 2
+        x: 5855
+        y: 597
+        width: 507
+        height: 1105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c770d78c2d81f290800000000000000
+      internalID: -7858344652388141115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Eau_47
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 594
+        width: 496
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239e57a8d740589f0800000000000000
+      internalID: -466962049122571982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
