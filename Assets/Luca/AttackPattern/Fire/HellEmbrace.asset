@@ -22,9 +22,9 @@ MonoBehaviour:
   push: 0
   pull: 1
   element: 1
-  AOE: 1
+  AOE: 0
   aoeEffect: {fileID: 0}
-  around: 1
+  around: 0
   effect: 0
   duration: 0
   intensity: 0
