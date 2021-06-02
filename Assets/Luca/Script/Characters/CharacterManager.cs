@@ -126,7 +126,7 @@ public class CharacterManager : MonoBehaviour
             //}
 
             //SceneManager.LoadScene("MainMenu");
-            UiActionManager.Instance.StartCoroutine("backToMenu");
+            UiActionManager.Instance.StartCoroutine("goToDeath");
         }
 
         else if (enemyList.Count == 0)

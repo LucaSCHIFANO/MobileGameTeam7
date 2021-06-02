@@ -109,6 +109,10 @@ public class BattleManager : MonoBehaviour
 
             if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
             {
+
+                AudioManager.Instance.Play("Hit");
+
+
                 att.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
                 ElementInteract.Instance.changeElement(att.element,currentAttackParam.element);
                 UiActionManager.Instance.showButton();
