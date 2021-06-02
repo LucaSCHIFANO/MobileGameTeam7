@@ -186,7 +186,7 @@ public class CardManager : MonoBehaviour
                                     middleCard = hitCard;
                                     risingUp = true;
                                     var hitTrans = hitCard.GetComponent<RectTransform>();
-                                    middlePos = hitTrans.localPosition + new Vector3(0f, 200f, 0f);
+                                    middlePos = hitTrans.localPosition + new Vector3(0f, 225f, 0f);
                                     previousTransform = hitTrans.localPosition;
                                     previousRotation = hitTrans.rotation;
                                     previousScale = hitCard.transform.localScale;
@@ -294,7 +294,7 @@ public class CardManager : MonoBehaviour
             mdlTrans.rotation = Quaternion.Lerp(mdlTrans.rotation, midRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(mdlTrans.localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
-                middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.4f, 1.4f, 1.4f), 7f * Time.deltaTime);
+                middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, new Vector3(1.2f, 1.2f, 1.2f), 7f * Time.deltaTime);
                 mdlDisplay.actionCostText.text = "";
                 mdlDisplay.attackText.text = "";
                 mdlDisplay.strong.gameObject.SetActive(false);
@@ -415,7 +415,7 @@ public class CardManager : MonoBehaviour
 
     public void RollCard()
     {
-        var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-3, -1.4f, 0)), Quaternion.identity, canvas.transform);
+        var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-4, -1.4f, 0)), Quaternion.identity, canvas.transform);
         var number = Random.Range(0, cardList.Count);
         var newDisplay = newCard.GetComponent<CardDisplay>();
         newDisplay.card = cardList[number];
@@ -432,7 +432,7 @@ public class CardManager : MonoBehaviour
         actualRoll.Add(newCard);
 
         number = Random.Range(0, cardList.Count);
-        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(3, -1.4f, 0)), Quaternion.identity, canvas.transform);
+        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(4, -1.4f, 0)), Quaternion.identity, canvas.transform);
         newDisplay = newCard.GetComponent<CardDisplay>();
         newDisplay.card = cardList[number];
         newDisplay.attackParam = attackParams[number];
