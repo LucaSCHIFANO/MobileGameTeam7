@@ -118,20 +118,16 @@ public class UiActionManager : MonoBehaviour
             {
                 if (!cardM.handToMid && !cardM.midToHand)
                 {
-                    if (cardM.middleCard != null)
+                    var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
+
+                    cardM.MidToHandLaFonction();
+                    showAttackRange(midCard);
+                    cardM.handPanel.GetComponent<Animator>().SetTrigger("Hide");
+                    cardM.chosenCard = cardM.middleCard;
+
+                    if (BattleManager.Instance.currentAttackParam.around)
                     {
-                        var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
-                        var player = CharacterManager.Instance.currentPlayer;
-
-                        cardM.MidToHandLaFonction();
-                        showAttackRange(midCard);
-                        cardM.handPanel.GetComponent<Animator>().SetTrigger("Hide");
-                        cardM.chosenCard = cardM.middleCard;
-
-                        if (BattleManager.Instance.currentAttackParam.around)
-                        {
-                            CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.AOESELECT;
-                        }
+                        CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.AOESELECT;
                     }
                 }
             }
