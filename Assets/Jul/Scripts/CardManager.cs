@@ -39,10 +39,13 @@ public class CardManager : MonoBehaviour
     private bool isMid = false;
     private List<GameObject> hand = new List<GameObject>();
     public GameObject middleCard = null;
-
     public GameObject chosenCard = null;
     public GameObject rollCard = null;
  
+    [Header("Is RiseUp")]
+    public bool isRiseUp = false;
+    public bool risingUp = false;
+    private Vector3 middlePos;
 
     [Header("HearthStone Style")]
     public Transform startLocation;
@@ -178,22 +181,36 @@ public class CardManager : MonoBehaviour
 
                             if (inRound)
                             {
-                                if (!isMid)
+                                if (!isRiseUp)
                                 {
-                                    AudioManager.Instance.Play("Card");
+                                    middleCard = hitCard;
+                                    risingUp = true;
                                     var hitTrans = hitCard.GetComponent<RectTransform>();
+                                    middlePos = hitTrans.localPosition + new Vector3(0f, 200f, 0f);
                                     previousTransform = hitTrans.localPosition;
                                     previousRotation = hitTrans.rotation;
                                     previousScale = hitCard.transform.localScale;
-                                    middleCard = hitCard;
-                                    handToMid = true;
-                                    isMid = true;
+                                    isRiseUp = true;
                                 }
-                                else if (isMid && middleCard == hitCard)
+                                else if (isRiseUp && middleCard != hitCard)
                                 {
                                     midToHand = true;
-                                    AudioManager.Instance.Play("Card");
                                 }
+                                else if (isRiseUp && middleCard == hitCard)
+                                {
+                                    if (!isMid)
+                                    {
+                                        AudioManager.Instance.Play("Card");
+                                        handToMid = true;
+                                        isMid = true;
+                                    }
+                                    else if (isMid && middleCard == hitCard)
+                                    {
+                                        midToHand = true;
+                                        AudioManager.Instance.Play("Card");
+                                    }
+                                }
+                                  
                             }
                         }
                     }
@@ -246,6 +263,23 @@ public class CardManager : MonoBehaviour
             } 
         }
 
+        if (risingUp)
+        {
+            var mdlTrans = middleCard.GetComponent<RectTransform>();
+
+            if (middleCard == null)
+            {
+                return;
+            }
+
+            mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, middlePos, 25f * Time.deltaTime);
+            if (Vector2.Distance(mdlTrans.localPosition, middlePos) < .1f)
+            {
+                mdlTrans.localPosition = middlePos;
+                risingUp = false;
+            }
+        }
+
         if (handToMid)
         {
             var mdlTrans = middleCard.GetComponent<RectTransform>();
@@ -256,7 +290,7 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
-            mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, cardPosition.localPosition, 7f * Time.deltaTime);
+            mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, cardPosition.localPosition, 8f * Time.deltaTime);
             mdlTrans.rotation = Quaternion.Lerp(mdlTrans.rotation, midRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(mdlTrans.localPosition, cardPosition.localPosition) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
@@ -272,7 +306,7 @@ public class CardManager : MonoBehaviour
                 mdlInfos.UpdateInfos();
             }
 
-            if (Vector2.Distance(mdlTrans.localPosition, cardPosition.localPosition) < 5f) // trouver la bonne valuer avec la speed
+            if (Vector2.Distance(mdlTrans.localPosition, cardPosition.localPosition) < .3f) // trouver la bonne valuer avec la speed
             {
                 handToMid = false;
                 mdlTrans.localPosition = cardPosition.localPosition;
@@ -289,22 +323,24 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
-            mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, previousTransform, 5f * Time.deltaTime);
+            mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, previousTransform, 8f * Time.deltaTime);
             mdlTrans.rotation = Quaternion.Lerp(mdlTrans.rotation, previousRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(mdlTrans.localPosition, previousTransform) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
             {
                 middleCard.transform.localScale = Vector3.Lerp(middleCard.transform.localScale, previousScale, 7f * Time.deltaTime);
                 mdlInfos.card = null;
                 mdlDisplay.artworkImage.gameObject.SetActive(true);
+                cardInfos = middleCard.transform.GetChild(6).gameObject;
                 cardInfos.SetActive(false);
                 mdlDisplay.UpdateCard();
             }
-            if (Vector2.Distance(mdlTrans.localPosition, previousTransform) < 5f)
+            if (Vector2.Distance(mdlTrans.localPosition, previousTransform) < .3f)
             {
                 midToHand = false;
                 mdlTrans.localPosition = previousTransform;
                 middleCard = null;
                 isMid = false;
+                isRiseUp = false;
             }
         }
 

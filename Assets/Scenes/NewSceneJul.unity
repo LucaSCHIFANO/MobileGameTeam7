@@ -436,7 +436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02, y: 0.02}
   m_AnchorMax: {x: 0.18, y: 0.19}
-  m_AnchoredPosition: {x: -6.999878, y: 1.5}
+  m_AnchoredPosition: {x: -7, y: 1.5}
   m_SizeDelta: {x: -148, y: -89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51664393
@@ -7160,7 +7160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 302.00006, y: -244.89156}
+  m_AnchoredPosition: {x: 302.00006, y: -244.89154}
   m_SizeDelta: {x: 337, y: 101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &362967345
@@ -8726,7 +8726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &634327779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9071,9 +9071,9 @@ MonoBehaviour:
   playerSpawn: []
   playerPrefab: {fileID: 4391244545055928749, guid: a26c6c7cf9ae8984fb22478eaf0339f2, type: 3}
   enemy: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
-  enemyFire: {fileID: 0}
-  enemyWater: {fileID: 0}
-  enemyEarth: {fileID: 0}
+  enemyFire: {fileID: 571073717275479376, guid: 0042ceafeed3d4c42b62f5332f4284e9, type: 3}
+  enemyWater: {fileID: 2278919941614207873, guid: c1c4805c17990ff4f815a3ca98c75ba5, type: 3}
+  enemyEarth: {fileID: 4375653194845116708, guid: d03df6587d7c9244bbd550f96a08a39e, type: 3}
   holoPlayer: {fileID: 4451149331830433231, guid: eb4f24bf41481af4eb0e184c64796d6c, type: 3}
   mC: {fileID: 260224054}
   listSprites:
@@ -10303,7 +10303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.7}
   m_AnchorMax: {x: 1, y: 0.86}
-  m_AnchoredPosition: {x: 0.008728027, y: 4.5}
+  m_AnchoredPosition: {x: 0.0087890625, y: 4.5}
   m_SizeDelta: {x: 0, y: 12.26001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &882483346
@@ -14213,11 +14213,13 @@ MonoBehaviour:
   middleCard: {fileID: 0}
   chosenCard: {fileID: 0}
   rollCard: {fileID: 0}
+  isRiseUp: 0
+  risingUp: 0
   startLocation: {fileID: 1887949847}
   gap: 2.25
   handPanel: {fileID: 411351869}
   cardPosition: {fileID: 1088603448}
-  transitionStyle: {fileID: 0}
+  transitionStyle: {fileID: 346627129}
 --- !u!4 &1625963888
 Transform:
   m_ObjectHideFlags: 0
@@ -14797,7 +14799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.02, y: 0.02}
   m_AnchorMax: {x: 0.18, y: 0.19}
-  m_AnchoredPosition: {x: -6.999878, y: 1.5}
+  m_AnchoredPosition: {x: -7, y: 1.5}
   m_SizeDelta: {x: -148, y: -89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1789099579
