@@ -52,7 +52,7 @@ public class CreateAnEnemy : MonoBehaviour
 
                 case 1:
                     enemy.stats.characName = "A plant...";
-                    enemy.stats.maxHP = 12 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxHP = 11 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
                     enemy.stats.strenght += upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
@@ -70,7 +70,7 @@ public class CreateAnEnemy : MonoBehaviour
 
                 case 2:
                     enemy.stats.characName = "Bububle";
-                    enemy.stats.maxHP = 7 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxHP = 8 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
                     enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += upgradeValue + proba(upgradeProba);
@@ -88,7 +88,7 @@ public class CreateAnEnemy : MonoBehaviour
 
                 case 3:
                     enemy.stats.characName = "Fiya Foxu";
-                    enemy.stats.maxHP = 6 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxHP = 7 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
                     enemy.stats.strenght += 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += 1 + upgradeValue + proba(upgradeProba);

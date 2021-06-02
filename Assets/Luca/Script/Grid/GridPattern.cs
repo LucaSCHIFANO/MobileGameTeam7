@@ -396,7 +396,7 @@ public class GridPattern : MonoBehaviour
                 pattern = new panelType[,]
                 {
                   {panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS},
-                  {panelType.FOREST,panelType.WALL,panelType.PATH,panelType.WATER,panelType.WATER,panelType.WATER,panelType.GRASS},
+                  {panelType.FOREST,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.GRASS},
                   {panelType.WALL,panelType.WALL,panelType.WALL,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.GRASS},
                   {panelType.WALL,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST},
                   {panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.PATH},
@@ -544,7 +544,7 @@ public class GridPattern : MonoBehaviour
                   {panelType.GRASS,panelType.WALL,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.PATH},
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.FOREST,panelType.PATH,panelType.FOREST,panelType.GRASS},
                   {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
-                  {panelType.PATH,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS},
+                  {panelType.PATH,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.WALL,panelType.GRASS},
                   {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.FOREST,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS},
 
 
@@ -569,12 +569,12 @@ public class GridPattern : MonoBehaviour
                 pattern = new panelType[,]
                 {
                   {panelType.FOREST,panelType.WALL,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.PATH},
-                  {panelType.PATH,panelType.WALL,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS},
+                  {panelType.PATH,panelType.PATH,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.FOREST,panelType.PATH,panelType.FOREST,panelType.PATH},
                   {panelType.HOLE,panelType.WALL,panelType.GRASS,panelType.WALL,panelType.GRASS,panelType.WALL,panelType.GRASS,panelType.GRASS},
-                  {panelType.HOLE,panelType.WALL,panelType.PATH,panelType.WALL,panelType.GRASS,panelType.WALL,panelType.GRASS,panelType.GRASS},
+                  {panelType.HOLE,panelType.PATH,panelType.PATH,panelType.WALL,panelType.GRASS,panelType.WALL,panelType.GRASS,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.PATH,panelType.GRASS},
-                  {panelType.FOREST,panelType.WALL,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.FOREST},
+                  {panelType.FOREST,panelType.WALL,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.FOREST},
                   {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS},
 
 
@@ -604,7 +604,7 @@ public class GridPattern : MonoBehaviour
                   {panelType.PATH,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.GRASS,panelType.GRASS,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.PATH,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.PATH},
-                  {panelType.PATH,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.PATH},
+                  {panelType.PATH,panelType.PATH,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.PATH,panelType.PATH},
                   {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.GRASS},
 
 
@@ -632,7 +632,7 @@ public class GridPattern : MonoBehaviour
                   {panelType.GRASS,panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.GRASS},
                   {panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.POISON,panelType.POISON,panelType.GRASS,panelType.FOREST,panelType.GRASS},
                   {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.PATH,panelType.POISON,panelType.GRASS,panelType.WALL,panelType.WALL},
-                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.POISON,panelType.PATH,panelType.GRASS,panelType.WALL,panelType.WALL},
+                  {panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.POISON,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.WALL},
                   {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.POISON,panelType.POISON,panelType.PATH,panelType.PATH,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.PATH,panelType.GRASS},
                   {panelType.FOREST,panelType.PATH,panelType.PATH,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS},
@@ -662,10 +662,10 @@ public class GridPattern : MonoBehaviour
                   {panelType.WALL,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.FOREST,panelType.PATH,panelType.GRASS,panelType.GRASS},
                   {panelType.PATH,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.PATH,panelType.GRASS},
                   {panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.WATER,panelType.WATER,panelType.PATH,panelType.GRASS,panelType.GRASS},
-                  {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.WATER,panelType.FOREST,panelType.GRASS},
+                  {panelType.WALL,panelType.PATH,panelType.GRASS,panelType.WATER,panelType.WATER,panelType.WATER,panelType.FOREST,panelType.GRASS},
                   {panelType.WALL,panelType.WALL,panelType.FOREST,panelType.PATH,panelType.WATER,panelType.WATER,panelType.GRASS,panelType.PATH},
                   {panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.PATH,panelType.PATH,panelType.GRASS},
-                  {panelType.GRASS,panelType.PATH,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST},
+                  {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.FOREST},
                   {panelType.PATH,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.GRASS},
 
 
@@ -780,12 +780,12 @@ public class GridPattern : MonoBehaviour
                 pattern = new panelType[,]
                 {
                   {panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.PATH,panelType.GRASS},
-                  {panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS},
+                  {panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.PATH,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.GRASS},
                   {panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.FOREST,panelType.GRASS},
-                  {panelType.POISON,panelType.POISON,panelType.POISON,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.GRASS},
-                  {panelType.POISON,panelType.POISON,panelType.PATH,panelType.WALL,panelType.WALL,panelType.WALL,panelType.WALL,panelType.GRASS},
+                  {panelType.POISON,panelType.POISON,panelType.POISON,panelType.WALL,panelType.WALL,panelType.WALL,panelType.PATH,panelType.GRASS},
+                  {panelType.POISON,panelType.POISON,panelType.PATH,panelType.PATH,panelType.WALL,panelType.WALL,panelType.WALL,panelType.GRASS},
                   {panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.PATH},
-                  {panelType.FOREST,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.FOREST,panelType.PATH,panelType.GRASS,panelType.FOREST},
+                  {panelType.FOREST,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.FOREST,panelType.PATH,panelType.GRASS,panelType.FOREST},
                   {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.FOREST,panelType.GRASS,panelType.GRASS},
 
 
@@ -811,10 +811,10 @@ public class GridPattern : MonoBehaviour
                   {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.PATH},
                   {panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.FOREST,panelType.GRASS},
                   {panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS},
-                  {panelType.POISON,panelType.POISON,panelType.POISON,panelType.WALL,panelType.WALL,panelType.POISON,panelType.PATH,panelType.POISON},
+                  {panelType.POISON,panelType.POISON,panelType.POISON,panelType.WALL,panelType.PATH,panelType.POISON,panelType.PATH,panelType.POISON},
                   {panelType.PATH,panelType.POISON,panelType.POISON,panelType.WALL,panelType.WALL,panelType.POISON,panelType.POISON,panelType.POISON},
                   {panelType.GRASS,panelType.PATH,panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.FOREST,panelType.GRASS},
-                  {panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.FOREST,panelType.PATH,panelType.WALL,panelType.WALL},
+                  {panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.GRASS,panelType.FOREST,panelType.PATH,panelType.PATH,panelType.WALL},
                   {panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.GRASS,panelType.PATH,panelType.WALL,panelType.WALL},
 
 
@@ -838,12 +838,12 @@ public class GridPattern : MonoBehaviour
                 pattern = new panelType[,]
                 {
                   {panelType.PATH,panelType.PATH,panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.FOREST,panelType.GRASS},
-                  {panelType.FOREST,panelType.GRASS,panelType.FOREST,panelType.WALL,panelType.WALL,panelType.PATH,panelType.PATH,panelType.GRASS},
+                  {panelType.FOREST,panelType.GRASS,panelType.FOREST,panelType.PATH,panelType.WALL,panelType.PATH,panelType.PATH,panelType.GRASS},
                   {panelType.GRASS,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.PATH,panelType.GRASS},
                   {panelType.PATH,panelType.HOLE,panelType.HOLE,panelType.WATER,panelType.WATER,panelType.WALL,panelType.WALL,panelType.WATER},
-                  {panelType.WATER,panelType.HOLE,panelType.HOLE,panelType.WATER,panelType.WATER,panelType.WALL,panelType.WALL,panelType.PATH},
+                  {panelType.WATER,panelType.HOLE,panelType.HOLE,panelType.WATER,panelType.WATER,panelType.PATH,panelType.WALL,panelType.PATH},
                   {panelType.GRASS,panelType.FOREST,panelType.GRASS,panelType.PATH,panelType.PATH,panelType.PATH,panelType.GRASS,panelType.GRASS},
-                  {panelType.GRASS,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.GRASS,panelType.POISON,panelType.POISON,panelType.GRASS},
+                  {panelType.GRASS,panelType.WALL,panelType.PATH,panelType.GRASS,panelType.GRASS,panelType.POISON,panelType.POISON,panelType.GRASS},
                   {panelType.PATH,panelType.WALL,panelType.WALL,panelType.GRASS,panelType.FOREST,panelType.POISON,panelType.PATH,panelType.PATH},
 
 
