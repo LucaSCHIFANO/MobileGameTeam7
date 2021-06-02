@@ -5775,7 +5775,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 71dcee94c1fe8784c97999df637d1f20, type: 3}
   - {fileID: 21300000, guid: 3ac26b84d3aba204dad040d01837a9f7, type: 3}
   - {fileID: 21300000, guid: 2f7645428a560dc49ad5faf60b76fcc1, type: 3}
-  speed: 0
+  speed: 1
   sra: {fileID: 974637998}
 --- !u!114 &974637998
 MonoBehaviour:

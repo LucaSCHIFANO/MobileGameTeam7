@@ -258,5 +258,6 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         xPos = panelToMove.x;
         yPos = -panelToMove.y;
+        panelToGo = null;
     }
 }
