@@ -31,25 +31,24 @@ public class ForAnimEnemy : MonoBehaviour
                 sr.flipX = false;
                 anim.SetBool("Idle", false);
             }
-            else
-            {
-                anim.SetBool("Idle", true);
-            }
+            
 
             if (pm.panelToGo.transform.position.y > transform.position.y)
             {
                 anim.SetFloat("Dos", 1);
                 anim.SetBool("Idle", false);
+                sr.flipX = !sr.flipX;
             }
             else if (pm.panelToGo.transform.position.y < transform.position.y)
             {
                 anim.SetFloat("Dos", 0);
                 anim.SetBool("Idle", false);
             }
-            else
-            {
-                anim.SetBool("Idle", true);
-            }
+            
+        }
+        else
+        {
+            anim.SetBool("Idle", true);
         }
     }
 }

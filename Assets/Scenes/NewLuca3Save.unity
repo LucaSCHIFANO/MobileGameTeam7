@@ -460,7 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: BattleMap1
-    clip: {fileID: 8300000, guid: 3948641b3779a8b419489937d7598eac, type: 3}
+    clip: {fileID: 8300000, guid: a75f605c850afd84fb4084219094214c, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
     volume: 0.1
     pitch: 1
@@ -3801,6 +3801,9 @@ MonoBehaviour:
   playerSpawn: []
   playerPrefab: {fileID: 4391244545055928749, guid: a26c6c7cf9ae8984fb22478eaf0339f2, type: 3}
   enemy: {fileID: 4439571939307100703, guid: 8153225d117bb0c4c896753fc04b3f57, type: 3}
+  enemyFire: {fileID: 0}
+  enemyWater: {fileID: 0}
+  enemyEarth: {fileID: 0}
   holoPlayer: {fileID: 4451149331830433231, guid: eb4f24bf41481af4eb0e184c64796d6c, type: 3}
   mC: {fileID: 260224054}
   listSprites:
@@ -5756,6 +5759,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 625ab818ec0623b4f8fe2b92fb316a0a, type: 3}
   - {fileID: 21300000, guid: 465f684811e8a9d4cb3d27a74e382217, type: 3}
   - {fileID: 21300000, guid: 63f85d0979939864990d21b574370bae, type: 3}
+  turnText: {fileID: 0}
   inGame:
   - {fileID: 929201447}
   - {fileID: 685308340}
@@ -6453,6 +6457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1585049808}
   optionMenuUI: {fileID: 271918808}
+  pauseButton: {fileID: 0}
 --- !u!114 &1071518424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8791,10 +8796,13 @@ MonoBehaviour:
   middleCard: {fileID: 0}
   chosenCard: {fileID: 0}
   rollCard: {fileID: 0}
+  isRiseUp: 0
+  risingUp: 0
   startLocation: {fileID: 1887949847}
   gap: 2
   handPanel: {fileID: 411351869}
   cardPosition: {fileID: 1088603448}
+  transitionStyle: {fileID: 0}
 --- !u!4 &1625963888
 Transform:
   m_ObjectHideFlags: 0
@@ -8873,7 +8881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -60.299927, y: -60}
+  m_AnchoredPosition: {x: -60.299866, y: -60}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1674400895

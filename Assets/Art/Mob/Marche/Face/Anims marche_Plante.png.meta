@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: e9e67926569580047be5bea22fdabcb3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3755764596622583927
+    second: Anims marche_Plante_0
+  - first:
+      213: -340960377565624635
+    second: Anims marche_Plante_1
+  - first:
+      213: 9060201042597312308
+    second: Anims marche_Plante_2
+  - first:
+      213: -4856593456474174272
+    second: Anims marche_Plante_3
+  - first:
+      213: 3589147247790475675
+    second: Anims marche_Plante_4
+  - first:
+      213: -2328711209331317602
+    second: Anims marche_Plante_5
+  - first:
+      213: -2487781842650981977
+    second: Anims marche_Plante_6
+  - first:
+      213: -7664717492280899347
+    second: Anims marche_Plante_7
+  - first:
+      213: -5991506222714385778
+    second: Anims marche_Plante_8
+  - first:
+      213: 4239943504446838935
+    second: Anims marche_Plante_9
+  - first:
+      213: -4604140721945979952
+    second: Anims marche_Plante_10
+  - first:
+      213: 6607215582164267410
+    second: Anims marche_Plante_11
+  - first:
+      213: -1068555001898458110
+    second: Anims marche_Plante_12
+  - first:
+      213: -3263555530837047858
+    second: Anims marche_Plante_13
+  - first:
+      213: 987287706536231137
+    second: Anims marche_Plante_14
+  - first:
+      213: 8251886271160368566
+    second: Anims marche_Plante_15
+  - first:
+      213: 7376535165564736636
+    second: Anims marche_Plante_16
+  - first:
+      213: -8422629615801601082
+    second: Anims marche_Plante_17
+  - first:
+      213: 3689544523162030248
+    second: Anims marche_Plante_18
+  - first:
+      213: -2751928843161092107
+    second: Anims marche_Plante_19
+  - first:
+      213: 904321719754212995
+    second: Anims marche_Plante_20
+  - first:
+      213: -6404941686754237000
+    second: Anims marche_Plante_21
+  - first:
+      213: 8982456299136386615
+    second: Anims marche_Plante_22
+  - first:
+      213: 5159684495954647235
+    second: Anims marche_Plante_23
+  - first:
+      213: 4926403950832502647
+    second: Anims marche_Plante_24
+  - first:
+      213: -1121739069013274759
+    second: Anims marche_Plante_25
+  - first:
+      213: -3721305571215138925
+    second: Anims marche_Plante_26
+  - first:
+      213: 7586262341826033542
+    second: Anims marche_Plante_27
+  - first:
+      213: 566304058725936057
+    second: Anims marche_Plante_28
+  - first:
+      213: 1833170916427252388
+    second: Anims marche_Plante_29
+  - first:
+      213: 4936626897332490029
+    second: Anims marche_Plante_30
+  - first:
+      213: 3438167328330269676
+    second: Anims marche_Plante_31
+  - first:
+      213: 6518434925381836749
+    second: Anims marche_Plante_32
+  - first:
+      213: -5470335273898626343
+    second: Anims marche_Plante_33
+  - first:
+      213: 964777429519747913
+    second: Anims marche_Plante_34
+  - first:
+      213: -2407628640032767479
+    second: Anims marche_Plante_35
+  - first:
+      213: 6101507270741874565
+    second: Anims marche_Plante_36
+  - first:
+      213: -2178317575971412302
+    second: Anims marche_Plante_37
+  - first:
+      213: 1735023902051611578
+    second: Anims marche_Plante_38
+  - first:
+      213: -3866556599260052572
+    second: Anims marche_Plante_39
+  - first:
+      213: 649515871877948786
+    second: Anims marche_Plante_40
+  - first:
+      213: -2868996017135281396
+    second: Anims marche_Plante_41
+  - first:
+      213: -9091649981276318574
+    second: Anims marche_Plante_42
+  - first:
+      213: -8503581080414239181
+    second: Anims marche_Plante_43
+  - first:
+      213: 4955611376616823026
+    second: Anims marche_Plante_44
+  - first:
+      213: -745831058180687043
+    second: Anims marche_Plante_45
+  - first:
+      213: 154854907614914909
+    second: Anims marche_Plante_46
+  - first:
+      213: -6841061487851590019
+    second: Anims marche_Plante_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims marche_Plante_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7786da170082f1430800000000000000
+      internalID: 3755764596622583927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_1
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 6982
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6c7b4d75aa44bf0800000000000000
+      internalID: -340960377565624635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_2
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 6982
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437f2a168dc4cbd70800000000000000
+      internalID: 9060201042597312308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_3
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 6986
+        width: 484
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccce509bf9e99cb0800000000000000
+      internalID: -4856593456474174272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_4
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 6986
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b994f1fd7663fc130800000000000000
+      internalID: 3589147247790475675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_5
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 6986
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94265f3e71ceafd0800000000000000
+      internalID: -2328711209331317602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_6
+      rect:
+        serializedVersion: 2
+        x: 5882
+        y: 6990
+        width: 472
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a91f1e489f997dd0800000000000000
+      internalID: -2487781842650981977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_7
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 6990
+        width: 468
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8cfd8dc0471a590800000000000000
+      internalID: -7664717492280899347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_8
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 5714
+        width: 472
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a0195b5d4e9dca0800000000000000
+      internalID: -5991506222714385778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_9
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 5714
+        width: 471
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7985742372e47da30800000000000000
+      internalID: 4239943504446838935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_10
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 5718
+        width: 464
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3df7c386eca10c0800000000000000
+      internalID: -4604140721945979952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_11
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 5718
+        width: 468
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291b351c09b81bb50800000000000000
+      internalID: 6607215582164267410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_12
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 5718
+        width: 468
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20420e023eabb21f0800000000000000
+      internalID: -1068555001898458110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_13
+      rect:
+        serializedVersion: 2
+        x: 4946
+        y: 5714
+        width: 468
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec542b7298585b2d0800000000000000
+      internalID: -3263555530837047858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_14
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 5714
+        width: 470
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0c33f20fc83bd00800000000000000
+      internalID: 987287706536231137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_15
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 5714
+        width: 471
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdbf6fd7d6948270800000000000000
+      internalID: 8251886271160368566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 4434
+        width: 482
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74d9a886a7be5660800000000000000
+      internalID: 7376535165564736636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_17
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 4434
+        width: 472
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3f57b4dfecc1b80800000000000000
+      internalID: -8422629615801601082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_18
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 4430
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a09f0e1235e33330800000000000000
+      internalID: 3689544523162030248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_19
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 4430
+        width: 476
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff3b382c4f2fc9d0800000000000000
+      internalID: -2751928843161092107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_20
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 4430
+        width: 480
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386ce9410dbcc8c00800000000000000
+      internalID: 904321719754212995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_21
+      rect:
+        serializedVersion: 2
+        x: 4930
+        y: 4430
+        width: 480
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b52ce188731d17a0800000000000000
+      internalID: -6404941686754237000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_22
+      rect:
+        serializedVersion: 2
+        x: 5870
+        y: 4426
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7368e78b96818ac70800000000000000
+      internalID: 8982456299136386615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_23
+      rect:
+        serializedVersion: 2
+        x: 6814
+        y: 4426
+        width: 484
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8977e36b1ea9740800000000000000
+      internalID: 5159684495954647235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_24
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3150
+        width: 496
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777c375ca4a1e5440800000000000000
+      internalID: 4926403950832502647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_25
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 3151
+        width: 506
+        height: 1107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f49cc8248ce60f0800000000000000
+      internalID: -1121739069013274759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_26
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 3151
+        width: 515
+        height: 1107
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f1a0f9c444b5cc0800000000000000
+      internalID: -3721305571215138925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_27
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 3158
+        width: 524
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687b679f761d74960800000000000000
+      internalID: 7586262341826033542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_28
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 3158
+        width: 532
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bba83f7a8aebd700800000000000000
+      internalID: 566304058725936057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_29
+      rect:
+        serializedVersion: 2
+        x: 4894
+        y: 3162
+        width: 540
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a249366c3bb07910800000000000000
+      internalID: 1833170916427252388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_30
+      rect:
+        serializedVersion: 2
+        x: 5834
+        y: 3162
+        width: 548
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f442cf10c628440800000000000000
+      internalID: 4936626897332490029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_31
+      rect:
+        serializedVersion: 2
+        x: 6774
+        y: 3166
+        width: 556
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3ca7b08f2d6bf20800000000000000
+      internalID: 3438167328330269676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_32
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1890
+        width: 564
+        height: 1088
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf52ea4702267a50800000000000000
+      internalID: 6518434925381836749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_33
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 1894
+        width: 572
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2bbfc2d077514b0800000000000000
+      internalID: -5470335273898626343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_34
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 1894
+        width: 582
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bc6d5e5f3936d00800000000000000
+      internalID: 964777429519747913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_35
+      rect:
+        serializedVersion: 2
+        x: 2978
+        y: 1898
+        width: 592
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9024acf0282669ed0800000000000000
+      internalID: -2407628640032767479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_36
+      rect:
+        serializedVersion: 2
+        x: 3918
+        y: 1902
+        width: 600
+        height: 1076
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587580b1988eca450800000000000000
+      internalID: 6101507270741874565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_37
+      rect:
+        serializedVersion: 2
+        x: 4867
+        y: 1898
+        width: 591
+        height: 1080
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6eb34b4bf05c1e0800000000000000
+      internalID: -2178317575971412302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_38
+      rect:
+        serializedVersion: 2
+        x: 5818
+        y: 1894
+        width: 580
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3399edb0b041810800000000000000
+      internalID: 1735023902051611578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_39
+      rect:
+        serializedVersion: 2
+        x: 6766
+        y: 1894
+        width: 572
+        height: 1084
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a38925424b375ac0800000000000000
+      internalID: -3866556599260052572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_40
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 614
+        width: 564
+        height: 1088
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27563438e3b830900800000000000000
+      internalID: 649515871877948786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_41
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 610
+        width: 552
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b14a0b2574f28d0800000000000000
+      internalID: -2868996017135281396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_42
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 606
+        width: 540
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29496dbf288f3d180800000000000000
+      internalID: -9091649981276318574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_43
+      rect:
+        serializedVersion: 2
+        x: 3010
+        y: 606
+        width: 532
+        height: 1096
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3364d2faf063df980800000000000000
+      internalID: -8503581080414239181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_44
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 602
+        width: 524
+        height: 1100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f851248a4ed5c440800000000000000
+      internalID: 4955611376616823026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_45
+      rect:
+        serializedVersion: 2
+        x: 4906
+        y: 598
+        width: 518
+        height: 1104
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bbfaaaa9646a5f0800000000000000
+      internalID: -745831058180687043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_46
+      rect:
+        serializedVersion: 2
+        x: 5855
+        y: 597
+        width: 507
+        height: 1105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59ec10d7b7262200800000000000000
+      internalID: 154854907614914909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_Plante_47
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 594
+        width: 496
+        height: 1108
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e200282daaf01a0800000000000000
+      internalID: -6841061487851590019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

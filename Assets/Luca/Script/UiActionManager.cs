@@ -43,6 +43,10 @@ public class UiActionManager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+    private void Update()
+    {
 
         Time.timeScale = speed;
     }
@@ -277,4 +281,10 @@ public class UiActionManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public IEnumerator goToDeath()
+    {
+        MapComposent.Instance.fadeOutIn();
+        yield return new WaitForSeconds(0.6f);
+        SceneManager.LoadScene("GameOver");
+    }
 }

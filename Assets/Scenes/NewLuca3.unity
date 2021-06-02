@@ -460,15 +460,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: BattleMap1
-    clip: {fileID: 8300000, guid: 3948641b3779a8b419489937d7598eac, type: 3}
+    clip: {fileID: 8300000, guid: a75f605c850afd84fb4084219094214c, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
-    volume: 0.1
+    volume: 0.25
     pitch: 1
     mute: 0
     loop: 1
     source: {fileID: 0}
   - name: GlobalMap
-    clip: {fileID: 8300000, guid: 4fbec42802b3677438427e4565026635, type: 3}
+    clip: {fileID: 8300000, guid: 5e846627390fa224a9ff056317ddb74e, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
     volume: 0.1
     pitch: 1
@@ -476,7 +476,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Victory!
-    clip: {fileID: 8300000, guid: 3348773561ef5f64697c2b23d0761564, type: 3}
+    clip: {fileID: 8300000, guid: 5a240f32323200540895fb36a857d55b, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
     volume: 0.1
     pitch: 1
@@ -645,6 +645,22 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Dart
     clip: {fileID: 8300000, guid: bab249d6149bec445837763eb06f7325, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Slap
+    clip: {fileID: 8300000, guid: b6586fc269e05bc4098180584f986703, type: 3}
+    audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+    volume: 0.4
+    pitch: 1
+    mute: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 2d7d83a864c471b47849f5137a6146d8, type: 3}
     audioMixerGroup: {fileID: 24300002, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
     volume: 0.4
     pitch: 1
@@ -10594,7 +10610,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 71dcee94c1fe8784c97999df637d1f20, type: 3}
   - {fileID: 21300000, guid: 3ac26b84d3aba204dad040d01837a9f7, type: 3}
   - {fileID: 21300000, guid: 2f7645428a560dc49ad5faf60b76fcc1, type: 3}
-  speed: 0
+  speed: 5
   sra: {fileID: 974637998}
 --- !u!114 &974637998
 MonoBehaviour:
@@ -18639,8 +18655,10 @@ MonoBehaviour:
   middleCard: {fileID: 0}
   chosenCard: {fileID: 0}
   rollCard: {fileID: 0}
+  isRiseUp: 0
+  risingUp: 0
   startLocation: {fileID: 1887949847}
-  gap: 2
+  gap: 2.25
   handPanel: {fileID: 411351869}
   cardPosition: {fileID: 1088603448}
   transitionStyle: {fileID: 638624651}

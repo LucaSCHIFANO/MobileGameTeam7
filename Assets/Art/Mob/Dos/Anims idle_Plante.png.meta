@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: f091452428ca60c488809913892cfad2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6910030875164906761
+    second: Anims idle_Plante_0
+  - first:
+      213: 2252157241793025916
+    second: Anims idle_Plante_2
+  - first:
+      213: -7292454399441943980
+    second: Anims idle_Plante_4
+  - first:
+      213: -7047314752307372586
+    second: Anims idle_Plante_6
+  - first:
+      213: -1956439597007964584
+    second: Anims idle_Plante_8
+  - first:
+      213: 2607784876145842339
+    second: Anims idle_Plante_10
+  - first:
+      213: 7453206615920891883
+    second: Anims idle_Plante_12
+  - first:
+      213: -7530589231008050958
+    second: Anims idle_Plante_14
+  - first:
+      213: 6803163009793690855
+    second: Anims idle_Plante_16
+  - first:
+      213: -490974886330163029
+    second: Anims idle_Plante_18
+  - first:
+      213: -1213224876469355178
+    second: Anims idle_Plante_20
+  - first:
+      213: 4797349698793917520
+    second: Anims idle_Plante_22
+  - first:
+      213: -8520143241286203031
+    second: Anims idle_Plante_24
+  - first:
+      213: 8085593232673040220
+    second: Anims idle_Plante_26
+  - first:
+      213: 5195597622514980261
+    second: Anims idle_Plante_28
+  - first:
+      213: 5815618651542822161
+    second: Anims idle_Plante_30
+  - first:
+      213: -5641704939130905564
+    second: Anims idle_Plante_32
+  - first:
+      213: 2718788842435898288
+    second: Anims idle_Plante_34
+  - first:
+      213: 7105490840207949978
+    second: Anims idle_Plante_36
+  - first:
+      213: -4693886628986632870
+    second: Anims idle_Plante_38
+  - first:
+      213: -8584749358104213076
+    second: Anims idle_Plante_40
+  - first:
+      213: 8551052982083548927
+    second: Anims idle_Plante_42
+  - first:
+      213: 8556483265065641167
+    second: Anims idle_Plante_44
+  - first:
+      213: -3041249154724189470
+    second: Anims idle_Plante_46
+  - first:
+      213: 4642575666237263780
+    second: Anims idle_Plante_48
+  - first:
+      213: 8986547543728162976
+    second: Anims idle_Plante_50
+  - first:
+      213: -2008508964557188932
+    second: Anims idle_Plante_52
+  - first:
+      213: -1839181987633342917
+    second: Anims idle_Plante_54
+  - first:
+      213: -2868721126449131658
+    second: Anims idle_Plante_56
+  - first:
+      213: 8520767939715900034
+    second: Anims idle_Plante_58
+  - first:
+      213: 4507091533070732488
+    second: Anims idle_Plante_60
+  - first:
+      213: 1231033646351849014
+    second: Anims idle_Plante_62
+  - first:
+      213: -3304152265822747931
+    second: Anims idle_Plante_64
+  - first:
+      213: -9135283070541080287
+    second: Anims idle_Plante_66
+  - first:
+      213: 4579465181228295998
+    second: Anims idle_Plante_68
+  - first:
+      213: -8271737456277210444
+    second: Anims idle_Plante_70
+  - first:
+      213: -4986800443923849737
+    second: Anims idle_Plante_72
+  - first:
+      213: -8715170943656388803
+    second: Anims idle_Plante_74
+  - first:
+      213: 1933658898148305257
+    second: Anims idle_Plante_76
+  - first:
+      213: -899396046854718000
+    second: Anims idle_Plante_78
+  - first:
+      213: -439482572007026614
+    second: Anims idle_Plante_80
+  - first:
+      213: -4234646564927278009
+    second: Anims idle_Plante_81
+  - first:
+      213: -259156071186806115
+    second: Anims idle_Plante_83
+  - first:
+      213: 3880692761578500606
+    second: Anims idle_Plante_85
+  - first:
+      213: -5472302996558607916
+    second: Anims idle_Plante_87
+  - first:
+      213: 9110128571908272878
+    second: Anims idle_Plante_89
+  - first:
+      213: -3826397544066600269
+    second: Anims idle_Plante_91
+  - first:
+      213: 4316779474246875155
+    second: Anims idle_Plante_93
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims idle_Plante_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9059f25587c55ef50800000000000000
+      internalID: 6910030875164906761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_2
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 6976
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7795673415414f10800000000000000
+      internalID: 2252157241793025916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_4
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 6982
+        width: 492
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452478c5c5ffbca90800000000000000
+      internalID: -7292454399441943980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_6
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 6982
+        width: 496
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd59503298e23e90800000000000000
+      internalID: -7047314752307372586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_8
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 6981
+        width: 496
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856f4db5d8459d4e0800000000000000
+      internalID: -1956439597007964584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_10
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 6982
+        width: 496
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a81f493786b03420800000000000000
+      internalID: 2607784876145842339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_12
+      rect:
+        serializedVersion: 2
+        x: 5878
+        y: 6982
+        width: 500
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be75e8badeb1f6760800000000000000
+      internalID: 7453206615920891883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_14
+      rect:
+        serializedVersion: 2
+        x: 6818
+        y: 6982
+        width: 508
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f012604ef8fd7790800000000000000
+      internalID: -7530589231008050958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_16
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 5702
+        width: 512
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec84d376b0b96e50800000000000000
+      internalID: 6803163009793690855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_18
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 5702
+        width: 520
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba027a231f4bf29f0800000000000000
+      internalID: -490974886330163029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_20
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 5702
+        width: 524
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d706d1762c92fe0800000000000000
+      internalID: -1213224876469355178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_22
+      rect:
+        serializedVersion: 2
+        x: 3018
+        y: 5695
+        width: 532
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c40f3322c939240800000000000000
+      internalID: 4797349698793917520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_24
+      rect:
+        serializedVersion: 2
+        x: 3966
+        y: 5702
+        width: 528
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969c0bb1dde52c980800000000000000
+      internalID: -8520143241286203031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_26
+      rect:
+        serializedVersion: 2
+        x: 4911
+        y: 5702
+        width: 527
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5767cfa43cc53070800000000000000
+      internalID: 8085593232673040220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_28
+      rect:
+        serializedVersion: 2
+        x: 5862
+        y: 5702
+        width: 522
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a59edd92887a1840800000000000000
+      internalID: 5195597622514980261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_30
+      rect:
+        serializedVersion: 2
+        x: 6806
+        y: 5702
+        width: 522
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d9852e95a35b050800000000000000
+      internalID: 5815618651542822161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_32
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 4422
+        width: 516
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c1987bf33a4b1b0800000000000000
+      internalID: -5641704939130905564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_34
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 4422
+        width: 512
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbefa42c041bb520800000000000000
+      internalID: 2718788842435898288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_36
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 4422
+        width: 511
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90036dc546cb9260800000000000000
+      internalID: 7105490840207949978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_38
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 4422
+        width: 507
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55cb4feaf6fbdeb0800000000000000
+      internalID: -4693886628986632870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_40
+      rect:
+        serializedVersion: 2
+        x: 3974
+        y: 4422
+        width: 508
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca98f6851f7dcd880800000000000000
+      internalID: -8584749358104213076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_42
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 4422
+        width: 504
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff672acb1617ba670800000000000000
+      internalID: 8551052982083548927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_44
+      rect:
+        serializedVersion: 2
+        x: 5870
+        y: 4422
+        width: 500
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4efc4023cbeb670800000000000000
+      internalID: 8556483265065641167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_46
+      rect:
+        serializedVersion: 2
+        x: 6815
+        y: 4422
+        width: 499
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea253bc1005bc5d0800000000000000
+      internalID: -3041249154724189470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_48
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3142
+        width: 492
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afc1f498fdbd6040800000000000000
+      internalID: 4642575666237263780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_50
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 3142
+        width: 492
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a88315d061a6bc70800000000000000
+      internalID: 8986547543728162976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_52
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 3142
+        width: 492
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0916ffcb75024e0800000000000000
+      internalID: -2008508964557188932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_54
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 3142
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3651d50ab9e976e0800000000000000
+      internalID: -1839181987633342917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_56
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 3142
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f475aa5514038d0800000000000000
+      internalID: -2868721126449131658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_58
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 3142
+        width: 490
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282ad44db49df3670800000000000000
+      internalID: 8520767939715900034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_60
+      rect:
+        serializedVersion: 2
+        x: 5878
+        y: 3142
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc0ad6aed76c8e30800000000000000
+      internalID: 4507091533070732488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_62
+      rect:
+        serializedVersion: 2
+        x: 6826
+        y: 3142
+        width: 487
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6361b5d3492851110800000000000000
+      internalID: 1231033646351849014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_64
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1862
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e245d7350b4522d0800000000000000
+      internalID: -3304152265822747931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_66
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1862
+        width: 484
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12952c9b274f83180800000000000000
+      internalID: -9135283070541080287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_68
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 1862
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37e16cb1578d8f30800000000000000
+      internalID: 4579465181228295998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_70
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 1862
+        width: 487
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4babd4beb92e43d80800000000000000
+      internalID: -8271737456277210444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_72
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 1862
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd982eda635bcab0800000000000000
+      internalID: -4986800443923849737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_74
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 1862
+        width: 485
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d371e82a33e7d0780800000000000000
+      internalID: -8715170943656388803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_76
+      rect:
+        serializedVersion: 2
+        x: 5878
+        y: 1861
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96927ecd58cb5da10800000000000000
+      internalID: 1933658898148305257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_78
+      rect:
+        serializedVersion: 2
+        x: 6826
+        y: 1862
+        width: 487
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd75d28f04b483f0800000000000000
+      internalID: -899396046854718000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_80
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 582
+        width: 488
+        height: 1076
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40db82ede4a6e9f0800000000000000
+      internalID: -439482572007026614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_81
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 576
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7447e24a2638b35c0800000000000000
+      internalID: -4234646564927278009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_83
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 578
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a46832dea476cf0800000000000000
+      internalID: -259156071186806115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_85
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 582
+        width: 484
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1f050818dfad530800000000000000
+      internalID: 3880692761578500606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_87
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 578
+        width: 494
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d981da0b697e04b0800000000000000
+      internalID: -5472302996558607916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_89
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 582
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2baba2badad6e70800000000000000
+      internalID: 9110128571908272878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_91
+      rect:
+        serializedVersion: 2
+        x: 5878
+        y: 578
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2bb70f4b7e5eac0800000000000000
+      internalID: -3826397544066600269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims idle_Plante_93
+      rect:
+        serializedVersion: 2
+        x: 6826
+        y: 578
+        width: 488
+        height: 1112
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318be208f0848eb30800000000000000
+      internalID: 4316779474246875155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

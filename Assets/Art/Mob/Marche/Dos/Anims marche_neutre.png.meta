@@ -1,0 +1,1236 @@
+fileFormatVersion: 2
+guid: d0599bbfa293bbc42a35038f5a65194e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7636040646376244078
+    second: Anims marche_neutre_0
+  - first:
+      213: -2803741659145007022
+    second: Anims marche_neutre_1
+  - first:
+      213: -1125974707537164724
+    second: Anims marche_neutre_2
+  - first:
+      213: 389902816555082913
+    second: Anims marche_neutre_3
+  - first:
+      213: -1217630342787117530
+    second: Anims marche_neutre_4
+  - first:
+      213: 1814177799162690657
+    second: Anims marche_neutre_5
+  - first:
+      213: 8853151365581567267
+    second: Anims marche_neutre_6
+  - first:
+      213: 53489508299971418
+    second: Anims marche_neutre_7
+  - first:
+      213: 3272785408081082051
+    second: Anims marche_neutre_8
+  - first:
+      213: 3321908040962960474
+    second: Anims marche_neutre_9
+  - first:
+      213: 2559656542059319758
+    second: Anims marche_neutre_10
+  - first:
+      213: 3203686934037350193
+    second: Anims marche_neutre_11
+  - first:
+      213: 2348196145623466589
+    second: Anims marche_neutre_12
+  - first:
+      213: -2138744959788160348
+    second: Anims marche_neutre_13
+  - first:
+      213: 278120721079145585
+    second: Anims marche_neutre_14
+  - first:
+      213: -728017898733974938
+    second: Anims marche_neutre_15
+  - first:
+      213: -7402845588132574178
+    second: Anims marche_neutre_16
+  - first:
+      213: 4410765952593564936
+    second: Anims marche_neutre_17
+  - first:
+      213: -6959258784804862720
+    second: Anims marche_neutre_18
+  - first:
+      213: 716086128477377314
+    second: Anims marche_neutre_19
+  - first:
+      213: 2933148851785289871
+    second: Anims marche_neutre_20
+  - first:
+      213: 6846886192193972452
+    second: Anims marche_neutre_21
+  - first:
+      213: 7184799158169183431
+    second: Anims marche_neutre_22
+  - first:
+      213: -724564826866093626
+    second: Anims marche_neutre_23
+  - first:
+      213: -8422423700103559563
+    second: Anims marche_neutre_24
+  - first:
+      213: 321541468490500623
+    second: Anims marche_neutre_25
+  - first:
+      213: -2807078803949520646
+    second: Anims marche_neutre_26
+  - first:
+      213: -2030806253192562754
+    second: Anims marche_neutre_27
+  - first:
+      213: 3985634426633497220
+    second: Anims marche_neutre_28
+  - first:
+      213: -4223931838163411976
+    second: Anims marche_neutre_29
+  - first:
+      213: -8196296559795238031
+    second: Anims marche_neutre_30
+  - first:
+      213: 7980190398235872123
+    second: Anims marche_neutre_31
+  - first:
+      213: -8617377149916548102
+    second: Anims marche_neutre_32
+  - first:
+      213: -7722361925518712800
+    second: Anims marche_neutre_33
+  - first:
+      213: 2430339482678564070
+    second: Anims marche_neutre_34
+  - first:
+      213: 1356420526822055105
+    second: Anims marche_neutre_35
+  - first:
+      213: -7699984768888478572
+    second: Anims marche_neutre_36
+  - first:
+      213: 1139881343380191547
+    second: Anims marche_neutre_37
+  - first:
+      213: 8625630839398071484
+    second: Anims marche_neutre_38
+  - first:
+      213: -8018463523476534165
+    second: Anims marche_neutre_39
+  - first:
+      213: 1914593369525721957
+    second: Anims marche_neutre_40
+  - first:
+      213: 1497623497660813571
+    second: Anims marche_neutre_41
+  - first:
+      213: -7138048941111386424
+    second: Anims marche_neutre_42
+  - first:
+      213: 8073254995873472241
+    second: Anims marche_neutre_43
+  - first:
+      213: 6859925484506728353
+    second: Anims marche_neutre_44
+  - first:
+      213: -3559342610072018712
+    second: Anims marche_neutre_45
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims marche_neutre_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1056
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6343b9a28aa8f960800000000000000
+      internalID: 7636040646376244078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_1
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 6986
+        width: 492
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25092bcd0db1719d0800000000000000
+      internalID: -2803741659145007022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_2
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 6994
+        width: 500
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c464c2b18fbbf50f0800000000000000
+      internalID: -1125974707537164724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_3
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 7002
+        width: 508
+        height: 1036
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4a0bdbb86396500800000000000000
+      internalID: 389902816555082913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_4
+      rect:
+        serializedVersion: 2
+        x: 3967
+        y: 7006
+        width: 519
+        height: 1032
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ecf6e87ab1a1fe0800000000000000
+      internalID: -1217630342787117530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_5
+      rect:
+        serializedVersion: 2
+        x: 4912
+        y: 7014
+        width: 525
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cfd7ea8114d2910800000000000000
+      internalID: 1814177799162690657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_6
+      rect:
+        serializedVersion: 2
+        x: 5858
+        y: 7018
+        width: 528
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325f040d246bcda70800000000000000
+      internalID: 8853151365581567267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_7
+      rect:
+        serializedVersion: 2
+        x: 6798
+        y: 7026
+        width: 536
+        height: 1012
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b1e65ac680eb000800000000000000
+      internalID: 53489508299971418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_8
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 5754
+        width: 544
+        height: 1004
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c631ca1df44b6d20800000000000000
+      internalID: 3272785408081082051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_9
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 5762
+        width: 552
+        height: 996
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c6c1653c9c91e20800000000000000
+      internalID: 3321908040962960474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_10
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 5766
+        width: 556
+        height: 992
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec15378301ab58320800000000000000
+      internalID: 2559656542059319758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_11
+      rect:
+        serializedVersion: 2
+        x: 3018
+        y: 5774
+        width: 567
+        height: 984
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1374bdaea48c57c20800000000000000
+      internalID: 3203686934037350193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_12
+      rect:
+        serializedVersion: 2
+        x: 3962
+        y: 5766
+        width: 560
+        height: 992
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5204d204f7769020800000000000000
+      internalID: 2348196145623466589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_13
+      rect:
+        serializedVersion: 2
+        x: 4906
+        y: 5762
+        width: 552
+        height: 996
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa6ba66ac6a152e0800000000000000
+      internalID: -2138744959788160348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_14
+      rect:
+        serializedVersion: 2
+        x: 5854
+        y: 5758
+        width: 547
+        height: 1000
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174199082551cd300800000000000000
+      internalID: 278120721079145585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_15
+      rect:
+        serializedVersion: 2
+        x: 6798
+        y: 5750
+        width: 540
+        height: 1008
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ac5db049f85e5f0800000000000000
+      internalID: -728017898733974938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_16
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 4470
+        width: 536
+        height: 1012
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c4a48d82fc34990800000000000000
+      internalID: -7402845588132574178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_17
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 4448
+        width: 519
+        height: 1034
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8051abfb340363d30800000000000000
+      internalID: 4410765952593564936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_18
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 4446
+        width: 508
+        height: 1036
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00580b7c10fbb6f90800000000000000
+      internalID: -6959258784804862720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_19
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 4442
+        width: 504
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2239a743a8c00f900800000000000000
+      internalID: 716086128477377314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_20
+      rect:
+        serializedVersion: 2
+        x: 3974
+        y: 4434
+        width: 500
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80d1081753a4b820800000000000000
+      internalID: 2933148851785289871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_21
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 4430
+        width: 492
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8af3727b6050f50800000000000000
+      internalID: 6846886192193972452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_22
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 4426
+        width: 480
+        height: 1056
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4233584c885b360800000000000000
+      internalID: 7184799158169183431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_23
+      rect:
+        serializedVersion: 2
+        x: 6822
+        y: 4426
+        width: 476
+        height: 1056
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c177edf024d1f5f0800000000000000
+      internalID: -724564826866093626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_24
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 3150
+        width: 468
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5760f77c44a8d1b80800000000000000
+      internalID: -8422423700103559563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_25
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 3154
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a0fe11348567400800000000000000
+      internalID: 321541468490500623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_26
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 3154
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af87f0a43b04b09d0800000000000000
+      internalID: -2807078803949520646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_27
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 3152
+        width: 464
+        height: 1050
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7b0dee87021d3e0800000000000000
+      internalID: -2030806253192562754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_28
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 3154
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aae0ce461df4730800000000000000
+      internalID: 3985634426633497220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_29
+      rect:
+        serializedVersion: 2
+        x: 4946
+        y: 3158
+        width: 464
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb9ece5f549165c0800000000000000
+      internalID: -4223931838163411976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_30
+      rect:
+        serializedVersion: 2
+        x: 5886
+        y: 3158
+        width: 471
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b06a764b7e04e80800000000000000
+      internalID: -8196296559795238031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_31
+      rect:
+        serializedVersion: 2
+        x: 6834
+        y: 3158
+        width: 468
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b05d6e2e45fbe60800000000000000
+      internalID: 7980190398235872123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_32
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1882
+        width: 468
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3f7a3932de86880800000000000000
+      internalID: -8617377149916548102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_33
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 1882
+        width: 465
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020a47a5eb8a4d490800000000000000
+      internalID: -7722361925518712800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_34
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 1886
+        width: 464
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e499ac02ec4ab120800000000000000
+      internalID: 2430339482678564070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_35
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 1882
+        width: 468
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccd6435849f2d210800000000000000
+      internalID: 1356420526822055105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_36
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 1882
+        width: 468
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494eb7226a8242590800000000000000
+      internalID: -7699984768888478572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_37
+      rect:
+        serializedVersion: 2
+        x: 4943
+        y: 1882
+        width: 471
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39754eda0ca1df00800000000000000
+      internalID: 1139881343380191547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_38
+      rect:
+        serializedVersion: 2
+        x: 5887
+        y: 1878
+        width: 467
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcf9f14c8564b770800000000000000
+      internalID: 8625630839398071484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_39
+      rect:
+        serializedVersion: 2
+        x: 6834
+        y: 1878
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c01c6b8e1b8b090800000000000000
+      internalID: -8018463523476534165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_40
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 598
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b16ef8680029a10800000000000000
+      internalID: 1914593369525721957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_41
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 598
+        width: 467
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301d959e2a0a8c410800000000000000
+      internalID: 1497623497660813571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_42
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 598
+        width: 468
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ced3bb9e4e80fc90800000000000000
+      internalID: -7138048941111386424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_43
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 594
+        width: 468
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe9f2215a6f90070800000000000000
+      internalID: 8073254995873472241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_44
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 594
+        width: 476
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a74ca9f1e9533f50800000000000000
+      internalID: 6859925484506728353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_neutre_45
+      rect:
+        serializedVersion: 2
+        x: 4930
+        y: 594
+        width: 480
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0eebc11ccaa9ec0800000000000000
+      internalID: -3559342610072018712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1236 @@
+fileFormatVersion: 2
+guid: 05aabdc2e16198d408b7f652269254b3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9193356882916861935
+    second: Anims marche_eau_0
+  - first:
+      213: -3825645861956216496
+    second: Anims marche_eau_1
+  - first:
+      213: 1973478828885336110
+    second: Anims marche_eau_2
+  - first:
+      213: -6225879050634741486
+    second: Anims marche_eau_3
+  - first:
+      213: -2392270560856112127
+    second: Anims marche_eau_4
+  - first:
+      213: -7069431360708059061
+    second: Anims marche_eau_5
+  - first:
+      213: 5322541352944157871
+    second: Anims marche_eau_6
+  - first:
+      213: -947675189520020905
+    second: Anims marche_eau_7
+  - first:
+      213: -7984235936625765655
+    second: Anims marche_eau_8
+  - first:
+      213: -5643592164029270319
+    second: Anims marche_eau_9
+  - first:
+      213: 8437346311908577870
+    second: Anims marche_eau_10
+  - first:
+      213: -1106735164015413914
+    second: Anims marche_eau_11
+  - first:
+      213: 1164862524718104289
+    second: Anims marche_eau_12
+  - first:
+      213: -1813440995928440457
+    second: Anims marche_eau_13
+  - first:
+      213: 7983850797398333347
+    second: Anims marche_eau_14
+  - first:
+      213: -6301967882243475202
+    second: Anims marche_eau_15
+  - first:
+      213: 6930252611262702315
+    second: Anims marche_eau_16
+  - first:
+      213: 3514304832503359798
+    second: Anims marche_eau_17
+  - first:
+      213: 8609713296682559697
+    second: Anims marche_eau_18
+  - first:
+      213: -1206159812882053398
+    second: Anims marche_eau_19
+  - first:
+      213: 6815100158642036212
+    second: Anims marche_eau_20
+  - first:
+      213: -1804548567630010584
+    second: Anims marche_eau_21
+  - first:
+      213: 977529608895171825
+    second: Anims marche_eau_22
+  - first:
+      213: 7983750858809071021
+    second: Anims marche_eau_23
+  - first:
+      213: 874672854853949958
+    second: Anims marche_eau_24
+  - first:
+      213: -3415063454675530904
+    second: Anims marche_eau_25
+  - first:
+      213: 51810802035113364
+    second: Anims marche_eau_26
+  - first:
+      213: 4367947038825774933
+    second: Anims marche_eau_27
+  - first:
+      213: -3181110626565343772
+    second: Anims marche_eau_28
+  - first:
+      213: -4447175026843346941
+    second: Anims marche_eau_29
+  - first:
+      213: -26590932780285706
+    second: Anims marche_eau_30
+  - first:
+      213: 1886863614652151271
+    second: Anims marche_eau_31
+  - first:
+      213: 6872898285542380972
+    second: Anims marche_eau_32
+  - first:
+      213: -8712333363636321931
+    second: Anims marche_eau_33
+  - first:
+      213: -7410237452335234470
+    second: Anims marche_eau_34
+  - first:
+      213: 4042546739563928791
+    second: Anims marche_eau_35
+  - first:
+      213: -8358957156942332826
+    second: Anims marche_eau_36
+  - first:
+      213: 2200448066786391530
+    second: Anims marche_eau_37
+  - first:
+      213: -8834327287896442525
+    second: Anims marche_eau_38
+  - first:
+      213: 8922130550078755785
+    second: Anims marche_eau_39
+  - first:
+      213: -6274232649928826972
+    second: Anims marche_eau_40
+  - first:
+      213: 8473386046541281430
+    second: Anims marche_eau_41
+  - first:
+      213: -2286729309311496276
+    second: Anims marche_eau_42
+  - first:
+      213: 930677277462002418
+    second: Anims marche_eau_43
+  - first:
+      213: -6806478708176621033
+    second: Anims marche_eau_44
+  - first:
+      213: -8779818771587561815
+    second: Anims marche_eau_45
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anims marche_eau_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6982
+        width: 488
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7e6a3606d559f70800000000000000
+      internalID: 9193356882916861935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_1
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 6986
+        width: 492
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05918a19b5398eac0800000000000000
+      internalID: -3825645861956216496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_2
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 6994
+        width: 500
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20e677f984336b10800000000000000
+      internalID: 1973478828885336110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_3
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 7002
+        width: 508
+        height: 1032
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219be545dfb3999a0800000000000000
+      internalID: -6225879050634741486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_4
+      rect:
+        serializedVersion: 2
+        x: 3967
+        y: 7006
+        width: 519
+        height: 1028
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1040c858992fcced0800000000000000
+      internalID: -2392270560856112127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_5
+      rect:
+        serializedVersion: 2
+        x: 4912
+        y: 7014
+        width: 525
+        height: 1020
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b406df402a554ed90800000000000000
+      internalID: -7069431360708059061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_6
+      rect:
+        serializedVersion: 2
+        x: 5858
+        y: 7018
+        width: 528
+        height: 1016
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4409419277dd940800000000000000
+      internalID: 5322541352944157871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_7
+      rect:
+        serializedVersion: 2
+        x: 6798
+        y: 7026
+        width: 536
+        height: 1008
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a4536af6e29d2f0800000000000000
+      internalID: -947675189520020905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_8
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 5754
+        width: 544
+        height: 1004
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2538ac7bb423190800000000000000
+      internalID: -7984235936625765655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_9
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 5762
+        width: 552
+        height: 996
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d67bdde3deeda1b0800000000000000
+      internalID: -5643592164029270319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_10
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 5766
+        width: 556
+        height: 992
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42534884c9771570800000000000000
+      internalID: 8437346311908577870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_11
+      rect:
+        serializedVersion: 2
+        x: 3018
+        y: 5774
+        width: 567
+        height: 984
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6657d686b3614a0f0800000000000000
+      internalID: -1106735164015413914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_12
+      rect:
+        serializedVersion: 2
+        x: 3962
+        y: 5766
+        width: 560
+        height: 992
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eebcf56b4c6a2010800000000000000
+      internalID: 1164862524718104289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_13
+      rect:
+        serializedVersion: 2
+        x: 4906
+        y: 5762
+        width: 552
+        height: 996
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7710e80b50d55d6e0800000000000000
+      internalID: -1813440995928440457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_14
+      rect:
+        serializedVersion: 2
+        x: 5854
+        y: 5758
+        width: 547
+        height: 1000
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a795aefff55cce60800000000000000
+      internalID: 7983850797398333347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_15
+      rect:
+        serializedVersion: 2
+        x: 6798
+        y: 5750
+        width: 540
+        height: 1008
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8f4f0b999ea88a0800000000000000
+      internalID: -6301967882243475202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_16
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 4470
+        width: 536
+        height: 1008
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2690a28043d2060800000000000000
+      internalID: 6930252611262702315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_17
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 4448
+        width: 519
+        height: 1030
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6392dc520a155c030800000000000000
+      internalID: 3514304832503359798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_18
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 4446
+        width: 508
+        height: 1032
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8a8ba80a8db7770800000000000000
+      internalID: 8609713296682559697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_19
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 4442
+        width: 504
+        height: 1036
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae640da6a0cd24fe0800000000000000
+      internalID: -1206159812882053398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_20
+      rect:
+        serializedVersion: 2
+        x: 3974
+        y: 4434
+        width: 500
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd11908c79149e50800000000000000
+      internalID: 6815100158642036212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_21
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 4430
+        width: 492
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827297e73a4f4f6e0800000000000000
+      internalID: -1804548567630010584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_22
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 4426
+        width: 480
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc8f970002e09d00800000000000000
+      internalID: 977529608895171825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_23
+      rect:
+        serializedVersion: 2
+        x: 6822
+        y: 4426
+        width: 476
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5d88a3b1bfbce60800000000000000
+      internalID: 7983750858809071021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_24
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 3150
+        width: 468
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a1f38c356732c00800000000000000
+      internalID: 874672854853949958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_25
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 3154
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b85aab1e14b90d0800000000000000
+      internalID: -3415063454675530904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_26
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 3154
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49db4d266a118b000800000000000000
+      internalID: 51810802035113364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_27
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 3152
+        width: 464
+        height: 1050
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ffdee70b01e9c30800000000000000
+      internalID: 4367947038825774933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_28
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 3154
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e53a584dbc6ad3d0800000000000000
+      internalID: -3181110626565343772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_29
+      rect:
+        serializedVersion: 2
+        x: 4946
+        y: 3158
+        width: 464
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308930f00e57842c0800000000000000
+      internalID: -4447175026843346941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_30
+      rect:
+        serializedVersion: 2
+        x: 5886
+        y: 3158
+        width: 471
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0826100b781aff0800000000000000
+      internalID: -26590932780285706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_31
+      rect:
+        serializedVersion: 2
+        x: 6834
+        y: 3158
+        width: 468
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e573f2e57c7f2a10800000000000000
+      internalID: 1886863614652151271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_32
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1882
+        width: 468
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca515279390716f50800000000000000
+      internalID: 6872898285542380972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_33
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 1882
+        width: 465
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5714ca737f2971780800000000000000
+      internalID: -8712333363636321931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_34
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 1886
+        width: 464
+        height: 1036
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5243485c4c892990800000000000000
+      internalID: -7410237452335234470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_35
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 1882
+        width: 468
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc1f9f57d20a1830800000000000000
+      internalID: 4042546739563928791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_36
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 1882
+        width: 468
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c3ebfd0c40ffb80800000000000000
+      internalID: -8358957156942332826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_37
+      rect:
+        serializedVersion: 2
+        x: 4943
+        y: 1882
+        width: 471
+        height: 1040
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae57f77bbdf898e10800000000000000
+      internalID: 2200448066786391530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_38
+      rect:
+        serializedVersion: 2
+        x: 5887
+        y: 1878
+        width: 467
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369746f432a266580800000000000000
+      internalID: -8834327287896442525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_39
+      rect:
+        serializedVersion: 2
+        x: 6834
+        y: 1878
+        width: 464
+        height: 1044
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3da1db676c1db70800000000000000
+      internalID: 8922130550078755785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_40
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 598
+        width: 464
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af95dea5a27de8a0800000000000000
+      internalID: -6274232649928826972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_41
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 598
+        width: 467
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69838d427b3879570800000000000000
+      internalID: 8473386046541281430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_42
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 598
+        width: 468
+        height: 1048
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf830d0fc7e340e0800000000000000
+      internalID: -2286729309311496276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_43
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 594
+        width: 468
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa76ab8d0e6aec00800000000000000
+      internalID: 930677277462002418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_44
+      rect:
+        serializedVersion: 2
+        x: 3990
+        y: 594
+        width: 476
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7127fdb5da78a81a0800000000000000
+      internalID: -6806478708176621033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anims marche_eau_45
+      rect:
+        serializedVersion: 2
+        x: 4930
+        y: 594
+        width: 480
+        height: 1052
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6873f3851d72680800000000000000
+      internalID: -8779818771587561815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
