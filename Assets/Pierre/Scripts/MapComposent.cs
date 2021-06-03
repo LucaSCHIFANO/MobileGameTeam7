@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class MapComposent : MonoBehaviour
 {
     public float position = 1;
@@ -43,6 +43,11 @@ public class MapComposent : MonoBehaviour
     private int LaTaverneDuCaptain = 0;
 
     public GameObject winScreen;
+    public TextMeshProUGUI actualScore;
+    public TextMeshProUGUI highscore;
+    public TextMeshProUGUI newHighscore;
+
+
     public Text infoText;
 
     public GameObject fade;
@@ -672,7 +677,7 @@ public class MapComposent : MonoBehaviour
         {
             MapUI.SetActive(false);
             winScreen.SetActive(true);
-            GameObject.Find("NOT").GetComponent<Text>().text = "Nombre de tour : " + PhaseManager.Instance.numberOfTurn;
+            actualScore.text = "Number of turn : " + PhaseManager.Instance.numberOfTurn;
 
            /* if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
             {*/
@@ -692,7 +697,8 @@ public class MapComposent : MonoBehaviour
             {
                 PlayerPrefs.SetInt("NumberOfTurn", PhaseManager.Instance.numberOfTurn);
 
-                GameObject.Find("OldRecord").GetComponent<Text>().text = "It's a NewRecord !!";
+                highscore.text = "Highscore :" + PlayerPrefs.GetInt("NumberOfTurn").ToString();
+                newHighscore.gameObject.SetActive(true);
 
                 /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                 {*/
@@ -704,7 +710,8 @@ public class MapComposent : MonoBehaviour
             }
             else
             {
-                GameObject.Find("OldRecord").GetComponent<Text>().text = "Record : " + PhaseManager.Instance.numberOfTurnRecord;
+                highscore.text = "Highscore :" + PlayerPrefs.GetInt("NumberOfTurn").ToString();
+                newHighscore.gameObject.SetActive(false);
             }
 
         }else if (position == 50)
