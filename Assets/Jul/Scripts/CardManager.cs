@@ -22,7 +22,7 @@ public class CardManager : MonoBehaviour
 
     [Header("RollCard")]
     public bool inChosenTime = false;
-    public Text chooseCardText;
+    public TextMeshProUGUI chooseCardText;
     public GameObject deckSelection;
     public Transform deckObject;
     private List<Card> deck = new List<Card>();
@@ -143,6 +143,7 @@ public class CardManager : MonoBehaviour
                                 rollCard = hitCard;
                                 rollCard.transform.SetParent(deckObject);
                                 rollCardIsChose = true;
+                                rollCard.gameObject.tag = "TaMereLaPute";
 
                                 if (index < nbTirageDebut - 1)
                                 {

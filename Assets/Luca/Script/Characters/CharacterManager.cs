@@ -174,6 +174,7 @@ public class CharacterManager : MonoBehaviour
             if(Grid.Instance.progress != 9)
             {
                 CardManager.Instance.RollCard();
+                CardManager.Instance.pauseButton.SetActive(false);
                 CharacterManager.Instance.currentPlayer.state = PlayerMovement.States.WIN;
                 CardManager.Instance.toChoice();
             }
