@@ -27,17 +27,12 @@ public class Menu : MonoBehaviour
     private IEnumerator waitforthat()
     {
         yield return new WaitForSeconds(0.6f);
-        SceneManager.LoadScene("NewLuca3");
+        SceneManager.LoadScene("NewSceneJul");
     }
 
     public void BouttonTuto()
     {
         SceneManager.LoadScene("Tuto");
-    }
-
-    public void BouttonQuitter()
-    {
-        Application.Quit();
     }
 
     public void CreditsActive()

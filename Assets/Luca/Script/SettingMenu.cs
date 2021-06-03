@@ -9,6 +9,9 @@ public class SettingMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public AudioMixer audioMixer2;
 
+    public Slider ost;
+    public Slider sfx;
+
     public GameObject toFalse;
 
     void Start()
@@ -16,8 +19,8 @@ public class SettingMenu : MonoBehaviour
         SetVolume(PlayerPrefs.GetFloat("volumeOST"));
         SetVolumeSFX(PlayerPrefs.GetFloat("volumeSFX"));
 
-        GameObject.Find("SliderOST").GetComponent<Slider>().value = PlayerPrefs.GetFloat("volumeOST");
-        GameObject.Find("SliderSFX").GetComponent<Slider>().value = PlayerPrefs.GetFloat("volumeSFX");
+        ost.value = PlayerPrefs.GetFloat("volumeOST");
+        sfx.value = PlayerPrefs.GetFloat("volumeSFX");
 
         toFalse.SetActive(false);
     }
