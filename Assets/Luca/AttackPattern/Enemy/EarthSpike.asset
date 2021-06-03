@@ -30,4 +30,5 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 0}
   BackGround: {fileID: 0}
+  effectAttack: {fileID: 5253077733382196637, guid: be895fb98e5e88740b654e1e58d29c6b, type: 3}
   musicName: Nature2

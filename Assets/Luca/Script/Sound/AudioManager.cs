@@ -1,5 +1,8 @@
 using UnityEngine.Audio;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -41,6 +44,13 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string name)
     {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Play();
+    }
+
+    public IEnumerator PlayWDelay(string name, float time)
+    {
+        yield return new WaitForSeconds(time);
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
     }

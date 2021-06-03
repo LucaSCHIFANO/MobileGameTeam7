@@ -22,7 +22,7 @@ MonoBehaviour:
   push: 0
   pull: 0
   element: 1
-  AOE: 1
+  AOE: 0
   aoeEffect: {fileID: 0}
   around: 0
   effect: 0
@@ -30,4 +30,5 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 21300000, guid: 5443a9843792f17469371396c033eb47, type: 3}
   BackGround: {fileID: 21300000, guid: 8dd91c50c59a05546a75ccbf72985f2c, type: 3}
+  effectAttack: {fileID: 2066511720260341787, guid: 30991f3aa8befaa4f8c51946e0cb6779, type: 3}
   musicName: Fire2

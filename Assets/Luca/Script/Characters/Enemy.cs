@@ -223,6 +223,7 @@ public class Enemy : MonoBehaviour
                 if (attackMonster.seePlayer && canAttack)
                 {
                     BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>(), false);
+                    yield return new WaitForSeconds(1f);
                     break;
                 }
 
@@ -259,5 +260,6 @@ public class Enemy : MonoBehaviour
         xPos = panelToMove.x;
         yPos = -panelToMove.y;
         panelToGo = null;
+
     }
 }

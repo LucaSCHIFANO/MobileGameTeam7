@@ -30,4 +30,5 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 21300000, guid: 6441a3ccfab5abb4e9ca5b39af0c3597, type: 3}
   BackGround: {fileID: 21300000, guid: 8dd91c50c59a05546a75ccbf72985f2c, type: 3}
+  effectAttack: {fileID: 1054052750960211209, guid: b6a26e651b591c64fb5bb2db2651effd, type: 3}
   musicName: Fire1

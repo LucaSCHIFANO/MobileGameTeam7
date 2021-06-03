@@ -30,4 +30,5 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 0}
   BackGround: {fileID: 0}
+  effectAttack: {fileID: 1054052750960211209, guid: b6a26e651b591c64fb5bb2db2651effd, type: 3}
   musicName: Sword

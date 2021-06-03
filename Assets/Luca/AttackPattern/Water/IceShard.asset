@@ -30,4 +30,5 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 21300000, guid: b575941e8328d79479f6029437478ac7, type: 3}
   BackGround: {fileID: 21300000, guid: 5a1c5cfc4c919a9438cb02e1a7cdd6cc, type: 3}
+  effectAttack: {fileID: 1708284037949464472, guid: bc37097ecb7610b4399eab589edd872a, type: 3}
   musicName: HookShot
