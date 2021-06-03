@@ -61,7 +61,7 @@ public class BattleManager : MonoBehaviour
         UiActionManager.Instance.HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
         UiActionManager.Instance.currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
 
-        AudioManager.Instance.StartCoroutine(AudioManager.Instance.PlayWDelay(currentAttackParam.musicName, 0.7f));
+        StartCoroutine(AudioManager.Instance.PlayWDelay(currentAttackParam.musicName, 0.7f));
 
         StartCoroutine(AttackPart2(att, def, aoe, damage));
 
