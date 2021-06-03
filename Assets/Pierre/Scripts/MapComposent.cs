@@ -48,7 +48,7 @@ public class MapComposent : MonoBehaviour
     public TextMeshProUGUI newHighscore;
 
 
-    public Text infoText;
+    public TextMeshProUGUI infoText;
 
     public GameObject fade;
 
