@@ -565,6 +565,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
   audioMixer2: {fileID: 24100000, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+  ost: {fileID: 0}
+  sfx: {fileID: 0}
   toFalse: {fileID: 271918808}
 --- !u!4 &60281981
 Transform:
@@ -7160,7 +7162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.22034658, y: 0.34500003}
   m_AnchorMax: {x: 0.7794657, y: 0.57100004}
-  m_AnchoredPosition: {x: 0.39990234, y: -0.16539001}
+  m_AnchoredPosition: {x: 0.39990234, y: -0.16540527}
   m_SizeDelta: {x: -1, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &362967345
@@ -8766,6 +8768,9 @@ MonoBehaviour:
   salle9: {fileID: 1194169232}
   salle10: {fileID: 365564158}
   winScreen: {fileID: 1339741208}
+  actualScore: {fileID: 1496174427}
+  highscore: {fileID: 827428678}
+  newHighscore: {fileID: 1940304155}
   infoText: {fileID: 882483346}
   fade: {fileID: 2281330016324294858, guid: ca7fe4d71295024469b9a33aafe0d47a, type: 3}
 --- !u!1 &641896381
@@ -9972,10 +9977,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.4
+  m_fontSize: 59.65
   m_fontSizeBase: 46.4
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -12695,7 +12700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.8}
   m_AnchorMax: {x: 0.55, y: 1}
-  m_AnchoredPosition: {x: -22.099976, y: 0}
+  m_AnchoredPosition: {x: -22.100098, y: 0}
   m_SizeDelta: {x: -44.21, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1365537060 stripped
@@ -13596,10 +13601,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.4
+  m_fontSize: 59.65
   m_fontSizeBase: 46.4
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -14156,7 +14161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -60.299927, y: -60.000244}
+  m_AnchoredPosition: {x: -60.299805, y: -60.000244}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1674400895
@@ -14778,7 +14783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1940304154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14848,7 +14853,7 @@ MonoBehaviour:
   m_fontSize: 40
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 16
