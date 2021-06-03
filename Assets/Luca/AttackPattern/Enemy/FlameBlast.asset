@@ -30,4 +30,5 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 0}
   BackGround: {fileID: 0}
+  effectAttack: {fileID: 2066511720260341787, guid: 30991f3aa8befaa4f8c51946e0cb6779, type: 3}
   musicName: Fire2

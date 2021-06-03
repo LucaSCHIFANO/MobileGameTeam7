@@ -33,6 +33,8 @@ public class AttackParam : ScriptableObject
     public Sprite artwork;
     public Sprite BackGround;
 
+    public GameObject effectAttack;
+
 
     public string musicName;
 }

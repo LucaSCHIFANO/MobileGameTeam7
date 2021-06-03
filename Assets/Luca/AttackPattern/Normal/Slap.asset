@@ -30,4 +30,5 @@ MonoBehaviour:
   intensity: 0
   artwork: {fileID: 21300000, guid: bdd626cbadb75944198d622246940be0, type: 3}
   BackGround: {fileID: 21300000, guid: 7e066c1adda49b0408c1892622c544fa, type: 3}
+  effectAttack: {fileID: 4066159510708306628, guid: 111ee12d662d0fa4eaea45d4e071e03c, type: 3}
   musicName: Slap

@@ -8747,7 +8747,7 @@ MonoBehaviour:
   listEnAttack:
   - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
   - {fileID: 11400000, guid: bdebbc7b1fe559944aff6940133c4ce3, type: 2}
-  - {fileID: 11400000, guid: 05dce7a32bbb4a54897f07a19e626c15, type: 2}
+  - {fileID: 11400000, guid: 14b5700e584b3b144ab2f7725732d66c, type: 2}
   - {fileID: 11400000, guid: 4a86ab43a5b5d414c8d311cbe9a9c393, type: 2}
 --- !u!1 &685308338
 GameObject:
@@ -10610,7 +10610,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 71dcee94c1fe8784c97999df637d1f20, type: 3}
   - {fileID: 21300000, guid: 3ac26b84d3aba204dad040d01837a9f7, type: 3}
   - {fileID: 21300000, guid: 2f7645428a560dc49ad5faf60b76fcc1, type: 3}
-  speed: 1
+  speed: 10
   sra: {fileID: 974637998}
 --- !u!114 &974637998
 MonoBehaviour:
@@ -11292,7 +11292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1585049808}
   optionMenuUI: {fileID: 271918808}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 2096851464}
 --- !u!114 &1071518424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16708,7 +16708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153800236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.32, y: 0.92, z: 0}
+  m_LocalPosition: {x: -21.8, y: 3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

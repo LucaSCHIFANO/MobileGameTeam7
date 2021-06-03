@@ -28,7 +28,7 @@ public class BattleManager : MonoBehaviour
         float multiplicator = ElementInteract.Instance.interaction(currentAttackParam.element, def.element);
 
         int totalAtt = (int)((att.strenght + currentAttackParam.damage + att.boostAtt) * multiplicator);
-        
+
         var damage = 0;
 
 
@@ -37,30 +37,39 @@ public class BattleManager : MonoBehaviour
             damage = totalAtt - (def.defense + def.boostDef);
         }
 
-        def.HP -= damage;
-        UiActionManager.Instance.HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
-        UiActionManager.Instance.currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
 
-        AudioManager.Instance.Play(currentAttackParam.musicName);
-
-        Instantiate(damageEffect, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
         if (att.GetComponent<PlayerMovement>())
         {
-            showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue);
-            
+            StartCoroutine(showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue));
+            Instantiate(currentAttackParam.effectAttack, def.gameObject.transform.GetChild(0).transform.GetChild(1).position, def.gameObject.transform.rotation);
+
         }
         else
         {
-            showDamage(damage, def.gameObject.transform.GetChild(0), Color.red);
+            StartCoroutine(showDamage(damage, def.gameObject.transform.GetChild(0), Color.red));
+            Instantiate(currentAttackParam.effectAttack, def.gameObject.transform.GetChild(0).position, def.gameObject.transform.rotation);
 
-            if(damage > 0)
+            if (damage > 0)
             {
                 CharacterManager.Instance.noDamage = false;
             }
         }
-        
 
+
+        def.HP -= damage;
+        UiActionManager.Instance.HPBar.value = CharacterManager.Instance.currentPlayer.stats.HP;
+        UiActionManager.Instance.currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
+
+        AudioManager.Instance.StartCoroutine(AudioManager.Instance.PlayWDelay(currentAttackParam.musicName, 0.7f));
+
+        StartCoroutine(AttackPart2(att, def, aoe, damage));
+
+    }
+
+    public IEnumerator AttackPart2(Stats att, Stats def, bool aoe, int damage)
+    {
+        yield return new WaitForSeconds(0.7f);
         if (currentAttackParam.pull || currentAttackParam.push)
         {
             if (att.gameObject.GetComponent<PlayerMovement>())
@@ -107,7 +116,7 @@ public class BattleManager : MonoBehaviour
 
             Grid.Instance.resetClicked();
 
-            if (PhaseManager.Instance.phase == PhaseManager.actualPhase.PLAYER)
+            if (att.GetComponent<PlayerMovement>())
             {
 
                 AudioManager.Instance.Play("Hit");
@@ -421,13 +430,15 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-   public void showDamage(int damage, Transform position, Color color)
+   public IEnumerator showDamage(int damage, Transform position, Color color)
    {
-        var txt = Instantiate(floatingText, position.position, position.rotation);
+        Transform newpos = position; 
+        var txt = Instantiate(floatingText, newpos.position, newpos.rotation);
         txt.GetComponent<TextMeshPro>().text = damage.ToString();
         txt.GetComponent<MeshRenderer>().sortingOrder = 100;
 
         txt.GetComponent<TextMeshPro>().color = color;
+        yield return new WaitForSeconds(1f);
     }
 
 }

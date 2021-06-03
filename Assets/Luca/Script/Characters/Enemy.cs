@@ -259,5 +259,6 @@ public class Enemy : MonoBehaviour
         xPos = panelToMove.x;
         yPos = -panelToMove.y;
         panelToGo = null;
+
     }
 }
