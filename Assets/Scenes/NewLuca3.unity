@@ -431,6 +431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 4f160a869a99344499fce09d4916bdda, type: 2}
   audioMixer2: {fileID: 24100000, guid: 3c8948fbc003b554b9614486a8428d9e, type: 2}
+  ost: {fileID: 0}
+  sfx: {fileID: 0}
   toFalse: {fileID: 271918808}
 --- !u!4 &60281981
 Transform:
@@ -3700,6 +3702,9 @@ MonoBehaviour:
   salle9: {fileID: 1194169232}
   salle10: {fileID: 365564158}
   winScreen: {fileID: 906367541}
+  actualScore: {fileID: 0}
+  highscore: {fileID: 0}
+  newHighscore: {fileID: 0}
   infoText: {fileID: 882483346}
   fade: {fileID: 2281330016324294858, guid: ca7fe4d71295024469b9a33aafe0d47a, type: 3}
 --- !u!1 &638624651
@@ -10610,7 +10615,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 71dcee94c1fe8784c97999df637d1f20, type: 3}
   - {fileID: 21300000, guid: 3ac26b84d3aba204dad040d01837a9f7, type: 3}
   - {fileID: 21300000, guid: 2f7645428a560dc49ad5faf60b76fcc1, type: 3}
-  speed: 10
+  speed: 1
   sra: {fileID: 974637998}
 --- !u!114 &974637998
 MonoBehaviour:
