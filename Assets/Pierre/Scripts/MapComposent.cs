@@ -675,6 +675,9 @@ public class MapComposent : MonoBehaviour
 
         if (position == 100)
         {
+            AudioManager.Instance.Stop("GlobalMap");
+            AudioManager.Instance.Play("Victory!");
+
             MapUI.SetActive(false);
             winScreen.SetActive(true);
             actualScore.text = "Number of turn : " + PhaseManager.Instance.numberOfTurn;
