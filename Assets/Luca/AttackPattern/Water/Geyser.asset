@@ -16,16 +16,20 @@ MonoBehaviour:
   description: You invoke a source of boiling water under your enemies
 <<<<<<< Prog
 <<<<<<< Prog
+<<<<<<< HEAD
 <<<<<<< Prog
 <<<<<<< Prog
 =======
 >>>>>>> Modif
 =======
 >>>>>>> Modif
+=======
+>>>>>>> Louis
   range: 3
 =======
   range: 2
 >>>>>>> Modif
+<<<<<<< HEAD
 <<<<<<< Prog
 <<<<<<< Prog
 =======
@@ -38,6 +42,11 @@ MonoBehaviour:
   range: 2
 >>>>>>> Modif
 >>>>>>> Modif
+=======
+=======
+  range: 2
+>>>>>>> Modif
+>>>>>>> Louis
   row_column: 0
   throughWall: 0
   APNeeded: 5
