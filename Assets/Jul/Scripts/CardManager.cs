@@ -79,7 +79,7 @@ public class CardManager : MonoBehaviour
 
     void Update()
     {
-        if (!handToMid && !midToHand)
+        if (!handToMid && !midToHand && !risingUp)
         {
             if (Input.GetMouseButtonDown(0))
             {
