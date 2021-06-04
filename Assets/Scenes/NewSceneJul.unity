@@ -8760,7 +8760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &634327779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9325,6 +9325,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 155cb5d927622f94db91f55ae61a38d0, type: 3}
   - {fileID: 21300000, guid: 6c71e3bf9bd974d4abd9f91459c7d109, type: 3}
   - {fileID: 21300000, guid: 4fbca928a788f61489b0736cd6558006, type: 3}
+  - {fileID: 21300000, guid: 4fbca928a788f61489b0736cd6558006, type: 3}
+  - {fileID: 21300000, guid: 4fbca928a788f61489b0736cd6558006, type: 3}
   listSpritesAlpha:
   - {fileID: 21300000, guid: 498ec891f7dceaf4a980d759d51780b8, type: 3}
   - {fileID: 21300000, guid: fba5957a8f3487e4b8bc6013a253826d, type: 3}
@@ -9702,7 +9704,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.55
+  m_fontSize: 51.95
   m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12605,7 +12607,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.5
+  m_fontSize: 65.35
   m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15971,7 +15973,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 465f684811e8a9d4cb3d27a74e382217, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 63f85d0979939864990d21b574370bae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21651,7 +21653,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.45
+  m_fontSize: 51.6
   m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 1

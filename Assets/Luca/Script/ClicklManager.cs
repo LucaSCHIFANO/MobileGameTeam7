@@ -346,7 +346,7 @@ public class ClicklManager : MonoBehaviour
         if (player.state == PlayerMovement.States.SELECTED)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.IDLE;
@@ -357,7 +357,7 @@ public class ClicklManager : MonoBehaviour
         else if (player.state == PlayerMovement.States.SELECTCARD)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.IDLE;
@@ -371,7 +371,7 @@ public class ClicklManager : MonoBehaviour
         else if (player.state == PlayerMovement.States.ACTION)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.SELECTCARD;
@@ -382,7 +382,7 @@ public class ClicklManager : MonoBehaviour
         else if (player.state == PlayerMovement.States.AOESELECT)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.SELECTCARD;
