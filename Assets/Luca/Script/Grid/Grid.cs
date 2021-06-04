@@ -86,7 +86,7 @@ public class Grid : MonoBehaviour
     }
 
 
-    void awake2() // crée la grid avec tt les cases en fct du pattern
+    void awake2() // crï¿½e la grid avec tt les cases en fct du pattern
     {
         var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
         gridArray = new Panel[width, height];
@@ -139,7 +139,7 @@ public class Grid : MonoBehaviour
                         break;
                     case GridPattern.panelType.WATER:
                         visu.sprite = listSprites[4];
-                        visu.color = new Color(0.0342f, 0.401f, 0.6603f);
+                        //visu.color = new Color(0.0342f, 0.401f, 0.6603f);
                         newPanel.movementCost = 3;
                         newPanel.canShotThrought = false;
                         break;
@@ -174,7 +174,7 @@ public class Grid : MonoBehaviour
                         break;
                     case GridPattern.panelType.POISON:
                         visu.sprite = listSprites[5];
-                        visu.color = new Color(0.5f, 0f, 0.3f);
+                        //visu.color = new Color(0.5f, 0f, 0.3f);
                         newPanel.movementCost = 3;
                         newPanel.isPoison = true;
                         newPanel.canShotThrought = false;
@@ -255,7 +255,7 @@ public class Grid : MonoBehaviour
         }
     }
 
-    void awake2Alpha() // crée la grid en transparent
+    void awake2Alpha() // crï¿½e la grid en transparent
     {
         gridArrayAlpha = new Panel[width, height];
         //var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
