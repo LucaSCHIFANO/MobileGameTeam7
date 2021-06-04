@@ -138,8 +138,8 @@ public class Grid : MonoBehaviour
                         newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.WATER:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.0342f, 0.401f, 0.6603f);
+                        visu.sprite = listSprites[4];
+                        //visu.color = new Color(0.0342f, 0.401f, 0.6603f);
                         newPanel.movementCost = 3;
                         newPanel.canShotThrought = false;
                         break;
@@ -173,8 +173,8 @@ public class Grid : MonoBehaviour
                         newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.POISON:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.5f, 0f, 0.3f);
+                        visu.sprite = listSprites[5];
+                        //visu.color = new Color(0.5f, 0f, 0.3f);
                         newPanel.movementCost = 3;
                         newPanel.isPoison = true;
                         newPanel.canShotThrought = false;
