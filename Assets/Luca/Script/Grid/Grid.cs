@@ -86,7 +86,7 @@ public class Grid : MonoBehaviour
     }
 
 
-    void awake2() // crée la grid avec tt les cases en fct du pattern
+    void awake2() // crï¿½e la grid avec tt les cases en fct du pattern
     {
         var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
         gridArray = new Panel[width, height];
@@ -255,7 +255,7 @@ public class Grid : MonoBehaviour
         }
     }
 
-    void awake2Alpha() // crée la grid en transparent
+    void awake2Alpha() // crï¿½e la grid en transparent
     {
         gridArrayAlpha = new Panel[width, height];
         //var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);

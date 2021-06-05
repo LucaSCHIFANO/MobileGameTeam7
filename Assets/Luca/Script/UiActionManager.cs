@@ -74,7 +74,7 @@ public class UiActionManager : MonoBehaviour
     public void showDeck()
     {
         var cardM = CardManager.Instance;
-        if (!cardM.handToMid && !cardM.midToHand)
+        if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
         {
             buttonHand.SetActive(false);
             buttonCancel.SetActive(true);
@@ -116,7 +116,7 @@ public class UiActionManager : MonoBehaviour
         {
             if (cardM.middleCard.GetComponent<CardDisplay>().attackParam.APNeeded <= CharacterManager.Instance.currentPlayer.GetComponent<Stats>().actionPoint)
             {
-                if (!cardM.handToMid && !cardM.midToHand)
+                if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
                 {
                     var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
 
@@ -146,7 +146,7 @@ public class UiActionManager : MonoBehaviour
     public void endTurn()
     {
         var cardM = CardManager.Instance;
-        if (!cardM.handToMid && !cardM.midToHand)
+        if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
         {
             CharacterManager.Instance.currentPlayer.endTurn();
         }
