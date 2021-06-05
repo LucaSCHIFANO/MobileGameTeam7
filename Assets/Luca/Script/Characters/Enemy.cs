@@ -231,6 +231,7 @@ public class Enemy : MonoBehaviour
         }else
         {
             BattleManager.Instance.attackUnit(GetComponent<Stats>(), CharacterManager.Instance.currentPlayer.GetComponent<Stats>(), false);
+            yield return new WaitForSeconds(1f);
         }
 
         panelToGo = null;

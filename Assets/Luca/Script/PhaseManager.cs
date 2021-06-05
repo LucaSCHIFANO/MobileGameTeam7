@@ -100,6 +100,7 @@ public class PhaseManager : MonoBehaviour
 
     public void checkAllEnemies() // check si tous les ennemies ont joués
     {
+            int numberbefore = CharacterManager.Instance.enemyList.Count;
         CharacterManager.Instance.StartCoroutine("checkAlive");
 
         int number = 0;
@@ -128,7 +129,6 @@ public class PhaseManager : MonoBehaviour
         else
         {
 
-            int numberbefore = CharacterManager.Instance.enemyList.Count;
 
             if (CharacterManager.Instance.enemyList.Count >= numberbefore)
             {

@@ -10,6 +10,7 @@ public class BattleManager : MonoBehaviour
     public GameObject damageEffect;
 
     public GameObject floatingText;
+    public GameObject floatingText2;
 
     private static BattleManager _instance = null;
 
@@ -39,7 +40,7 @@ public class BattleManager : MonoBehaviour
 
 
 
-        if (att.GetComponent<PlayerMovement>())
+        if (def.GetComponent<Enemy>())
         {
             StartCoroutine(showDamage(damage, def.gameObject.transform.GetChild(0), Color.blue));
             Instantiate(currentAttackParam.effectAttack, def.gameObject.transform.GetChild(0).transform.GetChild(1).position, def.gameObject.transform.rotation);
@@ -114,8 +115,6 @@ public class BattleManager : MonoBehaviour
         {
             CharacterManager.Instance.StartCoroutine("checkAlive");
 
-            Grid.Instance.resetClicked();
-
             if (att.GetComponent<PlayerMovement>())
             {
 
@@ -142,6 +141,10 @@ public class BattleManager : MonoBehaviour
                 UiActionManager.Instance.EnemyToHero(CharacterManager.Instance.currentPlayer.stats);
                 UiActionManager.Instance.ShowPortrait(CharacterManager.Instance.currentPlayer.stats);
             }
+        }
+        else
+        {
+            ComboSystem.Instance.comboEffect(CharacterManager.Instance.currentPlayer.stats.element, CharacterManager.Instance.currentPlayer.stats.elementCombo);
         }
 
         UiActionManager.Instance.apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
@@ -439,6 +442,18 @@ public class BattleManager : MonoBehaviour
 
         txt.GetComponent<TextMeshPro>().color = color;
         yield return new WaitForSeconds(1f);
+    }
+
+    public IEnumerator showDamageShort(int damage, Transform position, Color color)
+    {
+        Debug.Log("debut");
+        Transform newpos = position;
+        var txt = Instantiate(floatingText2, newpos.position, newpos.rotation);
+        txt.GetComponent<TextMeshPro>().text = damage.ToString();
+        txt.GetComponent<MeshRenderer>().sortingOrder = 100;
+
+        txt.GetComponent<TextMeshPro>().color = color;
+        yield return new WaitForSeconds(0.1f);
     }
 
 }
