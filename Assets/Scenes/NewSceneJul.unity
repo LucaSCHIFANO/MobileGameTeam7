@@ -8266,6 +8266,7 @@ MonoBehaviour:
   currentAttackParam: {fileID: 0}
   damageEffect: {fileID: 459824762910349844, guid: 650eba58a8824914fb85f47a0e8a7b99, type: 3}
   floatingText: {fileID: 1823786136959014163, guid: 74f9021f4eaaac44fa35e98d406ea936, type: 3}
+  floatingText2: {fileID: 539078528042685868, guid: a52fd10364e6e2046a214a40ecdb95ad, type: 3}
 --- !u!114 &548651354
 MonoBehaviour:
   m_ObjectHideFlags: 0

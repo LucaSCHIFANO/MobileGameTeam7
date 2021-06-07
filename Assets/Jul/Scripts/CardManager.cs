@@ -324,6 +324,7 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
+
             mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, previousTransform, 8f * Time.deltaTime);
             mdlTrans.rotation = Quaternion.Lerp(mdlTrans.rotation, previousRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(mdlTrans.localPosition, previousTransform) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
@@ -450,6 +451,9 @@ public class CardManager : MonoBehaviour
             Destroy(chosenCard);
             chosenCard = null;
             isMid = false;
+            midToHand = false;
+            middleCard = null;
+            isRiseUp = false;
             FitCards();
         }
     }
