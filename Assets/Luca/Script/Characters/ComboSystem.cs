@@ -77,9 +77,9 @@ public class ComboSystem : MonoBehaviour
                     player.stats.boostAtt = f2;
 
                     /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
-                    {
+                    {*/
                         Social.ReportProgress(GPGSIds.achievement_the_way_of_fire, 100.0f, null);
-                    }*/
+                    /*}*/
                 }
                 if (number >= 3)
                 {
