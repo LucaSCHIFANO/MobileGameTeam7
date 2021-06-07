@@ -7,8 +7,8 @@ using TMPro;
 public class CardManager : MonoBehaviour
 {
     [Header("KDO LES GD")]
-    public int nbTirageDebut = 5;
-    public int howManyInHand = 5;
+    public int nbTirageDebut;
+    public int howManyInHand;
     public GameObject cardPrefab;
     public List<Card> cardList = new List<Card>();
     public List<AttackParam> attackParams = new List<AttackParam>();
@@ -168,6 +168,7 @@ public class CardManager : MonoBehaviour
                                     }
                                     deckSelection.SetActive(false);
                                     rollCardIsChose = false;
+                                    rollCard = null;
 
                                     if (cM.currentPlayer == null || cM.currentPlayer.state != PlayerMovement.States.WIN)
                                     {
