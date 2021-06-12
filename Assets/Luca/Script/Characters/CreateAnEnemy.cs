@@ -24,89 +24,140 @@ public class CreateAnEnemy : MonoBehaviour
             upgradeProba = 35;
         }
 
-        for (int i = 0; i < numberOfRoll; i++)
+        if (progress == 4)
         {
-            Debug.Log(upgradeValue + " " + upgradeProba + " " + numberOfRoll + " " + i);
-
-            var type = enemy.stats.element;
-
-            switch (type)
+            for (int i = 0; i < numberOfRoll; i++)
             {
-                case Stats.ELEMENT.NORMAL:
-                    enemy.stats.characName = "Skully";
-                    enemy.stats.maxHP = 10 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.HP = enemy.stats.maxHP;
-                    enemy.stats.strenght += upgradeValue + proba(upgradeProba);
-                    enemy.stats.defense += upgradeValue + proba(upgradeProba);
-                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 3;
-                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
-                    enemy.stats.element = Stats.ELEMENT.NORMAL;
+                Debug.Log(upgradeValue + " " + upgradeProba + " " + numberOfRoll + " " + i);
 
-                    enemy.attackMonster.attackParam = listEnAttack[0];
-                    enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+                enemy.stats.characName = "Omega";
+                enemy.stats.maxHP = 20 + upgradeValue + proba(upgradeProba);
+                enemy.stats.HP = enemy.stats.maxHP;
+                enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
+                enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
+                enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                enemy.stats.maxActionPoint = 3;
+                enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                enemy.stats.element = Stats.ELEMENT.NORMAL;
 
-                    enemy.gameObject.name = "Skully";
-                    break;
+                enemy.attackMonster.attackParam = listEnAttack[0];
+                enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
 
-
-                case Stats.ELEMENT.RED:
-                    enemy.stats.characName = "Fiya Foxu";
-                    enemy.stats.maxHP = 6 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.HP = enemy.stats.maxHP;
-                    enemy.stats.strenght += 1 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.defense += 1 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 5;
-                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
-                    enemy.stats.element = Stats.ELEMENT.RED;
-
-                    enemy.attackMonster.attackParam = listEnAttack[3];
-                    enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
-
-                    enemy.gameObject.name = "Fiya Foxu";
-                    break;
-
-
-                case Stats.ELEMENT.BLUE:
-                    enemy.stats.characName = "Bububle";
-                    enemy.stats.maxHP = 7 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.HP = enemy.stats.maxHP;
-                    enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.defense += upgradeValue + proba(upgradeProba);
-                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 4;
-                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
-                    enemy.stats.element = Stats.ELEMENT.BLUE;
-
-                    enemy.attackMonster.attackParam = listEnAttack[2];
-                    enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
-
-                    enemy.gameObject.name = "Bububle";
-                    break;
-
-
-                case Stats.ELEMENT.GREEN:
-                    enemy.stats.characName = "A plant...";
-                    enemy.stats.maxHP = 12 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.HP = enemy.stats.maxHP;
-                    enemy.stats.strenght += upgradeValue + proba(upgradeProba);
-                    enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
-                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 4;
-                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
-                    enemy.stats.element = Stats.ELEMENT.GREEN;
-
-                    enemy.attackMonster.attackParam = listEnAttack[1];
-                    enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
-
-                    enemy.gameObject.name = "A plant...";
-                    break;
-
-                default:
-                    break;
+                enemy.gameObject.name = "Omega";
+                break;
             }
 
+        } else if (progress == 9) {
+
+            for (int i = 0; i < numberOfRoll; i++)
+            {
+                Debug.Log(upgradeValue + " " + upgradeProba + " " + numberOfRoll + " " + i);
+
+                enemy.stats.characName = "Sigma";
+                enemy.stats.maxHP = 30 + upgradeValue + proba(upgradeProba);
+                enemy.stats.HP = enemy.stats.maxHP;
+                enemy.stats.strenght += 4 + upgradeValue + proba(upgradeProba);
+                enemy.stats.defense += 3 + upgradeValue + proba(upgradeProba);
+                enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                enemy.stats.maxActionPoint = 4;
+                enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                enemy.stats.element = Stats.ELEMENT.NORMAL;
+
+                enemy.attackMonster.attackParam = listEnAttack[0];
+                enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                enemy.gameObject.name = "Sigma";
+                break;
+            }
+
+        }
+        else
+        {
+
+            for (int i = 0; i < numberOfRoll; i++)
+            {
+                Debug.Log(upgradeValue + " " + upgradeProba + " " + numberOfRoll + " " + i);
+
+                var type = enemy.stats.element;
+
+                switch (type)
+                {
+                    case Stats.ELEMENT.NORMAL:
+                        enemy.stats.characName = "Skully";
+                        enemy.stats.maxHP = 10 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.HP = enemy.stats.maxHP;
+                        enemy.stats.strenght += upgradeValue + proba(upgradeProba);
+                        enemy.stats.defense += upgradeValue + proba(upgradeProba);
+                        enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                        enemy.stats.maxActionPoint = 3;
+                        enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                        enemy.stats.element = Stats.ELEMENT.NORMAL;
+
+                        enemy.attackMonster.attackParam = listEnAttack[0];
+                        enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                        enemy.gameObject.name = "Skully";
+                        break;
+
+
+                    case Stats.ELEMENT.RED:
+                        enemy.stats.characName = "Fiya Foxu";
+                        enemy.stats.maxHP = 9 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.HP = enemy.stats.maxHP;
+                        enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.defense += 1 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                        enemy.stats.maxActionPoint = 5;
+                        enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                        enemy.stats.element = Stats.ELEMENT.RED;
+
+                        enemy.attackMonster.attackParam = listEnAttack[3];
+                        enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
+
+                        enemy.gameObject.name = "Fiya Foxu";
+                        break;
+
+
+                    case Stats.ELEMENT.BLUE:
+                        enemy.stats.characName = "Bububle";
+                        enemy.stats.maxHP = 11 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.HP = enemy.stats.maxHP;
+                        enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.defense += upgradeValue + proba(upgradeProba);
+                        enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                        enemy.stats.maxActionPoint = 4;
+                        enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                        enemy.stats.element = Stats.ELEMENT.BLUE;
+
+                        enemy.attackMonster.attackParam = listEnAttack[2];
+                        enemy.pattern = Enemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                        enemy.gameObject.name = "Bububle";
+                        break;
+
+
+                    case Stats.ELEMENT.GREEN:
+                        enemy.stats.characName = "A plant...";
+                        enemy.stats.maxHP = 12 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.HP = enemy.stats.maxHP;
+                        enemy.stats.strenght += upgradeValue + proba(upgradeProba);
+                        enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
+                        enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                        enemy.stats.maxActionPoint = 4;
+                        enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                        enemy.stats.element = Stats.ELEMENT.GREEN;
+
+                        enemy.attackMonster.attackParam = listEnAttack[1];
+                        enemy.pattern = Enemy.Pattern.RUSHDISTANCECIRCLE;
+
+                        enemy.gameObject.name = "A plant...";
+                        break;
+
+                    default:
+                        break;
+                }
+
+            }
         }
     }
 

@@ -9319,6 +9319,7 @@ MonoBehaviour:
   enemyFire: {fileID: 571073717275479376, guid: 0042ceafeed3d4c42b62f5332f4284e9, type: 3}
   enemyWater: {fileID: 2278919941614207873, guid: c1c4805c17990ff4f815a3ca98c75ba5, type: 3}
   enemyEarth: {fileID: 4375653194845116708, guid: d03df6587d7c9244bbd550f96a08a39e, type: 3}
+  boss: {fileID: 5455469853841108372, guid: 991a5d33d080e2d4380b384795a60ca4, type: 3}
   holoPlayer: {fileID: 4451149331830433231, guid: eb4f24bf41481af4eb0e184c64796d6c, type: 3}
   mC: {fileID: 260224054}
   listSprites:
