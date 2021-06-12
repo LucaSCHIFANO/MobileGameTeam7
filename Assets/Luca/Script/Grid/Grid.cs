@@ -30,6 +30,7 @@ public class Grid : MonoBehaviour
     public GameObject enemyFire;
     public GameObject enemyWater;
     public GameObject enemyEarth;
+    public GameObject boss;
     public GameObject holoPlayer;
     
     private CreateAnEnemy cae;
@@ -77,7 +78,14 @@ public class Grid : MonoBehaviour
     {
         awake2();
         awake2Alpha();
-        createEnemies();
+        if(progress == 4 || progress == 9)
+        {
+            createBoss();
+        }
+        else
+        {
+            createEnemies();
+        }
         setPos();
 
         mC.functionStart();
@@ -86,7 +94,7 @@ public class Grid : MonoBehaviour
     }
 
 
-    void awake2() // crée la grid avec tt les cases en fct du pattern
+    void awake2() // crï¿½e la grid avec tt les cases en fct du pattern
     {
         var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
         gridArray = new Panel[width, height];
@@ -138,8 +146,8 @@ public class Grid : MonoBehaviour
                         newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.WATER:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.0342f, 0.401f, 0.6603f);
+                        visu.sprite = listSprites[4];
+                        //visu.color = new Color(0.0342f, 0.401f, 0.6603f);
                         newPanel.movementCost = 3;
                         newPanel.canShotThrought = false;
                         break;
@@ -173,8 +181,8 @@ public class Grid : MonoBehaviour
                         newPanel.canShotThrought = false;
                         break;
                     case GridPattern.panelType.POISON:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.5f, 0f, 0.3f);
+                        visu.sprite = listSprites[5];
+                        //visu.color = new Color(0.5f, 0f, 0.3f);
                         newPanel.movementCost = 3;
                         newPanel.isPoison = true;
                         newPanel.canShotThrought = false;
@@ -255,7 +263,7 @@ public class Grid : MonoBehaviour
         }
     }
 
-    void awake2Alpha() // crée la grid en transparent
+    void awake2Alpha() // crï¿½e la grid en transparent
     {
         gridArrayAlpha = new Panel[width, height];
         //var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
@@ -365,6 +373,38 @@ public class Grid : MonoBehaviour
             cae.creation(enE, levelID, progress); // check type et je fait le truc
         }
         
+        locationEnemy.Clear();
+    }
+
+    void createBoss()
+    {
+
+        Debug.Log("Boss creation"); 
+
+        cae = GetComponent<CreateAnEnemy>();
+        var random = Random.Range(0, locationEnemy.Count - 1);
+        var positionRandom = 0;
+        foreach (var VECTOR in locationEnemy)
+        {
+            if (positionRandom == random)
+            {
+                GameObject en = null;
+                var number = Random.Range(0, 4);
+
+                en = Instantiate(boss, Vector2.zero, transform.rotation); // randomize
+
+                var enE = en.GetComponent<Enemy>();
+
+                enE.xPos = (int)VECTOR.x;
+                enE.yPos = (int)VECTOR.y;
+                enE.Start();
+
+                cae.creation(enE, levelID, progress); // check type et je fait le truc
+            }
+
+            positionRandom++;
+        }
+
         locationEnemy.Clear();
     }
 

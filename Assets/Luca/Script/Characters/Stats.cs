@@ -52,7 +52,7 @@ public class Stats : MonoBehaviour
                 HP -= intesity;
                 HP = Mathf.Clamp(HP, 0, maxHP);
 
-                BattleManager.Instance.showDamage(intesity, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f));
+                StartCoroutine(BattleManager.Instance.showDamageShort(intesity, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f)));
 
                 
 
@@ -72,10 +72,10 @@ public class Stats : MonoBehaviour
             var me = GetComponent<PlayerMovement>();
             if(Grid.Instance.gridArray[me.xPos, -me.yPos].isPoison)
             {
+                StartCoroutine(BattleManager.Instance.showDamageShort(intesity, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f)));
                 HP -= 3;
                 HP = Mathf.Clamp(HP, 0, maxHP);
 
-                BattleManager.Instance.showDamage(3, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f));
             }
         }
         else
@@ -83,10 +83,10 @@ public class Stats : MonoBehaviour
             var me = GetComponent<Enemy>();
             if (Grid.Instance.gridArray[me.xPos, -me.yPos].isPoison)
             {
+                StartCoroutine(BattleManager.Instance.showDamageShort(intesity, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f)));
                 HP -= 3;
                 HP = Mathf.Clamp(HP, 0, maxHP);
 
-                BattleManager.Instance.showDamage(3, gameObject.transform.GetChild(0), new Color(0.9f, 0, 0.7f));
             }
         }
     }

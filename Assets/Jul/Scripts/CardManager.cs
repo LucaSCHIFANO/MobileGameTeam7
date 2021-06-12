@@ -7,8 +7,8 @@ using TMPro;
 public class CardManager : MonoBehaviour
 {
     [Header("KDO LES GD")]
-    public int nbTirageDebut = 5;
-    public int howManyInHand = 5;
+    public int nbTirageDebut;
+    public int howManyInHand;
     public GameObject cardPrefab;
     public List<Card> cardList = new List<Card>();
     public List<AttackParam> attackParams = new List<AttackParam>();
@@ -79,7 +79,7 @@ public class CardManager : MonoBehaviour
 
     void Update()
     {
-        if (!handToMid && !midToHand)
+        if (!handToMid && !midToHand && !risingUp)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -168,6 +168,7 @@ public class CardManager : MonoBehaviour
                                     }
                                     deckSelection.SetActive(false);
                                     rollCardIsChose = false;
+                                    rollCard = null;
 
                                     if (cM.currentPlayer == null || cM.currentPlayer.state != PlayerMovement.States.WIN)
                                     {
@@ -324,6 +325,7 @@ public class CardManager : MonoBehaviour
             {
                 return;
             }
+
             mdlTrans.localPosition = Vector3.Lerp(mdlTrans.localPosition, previousTransform, 8f * Time.deltaTime);
             mdlTrans.rotation = Quaternion.Lerp(mdlTrans.rotation, previousRotation, 7f * Time.deltaTime);
             if (Vector2.Distance(mdlTrans.localPosition, previousTransform) <= Vector2.Distance(cardPosition.localPosition, previousTransform) / 2)
@@ -450,6 +452,9 @@ public class CardManager : MonoBehaviour
             Destroy(chosenCard);
             chosenCard = null;
             isMid = false;
+            midToHand = false;
+            middleCard = null;
+            isRiseUp = false;
             FitCards();
         }
     }

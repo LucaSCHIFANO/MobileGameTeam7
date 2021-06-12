@@ -107,9 +107,10 @@ public class ClicklManager : MonoBehaviour
                                             {
                                                 if (touchedPanel.unitOn != null)
                                                 {
+                                                    Grid.Instance.resetClicked();
+                                                    currentPanel = null;
                                                     BattleManager.Instance.attackUnit(player.stats, touchedPanel.unitOn.GetComponent<Enemy>().stats, false);
                                                     CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                    currentPanel = null;
                                                     CardManager.Instance.UseCard();
                                                     CardManager.Instance.midToHand = false;
                                                 }
@@ -119,6 +120,7 @@ public class ClicklManager : MonoBehaviour
                                         {
                                             if (touchedPanel.unitOn != null)
                                             {
+                                                
                                                 foreach (var panel in Grid.Instance.gridArray)
                                                 {
                                                     if (panel.canBeClick && panel.unitOn != null)
@@ -126,7 +128,6 @@ public class ClicklManager : MonoBehaviour
                                                         if (panel.unitOn.GetComponent<Enemy>())
                                                         {
                                                             BattleManager.Instance.attackUnit(player.stats, panel.unitOn.GetComponent<Enemy>().stats, true);
-                                                            CardManager.Instance.UseCard();
                                                             Debug.Log("hit enemy");
                                                         }
                                                         else
@@ -138,15 +139,14 @@ public class ClicklManager : MonoBehaviour
                                                     }
                                                 }
 
+                                                Grid.Instance.resetClicked();
                                                 CardManager.Instance.UseCard();
                                                 CardManager.Instance.midToHand = false;
-
                                                 CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
+                                                ElementInteract.Instance.changeElement(player.stats.element, BattleManager.Instance.currentAttackParam.element);
+                                                player.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
                                                 CharacterManager.Instance.StartCoroutine("checkAlive");
 
-                                                Grid.Instance.resetClicked();
-                                                player.GetComponent<PlayerMovement>().state = PlayerMovement.States.IDLE;
-                                                ElementInteract.Instance.changeElement(player.stats.element, BattleManager.Instance.currentAttackParam.element);
                                                 UiActionManager.Instance.showButton();
                                                 UiActionManager.Instance.HidePortrait();
                                             }
@@ -238,9 +238,10 @@ public class ClicklManager : MonoBehaviour
                                             
                                             else
                                             {
+                                                    Grid.Instance.resetClicked();
+                                                    currentPanel = null;
                                                     BattleManager.Instance.attackUnit(player.stats, charact.stats, false);
                                                     CharacterManager.Instance.currentPlayer.stats.actionPoint -= BattleManager.Instance.currentAttackParam.APNeeded;
-                                                    currentPanel = null;
                                                     CardManager.Instance.UseCard();
                                                     CardManager.Instance.midToHand = false;
                                             }
@@ -346,7 +347,7 @@ public class ClicklManager : MonoBehaviour
         if (player.state == PlayerMovement.States.SELECTED)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.IDLE;
@@ -357,7 +358,7 @@ public class ClicklManager : MonoBehaviour
         else if (player.state == PlayerMovement.States.SELECTCARD)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.IDLE;
@@ -371,7 +372,7 @@ public class ClicklManager : MonoBehaviour
         else if (player.state == PlayerMovement.States.ACTION)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.SELECTCARD;
@@ -382,7 +383,7 @@ public class ClicklManager : MonoBehaviour
         else if (player.state == PlayerMovement.States.AOESELECT)
         {
             var cardM = CardManager.Instance;
-            if (!cardM.handToMid && !cardM.midToHand)
+            if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
             {
                 Grid.Instance.resetClicked();
                 player.state = PlayerMovement.States.SELECTCARD;

@@ -8266,6 +8266,7 @@ MonoBehaviour:
   currentAttackParam: {fileID: 0}
   damageEffect: {fileID: 459824762910349844, guid: 650eba58a8824914fb85f47a0e8a7b99, type: 3}
   floatingText: {fileID: 1823786136959014163, guid: 74f9021f4eaaac44fa35e98d406ea936, type: 3}
+  floatingText2: {fileID: 539078528042685868, guid: a52fd10364e6e2046a214a40ecdb95ad, type: 3}
 --- !u!114 &548651354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8760,7 +8761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &634327779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9318,6 +9319,7 @@ MonoBehaviour:
   enemyFire: {fileID: 571073717275479376, guid: 0042ceafeed3d4c42b62f5332f4284e9, type: 3}
   enemyWater: {fileID: 2278919941614207873, guid: c1c4805c17990ff4f815a3ca98c75ba5, type: 3}
   enemyEarth: {fileID: 4375653194845116708, guid: d03df6587d7c9244bbd550f96a08a39e, type: 3}
+  boss: {fileID: 5455469853841108372, guid: 991a5d33d080e2d4380b384795a60ca4, type: 3}
   holoPlayer: {fileID: 4451149331830433231, guid: eb4f24bf41481af4eb0e184c64796d6c, type: 3}
   mC: {fileID: 260224054}
   listSprites:
@@ -9325,6 +9327,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 155cb5d927622f94db91f55ae61a38d0, type: 3}
   - {fileID: 21300000, guid: 6c71e3bf9bd974d4abd9f91459c7d109, type: 3}
   - {fileID: 21300000, guid: 4fbca928a788f61489b0736cd6558006, type: 3}
+  - {fileID: 21300000, guid: fc50c663c9a905240920e735c1540bc2, type: 3}
+  - {fileID: 21300000, guid: 78b1cf75b3813aa498b53103c412495a, type: 3}
   listSpritesAlpha:
   - {fileID: 21300000, guid: 498ec891f7dceaf4a980d759d51780b8, type: 3}
   - {fileID: 21300000, guid: fba5957a8f3487e4b8bc6013a253826d, type: 3}
@@ -9702,7 +9706,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.55
+  m_fontSize: 51.95
   m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11359,7 +11363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.27131236, y: 0}
   m_AnchorMax: {x: 0.7136562, y: 0.105000004}
-  m_AnchoredPosition: {x: 0.25, y: -11.400024}
+  m_AnchoredPosition: {x: 0.25, y: -11.4001465}
   m_SizeDelta: {x: 262.38605, y: 88.23134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1048666540
@@ -12605,7 +12609,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.5
+  m_fontSize: 65.35
   m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14323,7 +14327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5602084}
   m_AnchorMax: {x: 1, y: 0.90449774}
-  m_AnchoredPosition: {x: 0, y: -3.6500244}
+  m_AnchoredPosition: {x: 0, y: -3.6501465}
   m_SizeDelta: {x: -0, y: -7.619995}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1651294628
@@ -14590,7 +14594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -60.299744, y: -60.00049}
+  m_AnchoredPosition: {x: -60.299805, y: -60.00049}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1674400895
@@ -15568,7 +15572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1941656447}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1071518423}
+        m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1941656447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15959,7 +15975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 465f684811e8a9d4cb3d27a74e382217, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 63f85d0979939864990d21b574370bae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21639,7 +21655,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.45
+  m_fontSize: 51.6
   m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -74,7 +74,7 @@ public class UiActionManager : MonoBehaviour
     public void showDeck()
     {
         var cardM = CardManager.Instance;
-        if (!cardM.handToMid && !cardM.midToHand)
+        if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
         {
             buttonHand.SetActive(false);
             buttonCancel.SetActive(true);
@@ -116,7 +116,7 @@ public class UiActionManager : MonoBehaviour
         {
             if (cardM.middleCard.GetComponent<CardDisplay>().attackParam.APNeeded <= CharacterManager.Instance.currentPlayer.GetComponent<Stats>().actionPoint)
             {
-                if (!cardM.handToMid && !cardM.midToHand)
+                if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
                 {
                     var midCard = cardM.middleCard.GetComponent<CardDisplay>().attackParam;
 
@@ -146,7 +146,7 @@ public class UiActionManager : MonoBehaviour
     public void endTurn()
     {
         var cardM = CardManager.Instance;
-        if (!cardM.handToMid && !cardM.midToHand)
+        if (!cardM.handToMid && !cardM.midToHand && !cardM.risingUp)
         {
             CharacterManager.Instance.currentPlayer.endTurn();
         }
@@ -238,12 +238,13 @@ public class UiActionManager : MonoBehaviour
         {
             inGame[i].sprite = enemySprites[i];
         }
+        var aM = enemyStats.gameObject.GetComponent<AttackMonster>();
 
         apleft.text = enemyStats.actionPoint.ToString();
         maxHP.text = enemyStats.maxHP.ToString();
         currenntHP.text = enemyStats.HP.ToString();
         defText.text = (enemyStats.defense + enemyStats.boostDef).ToString();
-        attText.text = (enemyStats.strenght + enemyStats.boostAtt).ToString();
+        attText.text = (enemyStats.strenght + enemyStats.boostAtt + aM.attackParam.damage).ToString();
 
         switch (enemyStats.element)
         {
