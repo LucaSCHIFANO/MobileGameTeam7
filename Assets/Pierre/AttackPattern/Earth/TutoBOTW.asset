@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9ce1be291591a499eb4875a6efa8a1, type: 3}
+  m_Name: TutoBOTW
+  m_EditorClassIdentifier: 
+  patternName: Breath Of The Wild
+  description: A powerfull wind that pushes the enemy back for 3 squares
+  range: 3
+  row_column: 1
+  throughWall: 0
+  APNeeded: 3
+  damage: 10
+  push: 1
+  pull: 0
+  element: 3
+  AOE: 0
+  aoeEffect: {fileID: 0}
+  around: 0
+  effect: 0
+  duration: 0
+  intensity: 0
+  artwork: {fileID: 21300000, guid: f168f298ee0998c46b71c3c05448c830, type: 3}
+  BackGround: {fileID: 21300000, guid: 96e4614aae0edf148811cd07c75ee8f2, type: 3}
+  effectAttack: {fileID: 6091653753260045737, guid: 52517219cafad52408d551e1b371a041, type: 3}
+  musicName: Nature3

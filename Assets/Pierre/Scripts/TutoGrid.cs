@@ -24,14 +24,17 @@ public class TutoGrid : MonoBehaviour
 
     public List<Vector2> locationEnemy = new List<Vector2>();
     public List<Vector2> playerSpawn = new List<Vector2>();
-    
+
     public GameObject playerPrefab;
     public GameObject enemy;
+    public GameObject enemyFire;
+    public GameObject enemyWater;
+    public GameObject enemyEarth;
     public GameObject holoPlayer;
-    
-    private CreateAnEnemy cae;
 
-    public MoveCam mC;
+    private TutoCreateEnemy cae;
+
+    public TutoMoveCam mC;
 
     public List<Sprite> listSprites = new List<Sprite>();
     public List<Sprite> listSpritesAlpha = new List<Sprite>();
@@ -42,8 +45,8 @@ public class TutoGrid : MonoBehaviour
     private GameObject front;
     private GameObject back;
 
-    
-    
+
+
 
 
 
@@ -67,7 +70,7 @@ public class TutoGrid : MonoBehaviour
 
     public void Start()
     {
-        CardManager.Instance.startTheGame();
+        TutoCardManager.Instance.startTheGame();
     }
 
     public void functionStart()
@@ -78,14 +81,14 @@ public class TutoGrid : MonoBehaviour
         setPos();
 
         mC.functionStart();
-        CardManager.Instance.EndRound();
-        PhaseManager.Instance.oneTime = false;
+        TutoCardManager.Instance.EndRound();
+        TutoPhaseManager.Instance.oneTime = false;
     }
 
 
     void awake2() // crée la grid avec tt les cases en fct du pattern
     {
-        var myGridPanel = GetComponent<GridPattern>().createPattern(levelID);
+        var myGridPanel = GetComponent<TutoPattern>().createPattern(levelID);
         gridArray = new Panel[width, height];
 
         for (int i = 0; i < width; i++)
@@ -103,8 +106,8 @@ public class TutoGrid : MonoBehaviour
                 }
                 if (j > 0)
                 {
-                    Panel panelPrevious = gridArray[i, j-1];
-                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x - 0.5f * cellSize, panelPrevious.transform.position.y -0.25f * cellSize);
+                    Panel panelPrevious = gridArray[i, j - 1];
+                    newPanel.gameObject.transform.position = new Vector2(panelPrevious.transform.position.x - 0.5f * cellSize, panelPrevious.transform.position.y - 0.25f * cellSize);
                 }
 
                 gridArray[i, j] = newPanel;
@@ -116,62 +119,72 @@ public class TutoGrid : MonoBehaviour
 
                 switch (myGridPanel[j, i])
                 {
-                    case GridPattern.panelType.GRASS:
-                        visu.sprite = listSprites[1]; 
+                    case TutoPattern.panelType.GRASS:
+                        visu.sprite = listSprites[1];
                         //newPanel.baseColor = new Color(0.006f, 0.7075f, 0);
                         newPanel.movementCost = 1;
+                        newPanel.canShotThrought = false;
                         break;
-                    case GridPattern.panelType.PATH:
+                    case TutoPattern.panelType.PATH:
                         visu.sprite = listSprites[0];
                         //newPanel.baseColor = new Color(0.8207f, 0.7423f, 0.3832f);
                         newPanel.movementCost = 1;
+                        newPanel.canShotThrought = false;
                         break;
-                    case GridPattern.panelType.FOREST:
+                    case TutoPattern.panelType.FOREST:
                         visu.sprite = listSprites[2];
                         //newPanel.baseColor = new Color(0.0165f, 0.3113f, 0);
                         newPanel.movementCost = 2;
+                        newPanel.canShotThrought = false;
                         break;
-                    case GridPattern.panelType.WATER:
+                    case TutoPattern.panelType.WATER:
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.0342f, 0.401f, 0.6603f);
                         newPanel.movementCost = 3;
-                        break;
-                    case GridPattern.panelType.WALL:
-                        visu.sprite = listSprites[0];
-                        visu.color = new Color(0.1792f, 0.0518f, 0);
-                        newPanel.movementCost = 255;
-                        newPanel.canBeCrossed = false;
                         newPanel.canShotThrought = false;
                         break;
-                    case GridPattern.panelType.BRIDGE:
+                    case TutoPattern.panelType.WALL:
+                        /*visu.sprite = listSprites[0];
+                        visu.color = new Color(0.1792f, 0.0518f, 0);*/
+                        visu.sprite = null;
+                        newPanel.movementCost = 255;
+                        newPanel.canBeCrossed = false;
+                        //newPanel.canShotThrought = false;
+                        break;
+                    case TutoPattern.panelType.BRIDGE:
                         visu.sprite = listSprites[0];
                         //visu.color = new Color(0.5943f, 0.1720f, 0);
                         newPanel.movementCost = 1;
+                        newPanel.canShotThrought = false;
                         break;
-                    case GridPattern.panelType.HOLE:
+                    case TutoPattern.panelType.HOLE:
                         //visu.sprite = listSprites[0];
                         //visu.color = new Color(0.45f, 0.45f, 0.45f);
                         visu.sprite = null;
                         newPanel.movementCost = 255;
                         newPanel.canBeCrossed = false;
                         break;
-                    case GridPattern.panelType.CHEST:
+                    case TutoPattern.panelType.CHEST:
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.7f, 0.5f, 0.5f);
                         newPanel.movementCost = 1;
                         newPanel.canBeOpen = true;
                         newPanel.isOpen = false;
+                        newPanel.canShotThrought = false;
                         break;
-                    case GridPattern.panelType.POISON:
+                    case TutoPattern.panelType.POISON:
                         visu.sprite = listSprites[0];
                         visu.color = new Color(0.5f, 0f, 0.3f);
                         newPanel.movementCost = 3;
-                        
+                        //newPanel.isPoison = true;
+                        newPanel.canShotThrought = false;
+
                         break;
                     default:
                         Debug.Log("ya un pb conar");
                         break;
                 }
+            
 
                 newPanel.GetComponent<SpriteRenderer>().color = newPanel.baseColor;
                 newPanel.transform.parent = GameObject.Find("TheGrid").transform;
@@ -179,16 +192,69 @@ public class TutoGrid : MonoBehaviour
             }
         }
 
-        if(height == 8 && width == 8)
+        if (height == 8 && width == 8)
         {
-            back = Instantiate(bgList[0], bgListTrans[0].position, transform.rotation);
-           
-            front = Instantiate(bgList[1], bgListTrans[1].position, transform.rotation);
-        }else if(height == 9 && width == 9)
+            if (Random.Range(0, 2) == 0)
+            {
+                back = Instantiate(bgList[0], bgListTrans[0].position, transform.rotation);
+
+                front = Instantiate(bgList[1], bgListTrans[1].position, transform.rotation);
+            }
+            else
+            {
+                back = Instantiate(bgList[18], bgListTrans[0].position, transform.rotation);
+
+                front = Instantiate(bgList[19], bgListTrans[1].position, transform.rotation);
+            }
+
+        }
+        else if (height == 9 && width == 9)
         {
             back = Instantiate(bgList[2], bgListTrans[2].position, transform.rotation);
 
             front = Instantiate(bgList[3], bgListTrans[3].position, transform.rotation);
+        }
+        else if (height == 6 && width == 6)
+        {
+            back = Instantiate(bgList[4], bgListTrans[4].position, transform.rotation);
+
+            front = Instantiate(bgList[5], bgListTrans[5].position, transform.rotation);
+        }
+        else if (height == 10 && width == 10)
+        {
+            back = Instantiate(bgList[6], bgListTrans[6].position, transform.rotation);
+
+            front = Instantiate(bgList[7], bgListTrans[7].position, transform.rotation);
+        }
+        else if (height == 8 && width == 7)
+        {
+            back = Instantiate(bgList[8], bgListTrans[8].position, transform.rotation);
+
+            front = Instantiate(bgList[9], bgListTrans[9].position, transform.rotation);
+        }
+        else if (height == 12 && width == 7)
+        {
+            back = Instantiate(bgList[10], bgListTrans[10].position, transform.rotation);
+
+            front = Instantiate(bgList[11], bgListTrans[11].position, transform.rotation);
+        }
+        else if (height == 7 && width == 7)
+        {
+            back = Instantiate(bgList[12], bgListTrans[12].position, transform.rotation);
+
+            front = Instantiate(bgList[13], bgListTrans[13].position, transform.rotation);
+        }
+        else if (height == 10 && width == 8)
+        {
+            back = Instantiate(bgList[14], bgListTrans[14].position, transform.rotation);
+
+            front = Instantiate(bgList[15], bgListTrans[15].position, transform.rotation);
+        }
+        else if (height == 8 && width == 4)
+        {
+            back = Instantiate(bgList[16], bgListTrans[16].position, transform.rotation);
+
+            front = Instantiate(bgList[17], bgListTrans[17].position, transform.rotation);
         }
     }
 
@@ -264,19 +330,44 @@ public class TutoGrid : MonoBehaviour
 
     void createEnemies()
     {
-        cae = GetComponent<CreateAnEnemy>();
+        cae = GetComponent<TutoCreateEnemy>();
         foreach (var VECTOR in locationEnemy)
         {
-            var en = Instantiate(enemy, Vector2.zero, transform.rotation);
-            var enE = en.GetComponent<Enemy>();
+            GameObject en = null;
+            var number = Random.Range(0, 4);
+
+            switch (number)
+            {
+                case 0:
+                    en = Instantiate(enemy, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                case 1:
+                    en = Instantiate(enemyFire, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                case 2:
+                    en = Instantiate(enemyWater, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                case 3:
+                    en = Instantiate(enemyEarth, Vector2.zero, transform.rotation); // randomize
+                    break;
+
+                default:
+                    en = Instantiate(enemy, Vector2.zero, transform.rotation); // randomize
+                    break;
+            }
+
+            var enE = en.GetComponent<TutoEnemy>();
 
             enE.xPos = (int)VECTOR.x;
             enE.yPos = (int)VECTOR.y;
             enE.Start();
 
-            cae.creation(enE, levelID, progress);
+            cae.creation(enE, levelID, progress); // check type et je fait le truc
         }
-        
+
         locationEnemy.Clear();
     }
 
@@ -290,8 +381,8 @@ public class TutoGrid : MonoBehaviour
 
         Debug.Log("creation du joueur");
         var en = Instantiate(playerPrefab, Vector2.zero, transform.rotation);
-        var enE = en.GetComponent<PlayerMovement>();
-        CharacterManager.Instance.currentPlayer = enE;
+        var enE = en.GetComponent<TutoPlayerMovement>();
+        TutoCharacterManager.Instance.currentPlayer = enE;
 
         enE.xPos = panel.x;
         enE.yPos = -panel.y;
@@ -299,20 +390,20 @@ public class TutoGrid : MonoBehaviour
 
         playerSpawn.Clear();
 
-        PhaseManager.Instance.phase = PhaseManager.actualPhase.PLAYER;
+        TutoPhaseManager.Instance.phase = TutoPhaseManager.actualPhase.PLAYER;
         en.name = "Player";
 
-        if(CharacterManager.Instance.sS.firstTime == false)
+        if (TutoCharacterManager.Instance.sS.firstTime == false)
         {
-            CharacterManager.Instance.sS.setValues(enE.stats);
+            TutoCharacterManager.Instance.sS.setValues(enE.stats);
             enE.stats.HP = enE.stats.maxHP;
         }
         else
         {
-            setPlayerStats(enE.stats, CharacterManager.Instance.sS.loadValue());
+            setPlayerStats(enE.stats, TutoCharacterManager.Instance.sS.loadValue());
         }
 
-        switch (CharacterManager.Instance.currentPlayer.stats.element)
+        /*switch (CharacterManager.Instance.currentPlayer.stats.element)
         {
             case Stats.ELEMENT.NORMAL:
                 UiActionManager.Instance.elementImage.sprite = UiActionManager.Instance.elementInfos[3];
@@ -328,13 +419,13 @@ public class TutoGrid : MonoBehaviour
                 break;
             default:
                 break;
-        }
+        }*/
 
-        CharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
+        TutoCharacterManager.Instance.currentPlayer.stats.boostAPUsed = 0;
 
-        ComboSystem.Instance.comboEffect(enE.stats.element, enE.stats.elementCombo);
-        ComboSystem.Instance.resetSave();
-        CharacterManager.Instance.noDamage = true;
+        TutoComboSystem.Instance.comboEffect(enE.stats.element, enE.stats.elementCombo);
+        TutoComboSystem.Instance.resetSave();
+        TutoCharacterManager.Instance.noDamage = true;
 
         resetClicked();
     }
@@ -343,12 +434,12 @@ public class TutoGrid : MonoBehaviour
     {
         foreach (var VECTOR in playerSpawn)
         {
-            var alphaPanel = Grid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+            var alphaPanel = TutoGrid.Instance.gridArrayAlpha[(int)VECTOR.x, -(int)VECTOR.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
             alphaPanel.color = new Color(1, 1, 1, 0.5f);
             Instantiate(holoPlayer, alphaPanel.transform.position, alphaPanel.transform.rotation);
             //alphaPanel.sprite = Grid.Instance.listSpritesAlpha[0];
 
-            Grid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
+            TutoGrid.Instance.gridArray[(int)VECTOR.x, -(int)VECTOR.y].canBeClick = true;
         }
     }
 
@@ -378,24 +469,24 @@ public class TutoGrid : MonoBehaviour
         Destroy(back);
 
 
-        ClicklManager.Instance.currentPanel = null;
+        TutoClickManager.Instance.currentPanel = null;
 
-        CharacterManager.Instance.currentPlayer = null;
-        foreach (var item in CharacterManager.Instance.playerList)
+        TutoCharacterManager.Instance.currentPlayer = null;
+        foreach (var item in TutoCharacterManager.Instance.playerList)
         {
             Destroy(item);
         }
-        CharacterManager.Instance.playerList.Clear();
+        TutoCharacterManager.Instance.playerList.Clear();
 
-        foreach (var item in CharacterManager.Instance.enemyList)
+        foreach (var item in TutoCharacterManager.Instance.enemyList)
         {
             Destroy(item);
         }
-        CharacterManager.Instance.enemyList.Clear();
+        TutoCharacterManager.Instance.enemyList.Clear();
 
-        if(respawn == true)
+        if (respawn == true)
         {
-            PhaseManager.Instance.phase = PhaseManager.actualPhase.BEGIN;
+            TutoPhaseManager.Instance.phase = TutoPhaseManager.actualPhase.BEGIN;
 
             functionStart();
 
@@ -443,7 +534,7 @@ public class TutoGrid : MonoBehaviour
                     continue;
 
                 }
-                
+
                 else if (enemy && voisin.unitOn != null)
                 {
                     int tentativeGCost = currentPanel.GCost + CalculateHCost(currentPanel, voisin);
@@ -460,7 +551,8 @@ public class TutoGrid : MonoBehaviour
                         }
                     }
 
-                }else if (!enemy && voisin.unitOn != null)
+                }
+                else if (!enemy && voisin.unitOn != null)
                 {
                     closeList.Add(voisin);
                     continue;
@@ -517,7 +609,7 @@ public class TutoGrid : MonoBehaviour
             }
         }
 
-        ClicklManager.Instance.currentPanel = null;
+        TutoClickManager.Instance.currentPanel = null;
     }
 
     private int CalculateHCost(Panel start, Panel end) // verifie la distance d'un chemin
@@ -586,7 +678,7 @@ public class TutoGrid : MonoBehaviour
     }
 
 
-    private void setPlayerStats(Stats stats, Stats stats2) // a changer aussi dans saveStats
+    private void setPlayerStats(TutoStats stats, TutoStats stats2) // a changer aussi dans saveStats
     {
         stats.level = stats2.level;
         stats.maxHP = stats2.maxHP;
