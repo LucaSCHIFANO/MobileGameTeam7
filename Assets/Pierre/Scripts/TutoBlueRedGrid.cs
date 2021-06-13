@@ -23,14 +23,25 @@ public class TutoBlueRedGrid : MonoBehaviour
 
     public void blueRedPath(int maxMovementPlayer) // affiche les cases en bleu si le joueur peut s'y rendre
     {
-        foreach (var panel in TutoGrid.Instance.gridArray)
+        if (TutoClickManager.Instance.statePanel == 1)
         {
-            if (panel.actualMovementCost <= maxMovementPlayer && panel.prevousPanel != null)
-            {
-                var alphaPanel = TutoGrid.Instance.gridArrayAlpha[panel.x, panel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
-                alphaPanel.color = new Color(1, 1, 1, 0.5f);
-                alphaPanel.sprite = TutoGrid.Instance.listSpritesAlpha[0];
-                panel.canBeClick = true;
+            var alphaPanel = TutoGrid.Instance.gridArrayAlpha[4, 5].transform.GetChild(0).GetComponent<SpriteRenderer>();
+            alphaPanel.color = new Color(1, 1, 1, 0.5f);
+            alphaPanel.sprite = TutoGrid.Instance.listSpritesAlpha[0];
+            TutoGrid.Instance.gridArray[4, 5].canBeClick = true;
+        }
+        else
+        {
+            foreach (var panel in TutoGrid.Instance.gridArray)
+                {
+            
+                if (panel.actualMovementCost <= maxMovementPlayer && panel.prevousPanel != null)
+                {
+                    var alphaPanel = TutoGrid.Instance.gridArrayAlpha[panel.x, panel.y].transform.GetChild(0).GetComponent<SpriteRenderer>();
+                    alphaPanel.color = new Color(1, 1, 1, 0.5f);
+                    alphaPanel.sprite = TutoGrid.Instance.listSpritesAlpha[0];
+                    panel.canBeClick = true;
+                }
             }
         }
 

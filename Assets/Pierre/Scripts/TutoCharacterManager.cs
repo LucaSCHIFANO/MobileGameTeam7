@@ -134,7 +134,7 @@ public class TutoCharacterManager : MonoBehaviour
             Debug.Log("You win");
             TutoUI.Instance.hideAll();
             Tuto.Instance.NoPop63();
-            Tuto.Instance.TruePop7();
+            //Tuto.Instance.TruePop7();
 
             AudioManager.Instance.Stop("BattleMap1");
             AudioManager.Instance.Play("Victory!");
@@ -176,7 +176,7 @@ public class TutoCharacterManager : MonoBehaviour
             if (TutoGrid.Instance.progress != 9)
             {
                 TutoCardManager.Instance.RollCard();
-                Tuto.Instance.NoPop8();
+                //Tuto.Instance.NoPop8();
                 TutoCharacterManager.Instance.currentPlayer.state = TutoPlayerMovement.States.WIN;
                 TutoCardManager.Instance.toChoice();
             }

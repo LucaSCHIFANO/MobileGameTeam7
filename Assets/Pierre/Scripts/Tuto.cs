@@ -193,6 +193,7 @@ public class Tuto : MonoBehaviour
 
     public void Pop511()
     {
+        Popup51.SetActive(false);
         Popup511.SetActive(false);
         Popup52.SetActive(true);
         buttonCard.SetActive(true);

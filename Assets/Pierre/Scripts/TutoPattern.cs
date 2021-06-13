@@ -39,7 +39,7 @@ public class TutoPattern : MonoBehaviour
             gridreftuto.height = 9;
             gridreftuto.width = 9;
 
-            gridreftuto.locationEnemy.Add(new Vector2(4, -2));
+            gridreftuto.locationEnemy.Add(new Vector2(4, -3));
 
 
             gridreftuto.playerSpawn.Add(new Vector2(6, -6));

@@ -667,6 +667,7 @@ public class TutoMapComposent : MonoBehaviour
     private IEnumerator waitforopen()
     {
         yield return new WaitForSecondsRealtime(0.6f);
+        Tuto.Instance.Pop8();
         MapUI.SetActive(true);
         Time.timeScale = 0f;
         MapOpen = true;

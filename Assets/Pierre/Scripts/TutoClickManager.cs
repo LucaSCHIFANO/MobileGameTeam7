@@ -165,6 +165,7 @@ public class TutoClickManager : MonoBehaviour
                                     {
                                         if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<TutoPlayerMovement>() && canClickPlayer)
                                         {
+                                            statePanel++;
                                             TutoGrid.Instance.resetClicked();
                                             TutoBlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos, false);
                                             TutoBlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
@@ -203,6 +204,7 @@ public class TutoClickManager : MonoBehaviour
                                 {
                                     if (player.state == TutoPlayerMovement.States.IDLE && player.stats.actionPoint > 0)
                                     {
+                                        statePanel++;
                                         TutoGrid.Instance.resetClicked();
                                         TutoBlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos, false);
                                         TutoBlueRedGrid.Instance.blueRedPath(player.stats.actionPoint);
@@ -332,7 +334,11 @@ public class TutoClickManager : MonoBehaviour
 
         }
 
-
+        /*if(statePanel == 1)
+        {
+            TutoGrid.Instance.gridArray[4, 4] = currentPanel;
+        }*/
+ 
         if (currentPanel != null)
         {
             shinningPannel();

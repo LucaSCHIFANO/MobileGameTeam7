@@ -411,7 +411,7 @@ public class TutoCardManager : MonoBehaviour
     {
         if (chosenCard != null)
         {
-            Tuto.Instance.Pop6();
+            //Tuto.Instance.Pop6();
             discard.Add(chosenCard.GetComponent<TutoCardDisplay>().card);
             hand.Remove(chosenCard);
             Destroy(chosenCard);

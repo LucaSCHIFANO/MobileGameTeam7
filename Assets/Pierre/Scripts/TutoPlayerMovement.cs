@@ -100,7 +100,7 @@ public class TutoPlayerMovement : MonoBehaviour
     public void trueMovement()
     {
         transform.position = Vector3.MoveTowards(transform.position, panelToGo.gameObject.transform.position, 6.5f * Time.deltaTime);
-        Tuto.Instance.Pop51();
+        Tuto.Instance.Pop511();
     }
 
     public IEnumerator isPushOrPull(Panel panelToMove)
