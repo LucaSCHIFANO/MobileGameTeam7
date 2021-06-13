@@ -124,6 +124,11 @@ public class Tuto : MonoBehaviour
     public void Pop2()
     {
         Popup2.SetActive(false);
+        //Popup3.SetActive(true);
+    }
+
+    public void Pop2_1()
+    {
         Popup3.SetActive(true);
     }
 
@@ -169,12 +174,14 @@ public class Tuto : MonoBehaviour
     {
         Popup45.SetActive(false);
         Popup5.SetActive(true);
+        TutoClickManager.Instance.canClickEnemy = true;
     }
 
     public void Pop5()
     {
         Popup5.SetActive(false);
         Popup51.SetActive(true);
+        TutoClickManager.Instance.canClickPlayer = true;
     }
 
     public void Pop51()
@@ -284,7 +291,7 @@ public class Tuto : MonoBehaviour
         Popup63.SetActive(false);
         Popup7.SetActive(false);
         Popup8.SetActive(false);
-        Popup81.SetActive(true);
+        //Popup81.SetActive(true);
     }
 
     public void TruePop7()

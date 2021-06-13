@@ -12507,7 +12507,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.680054, y: -340}
+  m_AnchoredPosition: {x: -9.679932, y: -340}
   m_SizeDelta: {x: -904.09, y: -798.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899397794
@@ -12861,7 +12861,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13383,7 +13383,7 @@ MonoBehaviour:
   unitPortrait: {fileID: 1363868914}
   defText: {fileID: 743100017}
   attText: {fileID: 2079696912}
-  elementImage: {fileID: 1142889978}
+  elementImage: {fileID: 1965265047}
   elementInfos:
   - {fileID: 21300000, guid: 7d4f71379ec738f478ed240ebc9b9856, type: 3}
   - {fileID: 21300000, guid: 625ab818ec0623b4f8fe2b92fb316a0a, type: 3}
@@ -13488,6 +13488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPanel: {fileID: 0}
+  canClickPlayer: 0
+  canClickEnemy: 0
+  statePanel: 0
 --- !u!4 &999846370
 Transform:
   m_ObjectHideFlags: 0
@@ -14904,7 +14907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.680054, y: -340}
+  m_AnchoredPosition: {x: -9.679932, y: -340}
   m_SizeDelta: {x: -904.09, y: -798.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083481688
@@ -21946,7 +21949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1363868915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24388,7 +24391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -60.299927, y: -60}
+  m_AnchoredPosition: {x: -60.30005, y: -60}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1674400895

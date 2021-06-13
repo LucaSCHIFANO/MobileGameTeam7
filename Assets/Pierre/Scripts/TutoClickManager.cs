@@ -8,6 +8,13 @@ public class TutoClickManager : MonoBehaviour
 
     private static TutoClickManager _instance = null;
 
+
+    public bool canClickPlayer;
+    public bool canClickEnemy;
+
+    public int statePanel;
+
+
     public static TutoClickManager Instance
     {
         get => _instance;
@@ -156,7 +163,7 @@ public class TutoClickManager : MonoBehaviour
                                 {
                                     if (player.state == TutoPlayerMovement.States.IDLE)
                                     {
-                                        if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<TutoPlayerMovement>())
+                                        if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<TutoPlayerMovement>() && canClickPlayer)
                                         {
                                             TutoGrid.Instance.resetClicked();
                                             TutoBlueRedGrid.Instance.movementsPossible(player.xPos, player.yPos, false);
@@ -169,7 +176,7 @@ public class TutoClickManager : MonoBehaviour
                                             TutoUI.Instance.EnemyToHero(player.stats);
                                             TutoUI.Instance.ShowPortrait(player.stats);
                                         }
-                                        else if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<TutoEnemy>())
+                                        else if (touchedPanel.unitOn != null && touchedPanel.unitOn.GetComponent<TutoEnemy>() && canClickEnemy)
                                         {
                                             //UiActionManager.Instance.ShowPortrait(touchedPanel.unitOn.GetComponent<Enemy>().stats);
                                             Tuto.Instance.Pop5();
@@ -192,7 +199,7 @@ public class TutoClickManager : MonoBehaviour
                             else if (touchedCollier.gameObject.tag == "ClickableChar")
                             {
 
-                                if (touchedCollier.gameObject.GetComponentInParent<TutoPlayerMovement>())
+                                if (touchedCollier.gameObject.GetComponentInParent<TutoPlayerMovement>() && canClickPlayer)
                                 {
                                     if (player.state == TutoPlayerMovement.States.IDLE && player.stats.actionPoint > 0)
                                     {
@@ -217,7 +224,7 @@ public class TutoClickManager : MonoBehaviour
 
                                 }
 
-                                else if (touchedCollier.gameObject.GetComponentInParent<TutoEnemy>())
+                                else if (touchedCollier.gameObject.GetComponentInParent<TutoEnemy>() && canClickEnemy)
                                 {
                                     var charact = touchedCollier.gameObject.GetComponentInParent<TutoEnemy>();
                                     var actualPanel = TutoGrid.Instance.gridArray[charact.xPos, -charact.yPos];

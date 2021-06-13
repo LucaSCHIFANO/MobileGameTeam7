@@ -57,7 +57,7 @@ public class TutoCreateEnemy : MonoBehaviour
                     enemy.stats.strenght += 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 5;
+                    enemy.stats.maxActionPoint = 3;
                     enemy.stats.actionPoint = enemy.stats.maxActionPoint;
                     enemy.stats.element = TutoStats.ELEMENT.RED;
 
@@ -75,7 +75,7 @@ public class TutoCreateEnemy : MonoBehaviour
                     enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += upgradeValue + proba(upgradeProba);
                     enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 4;
+                    enemy.stats.maxActionPoint = 3;
                     enemy.stats.actionPoint = enemy.stats.maxActionPoint;
                     enemy.stats.element = TutoStats.ELEMENT.BLUE;
 
@@ -93,7 +93,7 @@ public class TutoCreateEnemy : MonoBehaviour
                     enemy.stats.strenght += upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
                     enemy.stats.speed += upgradeValue + proba(upgradeProba);
-                    enemy.stats.maxActionPoint = 4;
+                    enemy.stats.maxActionPoint = 3;
                     enemy.stats.actionPoint = enemy.stats.maxActionPoint;
                     enemy.stats.element = TutoStats.ELEMENT.GREEN;
 

@@ -83,6 +83,7 @@ public class TutoGrid : MonoBehaviour
         mC.functionStart();
         TutoCardManager.Instance.EndRound();
         TutoPhaseManager.Instance.oneTime = false;
+        Tuto.Instance.Pop2_1();
     }
 
 
