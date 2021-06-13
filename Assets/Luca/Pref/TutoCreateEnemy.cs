@@ -1,0 +1,124 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TutoCreateEnemy : MonoBehaviour
+{
+
+    public List<TutoAttackParam> listEnAttack = new List<TutoAttackParam>();
+    public void creation(TutoEnemy enemy, int idLevel, int progress)
+    {
+
+        var upgradeProba = 50 * progress;
+        var upgradeValue = 0;
+        var numberOfRoll = 1;
+
+        while (upgradeProba >= 100)
+        {
+            upgradeValue++;
+            upgradeProba -= 100;
+        }
+
+        if (upgradeProba != 50)
+        {
+            upgradeProba = 35;
+        }
+
+        for (int i = 0; i < numberOfRoll; i++)
+        {
+            Debug.Log(upgradeValue + " " + upgradeProba + " " + numberOfRoll + " " + i);
+
+            var type = enemy.stats.element;
+
+            switch (type)
+            {
+                case TutoStats.ELEMENT.NORMAL:
+                    enemy.stats.characName = "Skully";
+                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.HP = enemy.stats.maxHP;
+                    enemy.stats.strenght += upgradeValue + proba(upgradeProba);
+                    enemy.stats.defense += upgradeValue + proba(upgradeProba);
+                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxActionPoint = 3;
+                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                    enemy.stats.element = TutoStats.ELEMENT.NORMAL;
+
+                    enemy.attackMonster.attackParam = listEnAttack[0];
+                    enemy.pattern = TutoEnemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                    enemy.gameObject.name = "Skully";
+                    break;
+
+
+                case TutoStats.ELEMENT.RED:
+                    enemy.stats.characName = "Fiya Foxu";
+                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.HP = enemy.stats.maxHP;
+                    enemy.stats.strenght += 1 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.defense += 1 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxActionPoint = 5;
+                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                    enemy.stats.element = TutoStats.ELEMENT.RED;
+
+                    enemy.attackMonster.attackParam = listEnAttack[3];
+                    enemy.pattern = TutoEnemy.Pattern.RUSHDISTANCECIRCLE;
+
+                    enemy.gameObject.name = "Fiya Foxu";
+                    break;
+
+
+                case TutoStats.ELEMENT.BLUE:
+                    enemy.stats.characName = "Bububle";
+                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.HP = enemy.stats.maxHP;
+                    enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.defense += upgradeValue + proba(upgradeProba);
+                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxActionPoint = 4;
+                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                    enemy.stats.element = TutoStats.ELEMENT.BLUE;
+
+                    enemy.attackMonster.attackParam = listEnAttack[2];
+                    enemy.pattern = TutoEnemy.Pattern.RUSHDISTANCEROWCOLUMN;
+
+                    enemy.gameObject.name = "Bububle";
+                    break;
+
+
+                case TutoStats.ELEMENT.GREEN:
+                    enemy.stats.characName = "A plant...";
+                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.HP = enemy.stats.maxHP;
+                    enemy.stats.strenght += upgradeValue + proba(upgradeProba);
+                    enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.speed += upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxActionPoint = 4;
+                    enemy.stats.actionPoint = enemy.stats.maxActionPoint;
+                    enemy.stats.element = TutoStats.ELEMENT.GREEN;
+
+                    enemy.attackMonster.attackParam = listEnAttack[1];
+                    enemy.pattern = TutoEnemy.Pattern.RUSHDISTANCECIRCLE;
+
+                    enemy.gameObject.name = "A plant...";
+                    break;
+
+                default:
+                    break;
+            }
+
+        }
+    }
+
+    public int proba(int value)
+    {
+        if (Random.Range(1, 101) <= value)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+}
