@@ -91,6 +91,11 @@ public class TutoMapComposent : MonoBehaviour
             //var room1 = Instantiate(Enemy, salle1.position, salle1.rotation, salle1.transform);
             Create(Enemy, salle1, 10, 0);
 
+           /* Create(Enemy, salle2H, 20, 1);
+
+            Create(Treasure, salle2, 21, 1);
+
+            Create(Rest, salle2B, 22, 1);
             TutoMapComposent.Instance.disableOldBouton();
 
             RandomRoom = Random.Range(0, TypeRoom.Length);
@@ -127,7 +132,7 @@ public class TutoMapComposent : MonoBehaviour
             if (TypeRoom[RandomRoom] == Treasure)
             {
                 OnLATrouve();
-            }
+            }*/
             //var room2B = Instantiate(TypeRoom[RandomRoom], salle2B.position, salle2B.rotation, salle2B.transform);
         }
 
