@@ -382,7 +382,7 @@ public class TutoCardManager : MonoBehaviour
 
     public void RollCard()
     {
-        var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-3, -1.4f, 0)), Quaternion.identity, canvas.transform);
+        var newCard = Instantiate(cardPrefab, (transform.position + new Vector3(-4, -1.4f, 0)), Quaternion.identity, canvas.transform);
         var number = Random.Range(0, cardList.Count);
         var newDisplay = newCard.GetComponent<TutoCardDisplay>();
         newDisplay.card = cardList[number];
@@ -399,7 +399,7 @@ public class TutoCardManager : MonoBehaviour
         actualRoll.Add(newCard);
 
         number = Random.Range(0, cardList.Count);
-        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(3, -1.4f, 0)), Quaternion.identity, canvas.transform);
+        newCard = Instantiate(cardPrefab, (transform.position + new Vector3(4, -1.4f, 0)), Quaternion.identity, canvas.transform);
         newDisplay = newCard.GetComponent<TutoCardDisplay>();
         newDisplay.card = cardList[number];
         newDisplay.attackParam = attackParams[number];
