@@ -34,7 +34,7 @@ public class TutoCreateEnemy : MonoBehaviour
             {
                 case TutoStats.ELEMENT.NORMAL:
                     enemy.stats.characName = "Skully";
-                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxHP = 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
                     enemy.stats.strenght += upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += upgradeValue + proba(upgradeProba);
@@ -52,7 +52,7 @@ public class TutoCreateEnemy : MonoBehaviour
 
                 case TutoStats.ELEMENT.RED:
                     enemy.stats.characName = "Fiya Foxu";
-                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxHP = 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
                     enemy.stats.strenght += 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += 1 + upgradeValue + proba(upgradeProba);
@@ -70,7 +70,7 @@ public class TutoCreateEnemy : MonoBehaviour
 
                 case TutoStats.ELEMENT.BLUE:
                     enemy.stats.characName = "Bububle";
-                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxHP = 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
                     enemy.stats.strenght += 2 + upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += upgradeValue + proba(upgradeProba);
@@ -88,7 +88,7 @@ public class TutoCreateEnemy : MonoBehaviour
 
                 case TutoStats.ELEMENT.GREEN:
                     enemy.stats.characName = "A plant...";
-                    enemy.stats.maxHP = 2 + upgradeValue + proba(upgradeProba);
+                    enemy.stats.maxHP = 1 + upgradeValue + proba(upgradeProba);
                     enemy.stats.HP = enemy.stats.maxHP;
                     enemy.stats.strenght += upgradeValue + proba(upgradeProba);
                     enemy.stats.defense += 2 + upgradeValue + proba(upgradeProba);
