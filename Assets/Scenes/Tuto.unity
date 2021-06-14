@@ -494,7 +494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 200}
+  m_AnchoredPosition: {x: 41.999996, y: 0}
   m_SizeDelta: {x: 480.19, y: 205.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &48449034
@@ -1298,7 +1298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 200}
+  m_AnchoredPosition: {x: 42, y: 0}
   m_SizeDelta: {x: 480.19, y: 205.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &83163012
@@ -21174,7 +21174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1251417578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9fa474c0354bd8459b867a4cc96029c, type: 3}
+  m_Script: {fileID: 11500000, guid: d742c9de0f2d87546b2dfd945975d835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idLevel: 0
@@ -21225,9 +21225,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1251417580}
-        m_TargetAssemblyTypeName: BoutonInfo, Assembly-CSharp
-        m_MethodName: sendInfo
+      - m_Target: {fileID: 974637999}
+        m_TargetAssemblyTypeName: Tuto, Assembly-CSharp
+        m_MethodName: Pop83
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24659,7 +24659,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1664889428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9fa474c0354bd8459b867a4cc96029c, type: 3}
+  m_Script: {fileID: 11500000, guid: d742c9de0f2d87546b2dfd945975d835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idLevel: 0
@@ -24710,18 +24710,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1664889430}
-        m_TargetAssemblyTypeName: BoutonInfo, Assembly-CSharp
-        m_MethodName: sendInfo
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 974637999}
         m_TargetAssemblyTypeName: Tuto, Assembly-CSharp
         m_MethodName: Pop83
@@ -26609,7 +26597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1963488468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9fa474c0354bd8459b867a4cc96029c, type: 3}
+  m_Script: {fileID: 11500000, guid: d742c9de0f2d87546b2dfd945975d835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idLevel: 0
@@ -26660,9 +26648,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1963488470}
-        m_TargetAssemblyTypeName: BoutonInfo, Assembly-CSharp
-        m_MethodName: sendInfo
+      - m_Target: {fileID: 974637999}
+        m_TargetAssemblyTypeName: Tuto, Assembly-CSharp
+        m_MethodName: Pop83
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27325,7 +27313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 200}
+  m_AnchoredPosition: {x: 41.999996, y: 0}
   m_SizeDelta: {x: 480.19, y: 205.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2065913638
