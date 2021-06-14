@@ -40,6 +40,7 @@ public class Tuto : MonoBehaviour
     public GameObject buttonCard;
     public GameObject buttonTurn;
 
+    private bool pop6 = true;
 
     private static Tuto _instance = null;
 
@@ -207,8 +208,12 @@ public class Tuto : MonoBehaviour
 
     public void Pop6()
     {
-        Popup6.SetActive(false);
-        Popup61.SetActive(true);
+        if (pop6)
+        {
+            Popup6.SetActive(false);
+            Popup61.SetActive(true);
+            pop6 = false;
+        }
     }
 
     public void Pop61()
