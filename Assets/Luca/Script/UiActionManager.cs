@@ -238,12 +238,13 @@ public class UiActionManager : MonoBehaviour
         {
             inGame[i].sprite = enemySprites[i];
         }
+        var aM = enemyStats.gameObject.GetComponent<AttackMonster>();
 
         apleft.text = enemyStats.actionPoint.ToString();
         maxHP.text = enemyStats.maxHP.ToString();
         currenntHP.text = enemyStats.HP.ToString();
         defText.text = (enemyStats.defense + enemyStats.boostDef).ToString();
-        attText.text = (enemyStats.strenght + enemyStats.boostAtt).ToString();
+        attText.text = (enemyStats.strenght + enemyStats.boostAtt + aM.attackParam.damage).ToString();
 
         switch (enemyStats.element)
         {

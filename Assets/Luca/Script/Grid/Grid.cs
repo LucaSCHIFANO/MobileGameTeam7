@@ -30,6 +30,7 @@ public class Grid : MonoBehaviour
     public GameObject enemyFire;
     public GameObject enemyWater;
     public GameObject enemyEarth;
+    public GameObject boss;
     public GameObject holoPlayer;
     
     private CreateAnEnemy cae;
@@ -77,7 +78,14 @@ public class Grid : MonoBehaviour
     {
         awake2();
         awake2Alpha();
-        createEnemies();
+        if(progress == 4 || progress == 9)
+        {
+            createBoss();
+        }
+        else
+        {
+            createEnemies();
+        }
         setPos();
 
         mC.functionStart();
@@ -365,6 +373,38 @@ public class Grid : MonoBehaviour
             cae.creation(enE, levelID, progress); // check type et je fait le truc
         }
         
+        locationEnemy.Clear();
+    }
+
+    void createBoss()
+    {
+
+        Debug.Log("Boss creation"); 
+
+        cae = GetComponent<CreateAnEnemy>();
+        var random = Random.Range(0, locationEnemy.Count - 1);
+        var positionRandom = 0;
+        foreach (var VECTOR in locationEnemy)
+        {
+            if (positionRandom == random)
+            {
+                GameObject en = null;
+                var number = Random.Range(0, 4);
+
+                en = Instantiate(boss, Vector2.zero, transform.rotation); // randomize
+
+                var enE = en.GetComponent<Enemy>();
+
+                enE.xPos = (int)VECTOR.x;
+                enE.yPos = (int)VECTOR.y;
+                enE.Start();
+
+                cae.creation(enE, levelID, progress); // check type et je fait le truc
+            }
+
+            positionRandom++;
+        }
+
         locationEnemy.Clear();
     }
 
