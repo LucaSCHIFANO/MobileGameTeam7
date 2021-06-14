@@ -631,11 +631,11 @@ public class TutoMapComposent : MonoBehaviour
 
     public void Create(GameObject TypeSalle, Transform Emplacement, int position, int progression)
     {
-        GameObject NewRoom = (GameObject)Instantiate(TypeSalle, Emplacement.position, Quaternion.identity, Emplacement.transform);
-        NewRoom.GetComponent<TutoBoutonInfo>().positionMap = position;
+        /*GameObject NewRoom = (GameObject)Instantiate(TypeSalle, Emplacement.position, Quaternion.identity, Emplacement.transform);
+        //NewRoom.GetComponent<TutoBoutonInfo>().positionMap = position;
         NewRoom.GetComponent<TutoBoutonInfo>().progression = progression;
 
-        NewRoom.GetComponent<Button>().interactable = true;
+        NewRoom.GetComponent<Button>().interactable = true;*/
     }
 
     public void OnLATrouve()
