@@ -59,7 +59,6 @@ public class Tuto : MonoBehaviour
         Popup11.SetActive(false);
         Popup12.SetActive(false);
         Popup13.SetActive(false);
-        //Popup2.SetActive(false);
         Popup3.SetActive(false);
         Popup4.SetActive(false);
         Popup41.SetActive(false);
