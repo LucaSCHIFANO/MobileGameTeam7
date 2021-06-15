@@ -464,6 +464,9 @@ public class Grid : MonoBehaviour
         ComboSystem.Instance.resetSave();
         CharacterManager.Instance.noDamage = true;
 
+        UiActionManager.Instance.HPBar.value = CharacterManager.Instance.sS.HP;
+        UiActionManager.Instance.HPBar.maxValue = CharacterManager.Instance.sS.maxHP;
+
         resetClicked();
     }
 

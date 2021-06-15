@@ -57,6 +57,8 @@ public class BoutonInfo : MonoBehaviour
 
                     CharacterManager.Instance.isHealed = true;
 
+                    UiActionManager.Instance.HPBar.value = CharacterManager.Instance.sS.HP;
+                    UiActionManager.Instance.HPBar.maxValue = CharacterManager.Instance.sS.maxHP;
                     StartCoroutine(infoMap(tor));
 
                     //MapComposent.Instance.Closing();
