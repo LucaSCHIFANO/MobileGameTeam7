@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 7f44d006a3b082544905e8749b39ec3f
   - enabled: 1
     path: Assets/Scenes/Tuto.unity
-    guid: f916d447d8c930b43ac34550da6fba59
+    guid: 77e7d7945534ef041a1a122659b8f064
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 8c64608b451c9254b9e5b9e0063ddcf2

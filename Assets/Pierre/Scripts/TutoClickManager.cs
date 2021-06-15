@@ -262,6 +262,7 @@ public class TutoClickManager : MonoBehaviour
                                     else if (player.state == TutoPlayerMovement.States.IDLE)
                                     {
                                         TutoUI.Instance.ShowPortrait(charact.stats);
+                                        Tuto.Instance.Pop5();
 
                                         foreach (var item in TutoGrid.Instance.gridArrayAlpha)
                                         {
