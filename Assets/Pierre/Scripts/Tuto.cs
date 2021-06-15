@@ -13,7 +13,7 @@ public class Tuto : MonoBehaviour
     public GameObject Popup11;
     public GameObject Popup12;
     public GameObject Popup13;
-    public GameObject Popup2;
+    //public GameObject Popup2;
     public GameObject Popup3;
     public GameObject Popup4;
     public GameObject Popup41;
@@ -58,7 +58,7 @@ public class Tuto : MonoBehaviour
         Popup11.SetActive(false);
         Popup12.SetActive(false);
         Popup13.SetActive(false);
-        Popup2.SetActive(false);
+        //Popup2.SetActive(false);
         Popup3.SetActive(false);
         Popup4.SetActive(false);
         Popup41.SetActive(false);
@@ -118,12 +118,12 @@ public class Tuto : MonoBehaviour
     public void Pop13()
     {
         Popup13.SetActive(false);
-        Popup2.SetActive(true);
+        //Popup2.SetActive(true);
     }
 
     public void Pop2()
     {
-        Popup2.SetActive(false);
+        //Popup2.SetActive(false);
         //Popup3.SetActive(true);
     }
 
@@ -275,7 +275,7 @@ public class Tuto : MonoBehaviour
         Popup11.SetActive(false);
         Popup12.SetActive(false);
         Popup13.SetActive(false);
-        Popup2.SetActive(false);
+        //Popup2.SetActive(false);
         Popup3.SetActive(false);
         Popup4.SetActive(false);
         Popup41.SetActive(false);
