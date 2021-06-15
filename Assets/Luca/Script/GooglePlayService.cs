@@ -33,11 +33,11 @@ public class GooglePlayService : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
 
-        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
+        //PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
 
-        PlayGamesPlatform.InitializeInstance(config);
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
+        //PlayGamesPlatform.InitializeInstance(config);
+        //PlayGamesPlatform.DebugLogEnabled = true;
+        //PlayGamesPlatform.Activate();
     }
 
     public void Start()
@@ -47,7 +47,7 @@ public class GooglePlayService : MonoBehaviour
 
     public void SignInToGooglePlayServices()
     {
-        PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (result) => {
+        /*PlayGamesPlatform.Instance.Authenticate(SignInInteractivity.CanPromptOnce, (result) => {
             switch (result)
             {
                 case SignInStatus.Success:
@@ -57,7 +57,7 @@ public class GooglePlayService : MonoBehaviour
                     isConnectedToGooglePlayServices = false;
                     break;
             }
-        });
+        });*/
     }
 
 }

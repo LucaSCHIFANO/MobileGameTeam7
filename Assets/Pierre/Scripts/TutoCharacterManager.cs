@@ -106,9 +106,9 @@ public class TutoCharacterManager : MonoBehaviour
 
                     /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                     {*/
-                    GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_ruthless, 1, null); // 25
-                    GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_heartless, 1, null); //50 
-                    GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_genocide, 1, null); //100
+                    //GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_ruthless, 1, null); // 25
+                    //GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_heartless, 1, null); //50 
+                    //GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_genocide, 1, null); //100
                     //}
                 }
             }
@@ -122,7 +122,7 @@ public class TutoCharacterManager : MonoBehaviour
             /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
             {*/
             //Social.ReportProgress(GPGSIds.achievement_never_gonna_give_you_up, 10.0f, null);
-            GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_never_gonna_give_you_up, 1, null); //10
+            //GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_never_gonna_give_you_up, 1, null); //10
             //}
 
             //SceneManager.LoadScene("MainMenu");
@@ -203,7 +203,7 @@ public class TutoCharacterManager : MonoBehaviour
         /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
         {*/
         Social.ReportProgress(GPGSIds.achievement_a_legend_is_born, 100.0f, null);
-        GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_grinder, 1, null); //30
+        //GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_grinder, 1, null); //30
         //}
     }
 }

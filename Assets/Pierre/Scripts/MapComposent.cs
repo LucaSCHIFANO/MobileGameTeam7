@@ -676,7 +676,7 @@ public class MapComposent : MonoBehaviour
            /* if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
             {*/
                 Social.ReportProgress(GPGSIds.achievement_end_of_the_road, 100.0f, null);
-                GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_why_not, 1, null); //2
+                //GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_why_not, 1, null); //2
             //}
 
             if (!CharacterManager.Instance.isHealed)
