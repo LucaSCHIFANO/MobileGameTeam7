@@ -542,21 +542,12 @@ public class MapComposent : MonoBehaviour
         else if (position == 71)
         {
             RandomRoom = Random.Range(0, TypeRoom.Length);
-            if (LaTaverneDuCaptain == 1 && TypeRoom[RandomRoom] == Rest)
+            if (TypeRoom[RandomRoom] == Rest)
             {
-                TypeRoom[RandomRoom] = Enemy;
+                TypeRoom[RandomRoom] = Treasure;
                 Create(TypeRoom[RandomRoom], salle8B, 81, 7);
             }
-            else if (LaTaverneDuCaptain == 0 && TypeRoom[RandomRoom] == Rest)
-            {
-                TypeRoom[RandomRoom] = Rest;
-                Create(TypeRoom[RandomRoom], salle8B, 81, 7);
-            }
-            else if (LaTaverneDuCaptain == 0)
-            {
-                TypeRoom[RandomRoom] = Rest;
-                Create(TypeRoom[RandomRoom], salle8B, 81, 7);
-            }
+            
             else
                 Create(TypeRoom[RandomRoom], salle8B, 81, 7);
 
