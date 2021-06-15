@@ -686,15 +686,15 @@ public class TutoMapComposent : MonoBehaviour
 
             /* if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
              {*/
-            Social.ReportProgress(GPGSIds.achievement_end_of_the_road, 100.0f, null);
-            GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_why_not, 1, null); //2
+            //Social.ReportProgress(GPGSIds.achievement_end_of_the_road, 100.0f, null);
+            //GooglePlayGames.PlayGamesPlatform.Instance.IncrementAchievement(GPGSIds.achievement_why_not, 1, null); //2
             //}
 
             if (!TutoCharacterManager.Instance.isHealed)
             {
                 /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                 {*/
-                Social.ReportProgress(GPGSIds.achievement_god_among_gods, 100.0f, null);
+               // Social.ReportProgress(GPGSIds.achievement_god_among_gods, 100.0f, null);
                 //}
             }
 
@@ -706,10 +706,10 @@ public class TutoMapComposent : MonoBehaviour
 
                 /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                 {*/
-                Social.ReportScore(TutoPhaseManager.Instance.numberOfTurn, GPGSIds.leaderboard_best_time, (success) =>
-                {
+                //Social.ReportScore(TutoPhaseManager.Instance.numberOfTurn, GPGSIds.leaderboard_best_time, (success) =>
+                /*{
                     if (!success) Debug.LogError("Unable to post highScore");
-                });
+                });*/
                 // }
             }
             else
@@ -722,7 +722,7 @@ public class TutoMapComposent : MonoBehaviour
         {
             /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
             {*/
-            Social.ReportProgress(GPGSIds.achievement_halfway_through_hell, 100.0f, null);
+            //Social.ReportProgress(GPGSIds.achievement_halfway_through_hell, 100.0f, null);
             //}
         }
     }
