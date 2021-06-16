@@ -133,6 +133,7 @@ public class CharacterManager : MonoBehaviour
         {
             Debug.Log("You win");
             UiActionManager.Instance.hideAll();
+            CardManager.Instance.handPanel.GetComponent<Animator>().SetTrigger("Hide");
 
             AudioManager.Instance.Stop("BattleMap1");
             AudioManager.Instance.Play("Victory!");
