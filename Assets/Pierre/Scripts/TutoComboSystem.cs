@@ -95,7 +95,7 @@ public class TutoComboSystem : MonoBehaviour
 
                     /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                     {*/
-                    Social.ReportProgress(GPGSIds.achievement_endless_destruction, 100.0f, null);
+                    //Social.ReportProgress(GPGSIds.achievement_endless_destruction, 100.0f, null);
                     // }
                 }
                 break;
@@ -109,7 +109,7 @@ public class TutoComboSystem : MonoBehaviour
 
                     /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                     {*/
-                    Social.ReportProgress(GPGSIds.achievement_the_way_of_water, 100.0f, null);
+                    //Social.ReportProgress(GPGSIds.achievement_the_way_of_water, 100.0f, null);
                     //}
                 }
                 if (number >= 3)
@@ -126,7 +126,7 @@ public class TutoComboSystem : MonoBehaviour
 
                     /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                     {*/
-                    Social.ReportProgress(GPGSIds.achievement_impregnable_fortress, 100.0f, null);
+                    //Social.ReportProgress(GPGSIds.achievement_impregnable_fortress, 100.0f, null);
                     //}
                 }
                 break;
@@ -140,7 +140,7 @@ public class TutoComboSystem : MonoBehaviour
 
                     /* if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                      {*/
-                    Social.ReportProgress(GPGSIds.achievement_the_way_of_nature, 100.0f, null);
+                    //Social.ReportProgress(GPGSIds.achievement_the_way_of_nature, 100.0f, null);
                     //}
                 }
                 if (number >= 3)
@@ -157,7 +157,7 @@ public class TutoComboSystem : MonoBehaviour
 
                     /*if (GooglePlayService.Instance.isConnectedToGooglePlayServices)
                     {*/
-                    Social.ReportProgress(GPGSIds.achievement_speed_of_light, 100.0f, null);
+                    //Social.ReportProgress(GPGSIds.achievement_speed_of_light, 100.0f, null);
                     //}
                 }
 
