@@ -57,11 +57,14 @@ public class UiActionManager : MonoBehaviour
         buttonCancel.SetActive(false);
         unitPortrait.SetActive(true);
         use.SetActive(false);
-        apleft.text = CharacterManager.Instance.currentPlayer.stats.actionPoint.ToString();
-        maxHP.text = CharacterManager.Instance.currentPlayer.stats.maxHP.ToString();
-        currenntHP.text = CharacterManager.Instance.currentPlayer.stats.HP.ToString();
-        defText.text = CharacterManager.Instance.currentPlayer.stats.defense.ToString();
-        attText.text = CharacterManager.Instance.currentPlayer.stats.strenght.ToString();
+        var CMStats = CharacterManager.Instance.currentPlayer.stats;
+        apleft.text = CMStats.actionPoint.ToString();
+        maxHP.text = CMStats.maxHP.ToString();
+        currenntHP.text = CMStats.HP.ToString();
+        defText.text = CMStats.defense.ToString();
+        attText.text = CMStats.strenght.ToString();
+        HPBar.maxValue = CMStats.maxHP;
+        HPBar.value = CMStats.HP;
     }
 
     public void hideButton()
@@ -122,7 +125,6 @@ public class UiActionManager : MonoBehaviour
 
                     cardM.MidToHandLaFonction();
                     showAttackRange(midCard);
-                    cardM.handPanel.GetComponent<Animator>().SetTrigger("Hide");
                     cardM.chosenCard = cardM.middleCard;
 
                     if (BattleManager.Instance.currentAttackParam.around)
